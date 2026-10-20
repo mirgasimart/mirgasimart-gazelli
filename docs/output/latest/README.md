@@ -3,29 +3,35 @@
 
 ### Curatorial Statement & Vision
 Responding to the highest standards of contemporary fine art at **Gazelli Art House**, this collection explores authentic Absheron signatures and Caspian endemism through the physical substances of the land:
-- **The Muse of Masazir & Saline Crusts** (Mirgasim's Iconic Muse, Masazir Pink Salt & Caspian Seal Pup)
+- **Saline Strata of Masazir: Crystalline Lakebed Abstraction** (Lake Masazir Pink Salt, Mineral Terraces & Sgraffito)
 - **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone, Coquina & Fossil Didacna)
 - **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore & Marine Shad)
-- **Radical Volcanic Earth-Art** (Lokbatan Crater Craquelure & Armored Caspian Goby)
+- **The Celadon Caldera: Volcanic Craquelure & Armored Goby** (Lokbatan Clay, Greenish-Blue Caspian Verdigris Glazes, Pyrite Ore & Caspian Goby, Square 1:1 Format)
 - **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Beach Sand Mandala & Incised Rock Petroglyphs)
 
-Mirgasim’s core visual DNA—melancholic statuesque muses, connected dark brows, sculpted hands, heavy sculptural palette-knife impasto, tactile mineral reliefs, and deep sgraffito incisions—is preserved while expanding into architectural, geological, and mythic dimensions.
+Preserving the raw textural DNA of the Absheron School—heavy sculptural palette-knife impasto, tactile mineral reliefs, authentic crystalline encrustations, and deep incised sgraffito fissures—this exhibition replaces superficial decorative clichés with the literal primordial matter of the Absheron Peninsula.
 
 ---
 
 ## Catalog of Artworks
 
-### 1. *The Muse of Masazir: The Caspian Seal and Saline Grace* (*Masazır Pərisi: Xəzər Suiti və Duz Qayası*)
-![The Muse of Masazir](01_the_solitary_of_masazir_caspian_seal.jpg)
+### 1. *Strata of Masazir: Crystalline Salt Landscape* (*Masazır Layları: Çəhrayı Duz Abstraksiyası*)
+![Strata of Masazir](01_lacustrine_strata_masazir_salt.jpg)
 
-- **Genre**: Figurative Fine Art Portraiture / Geological Matter Painting
-- **Dimensions**: 100 × 150 cm (Portrait, Painting Specification from Brief)
-- **Endemic Caspian Wildlife**: Caspian Seal (*Pusa caspica*)
+- **Genre**: Pure Mineral Abstraction / Geological Earth Painting
+- **Dimensions**: 185 × 120 cm (Horizontal Landscape Canvas, Specification from Brief)
+- **Endemic Caspian Focus**: Absheron Lacustrine Strata & Lake Masazir Minerals
 - **Selected Absheron Materials**:
   - **Masazir Pink Lake Salt**: Genuine crystalline pink-and-white salt encrustations integrated directly into the heavy impasto ground.
-  - **Absheron Limestone & Plaster**: Porous cream-and-ochre ground scored with fine geometric sgraffito lines.
+  - **Absheron Limestone & Alabaster Plaster**: Porous cream-and-ochre ground scored with razor-thin geometric sgraffito lines.
 - **Curatorial Narrative**:
-  Synthesizing Mirgasim’s iconic visual hallmarks—a melancholic, statuesque Azerbaijani muse with connected dark brows, sculpted hands, and intense piercing gaze—with the raw geological matter of Absheron. Cradled tenderly in her arms is a gentle Caspian seal pup (*Pusa caspica*), its silver-grey mottled coat glistening against her modern, architectural plum-burgundy draped garment. The background is a thick, sculptural palette-knife impasto ground in warm ochres and blush tones, embedded with authentic sparkling crystalline clusters of raw pink-and-white Masazir lake salt and incised with delicate geometric sgraffito lines. *(Pure Mirgasim figurative signature; modern architectural couture; zero pyramids, zero towers, zero carpets).*
+  A serene, meditative abstract landscape composed of authentic crystalline pink-and-white salt encrustations from Lake Masazir. Honoring the mineral earth-art lineage of the Absheron School, the composition unfolds in sweeping horizontal terraces of soft rose-quartz, blush pink, peach, and warm alabaster white. The thick, sculptural palette-knife impasto captures the tactile relief of evaporated saline beds, glistening naturally under ambient light and scored with delicate geometric sgraffito fissures. Completely non-figurative, tranquil, and evocative of deep lacustrine time. *(Pure geological abstraction; zero portraits, zero figures, zero seals, zero carpets).*
+
+#### Additional Iteration Studies:
+| Study B: *Crystalline Terraces* | Study C: *Luminescence of Masazir Dawn* |
+| :---: | :---: |
+| ![Crystalline Terraces](01_variant_b_crystalline_terraces.jpg) | ![Luminescence of Masazir Dawn](01_variant_c_luminescence_dawn.jpg) |
+| *Stepped saline terraces & crystalline ridge-lines* | *Atmospheric sunrise over misty salt shoreline* |
 
 ---
 
@@ -59,18 +65,24 @@ Mirgasim’s core visual DNA—melancholic statuesque muses, connected dark brow
 
 ---
 
-### 4. *Breath of Lokbatan: Volcanic Crater and Armored Goby* (*Lökbatan Nəfəsi və Daşlaşmış Qobi*)
-![Breath of Lokbatan](04_whisper_of_the_mud_volcano_caspian_goby.jpg)
+### 4. *The Celadon Caldera: Breath of Lokbatan* (*Lökbatan Nəfəsi: Seladon Palçıq Qrifonu və Qobi*)
+![The Celadon Caldera](04_whisper_of_the_mud_volcano_caspian_goby.jpg)
 
 - **Genre**: Earth-Art Matter Painting & Tectonic Craquelure
 - **Dimensions**: 180 × 180 cm (Square Format, Specification from Brief)
 - **Endemic Caspian Wildlife**: Caspian Tadpole Goby (*Benthophilus* spp.)
 - **Selected Absheron Materials**:
   - **Mud-Volcano Clay (Ejecta from Lokbatan / Gobustan)**: Authentic volcanic clay applied in heavy impasto and cured into deep, natural craquelure fissures.
-  - **Absheron Limestone**: Porous limestone dust for structural relief.
-  - **Natural Bitumen**: Fluid lines defining ancient root systems.
+  - **Absheron Limestone & Mineral Verdigris**: Ground limestone and oxidized copper mineral glazes producing soothing greenish-blue, celadon, and seafoam Caspian tones.
+  - **Pyrite Mineral Accents**: Metallic brassy-gold sulfide flecks embedded along volcanic craquelure fault-lines.
 - **Curatorial Narrative**:
-  A tactile vortex of dried mud-volcano ejecta with natural craquelure fissures. Perched on a volcanic ridge is the prehistoric, armored Caspian tadpole goby—an ancient endemic bottom-dweller whose stone-like tubercles blend into the mineral ground. Organic roots weave across the tectonic vortex, embodying the subterranean forces of Absheron.
+  Executed in a monumental 180 × 180 cm square format, this work transforms the explosive geothermal energy of Absheron's mud volcanoes into a refined, visually soothing aesthetic experience. The circular crater swirls in elegant, luminous greenish-blue Caspian glazes—seafoam, pale celadon, ocean teal, and oxidized copper verdigris. Deep craquelure fissures crack open across the porcelain-smooth volcanic clay ground to reveal subtle golden pyrite veins beneath. Perched gracefully upon the central volcanic ridge is the prehistoric armored Caspian tadpole goby (*Benthophilus* spp.), rendered in fossilized stone relief. *(Strictly 1:1 square; no carpets; radiant Caspian greenish-blue mineral harmony).*
+
+#### Additional Greenish-Blue Square Iterations:
+| Study B: *Caspian Teal* | Study C: *Luminous Verdigris* | Study D: *Mint Jade* | Study E: *Abyssal Emerald* |
+| :---: | :---: | :---: | :---: |
+| ![Caspian Teal](04_variant_b_caspian_teal.jpg) | ![Luminous Verdigris](04_variant_c_luminous_verdigris.jpg) | ![Mint Jade](04_variant_d_mint_jade.jpg) | ![Abyssal Emerald](04_variant_e_abyssal_emerald.jpg) |
+| *Deep aquamarine teal with golden veins* | *Warm verdigris & oxidized copper patina* | *High-key soft mint & limestone craquelure* | *Rich peacock jewel-tones & mineral relief* |
 
 ---
 
