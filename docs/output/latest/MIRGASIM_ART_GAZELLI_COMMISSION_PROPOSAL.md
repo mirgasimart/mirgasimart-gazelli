@@ -4,8 +4,9 @@
 **Commissioning Body**: Gazelli Art House (London / Baku)  
 **Representing Atelier**: Mirgasim Art Studio (Baku, Azerbaijan)  
 **Executive Master Dossier (PDF)**: [MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf](MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf)  
-**Museum Archival Exhibition Plates**: [exhibition_plates/](exhibition_plates/)  
-**Protected Distribution Copies**: [watermarked/](watermarked/)  
+**Museum Archival Exhibition Plates**: [_exhibition_plates/](_exhibition_plates/)  
+**Protected Distribution Copies**: [_watermarked/](_watermarked/)  
+**Clean Production Masters**: [_clean/](_clean/)  
 **Copyright & Trademark Notice**: MIRGASIM ART™ is a registered trademark of Mirgasim Art Studio. All visual concepts, chemical formulations, and curatorial narratives are protected under international copyright law. © 2026 Mirgasim Art Studio. All rights reserved.
 
 ---
@@ -179,11 +180,11 @@ Mirgasim Art Studio maintains the technical infrastructure, raw mineral extracti
 1. **Executive Master PDF Dossier**:
    - [`MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf`](MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf) (6-Page complete presentation).
 2. **Museum Archival Exhibition Plates**:
-   - [`exhibition_plates/`](exhibition_plates/) — Full-bleed gallery passe-partout editions formatted for auction catalogues and executive review.
+   - [`_exhibition_plates/`](_exhibition_plates/) — Full-bleed gallery passe-partout editions formatted for auction catalogues and executive review.
 3. **Protected Digital Client Copies**:
-   - [`watermarked/`](watermarked/) — Embedded with the refined obsidian-and-gold MIRGASIM ART™ studio seal.
-4. **Unwatermarked Master Plates**:
-   - Preserved in this directory for gallery production and high-definition architectural rendering.
+   - [`_watermarked/`](_watermarked/) — Embedded with the refined obsidian-and-gold MIRGASIM ART™ studio seal.
+4. **Clean Unwatermarked Production Masters**:
+   - [`_clean/`](_clean/) — Preserved in pristine archival master resolution for gallery production and high-definition architectural rendering.
 
 ---
 **MIRGASIM ART STUDIO**  

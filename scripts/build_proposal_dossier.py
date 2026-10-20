@@ -19,17 +19,18 @@ import re
 
 def generate_dossier_html(use_watermarked=True):
     """Builds the 6-page HTML document with strict page-budget print CSS."""
-    img_dir = "docs/output/latest/watermarked" if use_watermarked else "docs/output/latest"
-    if not os.path.exists(img_dir):
-        img_dir = "docs/output/latest"
-
     cwd = os.getcwd()
 
     def get_img_uri(rel_path):
-        full_path = os.path.join(cwd, img_dir, rel_path)
-        if not os.path.exists(full_path):
-            full_path = os.path.join(cwd, "docs/output/latest", rel_path)
-        return f"file://{full_path}"
+        if use_watermarked:
+            dirs = ["docs/output/latest/_watermarked", "docs/output/latest/watermarked", "docs/output/latest"]
+        else:
+            dirs = ["docs/output/latest/_clean", "docs/output/latest"]
+        for d in dirs:
+            full_path = os.path.join(cwd, d, rel_path)
+            if os.path.exists(full_path):
+                return f"file:///{full_path.replace(os.sep, '/')}"
+        return f"file:///{os.path.join(cwd, 'docs/output/latest', rel_path).replace(os.sep, '/')}"
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
