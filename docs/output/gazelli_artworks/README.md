@@ -3,7 +3,7 @@
 
 ### Curatorial Statement & Vision
 Responding to the highest standards of contemporary fine art at **Gazelli Art House**, this collection explores authentic Absheron signatures and Caspian endemism through the physical substances of the land:
-- **Salt Monoliths & Brine Mining Architecture** (Masazir Pink Lake & Caspian Seal)
+- **Lyrical Absheron Coastal Terrain & Salt Ledge** (Absheron Stone Walls, Fig Trees, Masazir Salt & Caspian Seal)
 - **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone, Coquina & Fossil Didacna)
 - **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore & Marine Shad)
 - **Radical Volcanic Earth-Art** (Lokbatan Crater Craquelure & Armored Caspian Goby)
@@ -15,18 +15,18 @@ Mirgasim’s core visual DNA—thick sculptural palette-knife impasto, tactile m
 
 ## Catalog of Artworks
 
-### 1. *The Salt Monoliths of Masazir* (*Masazır Duz Monolitləri və Xəzər Suiti*)
-![The Salt Monoliths of Masazir](01_the_solitary_of_masazir_caspian_seal.jpg)
+### 1. *Sun Over Absheron: The Caspian Seal and Salt Ledge* (*Abşeron Günəşi: Xəzər Suiti və Duz Qayası*)
+![Sun Over Absheron](01_the_solitary_of_masazir_caspian_seal.jpg)
 
-- **Genre**: Minimalist Geological-Architectural Landscape
+- **Genre**: Lyrical Absheron School Landscape / Coastal Geological Painting
 - **Dimensions**: 100 × 150 cm (Portrait, Painting Specification from Brief)
 - **Endemic Caspian Wildlife**: Caspian Seal (*Pusa caspica*)
 - **Selected Absheron Materials**:
-  - **Masazir Pink Lake Salt**: Crystalline salt encrustations integrated directly into the impasto on the limestone shelf.
-  - **Absheron Limestone**: Porous cream limestone ground and sculpted geometric salt obelisks.
-  - **Natural Bitumen**: Fine dark lines tracing the weathered timber stakes and horizon.
+  - **Masazir Pink Lake Salt**: Natural crystalline salt clusters embedded directly into the impasto along the foreground coquina shelf.
+  - **Absheron Limestone**: Porous cream-and-ochre limestone ground forming traditional dry-stone walls (*daş hasar*).
+  - **Coquina (Shell Limestone)**: Textured coastal ledge supporting the seal.
 - **Curatorial Narrative**:
-  A serene, surrealist landscape capturing the blush-pink brine of Lake Masazir. Minimalist geometric monoliths and pyramids carved from salt and limestone rise from the water alongside weathered wooden brine-extraction stakes. Resting on a salt-encrusted ledge is a solitary Caspian seal, its spotted coat glistening with salt grains beneath an impasto sky scored with subtle golden solar lines. *(No carpets; pure geological-architectural minimalism).*
+  Channeling the lyrical, sun-drenched modernist tradition of master Sattar Bahlulzade and the Absheron School, this work captures the unmistakable essence of the Absheron coast. Winding through the sun-baked, golden-ochre bluffs are traditional dry-stone limestone walls (*daş hasar*), accompanied by wind-twisted Absheron fig trees (*əncir ağacları*) sculpted by the northern *Khazri* wind. Below, the glowing turquoise Caspian Sea stretches toward a radiant horizon. Resting peacefully in the foreground on a porous coquina shelf encrusted with genuine pink-and-white Masazir salt crystals is a solitary Caspian seal (*Pusa caspica*), its silver-grey mottled coat glistening under the warm Absheron sun. *(Unmistakably Absheron; zero pyramids, zero towers, zero carpets).*
 
 ---
 
