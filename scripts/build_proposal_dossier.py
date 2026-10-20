@@ -729,7 +729,7 @@ def find_browser_executable():
     return "chrome"
 
 def build_pdf(use_watermarked=True):
-    """Compiles HTML into an exact 6-page PDF via headless Chrome/Edge."""
+    """Compiles HTML into an exact 7-page PDF via headless Chrome/Edge."""
     import shutil
     html_content = generate_dossier_html(use_watermarked=use_watermarked)
 
@@ -743,15 +743,15 @@ def build_pdf(use_watermarked=True):
     header_html = (
         '<div style="font-size: 7pt; width: 100%; display: flex; justify-content: space-between; '
         'padding: 0 18mm; font-family: -apple-system, sans-serif; color: #888; text-transform: uppercase; letter-spacing: 1px;">'
-        '<span>MIRGASIM ART™ | Curatorial Commission Dossier</span>'
-        '<span>Gazelli Art House</span>'
+        '<span>MIRGASIM ART STUDIO | Curatorial Commission Dossier</span>'
+        '<span>Gazelli Art House (London / Baku)</span>'
         '</div>'
     )
 
     footer_html = (
         '<div style="font-size: 7pt; width: 100%; display: flex; justify-content: space-between; '
         'padding: 0 18mm; font-family: -apple-system, sans-serif; color: #888; letter-spacing: 0.5px;">'
-        '<span>Confidential Fine Art Proposal © 2026 Mirgasim Art. All Rights Reserved.</span>'
+        '<span>Commission Selection Proposal © 2026 Mirgasim Art Studio. All Rights Reserved.</span>'
         '<span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>'
         '</div>'
     )
@@ -768,7 +768,7 @@ def build_pdf(use_watermarked=True):
         f"file:///{os.path.abspath(tmp_html).replace(os.sep, '/')}"
     ]
 
-    print(f"Compiling 6-Page Luxury PDF Dossier via {browser_bin}...")
+    print(f"Compiling 7-Page Luxury PDF Dossier via {browser_bin}...")
     res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if os.path.exists(tmp_html):
         os.remove(tmp_html)
@@ -776,7 +776,7 @@ def build_pdf(use_watermarked=True):
     if os.path.exists(out_pdf):
         shutil.copyfile(out_pdf, readme_pdf)
         size_mb = os.path.getsize(out_pdf) / (1024 * 1024)
-        print(f"SUCCESS: Generated 6-Page Luxury Dossier ({size_mb:.2f} MB):")
+        print(f"SUCCESS: Generated 7-Page Luxury Dossier ({size_mb:.2f} MB):")
         print(f"  -> {out_pdf}")
         print(f"  -> {readme_pdf}")
     else:
@@ -784,7 +784,7 @@ def build_pdf(use_watermarked=True):
         print(res.stderr.decode(errors='ignore'))
 
 def main():
-    parser = argparse.ArgumentParser(description="Mirgasim Art - 6-Page Luxury PDF Dossier Builder")
+    parser = argparse.ArgumentParser(description="Mirgasim Art Studio - 7-Page Luxury PDF Dossier Builder")
     parser.add_argument("--clean", action="store_true", help="Use unwatermarked master artworks instead of watermarked")
     args = parser.parse_args()
 
