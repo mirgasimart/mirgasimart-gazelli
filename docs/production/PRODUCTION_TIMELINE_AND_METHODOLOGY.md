@@ -1,6 +1,6 @@
 # Production Methodology & Strategic Timelines: 5-Artwork Commission
 
-Executing five monumental and medium-scale mixed-media masterworks (100×150 cm to 150×200 cm) by hand requires strict studio management. Working with disparate geological matter (drying volcanic clay, oxidizing bitumen, moisture-sensitive salt, and heavy oil impasto) demands an **assembly-line batching methodology** rather than painting canvases one by one.
+Executing five monumental, medium-scale, and intimate mixed-media masterworks (40×60 cm to 185×120 cm) by hand requires strict studio management. Working with disparate geological matter (drying volcanic clay, oxidizing bitumen, moisture-sensitive salt, and heavy oil impasto) demands an **assembly-line batching methodology** rather than painting canvases one by one.
 
 ---
 

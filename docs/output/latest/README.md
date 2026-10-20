@@ -51,7 +51,7 @@ To protect studio copyright and provenance across digital and print distribution
 ![The Shebeke Reliquary](02_the_weaver_of_sunken_shells_didacna.jpg)
 
 - **Genre**: Architectural Stone Frieze & Paleontological Matter Relief
-- **Dimensions**: 150 × 200 cm (Vertical Monumental Canvas, Specification from Brief)
+- **Dimensions**: 40 × 60 cm (Vertical Format Canvas, Specification from Brief)
 - **Endemic Caspian Organism**: Caspian Cockle (*Didacna trigonoides* / *Didacna pyramidata*)
 - **Selected Absheron Materials**:
   - **Coquina (Shell Limestone)**: Heavy, porous quarry coquina forming the structural wall.

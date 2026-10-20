@@ -44,7 +44,7 @@ To ensure maximum curatorial resonance, all proposals must position themselves w
 ---
 
 ## 4. The 5-Artwork Distribution Strategy (Straddling the Dilemma)
-When presenting the 5 core deliverables, the portfolio is strategically balanced according to a **3:2 Hybrid Straddle**, tailored for intimate-to-medium luxury gallery formats (100×150 cm to 150×200 cm):
+When presenting the 5 core deliverables, the portfolio is strategically balanced according to a **3:2 Hybrid Straddle**, tailored for intimate-to-monumental luxury gallery formats (40×60 cm to 185×120 cm):
 
 ### Group A: The Mineral Sanctuary (3 Works) — Grounding Hypothesis 1
 *Resonates deeply with Gazelli's wellness philosophy of raw geological healing matter:*
@@ -53,7 +53,7 @@ When presenting the 5 core deliverables, the portfolio is strategically balanced
    - *Materials*: Masazir pink lake salt crystals, Absheron limestone, raw timber lineaments.
    - *Atmosphere*: Serene, meditative geological minimalism; crystalline brine and calm mammal.
 2. **Work 2: *The Shebeke Reliquary: Fossil Didacna in Absheron Stone*** (*Didacna* Cockles)
-   - *Dimensions*: 150 × 200 cm (Vertical Canvas)
+   - *Dimensions*: 40 × 60 cm (Vertical Canvas)
    - *Materials*: Porous coquina quarry stone, beach sand, genuine fossil Didacna bivalve shells.
    - *Atmosphere*: Tactile architectural masonry, ancient stone carving (*daş yonma*), paleontological sea fossils.
 3. **Work 3: *Breath of Lokbatan: Volcanic Crater and Armored Goby*** (*Benthophilus* / Caspian Tadpole Goby)

@@ -372,7 +372,7 @@ def generate_dossier_html(use_watermarked=True):
         <tr>
           <td><strong>02</strong></td>
           <td><em>The Shebeke Reliquary: Fossil Didacna</em></td>
-          <td>150 &times; 200 cm</td>
+          <td>40 &times; 60 cm</td>
           <td>Coquina Stone, Coastal Sand</td>
           <td><em>Didacna</em> Cockle Shells</td>
         </tr>
@@ -459,7 +459,7 @@ def generate_dossier_html(use_watermarked=True):
     <table class="specs-grid">
       <tr>
         <td class="spec-name">Dimensions</td>
-        <td class="spec-val"><strong>150 &times; 200 cm</strong> (Vertical Monumental Canvas, Specification from Brief)</td>
+        <td class="spec-val"><strong>40 &times; 60 cm</strong> (Vertical Format Canvas, Specification from Brief)</td>
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
