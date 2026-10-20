@@ -57,7 +57,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 ### Plate 01: *Luminescence of Masazir Dawn*
 *Masazır Şəfəqi: Çəhrayı Duz Gölü*
 
-![Plate 01: Luminescence of Masazir Dawn](01_luminescence_of_masazir_salt_dawn.jpg)
+![Plate 01: Luminescence of Masazir Dawn](_clean/01_luminescence_of_masazir_salt_dawn.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_01_luminescence_of_masazir_salt_dawn.jpg)
 
 - **Genre**: Pure Mineral Abstraction / Lacustrine Strata Painting
@@ -75,7 +75,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 ### Plate 02: *The Shebeke Reliquary: Fossil Didacna in Absheron Stone*
 *Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə*
 
-![Plate 02: The Shebeke Reliquary](02_the_weaver_of_sunken_shells_didacna.jpg)
+![Plate 02: The Shebeke Reliquary](_clean/02_the_weaver_of_sunken_shells_didacna.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_02_the_weaver_of_sunken_shells_didacna.jpg)
 
 - **Genre**: Mixed-Media Painting on Canvas / Tactile Stone Relief
@@ -94,7 +94,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 ### Plate 03: *The Binagadi Derrick: Hydrocarbon Strata & Pyrite Shad*
 *Binaqədi Buruğu: Qara Qızıl və Pirit Şad*
 
-![Plate 03: The Binagadi Derrick](03_keeper_of_the_cold_depths_caspian_shad.jpg)
+![Plate 03: The Binagadi Derrick](_clean/03_keeper_of_the_cold_depths_caspian_shad.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_03_keeper_of_the_cold_depths_caspian_shad.jpg)
 
 - **Genre**: Industrial-Geological Abstraction / Hydrocarbon Matter Painting
@@ -113,7 +113,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 ### Plate 04: *Breath of Lokbatan: Volcanic Crater and Armored Goby*
 *Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi*
 
-![Plate 04: Breath of Lokbatan](04_breath_of_lokbatan_tadpole_goby.jpg)
+![Plate 04: Breath of Lokbatan](_clean/04_breath_of_lokbatan_tadpole_goby.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_04_breath_of_lokbatan_tadpole_goby.jpg)
 
 - **Genre**: Earth-Art Vortex / Geothermal Mineral Painting
@@ -133,7 +133,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 ### Plate 05: *The Gobustan Solar Oracle: Ouroboros Lamprey*
 *Qobustan Günəşi: İlanbalığı və Qədim Qaya Təsvirləri*
 
-![Plate 05: The Gobustan Solar Oracle](05_the_lampreys_vigil_caspian_lamprey.jpg)
+![Plate 05: The Gobustan Solar Oracle](_clean/05_the_lampreys_vigil_caspian_lamprey.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_05_the_lampreys_vigil_caspian_lamprey.jpg)
 
 - **Genre**: Mythological Contemporary Altar Piece / Archaeological Totem
