@@ -1,104 +1,102 @@
-# Gazelli Art House Exhibition Proposal
-## *Absheron Tectonics: Primordial Matter & The Inland Sea*
+# Gazelli Art House Exhibition Proposal (Latest Active Version)
+## *Absheron Tectonics: Primordial Matter & Beyond the Loom*
 
 ### Curatorial Statement & Vision
-Departing from conventional representation, this series of five monumental works synthesizes the distinctive visual language of **Mirgasim**—heavy sculptural palette-knife impasto, deep linear sgraffito incisions, raw mineral materiality, and deconstructed Azerbaijani textile motifs—with the ancient geological and ecological soul of the Absheron Peninsula and the Caspian Sea.
-
-Conceived specifically for the curatorial standards of **Gazelli Art House**, the series expands beyond traditional portraiture into diverse, cutting-edge contemporary genres:
-- **Tectonic Abstract Landscapes** (Masazir Salt Flats)
-- **Stratigraphic Paleontological Wall Reliefs** (Coquina & Didacna Fossil Strata)
-- **Hydrocarbon Abyssal Vortices** (Binagadi Bitumen, Caspian Shad & Pyrite Ore)
+Responding to the highest standards of contemporary fine art at **Gazelli Art House**, this latest series transcends conventional regional clichés and literal decorative repetition. Instead of pervasive carpet motifs across all works, the collection pushes into diverse, intellectually rigorous, and authentic Absheron signatures:
+- **Salt Monoliths & Brine Mining Architecture** (Masazir Pink Lake)
+- **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone & Coquina)
+- **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore)
 - **Radical Volcanic Earth-Art** (Lokbatan Crater Craquelure & Armored Goby)
-- **Mythological Petroglyphic Mandalas** (Ouroboros Caspian Lamprey & Concentric Mineral Halos)
+- **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Sand Mandala, and the **sole, solitary heirloom textile shard** in the collection)
 
-Each piece physically incorporates authentic raw materials harvested from the Absheron environment alongside endemic Caspian species, establishing a visceral dialogue between Azerbaijan's hydrocarbon heritage, prehistoric rock art, and contemporary fine art abstraction.
+Mirgasim’s core visual DNA—thick sculptural palette-knife impasto, tactile mineral reliefs, deep sgraffito incisions, and raw earthen contrasts—is preserved while expanding into architectural, geological, and mythic dimensions.
 
 ---
 
 ## Catalog of Artworks
 
-### 1. *Tides of Masazir: The Submerged Witness* (*Masazır Çəhrayı Duzları və Şahid*)
-![Tides of Masazir](01_the_solitary_of_masazir_caspian_seal.jpg)
+### 1. *The Salt Monoliths of Masazir* (*Masazır Duz Monolitləri və Xəzər Suiti*)
+![The Salt Monoliths of Masazir](01_the_solitary_of_masazir_caspian_seal.jpg)
 
-- **Genre**: Tectonic Abstract-Geological Landscape
+- **Genre**: Minimalist Geological-Architectural Landscape
 - **Dimensions**: 100 × 150 cm (Portrait, Painting Specification from Brief)
 - **Endemic Caspian Wildlife**: Caspian Seal (*Pusa caspica*)
 - **Selected Absheron Materials**:
-  - **Masazir Pink Lake Salt**: Crystalline lake salt encrusted directly into the gesso ground and palette-knife impasto, creating real saline crystallization.
-  - **Absheron Limestone & Shell Coquina**: Pulverized into the chalky white ridges and bone-colored shoreline.
-  - **Natural Bitumen**: Liquid asphaltite used to paint the dark abyssal pool and fault lines.
+  - **Masazir Pink Lake Salt**: Crystalline salt encrustations integrated directly into the impasto on the limestone shelf.
+  - **Absheron Limestone**: Porous cream limestone ground and sculpted geometric salt obelisks.
+  - **Natural Bitumen**: Fine dark lines tracing the weathered timber stakes and horizon.
 - **Curatorial Narrative**:
-  An aerial-perspectival landscape capturing the surreal blush-pink salt plains of Lake Masazir meeting the ink-black depths of the Caspian shoreline. Emerging from the crystalline salt flats is the solitary, primordial form of the Caspian seal (*Pusa caspica*), while deconstructed fragments of Shirvan kilim carpets with hand-knotted white fringes are scored directly into the tectonic salt crust like ancient sacred channels.
+  A serene, surrealist landscape capturing the blush-pink brine of Lake Masazir. Minimalist geometric monoliths and pyramids carved from salt and limestone rise from the water alongside weathered wooden brine-extraction stakes. Resting on a salt-encrusted ledge is a solitary Caspian seal, its spotted coat glistening with salt grains beneath an impasto sky scored with subtle golden solar lines. *(No carpets; pure geological-architectural minimalism).*
 
 ---
 
-### 2. *Paleotethys Archives: Reliquary of the Inland Sea* (*Didacna: Qədim Dənizin Arxivləri*)
-![Paleotethys Archives](02_the_weaver_of_sunken_shells_didacna.jpg)
+### 2. *The Shebeke Reliquary: Fossil Didacna in Absheron Stone* (*Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə*)
+![The Shebeke Reliquary](02_the_weaver_of_sunken_shells_didacna.jpg)
 
-- **Genre**: Stratigraphic Architectural Matter Relief
+- **Genre**: Architectural Stone Frieze & Paleontological Matter Relief
 - **Dimensions**: 150 × 200 cm (Vertical Monumental Canvas, Specification from Brief)
 - **Endemic Caspian Organism**: Caspian Cockle (*Didacna trigonoides* / *Didacna pyramidata*)
 - **Selected Absheron Materials**:
-  - **Coquina (Shell Limestone)**: Porous shell-rich quarry limestone built up into a high-relief architectural frieze.
-  - **Absheron Coastal Beach Sand**: Coarse shell-laden coastal sand pressed into the wet mortar and oil glaze.
-  - **Natural Caspian Didacna Shells**: Natural fossilized and modern Didacna bivalve shells protruding in high sculptural relief.
+  - **Coquina (Shell Limestone)**: Heavy, porous quarry coquina forming the structural wall.
+  - **Absheron Beach Sand**: Coastal sand mixed into the wet plaster relief.
+  - **Natural Caspian Didacna Shells**: Genuine fossilized and contemporary Didacna bivalve shells protruding in high sculptural relief.
 - **Curatorial Narrative**:
-  A stratigraphic cross-section of Absheron's deep time. Carved directly into the coquina limestone impasto are the crenellations and watchtowers of Absheron fortress architecture (Mardakan and Ramana), juxtaposed with cascading azure-blue and madder-red Azerbaijani carpet weaves with long hanging fringes. Radiating Didacna cockles act as geological time capsules from the prehistoric Paratethys Sea.
+  Celebrating Absheron's ancient stone carving heritage (*daş yonma*), this monumental work depicts a coquina wall with an intricate geometric stone Shebeke window lattice. Behind the stone tracery glow luminous glazes of Caspian turquoise and deep lapis lazuli. Protruding from the limestone are radiant Didacna cockles, while a single elongated, sculpted hand touches the stone window frame, linking human craftsmanship with deep geological time. *(No carpets; pure architectural masonry & fossil relief).*
 
 ---
 
-### 3. *The Black Gold Vortex: Fire Under Water* (*Qara Qızıl və Qaranlıq Suların Cərəyanı*)
-![The Black Gold Vortex](03_keeper_of_the_cold_depths_caspian_shad.jpg)
+### 3. *The Binagadi Derrick: Hydrocarbon Strata & Pyrite Shad* (*Binaqədi Buruğu: Qara Qızıl və Pirit Şad*)
+![The Binagadi Derrick](03_keeper_of_the_cold_depths_caspian_shad.jpg)
 
-- **Genre**: Hydrocarbon Abyssal Abstraction / Dynamic Matter Painting
+- **Genre**: Industrial-Geological Abstraction / Hydrocarbon Matter Painting
 - **Dimensions**: 120 × 200 cm (Vertical Panoramic Canvas, Specification from Brief)
 - **Endemic Caspian Wildlife**: Caspian Marine Shad / Brazhnikov’s Shad (*Alosa braschnikowi*)
 - **Selected Absheron Materials**:
-  - **Natural Absheron Bitumen (Fatmai & Binagadi deposits)**: Raw, viscous hydrocarbons applied in thick, knife-sculpted swirls, providing an obsidian, velvety depth.
-  - **Pyrite Aggregates**: Crushed metallic mud-volcano sulfide mineral aggregates embedded into the fish scales, producing an authentic golden specular luster.
-  - **Mud-Volcano Silt Clay**: Matte subterranean clay blended into the underpainting.
+  - **Natural Absheron Bitumen (Binagadi & Fatmai deposits)**: Pure unrefined asphaltite applied in thick, viscous knife-strokes.
+  - **Pyrite Mineral Aggregates**: Irregular metallic brassy-gold sulfide crystals embedded into the fish scales.
+  - **Absheron Limestone Powder**: Providing stark, chalky white contrast against the black bitumen.
 - **Curatorial Narrative**:
-  Engaging directly with Azerbaijan’s identity as the "Land of Fire" (*Odlar Yurdu*) and cradle of the global petroleum industry, this dynamic composition depicts an oceanic maelstrom of liquid bitumen. Trapped in this abyssal vortex, a school of Caspian marine shad circles in a luminous spiral, illuminated by pyrite gold flecks and submerged fragments of burning crimson carpet weaves.
+  Engaging directly with Baku’s historic role as the pioneer of world petroleum, this dynamic piece juxtaposes sharp, minimalist scaffolding beams inspired by historic wooden oil derricks against slabs of pitch-black bitumen. Leaping through the dark structural lines is a Caspian marine shad adorned with shimmering pyrite ore, above an eternal natural gas flame (*Yanar Dağ / Ateshgah*) burning in the foreground. *(No carpets; industrial heritage meeting abyssal marine life).*
 
 ---
 
-### 4. *Breath of Lokbatan: Volcanic Crater and Primordial Goby* (*Lökbatan Nəfəsi və Daşlaşmış Qobi*)
+### 4. *Breath of Lokbatan: Volcanic Crater and Armored Goby* (*Lökbatan Nəfəsi və Daşlaşmış Qobi*)
 ![Breath of Lokbatan](04_whisper_of_the_mud_volcano_caspian_goby.jpg)
 
-- **Genre**: Earth-Art Matter Painting & Tectonic Surrealism
+- **Genre**: Earth-Art Matter Painting & Tectonic Craquelure
 - **Dimensions**: 180 × 180 cm (Square Format, Specification from Brief)
 - **Endemic Caspian Wildlife**: Caspian Tadpole Goby (*Benthophilus* spp.)
 - **Selected Absheron Materials**:
-  - **Mud-Volcano Clay (Ejecta from Lokbatan / Gobustan)**: Authentic subterranean volcanic clay applied in heavy impasto and dried into genuine geological craquelure (fissures).
-  - **Absheron Limestone Dust**: Integrated to add textural tooth and structural stability.
-  - **Natural Bitumen & Organic Pigments**: Tracing skeletal roots and geological strata.
+  - **Mud-Volcano Clay (Ejecta from Lokbatan / Gobustan)**: Authentic volcanic clay applied in heavy impasto and cured into deep, natural craquelure fissures.
+  - **Absheron Limestone**: Porous limestone dust for structural relief.
+  - **Natural Bitumen**: Fluid lines defining ancient root systems.
 - **Curatorial Narrative**:
-  A radical exploration of Absheron's volcanic typography. At the epicenter of a swirling mud-volcano crater rests an armored, petrified Caspian tadpole goby—an ancient endemic bottom-dweller perfectly adapted to the mineral-rich waters. Erupting through the volcanic craquelure fissures are sumptuous woven Azerbaijani carpets with knotted fringes and tangled roots, symbolizing culture springing from the primordial earth.
+  A tactile vortex of dried mud-volcano ejecta with natural craquelure fissures. Perched on a volcanic ridge is the prehistoric, armored Caspian tadpole goby—an ancient endemic bottom-dweller whose stone-like tubercles blend into the mineral ground. Organic roots weave across the tectonic vortex, embodying the subterranean forces of Absheron.
 
 ---
 
-### 5. *Totem of the Caspian: The Ouroboros Mandala* (*Xəzərin Totemi: İlanbalığı və Əbədi Halə*)
-![Totem of the Caspian](05_the_lampreys_vigil_caspian_lamprey.jpg)
+### 5. *The Gobustan Solar Oracle: Ouroboros Lamprey & The Sole Textile Shard* (*Qobustan Günəşi: İlanbalığı və Yeganə Xalça Qalığı*)
+![The Gobustan Solar Oracle](05_the_lampreys_vigil_caspian_lamprey.jpg)
 
 - **Genre**: Mythological Totemic Icon / Contemporary Symbolist Altar Piece
 - **Dimensions**: 100 × 150 cm (Portrait Specification from Brief)
 - **Endemic Caspian Wildlife**: Caspian Lamprey (*Caspiomyzon wagneri*)
 - **Selected Absheron Materials**:
-  - **Absheron Coastal Beach Sand**: Concentric rings textured with raw Caspian beach sand.
+  - **Absheron Coastal Beach Sand**: Concentric rings textured with raw beach sand.
   - **Masazir Lake Salt Crystals**: Saline clusters embedded along the cyan-blue outer orbital halo.
-  - **Absheron Limestone & Bone Plaster**: Deeply scored with Gobustan-style petroglyphic sgraffito.
+  - **Absheron Limestone & Bone Plaster**: Sgraffito incisions depicting Gobustan rock petroglyphs.
 - **Curatorial Narrative**:
-  A transcendental contemporary icon uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey—a jawless, eel-like living fossil unchanged for hundreds of millions of years—coils into a sacred Ouroboros circle of eternal return. Behind it radiates a textured sun-halo mandala flanked by floating Shirvan carpet corners with thick wool fringes, surrounded by carved Gobustan petroglyphs (shamans, archers, and sacred bulls).
+  A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved into the border are Gobustan petroglyphs (reed boats, hunters, and sacred bulls), accompanied by **the single, solitary heirloom textile shard in the entire exhibition**—treated as a precious historical relic rather than a ubiquitous pattern.
 
 ---
 
 ## Technical Integration & Absheron Materiality
 
 1. **Mineral Priming**:
-   Canvases are grounded with a specialized limestone-and-coquina primer that mimics the porous facade of Baku stone architecture.
+   Canvases are grounded with an authentic limestone-and-coquina primer replicating the porous masonry of Baku.
 2. **True Craquelure & Salt Accents**:
-   Mud-volcano clay and Masazir salt crystals are cured naturally onto the support, creating authentic 3D textural surfaces impossible to replicate with synthetic mediums.
-3. **Hydrocarbon Glazing**:
-   Authentic bitumen from Absheron oil seepages provides a deep, warm-toned darkness with high historical and cultural resonance.
-4. **Textile Deconstruction**:
-   Azerbaijani carpet motifs are deconstructed from mere decorative patterns into tectonic plates, floating celestial satellites, and archaeological friezes, honouring the national heritage with cutting-edge contemporary boldness.
+   Mud-volcano clay and Masazir salt crystals cure naturally on the support, producing authentic 3D tactile relief.
+3. **Hydrocarbon & Pyrite Glazing**:
+   Authentic bitumen from Absheron seepages provides deep, velvety black fields, while raw pyrite ore catches light with metallic specular highlights.
+4. **Restraint & Conceptual Diversity**:
+   Moving beyond repetitive decorative motifs to celebrate Absheron’s stone architecture, petroleum history, salt lakes, mud volcanoes, and ancient petroglyphs.
