@@ -54,8 +54,8 @@ When presenting the 5 core deliverables, the portfolio is strategically balanced
    - *Atmosphere*: Serene, meditative geological minimalism; crystalline brine and calm mammal.
 2. **Work 2: *The Shebeke Reliquary: Fossil Didacna in Absheron Stone*** (*Didacna* Cockles)
    - *Dimensions*: 40 × 60 cm (Vertical Canvas)
-   - *Materials*: Porous coquina quarry stone, beach sand, genuine fossil Didacna bivalve shells.
-   - *Atmosphere*: Tactile architectural masonry, ancient stone carving (*daş yonma*), paleontological sea fossils.
+   - *Materials*: Mineral limestone ground, coastal sand, oil impasto, subtle embedded Didacna shell accents.
+   - *Atmosphere*: Mixed-media painting on canvas, ancient stone carving motifs (*daş yonma*), low-relief tactile mineral textures.
 3. **Work 3: *Breath of Lokbatan: Volcanic Crater and Armored Goby*** (*Benthophilus* / Caspian Tadpole Goby)
    - *Dimensions*: 120 × 200 cm (Vertical Format)
    - *Materials*: Mud-volcano clay from Lokbatan, natural craquelure fissures, limestone dust.

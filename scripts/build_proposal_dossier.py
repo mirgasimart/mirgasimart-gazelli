@@ -373,7 +373,7 @@ def generate_dossier_html(use_watermarked=True):
           <td><strong>02</strong></td>
           <td><em>The Shebeke Reliquary: Fossil Didacna</em></td>
           <td>40 &times; 60 cm</td>
-          <td>Coquina Stone, Coastal Sand</td>
+          <td>Limestone Ground, Shell Accents</td>
           <td><em>Didacna</em> Cockle Shells</td>
         </tr>
         <tr>
@@ -447,7 +447,7 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="plate-top">
-      <div class="plate-badge">Plate 02 &bull; Architectural Masonry &amp; Fossil Strata</div>
+      <div class="plate-badge">Plate 02 &bull; Mixed-Media Painting on Canvas</div>
       <h3 class="plate-title">The Shebeke Reliquary: Fossil Didacna in Absheron Stone</h3>
       <div class="plate-subtitle">Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə</div>
     </div>
@@ -463,7 +463,7 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
-        <td class="spec-val">Porous Coquina Stone Relief, Absheron Beach Sand Plaster, Fossilized Caspian <em>Didacna</em> Shells in High Sculptural Relief, Turquoise &amp; Lapis Lazuli Glazes</td>
+        <td class="spec-val">Mixed-Media Oil &amp; Mineral Pigments on Stretched Canvas, Absheron Limestone Ground, Heavy Palette-Knife Impasto, Subtle Embedded <em>Didacna</em> Shell Elements, Turquoise &amp; Lapis Lazuli Glazes</td>
       </tr>
       <tr>
         <td class="spec-name">Endemic Organism</td>
@@ -472,7 +472,7 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Curatorial Concept</td>
         <td class="spec-val">
-          Honoring Absheron's ancient stone-carving heritage (<em>daş yonma</em>), a heavy coquina wall reveals an intricate geometric stone Shebeke window lattice. Behind the carved aperture glow deep Caspian turquoise and lapis lazuli glazes. Protruding from the masonry are radiant <em>Didacna</em> cockles, while an elongated sculpted hand touches the stone frame, linking human craftsmanship with deep geological time.
+          An intimate mixed-media painting on canvas honoring Absheron's stone-carving traditions (<em>daş yonma</em>). Thick palette-knife impasto and porous limestone-sand grounds evoke the tactile presence of Baku stone, framing an intricate painted Shebeke geometric window. Luminous glazes of Caspian turquoise and lapis lazuli glow within the tracery, accentuated by finely embedded small <em>Didacna</em> cockle shells providing delicate, low-relief tactile dimensionality to the canvas surface.
         </td>
       </tr>
     </table>

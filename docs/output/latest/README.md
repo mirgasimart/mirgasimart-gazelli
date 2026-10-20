@@ -11,7 +11,7 @@
 ### Curatorial Statement & Vision
 Responding to the highest standards of contemporary fine art at **Gazelli Art House**, this collection explores authentic Absheron signatures and Caspian endemism through the physical substances of the land:
 - **Saline Strata of Masazir: Crystalline Lakebed Abstraction** (Lake Masazir Pink Salt, Mineral Terraces & Sgraffito)
-- **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone, Coquina & Fossil Didacna)
+- **Shebeke Window Tracery & Paleontological Strata** (Absheron Limestone Ground, Sand Texture & Subtle Didacna Shell Accents)
 - **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore & Marine Shad)
 - **Work 04: [Atelier Development in Progress]** (180 × 180 cm Square Canvas, Reserved for Volcanic Craquelure & Caspian Greenish-Blue Glazes)
 - **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Beach Sand Mandala & Incised Rock Petroglyphs)
@@ -50,15 +50,15 @@ To protect studio copyright and provenance across digital and print distribution
 ### 2. *The Shebeke Reliquary: Fossil Didacna in Absheron Stone* (*Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə*)
 ![The Shebeke Reliquary](02_the_weaver_of_sunken_shells_didacna.jpg)
 
-- **Genre**: Architectural Stone Frieze & Paleontological Matter Relief
+- **Genre**: Mixed-Media Painting on Canvas / Tactile Mineral Impasto
 - **Dimensions**: 40 × 60 cm (Vertical Format Canvas, Specification from Brief)
 - **Endemic Caspian Organism**: Caspian Cockle (*Didacna trigonoides* / *Didacna pyramidata*)
 - **Selected Absheron Materials**:
-  - **Coquina (Shell Limestone)**: Heavy, porous quarry coquina forming the structural wall.
-  - **Absheron Beach Sand**: Coastal sand mixed into the wet plaster relief.
-  - **Natural Caspian Didacna Shells**: Genuine fossilized and contemporary Didacna bivalve shells protruding in high sculptural relief.
+  - **Absheron Limestone & Coquina Primer**: Fine quarry coquina and porous limestone powder integrated into the gesso ground for authentic mineral tooth.
+  - **Absheron Coastal Sand**: Natural coastal sand blended into palette-knife impasto.
+  - **Subtle Natural Caspian Didacna Accents**: Small, genuine Didacna bivalve shells delicately embedded into the impasto surface for subtle tactile low-relief dimensionality.
 - **Curatorial Narrative**:
-  Celebrating Absheron's ancient stone carving heritage (*daş yonma*), this monumental work depicts a coquina wall with an intricate geometric stone Shebeke window lattice. Behind the stone tracery glow luminous glazes of Caspian turquoise and deep lapis lazuli. Protruding from the limestone are radiant Didacna cockles, while a single elongated, sculpted hand touches the stone window frame, linking human craftsmanship with deep geological time. *(No carpets; pure architectural masonry & fossil relief).*
+  Celebrating Absheron's ancient stone-carving heritage (*daş yonma*), this intimate vertical painting on canvas captures a weather-worn Shebeke window lattice rendered in thick palette-knife impasto and porous mineral grounds. Behind the painted geometric tracery glow luminous glazes of Caspian turquoise and deep lapis lazuli. The painted surface is enriched with subtle low-relief physical accents—authentic small Didacna cockle shells embedded into the impasto crust—while an elongated painted hand rests against the window aperture, bridging human craftsmanship and deep geological time. *(Mixed-media painting on canvas; subtle tactile low-relief elements; no freestanding or wall sculptures, no carpets).*
 
 ---
 
