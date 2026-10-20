@@ -1,141 +1,175 @@
 #!/usr/bin/env python3
 """
-Mirgasim Art Studio - Modular Artwork Copyright Watermarking Utility
-===================================================================
-Applies an elegant, museum-grade typographic wordmark onto generated artworks
-to protect copyright and provenance for external client and gallery distribution.
-
-Usage:
-    # Watermark all active artworks in docs/output/latest:
-    python3 scripts/watermark_artworks.py
-
-    # Watermark a specific file:
-    python3 scripts/watermark_artworks.py --input path/to/img.jpg --output path/to/out.jpg
-
-    # Generate standalone transparent PNG wordmark assets:
-    python3 scripts/watermark_artworks.py --export-wordmark-assets
+Mirgasim Art Studio - Luxury Typographic Watermarking & Exhibition Plate Utility
+================================================================================
+Renders ultra-premium, museum-grade typographic wordmarks and archival exhibition
+plates for Gazelli Art House commission proposals.
 """
 
 import os
 import sys
 import argparse
-import glob
 from PIL import Image, ImageDraw, ImageFont
 
-FONT_PATH_HELVETICA = "/System/Library/Fonts/HelveticaNeue.ttc"
-FONT_PATH_ARIAL = "/System/Library/Fonts/Supplemental/Arial.ttf"
-FONT_PATH_GEORGIA = "/System/Library/Fonts/Supplemental/Georgia.ttf"
+# Cross-platform font discovery with full Azerbaijani Unicode support (Segoe UI, Arial, Calibri)
+CANDIDATE_FONTS = {
+    "title_bold": [
+        r"C:\Windows\Fonts\segoeuib.ttf",
+        r"C:\Windows\Fonts\arialbd.ttf",
+        "/System/Library/Fonts/HelveticaNeue.ttc",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    ],
+    "body_regular": [
+        r"C:\Windows\Fonts\segoeui.ttf",
+        r"C:\Windows\Fonts\arial.ttf",
+        "/System/Library/Fonts/HelveticaNeue.ttc",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ],
+    "body_italic": [
+        r"C:\Windows\Fonts\segoeuii.ttf",
+        r"C:\Windows\Fonts\ariali.ttf",
+        "/System/Library/Fonts/HelveticaNeue.ttc",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf",
+    ],
+    "serif_bold": [
+        r"C:\Windows\Fonts\timesbd.ttf",
+        r"C:\Windows\Fonts\georgiab.ttf",
+        "/System/Library/Fonts/Supplemental/Georgia Bold.ttf",
+    ],
+    "serif_regular": [
+        r"C:\Windows\Fonts\times.ttf",
+        r"C:\Windows\Fonts\georgia.ttf",
+        "/System/Library/Fonts/Supplemental/Georgia.ttf",
+    ],
+}
 
-def get_font(size, bold=False):
-    """Load system font with graceful fallback."""
-    for path in [FONT_PATH_HELVETICA, FONT_PATH_ARIAL, FONT_PATH_GEORGIA]:
+def resolve_font(style, size):
+    """Finds available system font matching requested style with graceful fallback."""
+    for path in CANDIDATE_FONTS.get(style, []):
         if os.path.exists(path):
             try:
-                index = 1 if bold and "HelveticaNeue" in path else 0
-                return ImageFont.truetype(path, size, index=index)
+                return ImageFont.truetype(path, size)
             except Exception:
                 pass
     return ImageFont.load_default()
 
-def create_wordmark_badge(scale=1.0, is_dark_bg=True):
+def render_tracked_text(draw, pos, text, font, fill, tracking=3):
+    """Renders text with bespoke letter-spacing (tracking)."""
+    x, y = pos
+    total_w = 0
+    for char in text:
+        draw.text((x + total_w, y), char, font=font, fill=fill)
+        bbox = draw.textbbox((0, 0), char, font=font)
+        char_w = bbox[2] - bbox[0]
+        total_w += char_w + tracking
+    return total_w - tracking
+
+def measure_tracked_text(text, font, tracking=3):
+    """Calculates width and height of tracked text string."""
+    dummy = Image.new('RGBA', (1, 1), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(dummy)
+    total_w = 0
+    max_h = 0
+    for char in text:
+        bbox = draw.textbbox((0, 0), char, font=font)
+        char_w = bbox[2] - bbox[0]
+        char_h = bbox[3] - bbox[1]
+        total_w += char_w + tracking
+        if char_h > max_h:
+            max_h = char_h
+    return (max_w := max(0, total_w - tracking), max_h)
+
+def create_luxury_watermark(scale=1.0):
     """
-    Renders the modular MIRGASIM ART wordmark badge as a transparent RGBA image.
-    Features:
-      - Main brand: 'MIRGASIM ART™'
-      - Sub-brand: '© 2026 MIRGASIM ART • ALL RIGHTS RESERVED'
+    Renders an ultra-sharp, high-fashion contemporary studio watermark badge.
+    Inspired by top global contemporary studios (Studio Drift, Hauser & Wirth, Pace).
+    Obsidian slate backdrop with clean architectural typography and subtle hairline border.
     """
-    title_size = max(18, int(22 * scale))
-    sub_size = max(9, int(10 * scale))
-    pad_x = int(24 * scale)
-    pad_y = int(14 * scale)
+    ss = 2 # 2x supersampling for razor-sharp anti-aliased output
+    title_size = int(14 * scale * ss)
+    sub_size = int(8.5 * scale * ss)
+    tag_size = int(7 * scale * ss)
 
-    font_title = get_font(title_size, bold=True)
-    font_sub = get_font(sub_size, bold=False)
+    font_title = resolve_font("title_bold", title_size)
+    font_sub = resolve_font("body_regular", sub_size)
+    font_tag = resolve_font("title_bold", tag_size)
 
-    title_text = "M I R G A S I M   A R T ™"
-    sub_text = "© 2026 MIRGASIM ART • ALL RIGHTS RESERVED"
+    title_text = "MIRGASIM ART"
+    sub_text = "ABSHERON TECTONICS  |  GAZELLI COMMISSION 2026"
+    tag_text = "CONFIDENTIAL CURATORIAL PREVIEW"
 
-    # Measure text bounds
-    dummy_img = Image.new('RGBA', (1, 1), (0, 0, 0, 0))
-    dummy_draw = ImageDraw.Draw(dummy_img)
-    t_bbox = dummy_draw.textbbox((0, 0), title_text, font=font_title)
-    s_bbox = dummy_draw.textbbox((0, 0), sub_text, font=font_sub)
+    tw, th = measure_tracked_text(title_text, font_title, tracking=int(4 * scale * ss))
+    sw, sh = measure_tracked_text(sub_text, font_sub, tracking=int(2 * scale * ss))
+    gw, gh = measure_tracked_text(tag_text, font_tag, tracking=int(3 * scale * ss))
 
-    t_w = t_bbox[2] - t_bbox[0]
-    t_h = t_bbox[3] - t_bbox[1]
-    s_w = s_bbox[2] - s_bbox[0]
-    s_h = s_bbox[3] - s_bbox[1]
+    content_w = max(tw, sw, gw)
+    pad_x = int(22 * scale * ss)
+    pad_y = int(16 * scale * ss)
 
-    badge_w = max(t_w, s_w) + pad_x * 2
-    badge_h = t_h + s_h + pad_y * 2 + int(6 * scale)
+    badge_w = content_w + pad_x * 2
+    badge_h = th + sh + gh + pad_y * 2 + int(14 * scale * ss)
 
     badge = Image.new('RGBA', (badge_w, badge_h), (0, 0, 0, 0))
     draw = ImageDraw.Draw(badge)
 
-    # Adaptive pill background (frosted glass look)
-    bg_color = (12, 12, 14, 185) if not is_dark_bg else (245, 245, 248, 195)
-    border_color = (255, 255, 255, 60) if not is_dark_bg else (0, 0, 0, 50)
-    text_primary = (255, 255, 255, 240) if not is_dark_bg else (15, 15, 18, 240)
-    text_sub = (200, 200, 205, 210) if not is_dark_bg else (60, 60, 65, 210)
+    # Obsidian dark card background (92% opacity)
+    bg_color = (12, 14, 18, 235)
+    border_color = (255, 255, 255, 45)
+    accent_gold = (212, 175, 55, 240) # Subtle refined metallic gold accent
+    text_white = (255, 255, 255, 250)
+    text_muted = (180, 185, 195, 220)
 
-    # Rounded rectangle background
-    radius = int(8 * scale)
-    draw.rounded_rectangle([(0, 0), (badge_w - 1, badge_h - 1)], radius=radius, fill=bg_color, outline=border_color, width=1)
+    # Rounded rectangle with delicate border
+    radius = int(8 * scale * ss)
+    draw.rounded_rectangle([(0, 0), (badge_w - 1, badge_h - 1)], radius=radius, fill=bg_color, outline=border_color, width=max(1, int(1 * ss)))
 
-    # Draw centered title
-    t_x = (badge_w - t_w) // 2
-    t_y = pad_y
-    draw.text((t_x, t_y), title_text, font=font_title, fill=text_primary)
+    # Accent diamond glyph & Title
+    cur_y = pad_y
+    # Draw small studio diamond
+    d_size = int(4 * scale * ss)
+    d_x = pad_x
+    d_y = cur_y + (th // 2)
+    draw.polygon([(d_x, d_y - d_size), (d_x + d_size, d_y), (d_x, d_y + d_size), (d_x - d_size, d_y)], fill=accent_gold)
 
-    # Draw centered sub-text
-    s_x = (badge_w - s_w) // 2
-    s_y = t_y + t_h + int(6 * scale)
-    draw.text((s_x, s_y), sub_text, font=font_sub, fill=text_sub)
+    # Render main title
+    render_tracked_text(draw, (pad_x + d_size * 2 + int(6 * scale * ss), cur_y), title_text, font_title, text_white, tracking=int(4 * scale * ss))
 
-    return badge
+    # Divider hairline
+    cur_y += th + int(8 * scale * ss)
+    draw.line([(pad_x, cur_y), (badge_w - pad_x, cur_y)], fill=(255, 255, 255, 35), width=max(1, int(1 * ss)))
 
-def is_area_dark(image, box):
-    """Calculates relative luminance of target bounding box."""
-    crop = image.crop(box).convert('L')
-    stat = crop.resize((1, 1)).getpixel((0, 0))
-    return stat < 128
+    # Subline
+    cur_y += int(7 * scale * ss)
+    render_tracked_text(draw, (pad_x, cur_y), sub_text, font_sub, text_muted, tracking=int(2 * scale * ss))
 
-def apply_watermark(image_path, output_path, position="bottom-right", margin=30):
-    """Applies the modular wordmark to an image file and saves result."""
+    # Confidential Tag
+    cur_y += sh + int(6 * scale * ss)
+    render_tracked_text(draw, (pad_x, cur_y), tag_text, font_tag, accent_gold, tracking=int(3 * scale * ss))
+
+    # Downsample
+    final_w = badge_w // ss
+    final_h = badge_h // ss
+    return badge.resize((final_w, final_h), Image.Resampling.LANCZOS)
+
+def apply_watermark(image_path, output_path, position="bottom-right", margin=32):
+    """Applies the luxury floating studio watermark to an artwork."""
     with Image.open(image_path) as base:
         base_rgb = base.convert('RGBA')
         img_w, img_h = base_rgb.size
 
-        # Responsive scale relative to 1200px
-        scale = max(0.65, min(1.6, img_w / 1200.0))
-
-        # Check background brightness at target position
-        sample_w = int(350 * scale)
-        sample_h = int(70 * scale)
+        # Responsive scale relative to 1400px
+        scale = max(0.85, min(1.35, img_w / 1400.0))
+        badge = create_luxury_watermark(scale=scale)
+        bw, bh = badge.size
 
         if position == "bottom-right":
-            box = (img_w - sample_w - margin, img_h - sample_h - margin, img_w - margin, img_h - margin)
+            pos = (img_w - bw - margin, img_h - bh - margin)
         elif position == "bottom-left":
-            box = (margin, img_h - sample_h - margin, margin + sample_w, img_h - margin)
-        elif position == "bottom-center":
-            box = ((img_w - sample_w) // 2, img_h - sample_h - margin, (img_w + sample_w) // 2, img_h - margin)
-        else: # center
-            box = ((img_w - sample_w) // 2, (img_h - sample_h) // 2, (img_w + sample_w) // 2, (img_h + sample_h) // 2)
+            pos = (margin, img_h - bh - margin)
+        else:
+            pos = ((img_w - bw) // 2, img_h - bh - margin)
 
-        dark_bg = is_area_dark(base_rgb, box)
-        badge = create_wordmark_badge(scale=scale, is_dark_bg=dark_bg)
-        badge_w, badge_h = badge.size
-
-        if position == "bottom-right":
-            pos = (img_w - badge_w - margin, img_h - badge_h - margin)
-        elif position == "bottom-left":
-            pos = (margin, img_h - badge_h - margin)
-        elif position == "bottom-center":
-            pos = ((img_w - badge_w) // 2, img_h - badge_h - margin)
-        else: # center
-            pos = ((img_w - badge_w) // 2, (img_h - badge_h) // 2)
-
-        # Composite watermark badge onto base image
+        # Composite
         watermarked = Image.new('RGBA', (img_w, img_h))
         watermarked.paste(base_rgb, (0, 0))
         watermarked.paste(badge, pos, badge)
@@ -144,70 +178,179 @@ def apply_watermark(image_path, output_path, position="bottom-right", margin=30)
         watermarked.convert('RGB').save(output_path, "JPEG", quality=95, optimize=True)
         print(f"  [Watermarked] {os.path.basename(image_path)} -> {output_path}")
 
-def export_standalone_assets(dest_dir="assets/branding"):
-    """Exports standalone high-res wordmark PNGs."""
-    os.makedirs(dest_dir, exist_ok=True)
-    light_badge = create_wordmark_badge(scale=2.0, is_dark_bg=True)
-    dark_badge = create_wordmark_badge(scale=2.0, is_dark_bg=False)
+# ==============================================================================
+# MUSEUM ARCHIVAL EXHIBITION PLATES (PASSE-PARTOUT GALLERY EDITIONS)
+# ==============================================================================
 
-    light_path = os.path.join(dest_dir, "mirgasimart_wordmark_light_badge.png")
-    dark_path = os.path.join(dest_dir, "mirgasimart_wordmark_dark_badge.png")
+CATALOG_METADATA = {
+    "01_luminescence_of_masazir_salt_dawn.jpg": {
+        "plate": "PLATE 01 / 05",
+        "title_en": "Luminescence of Masazir Dawn",
+        "title_az": "Masazır Şəfəqi: Çəhrayı Duz Gölü",
+        "genre": "Pure Mineral Abstraction / Lacustrine Strata",
+        "dimensions": "185 × 120 cm (Horizontal Landscape Canvas)",
+        "materials": "Genuine Masazir Pink Lake Salt, Porous Absheron Limestone Plaster & Sgraffito",
+        "fauna": "Absheron Lacustrine Strata (Pure geological meditation)",
+    },
+    "02_the_weaver_of_sunken_shells_didacna.jpg": {
+        "plate": "PLATE 02 / 05",
+        "title_en": "The Shebeke Reliquary: Fossil Didacna in Absheron Stone",
+        "title_az": "Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə",
+        "genre": "Mixed-Media Painting on Canvas / Tactile Stone Relief",
+        "dimensions": "40 × 60 cm (Vertical Architectural Canvas)",
+        "materials": "Absheron Coquina Ground, Coastal Beach Sand, Low-Relief Didacna Cockles",
+        "fauna": "Caspian Cockles (Didacna trigonoides & Didacna pyramidata)",
+    },
+    "03_keeper_of_the_cold_depths_caspian_shad.jpg": {
+        "plate": "PLATE 03 / 05",
+        "title_en": "The Binagadi Derrick: Hydrocarbon Strata & Pyrite Shad",
+        "title_az": "Binaqədi Buruğu: Qara Qızıl və Pirit Şad",
+        "genre": "Industrial-Geological Abstraction / Hydrocarbon Matter Painting",
+        "dimensions": "120 × 200 cm (Vertical Panoramic Canvas)",
+        "materials": "Pure Binagadi Bitumen, Brassy Pyrite Sulfide Ore, Limestone Ground",
+        "fauna": "Caspian Marine Shad (Alosa braschnikowi)",
+    },
+    "04_breath_of_lokbatan_tadpole_goby.jpg": {
+        "plate": "PLATE 04 / 05",
+        "title_en": "Breath of Lokbatan: Volcanic Crater and Armored Goby",
+        "title_az": "Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi",
+        "genre": "Earth-Art Vortex / Geothermal Mineral Painting",
+        "dimensions": "180 × 180 cm (Monumental 1:1 Square Canvas)",
+        "materials": "Subterranean Lokbatan Mud-Volcano Clay, Celadon & Seafoam Glazes, Pyrite Veins",
+        "fauna": "Armored Caspian Tadpole Goby (Benthophilus spp.)",
+    },
+    "05_the_lampreys_vigil_caspian_lamprey.jpg": {
+        "plate": "PLATE 05 / 05",
+        "title_en": "The Gobustan Solar Oracle: Ouroboros Lamprey",
+        "title_az": "Qobustan Günəşi: İlanbalığı və Qədim Qaya Təsvirləri",
+        "genre": "Mythological Contemporary Altar Piece / Archaeological Totem",
+        "dimensions": "100 × 150 cm (Vertical Portrait Canvas)",
+        "materials": "Absheron Coastal Beach Sand Mandala, Masazir Salt Halos, Gobustan Petroglyphic Sgraffito",
+        "fauna": "Caspian Lamprey (Caspiomyzon wagneri)",
+    },
+}
 
-    light_badge.save(light_path, "PNG")
-    dark_badge.save(dark_path, "PNG")
-    print(f"Exported standalone wordmarks to {dest_dir}:")
-    print(f"  - {light_path}")
-    print(f"  - {dark_path}")
+def generate_exhibition_plate(image_path, output_path, meta):
+    """
+    Renders the artwork mounted on a museum-grade archival passe-partout mat
+    with refined gallery typography, turning every artwork into a Sotheby's-grade
+    presentation plate.
+    """
+    with Image.open(image_path) as base:
+        base_rgb = base.convert('RGB')
+        art_w, art_h = base_rgb.size
 
-def watermark_catalog():
-    """Watermarks all primary artworks in docs/output/latest and study iterations."""
+        # Mat proportions
+        pad_top = int(art_h * 0.08)
+        pad_sides = int(art_w * 0.08)
+        pad_bottom = int(art_h * 0.18)
+
+        plate_w = art_w + pad_sides * 2
+        plate_h = art_h + pad_top + pad_bottom
+
+        # Warm museum archival mat background (#FAF9F6)
+        mat_color = (250, 249, 246)
+        mat = Image.new('RGB', (plate_w, plate_h), mat_color)
+        draw = ImageDraw.Draw(mat)
+
+        # Subtle shadow behind canvas
+        shadow_color = (220, 218, 212)
+        for offset in range(1, 8):
+            draw.rectangle(
+                [(pad_sides + offset, pad_top + offset), (pad_sides + art_w + offset, pad_top + art_h + offset)],
+                outline=shadow_color,
+                width=1
+            )
+
+        # Mount artwork
+        mat.paste(base_rgb, (pad_sides, pad_top))
+
+        # Delicate canvas edge reveal
+        draw.rectangle([(pad_sides - 1, pad_top - 1), (pad_sides + art_w, pad_top + art_h)], outline=(205, 202, 195), width=1)
+
+        # Gallery Typography below canvas (Segoe UI / Times with full Azerbaijani glyphs)
+        scale = max(1.0, plate_w / 1400.0)
+        font_plate = resolve_font("title_bold", int(11 * scale))
+        font_title = resolve_font("serif_bold", int(21 * scale))
+        font_sub = resolve_font("body_italic", int(13 * scale))
+        font_specs = resolve_font("body_regular", int(10.5 * scale))
+        font_footer = resolve_font("body_regular", int(9 * scale))
+
+        text_y = pad_top + art_h + int(24 * scale)
+
+        # Top Badge / Plate number
+        plate_label = f"M I R G A S I M   A R T   S T U D I O   •   {meta['plate']}"
+        tw, _ = measure_tracked_text(plate_label, font_plate, tracking=int(3 * scale))
+        render_tracked_text(draw, ((plate_w - tw) // 2, text_y), plate_label, font_plate, (120, 122, 128), tracking=int(3 * scale))
+
+        # Title EN
+        text_y += int(22 * scale)
+        title_text = meta["title_en"]
+        bbox = draw.textbbox((0, 0), title_text, font=font_title)
+        draw.text(((plate_w - (bbox[2] - bbox[0])) // 2, text_y), title_text, font=font_title, fill=(18, 20, 24))
+
+        # Title AZ (with full Azerbaijani character support)
+        text_y += int(28 * scale)
+        title_az = meta["title_az"]
+        bbox = draw.textbbox((0, 0), title_az, font=font_sub)
+        draw.text(((plate_w - (bbox[2] - bbox[0])) // 2, text_y), title_az, font=font_sub, fill=(90, 94, 102))
+
+        # Thin divider
+        text_y += int(20 * scale)
+        div_w = int(240 * scale)
+        draw.line([((plate_w - div_w) // 2, text_y), ((plate_w + div_w) // 2, text_y)], fill=(215, 212, 205), width=1)
+
+        # Metadata Line 1: Dimensions & Genre
+        text_y += int(14 * scale)
+        specs_1 = f"{meta['dimensions']}   |   {meta['genre']}"
+        bbox = draw.textbbox((0, 0), specs_1, font=font_specs)
+        draw.text(((plate_w - (bbox[2] - bbox[0])) // 2, text_y), specs_1, font=font_specs, fill=(60, 64, 72))
+
+        # Metadata Line 2: Materials & Taxonomy
+        text_y += int(16 * scale)
+        specs_2 = f"Materials: {meta['materials']}"
+        bbox = draw.textbbox((0, 0), specs_2, font=font_footer)
+        draw.text(((plate_w - (bbox[2] - bbox[0])) // 2, text_y), specs_2, font=font_footer, fill=(100, 104, 112))
+
+        # Curatorial Footer
+        text_y += int(16 * scale)
+        footer_text = "Curatorial Commission Proposal for Gazelli Art House • Baku / London • © 2026 Mirgasim Art Studio"
+        tw, _ = measure_tracked_text(footer_text, font_footer, tracking=int(1.5 * scale))
+        render_tracked_text(draw, ((plate_w - tw) // 2, text_y), footer_text, font_footer, (150, 152, 158), tracking=int(1.5 * scale))
+
+        os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+        mat.save(output_path, "JPEG", quality=95, optimize=True)
+        print(f"  [Exhibition Plate] {os.path.basename(image_path)} -> {output_path}")
+
+def watermark_catalog(generate_plates=True):
+    """Processes all 5 artworks in docs/output/latest."""
     base_dir = "docs/output/latest"
-    target_dir = "docs/output/latest/watermarked"
-    os.makedirs(target_dir, exist_ok=True)
+    wm_dir = "docs/output/latest/watermarked"
+    plates_dir = "docs/output/latest/exhibition_plates"
 
-    artworks = [
-        "01_luminescence_of_masazir_salt_dawn.jpg",
-        "02_the_weaver_of_sunken_shells_didacna.jpg",
-        "03_keeper_of_the_cold_depths_caspian_shad.jpg",
-        "04_breath_of_lokbatan_tadpole_goby.jpg",
-        "05_the_lampreys_vigil_caspian_lamprey.jpg",
-    ]
-
-    print(f"=== Watermarking Master Artworks with MIRGASIM ART™ Wordmark ===")
-    for fname in artworks:
+    print("=== 1. Generating Luxury Floating Obsidian Watermarks for Master Works ===")
+    for fname in CATALOG_METADATA.keys():
         src = os.path.join(base_dir, fname)
         if os.path.exists(src):
-            dst = os.path.join(target_dir, fname)
+            dst = os.path.join(wm_dir, fname)
             apply_watermark(src, dst)
-        else:
-            print(f"  [Skipped] {fname} not found in {base_dir}")
+            apply_watermark(src, os.path.join("docs/output/watermarked", fname))
 
-    # Also watermark in root docs/output/watermarked for standalone delivery
-    root_wm_dir = "docs/output/watermarked"
-    os.makedirs(root_wm_dir, exist_ok=True)
-    for fname in artworks:
-        src = os.path.join(base_dir, fname)
-        if os.path.exists(src):
-            dst = os.path.join(root_wm_dir, fname)
-            apply_watermark(src, dst)
+    if generate_plates:
+        print("\n=== 2. Generating Museum Archival Exhibition Passe-Partout Plates ===")
+        for fname, meta in CATALOG_METADATA.items():
+            src = os.path.join(base_dir, fname)
+            if os.path.exists(src):
+                dst = os.path.join(plates_dir, f"plate_{fname}")
+                generate_exhibition_plate(src, dst, meta)
+                generate_exhibition_plate(src, os.path.join("docs/output/exhibition_plates", f"plate_{fname}"), meta)
 
 def main():
-    parser = argparse.ArgumentParser(description="Mirgasim Art - Modular Copyright Watermarker")
-    parser.add_argument("--input", "-i", help="Input image path")
-    parser.add_argument("--output", "-o", help="Output image path")
-    parser.add_argument("--position", "-p", default="bottom-right", choices=["bottom-right", "bottom-left", "bottom-center", "center"])
-    parser.add_argument("--export-wordmark-assets", action="store_true", help="Export standalone transparent PNG wordmark files")
+    parser = argparse.ArgumentParser(description="Mirgasim Art Studio - Luxury Watermark & Exhibition Plate Builder")
+    parser.add_argument("--plates", action="store_true", help="Generate museum archival exhibition plates")
     args = parser.parse_args()
 
-    if args.export_wordmark_assets:
-        export_standalone_assets()
-        return
-
-    if args.input and args.output:
-        apply_watermark(args.input, args.output, position=args.position)
-    else:
-        export_standalone_assets()
-        watermark_catalog()
+    watermark_catalog(generate_plates=True)
 
 if __name__ == "__main__":
     main()
