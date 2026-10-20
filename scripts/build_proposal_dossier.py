@@ -16,10 +16,10 @@ import os
 import sys
 import argparse
 import subprocess
-import re
+import shutil
 
 def generate_dossier_html(use_watermarked=True):
-    """Builds the 6-page HTML document with strict page-budget print CSS."""
+    """Builds the 7-page HTML document with bespoke museum-grade print layout."""
     cwd = os.getcwd()
 
     def get_img_uri(rel_path):
@@ -37,14 +37,11 @@ def generate_dossier_html(use_watermarked=True):
 <meta charset="utf-8">
 <title>MIRGASIM ART STUDIO | Curatorial Commission Proposal &amp; Artist Dossier</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap');
 
   @page {{
-    size: A4 portrait;
-    margin-top: 18mm;
-    margin-bottom: 18mm;
-    margin-left: 18mm;
-    margin-right: 18mm;
+    size: 210mm 297mm;
+    margin: 0;
   }}
 
   * {{
@@ -57,127 +54,196 @@ def generate_dossier_html(use_watermarked=True):
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #1a1a1a;
     background: #ffffff;
-    line-height: 1.5;
+    line-height: 1.45;
     margin: 0;
     padding: 0;
-    font-size: 9.5pt;
+    font-size: 9pt;
   }}
 
-  /* Strict 1-Page per Section Utility */
+  /* Exact A4 Page Container with Controlled Bleed Margins */
   .page {{
     page-break-after: always;
     page-break-inside: avoid;
-    height: 258mm;
-    max-height: 258mm;
+    width: 210mm;
+    height: 297mm;
+    max-height: 297mm;
+    padding: 12mm 16mm 10mm 16mm;
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #ffffff;
   }}
 
   .page:last-child {{
     page-break-after: avoid;
   }}
 
-  /* Page 1: Executive Cover & Curatorial Statement */
-  .p1-header {{
+  /* Curatorial Running Header (Pages 2-7) */
+  .running-header {{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.6pt solid #d4c9b8;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    font-size: 6.8pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }}
+
+  .running-header .rh-atelier {{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+  }}
+
+  .running-header .rh-title {{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 7.8pt;
+    color: #666;
+    letter-spacing: 0.5px;
+    text-transform: none;
+  }}
+
+  .running-header .rh-body {{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #8c734b;
+    letter-spacing: 1.5px;
+  }}
+
+  /* Curatorial Running Footer (All Pages) */
+  .running-footer {{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.6pt solid #d4c9b8;
+    padding-top: 5px;
+    margin-top: 6px;
+    font-size: 6.8pt;
+    color: #888;
+    letter-spacing: 0.5px;
+  }}
+
+  .running-footer .rf-context {{
+    color: #666;
+  }}
+
+  .running-footer .rf-copyright {{
+    color: #999;
+    font-size: 6.2pt;
+  }}
+
+  .running-footer .rf-folio {{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1.5px;
+  }}
+
+  /* Page 1: Hero Cover Elements */
+  .p1-masthead {{
     text-align: center;
-    border-bottom: 1.5px solid #111;
-    padding-bottom: 12px;
-    margin-bottom: 14px;
+    border-bottom: 1.5pt solid #111;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
   }}
 
   .brand-wordmark {{
     font-family: 'Cinzel', serif;
-    font-size: 20pt;
+    font-size: 21pt;
     font-weight: 700;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     color: #0f0f12;
     margin: 0;
     text-transform: uppercase;
   }}
 
   .brand-subtitle {{
-    font-size: 8pt;
-    letter-spacing: 3px;
+    font-size: 7.5pt;
+    letter-spacing: 3.5px;
     color: #666;
     margin-top: 4px;
     text-transform: uppercase;
+    font-weight: 500;
   }}
 
   .p1-title-box {{
     text-align: center;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }}
 
   .dossier-label {{
-    font-size: 7.5pt;
+    font-size: 7pt;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     color: #8c734b;
     text-transform: uppercase;
     display: inline-block;
-    padding: 2px 12px;
+    padding: 2px 14px;
     border: 1px solid #d4c4a8;
-    border-radius: 14px;
+    border-radius: 12px;
     background: #fdfbf7;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }}
 
   .dossier-title {{
     font-family: 'Playfair Display', serif;
-    font-size: 19pt;
+    font-size: 18pt;
     font-weight: 600;
     color: #111;
-    margin: 4px 0 2px 0;
-    letter-spacing: -0.3px;
+    margin: 3px 0 2px 0;
+    letter-spacing: -0.2px;
   }}
 
   .dossier-subtitle {{
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 11pt;
-    color: #444;
+    font-size: 10.5pt;
+    color: #555;
     margin: 0;
   }}
 
   .curatorial-quote {{
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 9.5pt;
+    font-size: 9pt;
     line-height: 1.45;
     color: #333;
-    background: #fbfbfb;
-    border-left: 3px solid #8c734b;
-    padding: 8px 14px;
-    margin: 8px 0 12px 0;
+    background: #fbf9f6;
+    border-left: 2.5pt solid #8c734b;
+    padding: 7px 12px;
+    margin: 7px 0 10px 0;
   }}
 
   .p1-body-text {{
-    font-size: 8.8pt;
-    line-height: 1.5;
+    font-size: 8.4pt;
+    line-height: 1.48;
     color: #2a2a2a;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-align: justify;
   }}
 
   table.data-table {{
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
-    font-size: 8pt;
+    margin: 8px 0;
+    font-size: 7.8pt;
   }}
 
   table.data-table th {{
     background: #111;
     color: #fff;
-    padding: 6px 8px;
+    padding: 5px 8px;
     text-align: left;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-size: 7.5pt;
+    font-size: 7.2pt;
   }}
 
   table.data-table td {{
@@ -190,36 +256,27 @@ def generate_dossier_html(use_watermarked=True):
     background: #fcfcfc;
   }}
 
-  .p1-footer {{
-    border-top: 1px solid #eee;
-    padding-top: 8px;
-    font-size: 7.5pt;
-    color: #777;
-    text-align: center;
-    line-height: 1.4;
-  }}
-
-  /* Standard Artwork Page Layout (Pages 2-6) */
+  /* Standard Artwork Page Elements (Pages 2-6) */
   .plate-top {{
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }}
 
   .plate-badge {{
     display: inline-block;
     background: #111;
     color: #fff;
-    font-size: 7.5pt;
+    font-size: 7pt;
     font-weight: 600;
     letter-spacing: 1.5px;
-    padding: 2px 8px;
+    padding: 2px 7px;
     text-transform: uppercase;
     border-radius: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }}
 
   h3.plate-title {{
     font-family: 'Playfair Display', serif;
-    font-size: 14pt;
+    font-size: 13.5pt;
     font-weight: 600;
     color: #111;
     margin: 0;
@@ -228,102 +285,64 @@ def generate_dossier_html(use_watermarked=True):
 
   .plate-subtitle {{
     font-style: italic;
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #666;
-    margin: 2px 0 6px 0;
+    margin: 1px 0 4px 0;
   }}
 
   .artwork-showcase {{
     text-align: center;
-    margin: 6px 0 10px 0;
-    background: #fafafa;
-    border: 1px solid #eee;
-    padding: 10px;
-    border-radius: 4px;
+    margin: 4px 0 8px 0;
+    background: #faf8f5;
+    border: 1px solid #ece6dc;
+    padding: 8px;
+    border-radius: 3px;
   }}
 
   .artwork-showcase img {{
     max-width: 100%;
-    max-height: 330px;
+    max-height: 340px;
     height: auto;
     display: inline-block;
     border-radius: 2px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   }}
 
   .specs-grid {{
     width: 100%;
     border-collapse: collapse;
-    margin: 8px 0;
-    font-size: 8.2pt;
+    margin: 6px 0;
+    font-size: 8pt;
   }}
 
   .specs-grid td {{
-    padding: 4px 8px;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 3.5px 7px;
+    border-bottom: 1px solid #f0ece5;
     vertical-align: top;
   }}
 
   .specs-grid td.spec-name {{
-    width: 26%;
+    width: 25%;
     font-weight: 600;
     color: #555;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: #f9f9f9;
-    border-right: 1px solid #f0f0f0;
+    background: #fcfbfa;
+    border-right: 1px solid #f0ece5;
+    font-size: 7.2pt;
   }}
 
   .specs-grid td.spec-val {{
-    width: 74%;
+    width: 75%;
     color: #111;
   }}
 
   .curatorial-narrative {{
-    font-size: 8.5pt;
-    line-height: 1.5;
+    font-size: 8.2pt;
+    line-height: 1.46;
     color: #2a2a2a;
-    margin: 6px 0;
+    margin: 4px 0;
     text-align: justify;
-  }}
-
-  .studies-header {{
-    font-size: 7.5pt;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #8c734b;
-    margin-top: 8px;
-    margin-bottom: 4px;
-    border-top: 1px solid #eee;
-    padding-top: 6px;
-  }}
-
-  .studies-table {{
-    width: 100%;
-    border-collapse: collapse;
-  }}
-
-  .studies-table td {{
-    width: 50%;
-    padding: 2px 6px;
-    text-align: center;
-    vertical-align: top;
-  }}
-
-  .studies-table img {{
-    max-width: 95%;
-    max-height: 95px;
-    border-radius: 2px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  }}
-
-  .study-caption {{
-    font-size: 7pt;
-    color: #666;
-    font-style: italic;
-    display: block;
-    margin-top: 2px;
   }}
 </style>
 </head>
@@ -332,7 +351,7 @@ def generate_dossier_html(use_watermarked=True):
 <!-- PAGE 1: EXECUTIVE CURATORIAL DOSSIER & COLLECTION MATRIX -->
 <div class="page">
   <div>
-    <div class="p1-header">
+    <div class="p1-masthead">
       <div class="brand-wordmark">MIRGASIM ART STUDIO</div>
       <div class="brand-subtitle">FINE ART ATELIER &bull; BAKU &bull; AZERBAIJAN</div>
     </div>
@@ -400,33 +419,39 @@ def generate_dossier_html(use_watermarked=True):
       </tbody>
     </table>
 
-    <p class="p1-body-text" style="font-size: 8pt; margin-top: 4px; line-height: 1.45;">
+    <p class="p1-body-text" style="font-size: 7.8pt; margin-top: 3px; line-height: 1.42;">
       <strong>Faunal Taxonomy &amp; Caspian Strategy:</strong> The suite deliberately privileges archaic benthic survivors (<em>Didacna</em>, <em>Alosa</em>, <em>Benthophilus</em>, <em>Caspiomyzon</em>) to represent primordial antiquity. The iconic <strong>Caspian Seal (<em>Pusa caspica</em>)</strong> is honored through the serene lacustrine sanctuaries of Masazir, with an authorial figurative study documented in studio archives as an available companion acquisition.
     </p>
 
-    <p class="p1-body-text" style="font-size: 8pt; margin-top: 4px; line-height: 1.45;">
+    <p class="p1-body-text" style="font-size: 7.8pt; margin-top: 3px; line-height: 1.42;">
       <strong>Archival Conservation Protocol:</strong> All raw minerals are stabilized under museum standards: Masazir salt crystals undergo thermal dehydration and UV-matte acrylic encapsulation; mud-volcano craquelure is co-polymerized for zero shedding; and bitumen is mineral-dissolved into inert polymer glazes.
     </p>
   </div>
 
-  <div class="p1-footer">
-    <strong>MIRGASIM ART STUDIO &bull; BAKU &bull; COMMISSION SELECTION DOSSIER</strong><br/>
-    Submitted in Formal Response to the Curatorial Commission Selection Brief | Gazelli Art House (London / Baku)<br/>
-    <span style="font-size: 6.8pt; color: #999;">Fine art concepts, mineral formulations, and curatorial texts &copy; 2026 Mirgasim Art Studio. All rights reserved.</span>
+  <div class="running-footer">
+    <div class="rf-context">Curatorial Commission Selection Dossier &bull; Baku &amp; London</div>
+    <div class="rf-copyright">Submitted in Formal Response to Selection Brief | Gazelli Art House</div>
+    <div class="rf-folio">FOLIO 01 / 07</div>
   </div>
 </div>
 
 <!-- PAGE 2: PLATE 01 -->
 <div class="page">
   <div>
+    <div class="running-header">
+      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
+      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-body">GAZELLI ART HOUSE</div>
+    </div>
+
     <div class="plate-top">
       <div class="plate-badge">Plate 01 &bull; Pure Mineral Abstraction</div>
       <h3 class="plate-title">Luminescence of Masazir Dawn</h3>
-      <div class="plate-subtitle">Masazır Şəfəqi: Çəhrayı Duz Gölu</div>
+      <div class="plate-subtitle">Masazır Şəfəqi: Çəhrayı Duz Gölü</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('01_luminescence_of_masazir_salt_dawn.jpg')}" alt="Luminescence of Masazir Dawn" style="max-height: 380px;"/>
+      <img src="{get_img_uri('01_luminescence_of_masazir_salt_dawn.jpg')}" alt="Luminescence of Masazir Dawn"/>
     </div>
 
     <table class="specs-grid">
@@ -441,20 +466,32 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Curatorial Concept</td>
         <td class="spec-val">
-          An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. (Pure geological abstraction; zero portraits, zero figures, zero seals, zero carpets).
+          An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. (Pure geological abstraction; zero portraits, zero figures, zero carpets).
         </td>
       </tr>
       <tr>
         <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Mineral Impasto Continuous Wrap (or dark walnut floater frame) &bull; Dual Aluminum French Cleats (~14.5 kg) &bull; 2700K Warm Wash Lighting (CRI 95+)</td>
+        <td class="spec-val">Mineral Impasto Continuous Wrap (or dark walnut floater) &bull; Dual Aluminum French Cleats (~14.5 kg) &bull; 2700K Warm Wash Lighting</td>
       </tr>
     </table>
+  </div>
+
+  <div class="running-footer">
+    <div class="rf-context">Plate 01: Luminescence of Masazir Dawn</div>
+    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-folio">FOLIO 02 / 07</div>
   </div>
 </div>
 
 <!-- PAGE 3: PLATE 02 -->
 <div class="page">
   <div>
+    <div class="running-header">
+      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
+      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-body">GAZELLI ART HOUSE</div>
+    </div>
+
     <div class="plate-top">
       <div class="plate-badge">Plate 02 &bull; Mixed-Media Painting on Canvas</div>
       <h3 class="plate-title">The Shebeke Reliquary: Fossil Didacna in Absheron Stone</h3>
@@ -462,7 +499,7 @@ def generate_dossier_html(use_watermarked=True):
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="The Shebeke Reliquary" style="max-height: 380px;"/>
+      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="The Shebeke Reliquary"/>
     </div>
 
     <table class="specs-grid">
@@ -490,11 +527,23 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
     </table>
   </div>
+
+  <div class="running-footer">
+    <div class="rf-context">Plate 02: The Shebeke Reliquary</div>
+    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-folio">FOLIO 03 / 07</div>
+  </div>
 </div>
 
 <!-- PAGE 4: PLATE 03 -->
 <div class="page">
   <div>
+    <div class="running-header">
+      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
+      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-body">GAZELLI ART HOUSE</div>
+    </div>
+
     <div class="plate-top">
       <div class="plate-badge">Plate 03 &bull; Industrial-Geological Abstraction</div>
       <h3 class="plate-title">The Binagadi Derrick: Hydrocarbon Strata &amp; Pyrite Shad</h3>
@@ -502,7 +551,7 @@ def generate_dossier_html(use_watermarked=True):
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('03_keeper_of_the_cold_depths_caspian_shad.jpg')}" alt="The Binagadi Derrick" style="max-height: 380px;"/>
+      <img src="{get_img_uri('03_keeper_of_the_cold_depths_caspian_shad.jpg')}" alt="The Binagadi Derrick"/>
     </div>
 
     <table class="specs-grid">
@@ -530,11 +579,23 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
     </table>
   </div>
+
+  <div class="running-footer">
+    <div class="rf-context">Plate 03: The Binagadi Derrick</div>
+    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-folio">FOLIO 04 / 07</div>
+  </div>
 </div>
 
 <!-- PAGE 5: PLATE 04 -->
 <div class="page">
   <div>
+    <div class="running-header">
+      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
+      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-body">GAZELLI ART HOUSE</div>
+    </div>
+
     <div class="plate-top">
       <div class="plate-badge">Plate 04 &bull; Earth-Art Vortex &bull; Geothermal Mineral Painting</div>
       <h3 class="plate-title">Breath of Lokbatan: Volcanic Crater and Armored Goby</h3>
@@ -542,7 +603,7 @@ def generate_dossier_html(use_watermarked=True):
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('04_breath_of_lokbatan_tadpole_goby.jpg')}" alt="Breath of Lokbatan" style="max-height: 380px;"/>
+      <img src="{get_img_uri('04_breath_of_lokbatan_tadpole_goby.jpg')}" alt="Breath of Lokbatan"/>
     </div>
 
     <table class="specs-grid">
@@ -566,11 +627,23 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
     </table>
   </div>
+
+  <div class="running-footer">
+    <div class="rf-context">Plate 04: Breath of Lokbatan</div>
+    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-folio">FOLIO 05 / 07</div>
+  </div>
 </div>
 
 <!-- PAGE 6: PLATE 05 -->
 <div class="page">
   <div>
+    <div class="running-header">
+      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
+      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-body">GAZELLI ART HOUSE</div>
+    </div>
+
     <div class="plate-top">
       <div class="plate-badge">Plate 05 &bull; Mythological Archaeological Totem</div>
       <h3 class="plate-title">The Gobustan Solar Oracle: Ouroboros Lamprey</h3>
@@ -578,7 +651,7 @@ def generate_dossier_html(use_watermarked=True):
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('05_the_lampreys_vigil_caspian_lamprey.jpg')}" alt="The Gobustan Solar Oracle" style="max-height: 370px;"/>
+      <img src="{get_img_uri('05_the_lampreys_vigil_caspian_lamprey.jpg')}" alt="The Gobustan Solar Oracle"/>
     </div>
 
     <table class="specs-grid">
@@ -606,36 +679,44 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
     </table>
   </div>
+
+  <div class="running-footer">
+    <div class="rf-context">Plate 05: The Gobustan Solar Oracle</div>
+    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-folio">FOLIO 06 / 07</div>
+  </div>
 </div>
 
 <!-- PAGE 7: ARCHITECTURAL IN-SITU SIMULATION & TURNKEY INSTALLATION MATRIX -->
 <div class="page">
   <div>
-    <div class="p1-header" style="margin-bottom: 8px; padding-bottom: 6px;">
-      <div class="brand-wordmark" style="font-size: 16pt;">MIRGASIM ART STUDIO</div>
-      <div class="brand-subtitle" style="font-size: 7.5pt;">ARCHITECTURAL SPECIFICATIONS &amp; TURNKEY INSTALLATION SCHEDULE</div>
+    <div class="running-header">
+      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
+      <div class="rh-title">Architectural Placement &amp; Turnkey Contractor Schedule</div>
+      <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
-    <div class="p1-title-box" style="margin-bottom: 6px;">
-      <div class="dossier-label">Contractor-Ready Architectural Integration</div>
-      <h2 style="font-family: 'Playfair Display', serif; font-size: 15pt; margin: 3px 0 2px 0;">In-Situ Spatial Simulation &amp; Structural Hardware</h2>
+    <div class="plate-top" style="margin-bottom: 4px;">
+      <div class="plate-badge">Spatial Integration &bull; Contractor Specifications</div>
+      <h3 class="plate-title" style="font-size: 13pt;">In-Situ Spatial Context &amp; Structural Mounting Matrix</h3>
+      <div class="plate-subtitle">Photorealistic Architectural Previews on Honed Absheron Coquina Walls</div>
     </div>
 
     <!-- Dual In-Situ Image Row -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 8px;">
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 6px;">
       <tr>
         <td style="width: 50%; padding-right: 5px; text-align: center; vertical-align: top;">
           <img src="{get_insitu_uri('insitu_plate_01_masazir_dawn.jpg')}" alt="Plate 01 In-Situ" style="width: 100%; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);"/>
-          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 3px;">Plate 01: Honed Coquina Feature Wall &bull; Executive Salon Placement</span>
+          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 2px;">Plate 01: Honed Coquina Feature Wall &bull; Executive Salon Placement</span>
         </td>
         <td style="width: 50%; padding-left: 5px; text-align: center; vertical-align: top;">
           <img src="{get_insitu_uri('insitu_plate_04_breath_of_lokbatan.jpg')}" alt="Plate 04 In-Situ" style="width: 100%; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);"/>
-          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 3px;">Plate 04: Grand Double-Height Atrium &bull; 2700K Ceiling Wash Lighting</span>
+          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 2px;">Plate 04: Grand Double-Height Atrium &bull; 2700K Ceiling Wash Lighting</span>
         </td>
       </tr>
     </table>
 
-    <table class="data-table" style="font-size: 7.5pt; margin: 4px 0;">
+    <table class="data-table" style="font-size: 7.2pt; margin: 4px 0;">
       <thead>
         <tr>
           <th>Plate</th>
@@ -690,18 +771,18 @@ def generate_dossier_html(use_watermarked=True):
       </tbody>
     </table>
 
-    <div style="background: #fdfbf7; border: 1px solid #e8dfcf; border-radius: 3px; padding: 6px 10px; margin-top: 6px;">
-      <div style="font-size: 7.8pt; font-weight: 600; color: #8c734b; text-transform: uppercase; letter-spacing: 0.5px;">Curatorial Material Palette Box ("The Tactile Verification")</div>
-      <p style="font-size: 7.5pt; line-height: 1.45; color: #333; margin: 3px 0 0 0;">
+    <div style="background: #fdfbf7; border: 1px solid #e8dfcf; border-radius: 3px; padding: 5px 8px; margin-top: 4px;">
+      <div style="font-size: 7.2pt; font-weight: 600; color: #8c734b; text-transform: uppercase; letter-spacing: 0.5px;">Curatorial Material Palette Box ("The Tactile Verification")</div>
+      <p style="font-size: 7.2pt; line-height: 1.4; color: #333; margin: 2px 0 0 0;">
         Mirgasim Art Studio offers to deliver a bespoke hand-crafted presentation box containing five 15 &times; 15 cm cured architectural plaques (Masazir lake salt in UV-acrylic, Lokbatan clay craquelure, cold-polymerized Binagadi bitumen, honed Absheron coquina, and pyrite ore aggregates) for direct tactile review by the selection committee.
       </p>
     </div>
   </div>
 
-  <div class="p1-footer" style="padding-top: 6px;">
-    <strong>MIRGASIM ART STUDIO &bull; BAKU &bull; COMMISSION SELECTION DOSSIER</strong><br/>
-    Submitted in Formal Response to the Curatorial Commission Selection Brief | Gazelli Art House (London / Baku)<br/>
-    <span style="font-size: 6.8pt; color: #999;">Fine art concepts and mineral formulations &copy; 2026 Mirgasim Art Studio. All rights reserved.</span>
+  <div class="running-footer">
+    <div class="rf-context">Architectural Specifications &amp; Tactile Material Schedule</div>
+    <div class="rf-copyright">Submitted in Formal Response to Selection Brief | Gazelli Art House</div>
+    <div class="rf-folio">FOLIO 07 / 07</div>
   </div>
 </div>
 
@@ -729,8 +810,7 @@ def find_browser_executable():
     return "chrome"
 
 def build_pdf(use_watermarked=True):
-    """Compiles HTML into an exact 7-page PDF via headless Chrome/Edge."""
-    import shutil
+    """Compiles HTML into an exact 7-page PDF with zero browser header/footer artifacts."""
     html_content = generate_dossier_html(use_watermarked=use_watermarked)
 
     tmp_html = "docs/output/latest/temp_dossier.html"
@@ -740,35 +820,17 @@ def build_pdf(use_watermarked=True):
     out_pdf = "docs/output/latest/MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf"
     readme_pdf = "docs/output/latest/README.pdf"
 
-    header_html = (
-        '<div style="font-size: 7pt; width: 100%; display: flex; justify-content: space-between; '
-        'padding: 0 18mm; font-family: -apple-system, sans-serif; color: #888; text-transform: uppercase; letter-spacing: 1px;">'
-        '<span>MIRGASIM ART STUDIO | Curatorial Commission Dossier</span>'
-        '<span>Gazelli Art House (London / Baku)</span>'
-        '</div>'
-    )
-
-    footer_html = (
-        '<div style="font-size: 7pt; width: 100%; display: flex; justify-content: space-between; '
-        'padding: 0 18mm; font-family: -apple-system, sans-serif; color: #888; letter-spacing: 0.5px;">'
-        '<span>Commission Selection Proposal © 2026 Mirgasim Art Studio. All Rights Reserved.</span>'
-        '<span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>'
-        '</div>'
-    )
-
     browser_bin = find_browser_executable()
     cmd = [
         browser_bin,
         "--headless",
         "--disable-gpu",
-        "--display-header-footer",
-        f"--header-template={header_html}",
-        f"--footer-template={footer_html}",
+        "--no-pdf-header-footer",
         f"--print-to-pdf={out_pdf}",
         f"file:///{os.path.abspath(tmp_html).replace(os.sep, '/')}"
     ]
 
-    print(f"Compiling 7-Page Luxury PDF Dossier via {browser_bin}...")
+    print(f"Compiling 7-Page Luxury PDF Dossier via {browser_bin} (zero browser header/footer artifacts)...")
     res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if os.path.exists(tmp_html):
         os.remove(tmp_html)
