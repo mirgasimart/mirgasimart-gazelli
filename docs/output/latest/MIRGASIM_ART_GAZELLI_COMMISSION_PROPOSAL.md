@@ -58,7 +58,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 *Masazır Şəfəqi: Çəhrayı Duz Gölü*
 
 ![Plate 01: Luminescence of Masazir Dawn](01_luminescence_of_masazir_salt_dawn.jpg)
-> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](exhibition_plates/plate_01_luminescence_of_masazir_salt_dawn.jpg)
+> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_01_luminescence_of_masazir_salt_dawn.jpg)
 
 - **Genre**: Pure Mineral Abstraction / Lacustrine Strata Painting
 - **Dimensions**: **185 × 120 cm** (Horizontal Landscape Canvas, Specification from Brief)
@@ -76,7 +76,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 *Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə*
 
 ![Plate 02: The Shebeke Reliquary](02_the_weaver_of_sunken_shells_didacna.jpg)
-> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](exhibition_plates/plate_02_the_weaver_of_sunken_shells_didacna.jpg)
+> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_02_the_weaver_of_sunken_shells_didacna.jpg)
 
 - **Genre**: Mixed-Media Painting on Canvas / Tactile Stone Relief
 - **Dimensions**: **40 × 60 cm** (Vertical Architectural Canvas, Specification from Brief)
@@ -95,7 +95,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 *Binaqədi Buruğu: Qara Qızıl və Pirit Şad*
 
 ![Plate 03: The Binagadi Derrick](03_keeper_of_the_cold_depths_caspian_shad.jpg)
-> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](exhibition_plates/plate_03_keeper_of_the_cold_depths_caspian_shad.jpg)
+> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_03_keeper_of_the_cold_depths_caspian_shad.jpg)
 
 - **Genre**: Industrial-Geological Abstraction / Hydrocarbon Matter Painting
 - **Dimensions**: **120 × 200 cm** (Vertical Panoramic Canvas, Specification from Brief)
@@ -114,7 +114,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 *Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi*
 
 ![Plate 04: Breath of Lokbatan](04_breath_of_lokbatan_tadpole_goby.jpg)
-> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](exhibition_plates/plate_04_breath_of_lokbatan_tadpole_goby.jpg)
+> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_04_breath_of_lokbatan_tadpole_goby.jpg)
 
 - **Genre**: Earth-Art Vortex / Geothermal Mineral Painting
 - **Dimensions**: **180 × 180 cm** (Monumental 1:1 Square Canvas, Specification from Brief)
@@ -134,7 +134,7 @@ Rather than presenting five isolated decorative canvases, the atelier has struct
 *Qobustan Günəşi: İlanbalığı və Qədim Qaya Təsvirləri*
 
 ![Plate 05: The Gobustan Solar Oracle](05_the_lampreys_vigil_caspian_lamprey.jpg)
-> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](exhibition_plates/plate_05_the_lampreys_vigil_caspian_lamprey.jpg)
+> **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_05_the_lampreys_vigil_caspian_lamprey.jpg)
 
 - **Genre**: Mythological Contemporary Altar Piece / Archaeological Totem
 - **Dimensions**: **100 × 150 cm** (Vertical Portrait Canvas, Specification from Brief)
