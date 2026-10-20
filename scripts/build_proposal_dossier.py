@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-Mirgasim Art Studio - 6-Page Luxury Curatorial Commission Dossier Builder
+Mirgasim Art Studio - 7-Page Luxury Curatorial Commission Dossier Builder
 ========================================================================
-Compiles an exact 6-page museum-grade fine art commission proposal:
-  - Page 1: Executive Curatorial Statement, Collection Matrix & Studio Trademarks
-  - Page 2: Plate 01 — Strata of Masazir (Salt Landscape + Studies)
-  - Page 3: Plate 02 — The Shebeke Reliquary (Didacna & Limestone)
-  - Page 4: Plate 03 — The Binagadi Derrick (Bitumen & Pyrite Shad)
-  - Page 5: Plate 04 — Work in Progress Placeholder (Square 180x180 cm)
-  - Page 6: Plate 05 — The Gobustan Solar Oracle (Lamprey Mandala)
+Compiles an exact 7-page museum-grade fine art commission proposal:
+  - Page 1: Executive Curatorial Statement, Collection Matrix & Caspian Strategy
+  - Page 2: Plate 01 — Luminescence of Masazir Dawn (185 × 120 cm)
+  - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
+  - Page 4: Plate 03 — The Binagadi Derrick (120 × 200 cm)
+  - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
+  - Page 6: Plate 05 — The Gobustan Solar Oracle (100 × 150 cm)
+  - Page 7: Architectural In-Situ Integration & Turnkey Contractor Schedule
 """
 
 import os
@@ -26,11 +27,15 @@ def generate_dossier_html(use_watermarked=True):
         full_path = os.path.join(cwd, target_dir, rel_path)
         return f"file:///{full_path.replace(os.sep, '/')}"
 
+    def get_insitu_uri(rel_path):
+        full_path = os.path.join(cwd, "docs/output/latest/_insitu", rel_path)
+        return f"file:///{full_path.replace(os.sep, '/')}"
+
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MIRGASIM ART™ | Curatorial Commission Proposal & Artist Dossier</title>
+<title>MIRGASIM ART STUDIO | Curatorial Commission Proposal &amp; Artist Dossier</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap');
 
@@ -328,14 +333,14 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="p1-header">
-      <div class="brand-wordmark">MIRGASIM ART™</div>
-      <div class="brand-subtitle">FINE ART ATELIER • BAKU &amp; ABSHERON</div>
+      <div class="brand-wordmark">MIRGASIM ART STUDIO</div>
+      <div class="brand-subtitle">FINE ART ATELIER &bull; BAKU &bull; AZERBAIJAN</div>
     </div>
 
     <div class="p1-title-box">
       <div class="dossier-label">Curatorial Commission Dossier</div>
       <h1 class="dossier-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</h1>
-      <div class="dossier-subtitle">Prepared Exclusively for Gazelli Art House (London / Baku)</div>
+      <div class="dossier-subtitle">Submitted in Formal Response to the Selection Brief | Gazelli Art House (London / Baku)</div>
     </div>
 
     <div class="curatorial-quote">
@@ -343,7 +348,7 @@ def generate_dossier_html(use_watermarked=True):
     </div>
 
     <p class="p1-body-text">
-      Responding to the international fine art standards of <strong>Gazelli Art House</strong>, this 5-work suite channels the modernist lineage of the <strong>Absheron School</strong> (Javad Mirjavadov, Sattar Bahlulzade, Rasim Babayev). Abandoning superficial decorative clich&eacute;s and tourist carpet motifs, this collection explores authentic Absheron signatures through radical mineral materiality and Caspian endemism.
+      Responding to the international fine art standards of <strong>Gazelli Art House</strong>, this 5-work suite channels the pioneering spirit of the <strong>Absheron Modernist School</strong> (Javad Mirjavadov, Sattar Bahlulzade, Rasim Babayev, Tofig Javadov). Abandoning superficial decorative clich&eacute;s and carpet motifs, the artist explores authentic Absheron signatures through radical mineral materiality and Caspian scientific taxonomy.
     </p>
 
     <table class="data-table">
@@ -395,14 +400,19 @@ def generate_dossier_html(use_watermarked=True):
       </tbody>
     </table>
 
-    <p class="p1-body-text" style="font-size: 8.2pt; margin-top: 6px;">
-      <strong>Conservation Protocol:</strong> All raw substances are bound under archival museum standards: Masazir salt crystals are oven-dehydrated and sealed in UV-matte acrylic fixative; mud-volcano craquelure is co-polymer stabilized; and bitumen is mineral-dissolved into durable polymer glazes.
+    <p class="p1-body-text" style="font-size: 8pt; margin-top: 4px; line-height: 1.45;">
+      <strong>Faunal Taxonomy &amp; Caspian Strategy:</strong> The suite deliberately privileges archaic benthic survivors (<em>Didacna</em>, <em>Alosa</em>, <em>Benthophilus</em>, <em>Caspiomyzon</em>) to represent primordial antiquity. The iconic <strong>Caspian Seal (<em>Pusa caspica</em>)</strong> is honored through the serene lacustrine sanctuaries of Masazir, with an authorial figurative study documented in studio archives as an available companion acquisition.
+    </p>
+
+    <p class="p1-body-text" style="font-size: 8pt; margin-top: 4px; line-height: 1.45;">
+      <strong>Archival Conservation Protocol:</strong> All raw minerals are stabilized under museum standards: Masazir salt crystals undergo thermal dehydration and UV-matte acrylic encapsulation; mud-volcano craquelure is co-polymerized for zero shedding; and bitumen is mineral-dissolved into inert polymer glazes.
     </p>
   </div>
 
   <div class="p1-footer">
-    <strong>CONFIDENTIAL &amp; PROPRIETARY &bull; MIRGASIM ART STUDIO &bull; BAKU &bull; OCTOBER 2026</strong><br/>
-    MIRGASIM ART™ is a registered trademark. Master works protected under international copyright law. &copy; 2026 Mirgasim Art. All rights reserved.
+    <strong>MIRGASIM ART STUDIO &bull; BAKU &bull; COMMISSION SELECTION DOSSIER</strong><br/>
+    Submitted in Formal Response to the Curatorial Commission Selection Brief | Gazelli Art House (London / Baku)<br/>
+    <span style="font-size: 6.8pt; color: #999;">Fine art concepts, mineral formulations, and curatorial texts &copy; 2026 Mirgasim Art Studio. All rights reserved.</span>
   </div>
 </div>
 
@@ -433,6 +443,10 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val">
           An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. (Pure geological abstraction; zero portraits, zero figures, zero seals, zero carpets).
         </td>
+      </tr>
+      <tr>
+        <td class="spec-name">Turnkey Mounting</td>
+        <td class="spec-val">Mineral Impasto Continuous Wrap (or dark walnut floater frame) &bull; Dual Aluminum French Cleats (~14.5 kg) &bull; 2700K Warm Wash Lighting (CRI 95+)</td>
       </tr>
     </table>
   </div>
@@ -470,6 +484,10 @@ def generate_dossier_html(use_watermarked=True):
           An intimate mixed-media painting on canvas honoring Absheron's stone-carving traditions (<em>daş yonma</em>). Thick palette-knife impasto and porous limestone-sand grounds evoke the tactile presence of Baku stone, framing an intricate painted Shebeke geometric window. Luminous glazes of Caspian turquoise and lapis lazuli glow within the tracery, accentuated by finely embedded small <em>Didacna</em> cockle shells providing delicate, low-relief tactile dimensionality to the canvas surface.
         </td>
       </tr>
+      <tr>
+        <td class="spec-name">Turnkey Mounting</td>
+        <td class="spec-val">Limestone Gesso Wrap (or blackened steel floater) &bull; Single Aluminum Cleat w/ Locking Pin (~3.2 kg) &bull; 2700K-3000K Spot (15&deg; Beam)</td>
+      </tr>
     </table>
   </div>
 </div>
@@ -506,6 +524,10 @@ def generate_dossier_html(use_watermarked=True):
           Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (<em>Yanar Dağ / Ateshgah</em>).
         </td>
       </tr>
+      <tr>
+        <td class="spec-name">Turnkey Mounting</td>
+        <td class="spec-val">Bitumen Polymer Continuous Wrap &bull; Dual Heavy-Duty French Cleats (~16.0 kg) &bull; 3000K Museum Track Lighting (Highlight Pyrite)</td>
+      </tr>
     </table>
   </div>
 </div>
@@ -537,6 +559,10 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val">
           A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (<em>Benthophilus</em>) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
         </td>
+      </tr>
+      <tr>
+        <td class="spec-name">Turnkey Mounting</td>
+        <td class="spec-val">Volcanic Craquelure Gallery Wrap &bull; Triple Aluminum French Cleats (~19.5 kg) &bull; High-CRI 98 Wall Wash (Grazing Texture)</td>
       </tr>
     </table>
   </div>
@@ -574,7 +600,108 @@ def generate_dossier_html(use_watermarked=True):
           A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt solar mandala. Incised directly into the bone-plaster and limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
         </td>
       </tr>
+      <tr>
+        <td class="spec-name">Turnkey Mounting</td>
+        <td class="spec-val">Bone Plaster Gallery Edge (or oiled walnut floater) &bull; Dual Aluminum Z-Cleats (~11.0 kg) &bull; 2700K Framing Projector / Gimbal</td>
+      </tr>
     </table>
+  </div>
+</div>
+
+<!-- PAGE 7: ARCHITECTURAL IN-SITU SIMULATION & TURNKEY INSTALLATION MATRIX -->
+<div class="page">
+  <div>
+    <div class="p1-header" style="margin-bottom: 8px; padding-bottom: 6px;">
+      <div class="brand-wordmark" style="font-size: 16pt;">MIRGASIM ART STUDIO</div>
+      <div class="brand-subtitle" style="font-size: 7.5pt;">ARCHITECTURAL SPECIFICATIONS &amp; TURNKEY INSTALLATION SCHEDULE</div>
+    </div>
+
+    <div class="p1-title-box" style="margin-bottom: 6px;">
+      <div class="dossier-label">Contractor-Ready Architectural Integration</div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 15pt; margin: 3px 0 2px 0;">In-Situ Spatial Simulation &amp; Structural Hardware</h2>
+    </div>
+
+    <!-- Dual In-Situ Image Row -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 8px;">
+      <tr>
+        <td style="width: 50%; padding-right: 5px; text-align: center; vertical-align: top;">
+          <img src="{get_insitu_uri('insitu_plate_01_masazir_dawn.jpg')}" alt="Plate 01 In-Situ" style="width: 100%; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);"/>
+          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 3px;">Plate 01: Honed Coquina Feature Wall &bull; Executive Salon Placement</span>
+        </td>
+        <td style="width: 50%; padding-left: 5px; text-align: center; vertical-align: top;">
+          <img src="{get_insitu_uri('insitu_plate_04_breath_of_lokbatan.jpg')}" alt="Plate 04 In-Situ" style="width: 100%; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);"/>
+          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 3px;">Plate 04: Grand Double-Height Atrium &bull; 2700K Ceiling Wash Lighting</span>
+        </td>
+      </tr>
+    </table>
+
+    <table class="data-table" style="font-size: 7.5pt; margin: 4px 0;">
+      <thead>
+        <tr>
+          <th>Plate</th>
+          <th>Dimensions</th>
+          <th>Est. Weight</th>
+          <th>Edge / Framing Profile</th>
+          <th>Rigging Hardware</th>
+          <th>Optimal Lighting</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>01</strong></td>
+          <td>185 &times; 120 cm</td>
+          <td>~14.5 kg</td>
+          <td>Continuous Mineral Wrap / Floater</td>
+          <td>Dual Aluminum Z-Cleats</td>
+          <td>2700K Ceiling Wash (CRI 95+)</td>
+        </tr>
+        <tr>
+          <td><strong>02</strong></td>
+          <td>40 &times; 60 cm</td>
+          <td>~3.2 kg</td>
+          <td>Limestone Gesso / Black Steel</td>
+          <td>Single Cleat w/ Locking Pin</td>
+          <td>2700K-3000K Spot (15&deg;)</td>
+        </tr>
+        <tr>
+          <td><strong>03</strong></td>
+          <td>120 &times; 200 cm</td>
+          <td>~16.0 kg</td>
+          <td>Bitumen Polymer / Bronze Floater</td>
+          <td>Dual Continuous Cleats (80kg)</td>
+          <td>3000K Museum Track Light</td>
+        </tr>
+        <tr>
+          <td><strong>04</strong></td>
+          <td>180 &times; 180 cm</td>
+          <td>~19.5 kg</td>
+          <td>Volcanic Craquelure Wrap</td>
+          <td>Triple Cleats (Seismic Rated)</td>
+          <td>High-CRI 98 Wall Grazing</td>
+        </tr>
+        <tr>
+          <td><strong>05</strong></td>
+          <td>100 &times; 150 cm</td>
+          <td>~11.0 kg</td>
+          <td>Bone Plaster / Oiled Walnut</td>
+          <td>Dual Aluminum Z-Cleats</td>
+          <td>2700K Framing Projector</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #fdfbf7; border: 1px solid #e8dfcf; border-radius: 3px; padding: 6px 10px; margin-top: 6px;">
+      <div style="font-size: 7.8pt; font-weight: 600; color: #8c734b; text-transform: uppercase; letter-spacing: 0.5px;">Curatorial Material Palette Box ("The Tactile Verification")</div>
+      <p style="font-size: 7.5pt; line-height: 1.45; color: #333; margin: 3px 0 0 0;">
+        Mirgasim Art Studio offers to deliver a bespoke hand-crafted presentation box containing five 15 &times; 15 cm cured architectural plaques (Masazir lake salt in UV-acrylic, Lokbatan clay craquelure, cold-polymerized Binagadi bitumen, honed Absheron coquina, and pyrite ore aggregates) for direct tactile review by the selection committee.
+      </p>
+    </div>
+  </div>
+
+  <div class="p1-footer" style="padding-top: 6px;">
+    <strong>MIRGASIM ART STUDIO &bull; BAKU &bull; COMMISSION SELECTION DOSSIER</strong><br/>
+    Submitted in Formal Response to the Curatorial Commission Selection Brief | Gazelli Art House (London / Baku)<br/>
+    <span style="font-size: 6.8pt; color: #999;">Fine art concepts and mineral formulations &copy; 2026 Mirgasim Art Studio. All rights reserved.</span>
   </div>
 </div>
 
