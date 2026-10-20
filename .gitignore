@@ -31,3 +31,23 @@ yarn-error.log*
 node_modules/
 dist/
 build/
+
+# Images in my-works folder
+**/my-works/*.jpg
+**/my-works/*.JPG
+**/my-works/*.jpeg
+**/my-works/*.JPEG
+**/my-works/*.png
+**/my-works/*.PNG
+**/my-works/*.heic
+**/my-works/*.HEIC
+**/my-works/*.webp
+**/my-works/*.WEBP
+**/my-works/*.gif
+**/my-works/*.GIF
+**/my-works/*.tiff
+**/my-works/*.TIFF
+**/my-works/*.bmp
+**/my-works/*.BMP
+**/my-works/*.svg
+**/my-works/*.SVG
