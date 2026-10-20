@@ -323,35 +323,26 @@ def generate_exhibition_plate(image_path, output_path, meta):
         print(f"  [Exhibition Plate] {os.path.basename(image_path)} -> {output_path}")
 
 def watermark_catalog(generate_plates=True):
-    """Processes all 5 artworks in docs/output/latest."""
-    base_dir = "docs/output/latest"
+    """Processes all 5 artworks strictly within docs/output/latest/ subfolders."""
     clean_dir = "docs/output/latest/_clean"
-    wm_underscored = "docs/output/latest/_watermarked"
-    wm_legacy = "docs/output/latest/watermarked"
-    plates_underscored = "docs/output/latest/_exhibition_plates"
-    plates_legacy = "docs/output/latest/exhibition_plates"
+    wm_dir = "docs/output/latest/_watermarked"
+    plates_dir = "docs/output/latest/_exhibition_plates"
 
     print("=== 1. Generating Luxury Floating Obsidian Watermarks for Master Works ===")
     for fname in CATALOG_METADATA.keys():
         src = os.path.join(clean_dir, fname)
-        if not os.path.exists(src):
-            src = os.path.join(base_dir, fname)
         if os.path.exists(src):
-            apply_watermark(src, os.path.join(wm_underscored, fname))
-            apply_watermark(src, os.path.join(wm_legacy, fname))
-            apply_watermark(src, os.path.join("docs/output/watermarked", fname))
+            apply_watermark(src, os.path.join(wm_dir, fname))
+        else:
+            print(f"  [Warning] Missing clean master: {src}")
 
     if generate_plates:
         print("\n=== 2. Generating Museum Archival Exhibition Passe-Partout Plates ===")
         for fname, meta in CATALOG_METADATA.items():
             src = os.path.join(clean_dir, fname)
-            if not os.path.exists(src):
-                src = os.path.join(base_dir, fname)
             if os.path.exists(src):
                 dst_plate = f"plate_{fname}"
-                generate_exhibition_plate(src, os.path.join(plates_underscored, dst_plate), meta)
-                generate_exhibition_plate(src, os.path.join(plates_legacy, dst_plate), meta)
-                generate_exhibition_plate(src, os.path.join("docs/output/exhibition_plates", dst_plate), meta)
+                generate_exhibition_plate(src, os.path.join(plates_dir, dst_plate), meta)
 
 def main():
     parser = argparse.ArgumentParser(description="Mirgasim Art Studio - Luxury Watermark & Exhibition Plate Builder")

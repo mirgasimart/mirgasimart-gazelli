@@ -22,15 +22,9 @@ def generate_dossier_html(use_watermarked=True):
     cwd = os.getcwd()
 
     def get_img_uri(rel_path):
-        if use_watermarked:
-            dirs = ["docs/output/latest/_watermarked", "docs/output/latest/watermarked", "docs/output/latest"]
-        else:
-            dirs = ["docs/output/latest/_clean", "docs/output/latest"]
-        for d in dirs:
-            full_path = os.path.join(cwd, d, rel_path)
-            if os.path.exists(full_path):
-                return f"file:///{full_path.replace(os.sep, '/')}"
-        return f"file:///{os.path.join(cwd, 'docs/output/latest', rel_path).replace(os.sep, '/')}"
+        target_dir = "docs/output/latest/_watermarked" if use_watermarked else "docs/output/latest/_clean"
+        full_path = os.path.join(cwd, target_dir, rel_path)
+        return f"file:///{full_path.replace(os.sep, '/')}"
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
