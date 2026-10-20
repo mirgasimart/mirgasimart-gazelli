@@ -486,7 +486,7 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
       <tr>
         <td><strong>04</strong></td>
-        <td><em>The Celadon Caldera: Breath of Lokbatan</em></td>
+        <td><em>[Work in Progress / Forthcoming]</em></td>
         <td>180 × 180 cm (Square 1:1)</td>
         <td>Mud-Volcano Clay, Verdigris Glazes</td>
         <td>Armored Caspian Goby (<em>Benthophilus</em>)</td>
@@ -614,53 +614,35 @@ def generate_dossier_html(use_watermarked=True):
 
 <!-- PAGE 6: PLATE 04 -->
 <div class="page">
-  <div class="plate-badge">Plate 04 • Volcanic Earth-Art &amp; Tectonic Craquelure</div>
-  <h3 class="plate-title">The Celadon Caldera: Breath of Lokbatan</h3>
-  <div class="plate-subtitle">Lökbatan Nəfəsi: Seladon Palçıq Qrifonu və Qobi</div>
+  <div class="plate-badge">Plate 04 • Work in Progress / Reserved</div>
+  <h3 class="plate-title">[Work 04: Atelier Development in Progress]</h3>
+  <div class="plate-subtitle">Lökbatan Nəfəsi: Yeni Seriya Üzərində İş Gedir</div>
 
-  <div class="artwork-showcase">
-    <img src="{get_img_uri('04_whisper_of_the_mud_volcano_caspian_goby.jpg')}" alt="The Celadon Caldera"/>
+  <div class="artwork-showcase" style="padding: 25px 14px;">
+    <img src="{get_img_uri('04_placeholder_work_in_progress.png')}" alt="Plate 04 Placeholder" style="max-height: 360px;"/>
   </div>
 
   <table class="specs-grid">
     <tr>
-      <td class="spec-name">Dimensions</td>
+      <td class="spec-name">Status</td>
+      <td class="spec-val"><strong>Reserved for Forthcoming Atelier Review</strong> (Work in Progress)</td>
+    </tr>
+    <tr>
+      <td class="spec-name">Target Dimensions</td>
       <td class="spec-val"><strong>180 × 180 cm</strong> (Square Format 1:1, Specification from Brief)</td>
     </tr>
     <tr>
-      <td class="spec-name">Medium / Techniques</td>
-      <td class="spec-val">Lokbatan Mud-Volcano Clay, Deep Natural Drying Craquelure Fissures, Oxidized Copper Verdigris &amp; Celadon Mineral Glazes, Pyrite Vein Infiltration</td>
+      <td class="spec-name">Proposed Medium</td>
+      <td class="spec-val">Subterranean Lokbatan Mud-Volcano Clay, Luminous Caspian Greenish-Blue Mineral Glazes (Celadon, Seafoam, Verdigris), Natural Craquelure Fissures &amp; Pyrite Vein Infiltration</td>
     </tr>
     <tr>
-      <td class="spec-name">Endemic Wildlife</td>
-      <td class="spec-val">Caspian Tadpole Goby (<em>Benthophilus</em> spp.)</td>
+      <td class="spec-name">Proposed Endemic Fauna</td>
+      <td class="spec-val">Armored Caspian Tadpole Goby (<em>Benthophilus</em> spp.)</td>
     </tr>
     <tr>
-      <td class="spec-name">Curatorial Concept</td>
+      <td class="spec-name">Curatorial Note</td>
       <td class="spec-val">
-        A monumental 180 × 180 cm square format that transforms explosive geothermal volcanic mud into a refined, soothing aesthetic experience. Swirling across the circular crater are elegant greenish-blue Caspian glazes—seafoam, pale celadon, ocean teal, and verdigris patina. Deep craquelure fissures open across the smooth volcanic clay to reveal subtle golden pyrite veins beneath, with the armored Caspian tadpole goby sculpted in fossilized stone relief.
-      </td>
-    </tr>
-  </table>
-
-  <div class="studies-header">Alternative Greenish-Blue Square Iterations (Studio Studies)</div>
-  <table class="studies-table studies-table-4col">
-    <tr>
-      <td>
-        <img src="{get_img_uri('04_variant_b_caspian_teal.jpg')}" alt="Study B: Caspian Teal"/>
-        <span class="study-caption"><strong>Study B</strong>: Caspian Teal</span>
-      </td>
-      <td>
-        <img src="{get_img_uri('04_variant_c_luminous_verdigris.jpg')}" alt="Study C: Luminous Verdigris"/>
-        <span class="study-caption"><strong>Study C</strong>: Luminous Verdigris</span>
-      </td>
-      <td>
-        <img src="{get_img_uri('04_variant_d_mint_jade.jpg')}" alt="Study D: Mint Jade"/>
-        <span class="study-caption"><strong>Study D</strong>: Mint Jade</span>
-      </td>
-      <td>
-        <img src="{get_img_uri('04_variant_e_abyssal_emerald.jpg')}" alt="Study E: Abyssal Emerald"/>
-        <span class="study-caption"><strong>Study E</strong>: Abyssal Emerald</span>
+        Work #4 is currently being redesigned from scratch in the atelier to replace earlier dark earthy tones with radiant, pleasing Caspian greenish-blue palettes and a strict 1:1 square composition. The final artwork plate and alternative studies will be integrated upon completion of the new generation series.
       </td>
     </tr>
   </table>

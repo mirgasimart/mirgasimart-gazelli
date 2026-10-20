@@ -13,7 +13,7 @@ Responding to the highest standards of contemporary fine art at **Gazelli Art Ho
 - **Saline Strata of Masazir: Crystalline Lakebed Abstraction** (Lake Masazir Pink Salt, Mineral Terraces & Sgraffito)
 - **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone, Coquina & Fossil Didacna)
 - **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore & Marine Shad)
-- **The Celadon Caldera: Volcanic Craquelure & Armored Goby** (Lokbatan Clay, Greenish-Blue Caspian Verdigris Glazes, Pyrite Ore & Caspian Goby, Square 1:1 Format)
+- **Work 04: [Atelier Development in Progress]** (180 × 180 cm Square Canvas, Reserved for Volcanic Craquelure & Caspian Greenish-Blue Glazes)
 - **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Beach Sand Mandala & Incised Rock Petroglyphs)
 
 Preserving the raw textural DNA of the Absheron School—heavy sculptural palette-knife impasto, tactile mineral reliefs, authentic crystalline encrustations, and deep incised sgraffito fissures—this exhibition replaces superficial decorative clichés with the literal primordial matter of the Absheron Peninsula.
@@ -83,24 +83,15 @@ To protect studio copyright and provenance across digital and print distribution
 
 ---
 
-### 4. *The Celadon Caldera: Breath of Lokbatan* (*Lökbatan Nəfəsi: Seladon Palçıq Qrifonu və Qobi*)
-![The Celadon Caldera](04_whisper_of_the_mud_volcano_caspian_goby.jpg)
+### 4. *[Work 04: Atelier Development in Progress]*
+![Work 04 Placeholder](04_placeholder_work_in_progress.png)
 
-- **Genre**: Earth-Art Matter Painting & Tectonic Craquelure
-- **Dimensions**: 180 × 180 cm (Square Format, Specification from Brief)
-- **Endemic Caspian Wildlife**: Caspian Tadpole Goby (*Benthophilus* spp.)
-- **Selected Absheron Materials**:
-  - **Mud-Volcano Clay (Ejecta from Lokbatan / Gobustan)**: Authentic volcanic clay applied in heavy impasto and cured into deep, natural craquelure fissures.
-  - **Absheron Limestone & Mineral Verdigris**: Ground limestone and oxidized copper mineral glazes producing soothing greenish-blue, celadon, and seafoam Caspian tones.
-  - **Pyrite Mineral Accents**: Metallic brassy-gold sulfide flecks embedded along volcanic craquelure fault-lines.
-- **Curatorial Narrative**:
-  Executed in a monumental 180 × 180 cm square format, this work transforms the explosive geothermal energy of Absheron's mud volcanoes into a refined, visually soothing aesthetic experience. The circular crater swirls in elegant, luminous greenish-blue Caspian glazes—seafoam, pale celadon, ocean teal, and oxidized copper verdigris. Deep craquelure fissures crack open across the porcelain-smooth volcanic clay ground to reveal subtle golden pyrite veins beneath. Perched gracefully upon the central volcanic ridge is the prehistoric armored Caspian tadpole goby (*Benthophilus* spp.), rendered in fossilized stone relief. *(Strictly 1:1 square; no carpets; radiant Caspian greenish-blue mineral harmony).*
-
-#### Additional Greenish-Blue Square Iterations:
-| Study B: *Caspian Teal* | Study C: *Luminous Verdigris* | Study D: *Mint Jade* | Study E: *Abyssal Emerald* |
-| :---: | :---: | :---: | :---: |
-| ![Caspian Teal](04_variant_b_caspian_teal.jpg) | ![Luminous Verdigris](04_variant_c_luminous_verdigris.jpg) | ![Mint Jade](04_variant_d_mint_jade.jpg) | ![Abyssal Emerald](04_variant_e_abyssal_emerald.jpg) |
-| *Deep aquamarine teal with golden veins* | *Warm verdigris & oxidized copper patina* | *High-key soft mint & limestone craquelure* | *Rich peacock jewel-tones & mineral relief* |
+- **Status**: **Reserved / Forthcoming Atelier Iteration**
+- **Target Dimensions**: 180 × 180 cm (Square Format, Specification from Brief)
+- **Proposed Medium**: Subterranean Lokbatan Mud-Volcano Clay, Luminous Caspian Greenish-Blue Mineral Glazes (Celadon, Seafoam, Verdigris), Natural Craquelure Fissures & Pyrite Vein Infiltration
+- **Proposed Endemic Fauna**: Armored Caspian Tadpole Goby (*Benthophilus* spp.)
+- **Curatorial Note**:
+  Work #4 is currently being redesigned from scratch in the atelier to replace earlier dark earthy tones with radiant, pleasing Caspian greenish-blue palettes and a strict 1:1 square composition. The final artwork plate and alternative studies will be integrated upon completion of the new generation series.
 
 ---
 
