@@ -1,13 +1,13 @@
 # Gazelli Art House Exhibition Proposal (Latest Active Version)
-## *Absheron Tectonics: Primordial Matter & Beyond the Loom*
+## *Absheron Tectonics: Primordial Matter & Geological Strata*
 
 ### Curatorial Statement & Vision
-Responding to the highest standards of contemporary fine art at **Gazelli Art House**, this latest series transcends conventional regional clichés and literal decorative repetition. Instead of pervasive carpet motifs across all works, the collection pushes into diverse, intellectually rigorous, and authentic Absheron signatures:
-- **Salt Monoliths & Brine Mining Architecture** (Masazir Pink Lake)
-- **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone & Coquina)
-- **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore)
-- **Radical Volcanic Earth-Art** (Lokbatan Crater Craquelure & Armored Goby)
-- **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Sand Mandala, and the **sole, solitary heirloom textile shard** in the collection)
+Responding to the highest standards of contemporary fine art at **Gazelli Art House**, this collection explores authentic Absheron signatures and Caspian endemism through the physical substances of the land:
+- **Salt Monoliths & Brine Mining Architecture** (Masazir Pink Lake & Caspian Seal)
+- **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone, Coquina & Fossil Didacna)
+- **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore & Marine Shad)
+- **Radical Volcanic Earth-Art** (Lokbatan Crater Craquelure & Armored Caspian Goby)
+- **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Beach Sand Mandala & Incised Rock Petroglyphs)
 
 Mirgasim’s core visual DNA—thick sculptural palette-knife impasto, tactile mineral reliefs, deep sgraffito incisions, and raw earthen contrasts—is preserved while expanding into architectural, geological, and mythic dimensions.
 
@@ -75,7 +75,7 @@ Mirgasim’s core visual DNA—thick sculptural palette-knife impasto, tactile m
 
 ---
 
-### 5. *The Gobustan Solar Oracle: Ouroboros Lamprey & The Sole Textile Shard* (*Qobustan Günəşi: İlanbalığı və Yeganə Xalça Qalığı*)
+### 5. *The Gobustan Solar Oracle: Ouroboros Lamprey* (*Qobustan Günəşi: İlanbalığı və Qədim Qaya Təsvirləri*)
 ![The Gobustan Solar Oracle](05_the_lampreys_vigil_caspian_lamprey.jpg)
 
 - **Genre**: Mythological Totemic Icon / Contemporary Symbolist Altar Piece
@@ -86,7 +86,7 @@ Mirgasim’s core visual DNA—thick sculptural palette-knife impasto, tactile m
   - **Masazir Lake Salt Crystals**: Saline clusters embedded along the cyan-blue outer orbital halo.
   - **Absheron Limestone & Bone Plaster**: Sgraffito incisions depicting Gobustan rock petroglyphs.
 - **Curatorial Narrative**:
-  A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved into the border are Gobustan petroglyphs (reed boats, hunters, and sacred bulls), accompanied by **the single, solitary heirloom textile shard in the entire exhibition**—treated as a precious historical relic rather than a ubiquitous pattern.
+  A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time. *(No carpets; pure stone petroglyphs, sand mandala, and primordial marine life).*
 
 ---
 
