@@ -385,9 +385,9 @@ def generate_dossier_html(use_watermarked=True):
         </tr>
         <tr>
           <td><strong>04</strong></td>
-          <td><em>[Work in Progress / Forthcoming Atelier Review]</em></td>
+          <td><em>Breath of Lokbatan: Volcanic Crater &amp; Goby</em></td>
           <td>180 &times; 180 cm</td>
-          <td>Volcanic Clay, Celadon Glazes</td>
+          <td>Volcanic Clay, Celadon Glazes, Pyrite</td>
           <td>Caspian Tadpole Goby</td>
         </tr>
         <tr>
@@ -519,36 +519,28 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="plate-top">
-      <div class="plate-badge">Plate 04 &bull; Work in Progress / Reserved</div>
-      <h3 class="plate-title">[Work 04: Atelier Development in Progress]</h3>
-      <div class="plate-subtitle">Lökbatan Nəfəsi: Yeni Seriya Üzərində İş Gedir</div>
+      <div class="plate-badge">Plate 04 &bull; Earth-Art Vortex &bull; Geothermal Mineral Painting</div>
+      <h3 class="plate-title">Breath of Lokbatan: Volcanic Crater and Armored Goby</h3>
+      <div class="plate-subtitle">Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('04_placeholder_work_in_progress.png')}" alt="Plate 04 Placeholder" style="max-height: 370px;"/>
+      <img src="{get_img_uri('04_breath_of_lokbatan_tadpole_goby.jpg')}" alt="Breath of Lokbatan" style="max-height: 380px;"/>
     </div>
 
     <table class="specs-grid">
       <tr>
-        <td class="spec-name">Status</td>
-        <td class="spec-val"><strong>Reserved for Forthcoming Atelier Review</strong> (Work in Progress)</td>
+        <td class="spec-name">Dimensions</td>
+        <td class="spec-val"><strong>180 &times; 180 cm</strong> (Monumental Square Format 1:1, Specification from Brief)</td>
       </tr>
       <tr>
-        <td class="spec-name">Target Dimensions</td>
-        <td class="spec-val"><strong>180 &times; 180 cm</strong> (Square Format 1:1, Specification from Brief)</td>
+        <td class="spec-name">Materials</td>
+        <td class="spec-val">Subterranean Lokbatan Mud-Volcano Clay, Luminous Caspian Celadon &amp; Seafoam Glazes, Tactile Mineral Craquelure, Metallic Pyrite Vein Infiltration</td>
       </tr>
       <tr>
-        <td class="spec-name">Proposed Medium</td>
-        <td class="spec-val">Subterranean Lokbatan Mud-Volcano Clay, Luminous Caspian Greenish-Blue Mineral Glazes (Celadon, Seafoam, Verdigris), Natural Craquelure Fissures &amp; Pyrite Vein Infiltration</td>
-      </tr>
-      <tr>
-        <td class="spec-name">Proposed Endemic Fauna</td>
-        <td class="spec-val">Armored Caspian Tadpole Goby (<em>Benthophilus</em> spp.)</td>
-      </tr>
-      <tr>
-        <td class="spec-name">Curatorial Note</td>
+        <td class="spec-name">Curatorial Concept</td>
         <td class="spec-val">
-          Work #4 is currently being redesigned from scratch in the atelier to replace earlier dark earthy tones with radiant, pleasing Caspian greenish-blue palettes and a strict 1:1 square composition. The final artwork plate and alternative studies will be integrated upon completion of the new generation series.
+          A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (<em>Benthophilus</em>) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
         </td>
       </tr>
     </table>
@@ -595,12 +587,32 @@ def generate_dossier_html(use_watermarked=True):
 </html>'''
     return html
 
+def find_browser_executable():
+    """Finds Chrome or Edge browser executable across platforms."""
+    candidates = [
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+        "google-chrome",
+        "chromium",
+        "chrome",
+        "msedge",
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return c
+    return "chrome"
+
 def build_pdf(use_watermarked=True):
-    """Compiles HTML into an exact 6-page PDF via headless Chrome."""
+    """Compiles HTML into an exact 6-page PDF via headless Chrome/Edge."""
+    import shutil
     html_content = generate_dossier_html(use_watermarked=use_watermarked)
 
     tmp_html = "docs/output/latest/temp_dossier.html"
-    with open(tmp_html, "w") as f:
+    with open(tmp_html, "w", encoding="utf-8") as f:
         f.write(html_content)
 
     out_pdf = "docs/output/latest/MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf"
@@ -622,31 +634,32 @@ def build_pdf(use_watermarked=True):
         '</div>'
     )
 
+    browser_bin = find_browser_executable()
     cmd = [
-        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        browser_bin,
         "--headless",
         "--disable-gpu",
         "--display-header-footer",
         f"--header-template={header_html}",
         f"--footer-template={footer_html}",
         f"--print-to-pdf={out_pdf}",
-        f"file://{os.path.abspath(tmp_html)}"
+        f"file:///{os.path.abspath(tmp_html).replace(os.sep, '/')}"
     ]
 
-    print("Compiling 6-Page Luxury PDF Dossier via Google Chrome Headless...")
+    print(f"Compiling 6-Page Luxury PDF Dossier via {browser_bin}...")
     res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if os.path.exists(tmp_html):
         os.remove(tmp_html)
 
     if os.path.exists(out_pdf):
-        subprocess.run(["cp", out_pdf, readme_pdf])
+        shutil.copyfile(out_pdf, readme_pdf)
         size_mb = os.path.getsize(out_pdf) / (1024 * 1024)
         print(f"SUCCESS: Generated 6-Page Luxury Dossier ({size_mb:.2f} MB):")
         print(f"  -> {out_pdf}")
         print(f"  -> {readme_pdf}")
     else:
         print("ERROR: Failed to generate PDF dossier.")
-        print(res.stderr.decode())
+        print(res.stderr.decode(errors='ignore'))
 
 def main():
     parser = argparse.ArgumentParser(description="Mirgasim Art - 6-Page Luxury PDF Dossier Builder")

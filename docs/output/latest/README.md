@@ -13,7 +13,7 @@ Responding to the highest standards of contemporary fine art at **Gazelli Art Ho
 - **Saline Strata of Masazir: Crystalline Lakebed Abstraction** (Lake Masazir Pink Salt, Mineral Terraces & Sgraffito)
 - **Shebeke Window Tracery & Paleontological Strata** (Absheron Limestone Ground, Sand Texture & Subtle Didacna Shell Accents)
 - **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore & Marine Shad)
-- **Work 04: [Atelier Development in Progress]** (180 × 180 cm Square Canvas, Reserved for Volcanic Craquelure & Caspian Greenish-Blue Glazes)
+- **Breath of Lokbatan: Volcanic Crater and Armored Goby** (Subterranean Mud-Volcano Clay, Luminous Celadon Glazes & Pyrite Veins)
 - **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Beach Sand Mandala & Incised Rock Petroglyphs)
 
 Preserving the raw textural DNA of the Absheron School—heavy sculptural palette-knife impasto, tactile mineral reliefs, authentic crystalline encrustations, and deep incised sgraffito fissures—this exhibition replaces superficial decorative clichés with the literal primordial matter of the Absheron Peninsula.
@@ -77,15 +77,20 @@ To protect studio copyright and provenance across digital and print distribution
 
 ---
 
-### 4. *[Work 04: Atelier Development in Progress]*
-![Work 04 Placeholder](04_placeholder_work_in_progress.png)
+### 4. *Breath of Lokbatan: Volcanic Crater and Armored Goby* (*Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi*)
+![Breath of Lokbatan](04_breath_of_lokbatan_tadpole_goby.jpg)
 
-- **Status**: **Reserved / Forthcoming Atelier Iteration**
-- **Target Dimensions**: 180 × 180 cm (Square Format, Specification from Brief)
-- **Proposed Medium**: Subterranean Lokbatan Mud-Volcano Clay, Luminous Caspian Greenish-Blue Mineral Glazes (Celadon, Seafoam, Verdigris), Natural Craquelure Fissures & Pyrite Vein Infiltration
-- **Proposed Endemic Fauna**: Armored Caspian Tadpole Goby (*Benthophilus* spp.)
-- **Curatorial Note**:
-  Work #4 is currently being redesigned from scratch in the atelier to replace earlier dark earthy tones with radiant, pleasing Caspian greenish-blue palettes and a strict 1:1 square composition. The final artwork plate and alternative studies will be integrated upon completion of the new generation series.
+- **Genre**: Earth-Art Vortex / Geothermal Mineral Painting
+- **Dimensions**: 180 × 180 cm (Monumental Square Canvas, Specification from Brief)
+- **Endemic Caspian Wildlife**: Armored Caspian Tadpole Goby (*Benthophilus* spp.)
+- **Selected Absheron Materials**:
+  - **Subterranean Lokbatan Mud-Volcano Clay**: Authentic mineral clay curing into dynamic 3D craquelure fissures.
+  - **Caspian Mineral Glazes**: Luminous celadon, seafoam green, and verdigris pigments evoking thermal spring luminescence.
+  - **Metallic Pyrite Infiltration**: Genuine pyrite mineral grains accenting the prehistoric armor plates of the goby.
+  - **Incised Sgraffito Lines**: Deep directional fissures carved into the wet clay bed.
+- **Curatorial Narrative**:
+  A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (*Benthophilus*) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience. *(Zero carpets, pure geological matter, mineral craquelure, and authentic Caspian endemism).*
+
 
 ---
 

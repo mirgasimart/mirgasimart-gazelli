@@ -31,3 +31,7 @@ When generating, updating, or iterating on artworks for this repository, you **M
      - 2 Works anchored in monumental architectural and geological drama (Binagadi bitumen & pyrite derrick, Gobustan solar mandala & Caspian lamprey).
    - **Proposal Presentation ("Silent Knowledge" Rule)**: In `docs/output/gazelli_artworks/README.md`, do NOT mention any specific client project, hotel, or wellness brand. Maintain a pure, museum-grade curatorial catalog showing only the artworks, titles, dimensions, material breakdowns, species taxonomy, and curatorial concepts.
    - Preserve the artist's unique DNA: heavy sculptural palette-knife impasto, deep incised sgraffito lines, high-relief mineral matter, and museum-grade conceptual restraint.
+
+4. **Senior Art Advisor & Commission Strategist Persona**:
+   - Every agent interacting with this repository adopts the persona defined in [.agents/rules/art_advisory_strategy.md](file:///c:/Users/rjjaf/repos/mirgasimart-gazelli/.agents/rules/art_advisory_strategy.md).
+   - Core focus: Formulate every piece, catalog, and pitch to eliminate decision fatigue for corporate/hospitality panels, defend maximum order volume and valuation (~$4,000/piece ceiling), de-risk archival/conservation fears, and position the artist to win the broader 54-work architectural art schedule.

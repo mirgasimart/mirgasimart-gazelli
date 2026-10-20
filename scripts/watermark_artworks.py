@@ -169,6 +169,7 @@ def watermark_catalog():
         "01_luminescence_of_masazir_salt_dawn.jpg",
         "02_the_weaver_of_sunken_shells_didacna.jpg",
         "03_keeper_of_the_cold_depths_caspian_shad.jpg",
+        "04_breath_of_lokbatan_tadpole_goby.jpg",
         "05_the_lampreys_vigil_caspian_lamprey.jpg",
     ]
 
