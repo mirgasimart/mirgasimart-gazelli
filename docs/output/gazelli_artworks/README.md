@@ -3,30 +3,29 @@
 
 ### Curatorial Statement & Vision
 Responding to the highest standards of contemporary fine art at **Gazelli Art House**, this collection explores authentic Absheron signatures and Caspian endemism through the physical substances of the land:
-- **Lyrical Absheron Coastal Terrain & Salt Ledge** (Absheron Stone Walls, Fig Trees, Masazir Salt & Caspian Seal)
+- **The Muse of Masazir & Saline Crusts** (Mirgasim's Iconic Muse, Masazir Pink Salt & Caspian Seal Pup)
 - **Carved Stone Shebeke Tracery & Paleontological Strata** (Absheron Limestone, Coquina & Fossil Didacna)
 - **Industrial Hydrocarbon Scaffolding & Eternal Flames** (Binagadi Bitumen, Historic Derricks, Pyrite Ore & Marine Shad)
 - **Radical Volcanic Earth-Art** (Lokbatan Crater Craquelure & Armored Caspian Goby)
 - **The Gobustan Petroglyphic Solar Oracle** (Ouroboros Lamprey, Beach Sand Mandala & Incised Rock Petroglyphs)
 
-Mirgasim’s core visual DNA—thick sculptural palette-knife impasto, tactile mineral reliefs, deep sgraffito incisions, and raw earthen contrasts—is preserved while expanding into architectural, geological, and mythic dimensions.
+Mirgasim’s core visual DNA—melancholic statuesque muses, connected dark brows, sculpted hands, heavy sculptural palette-knife impasto, tactile mineral reliefs, and deep sgraffito incisions—is preserved while expanding into architectural, geological, and mythic dimensions.
 
 ---
 
 ## Catalog of Artworks
 
-### 1. *Sun Over Absheron: The Caspian Seal and Salt Ledge* (*Abşeron Günəşi: Xəzər Suiti və Duz Qayası*)
-![Sun Over Absheron](01_the_solitary_of_masazir_caspian_seal.jpg)
+### 1. *The Muse of Masazir: The Caspian Seal and Saline Grace* (*Masazır Pərisi: Xəzər Suiti və Duz Qayası*)
+![The Muse of Masazir](01_the_solitary_of_masazir_caspian_seal.jpg)
 
-- **Genre**: Lyrical Absheron School Landscape / Coastal Geological Painting
+- **Genre**: Figurative Fine Art Portraiture / Geological Matter Painting
 - **Dimensions**: 100 × 150 cm (Portrait, Painting Specification from Brief)
 - **Endemic Caspian Wildlife**: Caspian Seal (*Pusa caspica*)
 - **Selected Absheron Materials**:
-  - **Masazir Pink Lake Salt**: Natural crystalline salt clusters embedded directly into the impasto along the foreground coquina shelf.
-  - **Absheron Limestone**: Porous cream-and-ochre limestone ground forming traditional dry-stone walls (*daş hasar*).
-  - **Coquina (Shell Limestone)**: Textured coastal ledge supporting the seal.
+  - **Masazir Pink Lake Salt**: Genuine crystalline pink-and-white salt encrustations integrated directly into the heavy impasto ground.
+  - **Absheron Limestone & Plaster**: Porous cream-and-ochre ground scored with fine geometric sgraffito lines.
 - **Curatorial Narrative**:
-  Channeling the lyrical, sun-drenched modernist tradition of master Sattar Bahlulzade and the Absheron School, this work captures the unmistakable essence of the Absheron coast. Winding through the sun-baked, golden-ochre bluffs are traditional dry-stone limestone walls (*daş hasar*), accompanied by wind-twisted Absheron fig trees (*əncir ağacları*) sculpted by the northern *Khazri* wind. Below, the glowing turquoise Caspian Sea stretches toward a radiant horizon. Resting peacefully in the foreground on a porous coquina shelf encrusted with genuine pink-and-white Masazir salt crystals is a solitary Caspian seal (*Pusa caspica*), its silver-grey mottled coat glistening under the warm Absheron sun. *(Unmistakably Absheron; zero pyramids, zero towers, zero carpets).*
+  Synthesizing Mirgasim’s iconic visual hallmarks—a melancholic, statuesque Azerbaijani muse with connected dark brows, sculpted hands, and intense piercing gaze—with the raw geological matter of Absheron. Cradled tenderly in her arms is a gentle Caspian seal pup (*Pusa caspica*), its silver-grey mottled coat glistening against her modern, architectural plum-burgundy draped garment. The background is a thick, sculptural palette-knife impasto ground in warm ochres and blush tones, embedded with authentic sparkling crystalline clusters of raw pink-and-white Masazir lake salt and incised with delicate geometric sgraffito lines. *(Pure Mirgasim figurative signature; modern architectural couture; zero pyramids, zero towers, zero carpets).*
 
 ---
 
