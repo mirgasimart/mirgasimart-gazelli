@@ -45,18 +45,31 @@ You operate simultaneously as a **Senior Curatorial Director** and a **Principal
 - Decision-makers lack the visual imagination to see a flat JPG and imagine how it commands a luxury space.
 - Proposals must contextualize works against architectural finishes: warm Absheron coquina walls, brushed bronze reveals, recessed warm-white wash lighting (2700K–3000K).
 
-### 6. The Long Game: The 54-Piece Gateway
-- The current 5 pieces are the vanguard for a total schedule of **54 architectural works** (39 paintings, 13 freestanding sculptures, 2 wall sculptures).
-- Winning 3 to 5 pieces now is not just a $12,000–$20,000 commission; it positions the studio as the preferred primary vendor for the entire remaining ~$150,000+ project pipeline.
-- Every technical detail must demonstrate high production capacity, studio reliability, and seamless scalability.
+### 6. Authorial Masterpiece Positioning (Selective Architectural Placement)
+- The artist is submitting strictly as an **individual master painter** for a curated suite of hero architectural moments (executive boardrooms, double-height atriums, wellness sanctuaries, VIP suites), NOT as an industrial manufacturer or bulk supplier for all 54 works or sculptures.
+- Ground the value in rare authorial hand-craftsmanship, bespoke mineral extraction, and unmistakable painterly mastery.
+- Every technical detail must demonstrate meticulous execution reliability, precision drying/curing protocols, and flawless turnkey delivery.
+
+### 7. Turnkey Installation Readiness (Contractor Confidence)
+- Selection panels include technical specifiers and interior contractors. Eliminate logistical hesitation by detailing:
+  - Museum-grade gallery-wrap with mineral impasto extending continuously over all edges, or custom recessed shadow-line floater frames in blackened steel / matte dark walnut.
+  - Calculated structural weights (e.g. aluminum-cradled timber panels).
+  - Pre-installed heavy-duty aluminum French cleats (Z-bars) for high-traffic and seismic stability.
+
+### 8. The Tactile Clench (Curatorial Material Palette Box)
+- Propose a physical tactile sample box (cured 15 × 15 cm mineral plaques of Masazir salt in UV-acrylic, Lokbatan clay craquelure, Binagadi bitumen, and honed coquina) for the selection committee to handle directly.
 
 ---
 
 ## III. Commission Proposal Execution Checklist
 Before finalizing any submission dossier:
+- [ ] Is the artist presented strictly as an individual authorial painter (no bulk factory or sculpture fabrication claims)?
 - [ ] Are all 5 works rendered with zero placeholder files?
-- [ ] Is there an explicit scientific Latin binomial taxonomy for all endemic species?
+- [ ] Is there an explicit scientific Latin binomial taxonomy for all endemic species, with a curatorial note addressing the Caspian Seal (*Pusa caspica*) context?
 - [ ] Are Absheron native geological materials explicitly named with geological origin?
 - [ ] Are carpet / textile clichés strictly eliminated in favor of raw mineral impasto and stone shebeke?
 - [ ] Is the public proposal presented in museum-grade curatorial language ("Silent Knowledge" rule)?
-- [ ] Are physical dimensions, substrate weights, and mounting specs clearly stated?
+- [ ] Are turnkey architectural specs included (edge finish, floater frame, substrate weights, and French cleat mounting)?
+- [ ] Is a physical "Curatorial Material Palette Box" offered to the review panel?
+- [ ] Are in-situ architectural context visualizations provided showing works in luxury interior settings?
+- [ ] Are pre-award claims avoided ("Submitted in Formal Response to the Curatorial Commission Selection Brief | Gazelli Art House") and copyright notices kept dignified?
