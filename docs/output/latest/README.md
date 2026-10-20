@@ -3,7 +3,7 @@
 
 **Commissioning Body**: Gazelli Art House (London / Baku)  
 **Representing Atelier**: Mirgasim Art Studio (Baku, Azerbaijan)  
-**Executive Master Dossier (PDF)**: [MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf](MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf) (10-Page Presentation with Running Headers, Footers, Page Numbers, and Studio Trademarks)  
+**Executive Master Dossier (PDF)**: [MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf](MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf) (6-Page Presentation with Running Headers, Footers, Page Numbers, and Studio Trademarks)  
 **Copyright & Trademark Notice**: MIRGASIM ART™ is a registered trademark of Mirgasim Art Studio. All concepts, visual plates, material chemistries, and curatorial narratives are protected under international copyright law. © 2026 Mirgasim Art Studio. All rights reserved.
 
 ---
@@ -33,23 +33,17 @@ To protect studio copyright and provenance across digital and print distribution
 
 ## Catalog of Artworks
 
-### 1. *Strata of Masazir: Crystalline Salt Landscape* (*Masazır Layları: Çəhrayı Duz Abstraksiyası*)
-![Strata of Masazir](01_lacustrine_strata_masazir_salt.jpg)
+### 1. *Luminescence of Masazir Dawn* (*Masazır Şəfəqi: Çəhrayı Duz Gölu*)
+![Luminescence of Masazir Dawn](01_luminescence_of_masazir_salt_dawn.jpg)
 
 - **Genre**: Pure Mineral Abstraction / Geological Earth Painting
 - **Dimensions**: 185 × 120 cm (Horizontal Landscape Canvas, Specification from Brief)
 - **Endemic Caspian Focus**: Absheron Lacustrine Strata & Lake Masazir Minerals
 - **Selected Absheron Materials**:
   - **Masazir Pink Lake Salt**: Genuine crystalline pink-and-white salt encrustations integrated directly into the heavy impasto ground.
-  - **Absheron Limestone & Alabaster Plaster**: Porous cream-and-ochre ground scored with razor-thin geometric sgraffito lines.
+  - **Absheron Limestone & Alabaster Plaster**: Porous cream-and-ochre ground scored with delicate geometric sgraffito lines.
 - **Curatorial Narrative**:
-  A serene, meditative abstract landscape composed of authentic crystalline pink-and-white salt encrustations from Lake Masazir. Honoring the mineral earth-art lineage of the Absheron School, the composition unfolds in sweeping horizontal terraces of soft rose-quartz, blush pink, peach, and warm alabaster white. The thick, sculptural palette-knife impasto captures the tactile relief of evaporated saline beds, glistening naturally under ambient light and scored with delicate geometric sgraffito fissures. Completely non-figurative, tranquil, and evocative of deep lacustrine time. *(Pure geological abstraction; zero portraits, zero figures, zero seals, zero carpets).*
-
-#### Additional Iteration Studies:
-| Study B: *Crystalline Terraces* | Study C: *Luminescence of Masazir Dawn* |
-| :---: | :---: |
-| ![Crystalline Terraces](01_variant_b_crystalline_terraces.jpg) | ![Luminescence of Masazir Dawn](01_variant_c_luminescence_dawn.jpg) |
-| *Stepped saline terraces & crystalline ridge-lines* | *Atmospheric sunrise over misty salt shoreline* |
+  An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. *(Pure geological abstraction; zero portraits, zero figures, zero seals, zero carpets).*
 
 ---
 

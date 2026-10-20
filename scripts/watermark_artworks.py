@@ -166,20 +166,13 @@ def watermark_catalog():
     os.makedirs(target_dir, exist_ok=True)
 
     artworks = [
-        "01_lacustrine_strata_masazir_salt.jpg",
+        "01_luminescence_of_masazir_salt_dawn.jpg",
         "02_the_weaver_of_sunken_shells_didacna.jpg",
         "03_keeper_of_the_cold_depths_caspian_shad.jpg",
-        "04_whisper_of_the_mud_volcano_caspian_goby.jpg",
         "05_the_lampreys_vigil_caspian_lamprey.jpg",
-        "01_variant_b_crystalline_terraces.jpg",
-        "01_variant_c_luminescence_dawn.jpg",
-        "04_variant_b_caspian_teal.jpg",
-        "04_variant_c_luminous_verdigris.jpg",
-        "04_variant_d_mint_jade.jpg",
-        "04_variant_e_abyssal_emerald.jpg",
     ]
 
-    print(f"=== Watermarking {len(artworks)} Master Artworks with MIRGASIM ART™ Wordmark ===")
+    print(f"=== Watermarking Master Artworks with MIRGASIM ART™ Wordmark ===")
     for fname in artworks:
         src = os.path.join(base_dir, fname)
         if os.path.exists(src):

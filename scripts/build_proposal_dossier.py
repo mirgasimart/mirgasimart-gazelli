@@ -364,7 +364,7 @@ def generate_dossier_html(use_watermarked=True):
       <tbody>
         <tr>
           <td><strong>01</strong></td>
-          <td><em>Strata of Masazir: Crystalline Salt Landscape</em></td>
+          <td><em>Luminescence of Masazir Dawn</em></td>
           <td>185 &times; 120 cm</td>
           <td>Masazir Pink Lake Salt, Plaster</td>
           <td>Lacustrine Evaporites</td>
@@ -416,12 +416,12 @@ def generate_dossier_html(use_watermarked=True):
   <div>
     <div class="plate-top">
       <div class="plate-badge">Plate 01 &bull; Pure Mineral Abstraction</div>
-      <h3 class="plate-title">Strata of Masazir: Crystalline Salt Landscape</h3>
-      <div class="plate-subtitle">Masazır Layları: Çəhrayı Duz Abstraksiyası</div>
+      <h3 class="plate-title">Luminescence of Masazir Dawn</h3>
+      <div class="plate-subtitle">Masazır Şəfəqi: Çəhrayı Duz Gölu</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('01_lacustrine_strata_masazir_salt.jpg')}" alt="Strata of Masazir" style="max-height: 290px;"/>
+      <img src="{get_img_uri('01_luminescence_of_masazir_salt_dawn.jpg')}" alt="Luminescence of Masazir Dawn" style="max-height: 380px;"/>
     </div>
 
     <table class="specs-grid">
@@ -436,21 +436,7 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Curatorial Concept</td>
         <td class="spec-val">
-          A serene, meditative abstract landscape capturing the primordial mineral strata of Lake Masazir. Soft undulating terraces of rose-quartz, blush pink, and warm alabaster white are built with thick palette-knife impasto. Embedded in high relief are sparkling crystalline salt clusters, scored with delicate geometric sgraffito fissures. Completely non-figurative; zero portraits, zero seals, zero carpets.
-        </td>
-      </tr>
-    </table>
-
-    <div class="studies-header">Alternative Study Variations (Studio Iterations)</div>
-    <table class="studies-table">
-      <tr>
-        <td>
-          <img src="{get_img_uri('01_variant_b_crystalline_terraces.jpg')}" alt="Study B: Crystalline Terraces"/>
-          <span class="study-caption"><strong>Study B</strong>: Stepped Crystalline Salt Terraces</span>
-        </td>
-        <td>
-          <img src="{get_img_uri('01_variant_c_luminescence_dawn.jpg')}" alt="Study C: Luminescence of Masazir Dawn"/>
-          <span class="study-caption"><strong>Study C</strong>: Atmospheric Sunrise over Misty Saline Shoreline</span>
+          An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. (Pure geological abstraction; zero portraits, zero figures, zero seals, zero carpets).
         </td>
       </tr>
     </table>
