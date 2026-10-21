@@ -90,10 +90,10 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 
 ---
 
-### Plate 04: *Breath of Lokbatan: Volcanic Crater and Armored Goby*
-*Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi*
+### Plate 04: *After Hard Day of Work*
+*Ağır İş Günündən Sonra*
 
-![Plate 04: Breath of Lokbatan](_clean/04_breath_of_lokbatan_tadpole_goby.jpg)
+![Plate 04: After Hard Day of Work](_clean/04_breath_of_lokbatan_tadpole_goby.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_04_breath_of_lokbatan_tadpole_goby.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Grand Salon](_insitu/insitu_plate_04_breath_of_lokbatan.jpg)
 
@@ -101,11 +101,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Dimensions**: **145 × 145 cm** (Monumental 1:1 Square Canvas, Specification from Brief)
 - **Target Spatial Placement**: Grand Central Atrium, Double-Height Salon, or Wellness Mezzanine Feature Wall
 - **Endemic Caspian Wildlife**: Armored Caspian Tadpole Goby (*Benthophilus* spp.)
-- **Selected Absheron Minerals**:
-  - **Subterranean Lokbatan Mud-Volcano Clay**: Authentic mineral clay curing into dynamic 3D craquelure fissures.
-  - **Caspian Mineral Glazes**: Luminous celadon, seafoam green, and verdigris pigments evoking thermal spring luminescence.
-  - **Metallic Pyrite Infiltration**: Genuine pyrite mineral grains accenting the prehistoric armor plates of the goby.
-  - **Incised Sgraffito Lines**: Deep directional fissures carved into the wet clay bed.
+- **Materials**: Mud volcano, oil paint and canvas
 - **Concept**:
   A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (*Benthophilus*) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
 

@@ -150,8 +150,8 @@ const GALLERY_DATA = [
     id: "plate-04",
     number: "04",
     roman: "IV",
-    title: "Breath of Lokbatan: Volcanic Crater and Armored Goby",
-    azTitle: "Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi",
+    title: "After Hard Day of Work",
+    azTitle: "Ağır İş Günündən Sonra",
     genre: "Earth-Art Vortex / Geothermal Mineral Painting",
     widthCm: 145,
     heightCm: 145,
@@ -162,16 +162,12 @@ const GALLERY_DATA = [
     scientificTaxonomy: "Benthophilus macrocephalus / Benthophilus baeri",
     minerals: [
       {
-        name: "Subterranean Lokbatan Mud-Volcano Clay",
-        description: "Authentic mineral clay harvested from Lokbatan crater ejecta, curing into rich 3D craquelure fissures."
+        name: "Mud Volcano",
+        description: "Authentic mud volcano clay curing into rich tactile craquelure fissures."
       },
       {
-        name: "Caspian Mineral Glazes",
-        description: "Luminous celadon, seafoam green, and verdigris pigments evoking thermal spring luminescence."
-      },
-      {
-        name: "Metallic Pyrite Infiltration",
-        description: "Genuine pyrite mineral grains accenting the prehistoric armor plates of the goby."
+        name: "Oil Paint & Canvas",
+        description: "Masterwork oil pigments and mineral glazes on heavy linen canvas."
       }
     ],
     curatorialNarrative: "A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (Benthophilus) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.",

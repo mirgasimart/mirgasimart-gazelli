@@ -7,7 +7,7 @@ Compiles an exact 6-page museum-grade fine art commission proposal:
   - Page 2: Plate 01 — Luminescence of Masazir (130 × 100 cm)
   - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
   - Page 4: Plate 03 — Black Gold (80 × 100 cm)
-  - Page 5: Plate 04 — Breath of Lokbatan (145 × 145 cm)
+  - Page 5: Plate 04 — After Hard Day of Work (145 × 145 cm)
   - Page 6: Plate 05 — Solar Oracle (120 × 100 cm)
 """
 
@@ -388,8 +388,8 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val"><strong>40 &times; 60 cm</strong> (Vertical Format Canvas, Specification from Brief)</td>
       </tr>
       <tr>
-        <td class="spec-name">Medium / Techniques</td>
-        <td class="spec-val">Absheron Coquina Ground, Concentric Caspian <em>Didacna</em> Shell Assemblage, Mother-of-Pearl Inlay, Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Turquoise &amp; Celadon Mineral Pigments, Volcanic Craquelure Clay, Incised Geometric Sgraffito</td>
+        <td class="spec-name">Materials</td>
+        <td class="spec-val">Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Oil Paints and Canvas</td>
       </tr>
       <tr>
         <td class="spec-name">Endemic Organism</td>
@@ -468,12 +468,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 04 &bull; Earth-Art Vortex &bull; Geothermal Mineral Painting</div>
-      <h3 class="plate-title">Breath of Lokbatan: Volcanic Crater and Armored Goby</h3>
-      <div class="plate-subtitle">Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi</div>
+      <h3 class="plate-title">After Hard Day of Work</h3>
+      <div class="plate-subtitle">Ağır İş Günündən Sonra</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('04_breath_of_lokbatan_tadpole_goby.jpg')}" alt="Breath of Lokbatan"/>
+      <img src="{get_img_uri('04_breath_of_lokbatan_tadpole_goby.jpg')}" alt="After Hard Day of Work"/>
     </div>
 
     <table class="specs-grid">
@@ -483,7 +483,7 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
       <tr>
         <td class="spec-name">Materials</td>
-        <td class="spec-val">Subterranean Lokbatan Mud-Volcano Clay, Luminous Caspian Celadon &amp; Seafoam Glazes, Tactile Mineral Craquelure, Metallic Pyrite Vein Infiltration</td>
+        <td class="spec-val">Mud volcano, oil paint and canvas</td>
       </tr>
       <tr>
         <td class="spec-name">Concept</td>
@@ -495,7 +495,7 @@ def generate_dossier_html(use_watermarked=True):
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 04: Breath of Lokbatan</div>
+    <div class="rf-context">Plate 04: After Hard Day of Work</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">05 / 06</div>
   </div>

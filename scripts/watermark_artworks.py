@@ -212,11 +212,11 @@ CATALOG_METADATA = {
     },
     "04_breath_of_lokbatan_tadpole_goby.jpg": {
         "plate": "PLATE 04 / 05",
-        "title_en": "Breath of Lokbatan: Volcanic Crater and Armored Goby",
-        "title_az": "Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi",
+        "title_en": "After Hard Day of Work",
+        "title_az": "Ağır İş Günündən Sonra",
         "genre": "Earth-Art Vortex / Geothermal Mineral Painting",
         "dimensions": "145 × 145 cm (Monumental 1:1 Square Canvas)",
-        "materials": "Subterranean Lokbatan Mud-Volcano Clay, Celadon & Seafoam Glazes, Pyrite Veins",
+        "materials": "Mud volcano, oil paint and canvas",
         "fauna": "Armored Caspian Tadpole Goby (Benthophilus spp.)",
     },
     "05_the_lampreys_vigil_caspian_lamprey.jpg": {
