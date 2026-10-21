@@ -978,6 +978,10 @@ class GazelliCuratorialGallery {
       case 'S':
         this.dom.scaleToggleBtn.click();
         break;
+      case 'e':
+      case 'E':
+        this.toggleWing();
+        break;
       case 'i':
       case 'I':
         this.toggleDrawer(!this.dom.drawer.classList.contains('open'));
