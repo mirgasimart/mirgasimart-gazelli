@@ -8,7 +8,7 @@ Compiles an exact 7-page museum-grade fine art commission proposal:
   - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
   - Page 4: Plate 03 — The Binagadi Derrick (80 × 100 cm)
   - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
-  - Page 6: Plate 05 — The Gobustan Solar Oracle (100 × 150 cm)
+  - Page 6: Plate 05 — The Gobustan Solar Oracle (120 × 100 cm)
   - Page 7: Architectural In-Situ Integration & Turnkey Contractor Schedule
 """
 
@@ -412,7 +412,7 @@ def generate_dossier_html(use_watermarked=True):
         <tr>
           <td><strong>05</strong></td>
           <td><em>The Gobustan Solar Oracle: Lamprey</em></td>
-          <td>100 &times; 150 cm</td>
+          <td>120 &times; 100 cm</td>
           <td>Beach Sand, Lake Salt, Plaster</td>
           <td>Caspian Lamprey Mandala</td>
         </tr>
@@ -657,7 +657,7 @@ def generate_dossier_html(use_watermarked=True):
     <table class="specs-grid">
       <tr>
         <td class="spec-name">Dimensions</td>
-        <td class="spec-val"><strong>100 &times; 150 cm</strong> (Vertical Portrait Canvas, Specification from Brief)</td>
+        <td class="spec-val"><strong>120 &times; 100 cm</strong> (Horizontal Format Canvas, Specification from Brief)</td>
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
@@ -675,7 +675,7 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
       <tr>
         <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Bone Plaster Gallery Edge (or oiled walnut floater) &bull; Dual Aluminum Z-Cleats (~11.0 kg) &bull; 2700K Framing Projector / Gimbal</td>
+        <td class="spec-val">Bone Plaster Gallery Edge (or oiled walnut floater) &bull; Dual Aluminum Z-Cleats (~8.2 kg) &bull; 2700K Framing Projector / Gimbal</td>
       </tr>
     </table>
   </div>
@@ -762,8 +762,8 @@ def generate_dossier_html(use_watermarked=True):
         </tr>
         <tr>
           <td><strong>05</strong></td>
-          <td>100 &times; 150 cm</td>
-          <td>~11.0 kg</td>
+          <td>120 &times; 100 cm</td>
+          <td>~8.2 kg</td>
           <td>Bone Plaster / Oiled Walnut</td>
           <td>Dual Aluminum Z-Cleats</td>
           <td>2700K Framing Projector</td>
