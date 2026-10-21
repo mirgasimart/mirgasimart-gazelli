@@ -35,7 +35,7 @@ def generate_dossier_html(use_watermarked=True):
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MIRGASIM ART STUDIO | Curatorial Commission Proposal &amp; Artist Dossier</title>
+<title>Jeyran Mir-Gasim Jafarova | Project Proposal</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap');
 
@@ -145,48 +145,44 @@ def generate_dossier_html(use_watermarked=True):
     letter-spacing: 1.5px;
   }}
 
-  /* Page 1: Hero Cover Elements */
-  .p1-title-box {{
+  /* Page 1: Cover Page */
+  .cover-page {{
     text-align: center;
-    margin-top: 6px;
-    margin-bottom: 14px;
   }}
 
-  .dossier-title {{
-    font-family: 'Playfair Display', serif;
-    font-size: 21pt;
-    font-weight: 600;
-    color: #111;
-    margin: 0 0 5px 0;
-    letter-spacing: -0.2px;
+  .cover-center {{
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }}
 
-  .dossier-subtitle {{
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 10.5pt;
-    color: #555;
+  .cover-artist {{
+    font-family: 'Cinzel', serif;
+    font-size: 26pt;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #111114;
+    text-transform: uppercase;
     margin: 0;
   }}
 
-  .curatorial-quote {{
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 9pt;
-    line-height: 1.45;
-    color: #333;
-    background: #fbf9f6;
-    border-left: 2.5pt solid #8c734b;
-    padding: 7px 12px;
-    margin: 7px 0 10px 0;
+  .cover-line {{
+    width: 64px;
+    height: 1.5px;
+    background: #8c734b;
+    margin: 22px auto;
   }}
 
-  .p1-body-text {{
-    font-size: 8.4pt;
-    line-height: 1.48;
-    color: #2a2a2a;
-    margin-bottom: 8px;
-    text-align: justify;
+  .cover-project {{
+    font-family: 'Playfair Display', serif;
+    font-size: 20pt;
+    font-weight: 500;
+    font-style: italic;
+    color: #4a4a4a;
+    letter-spacing: 0.5px;
+    margin: 0;
   }}
 
   table.data-table {{
@@ -309,83 +305,17 @@ def generate_dossier_html(use_watermarked=True):
 </head>
 <body>
 
-<!-- PAGE 1: EXECUTIVE CURATORIAL DOSSIER & COLLECTION MATRIX -->
-<div class="page">
-  <div>
-    <div class="p1-title-box">
-      <h1 class="dossier-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</h1>
-      <div class="dossier-subtitle">Submitted in Formal Response to the Selection Brief | Gazelli Art House (London / Baku)</div>
-    </div>
-
-    <div class="curatorial-quote">
-      "True regional modernism does not decorate with heritage; it builds directly from the primordial substances of the land: crystallized pink salt, volcanic craquelure, and ancient hydrocarbons."
-    </div>
-
-    <p class="p1-body-text">
-      Responding to the international fine art standards of <strong>Gazelli Art House</strong>, this 5-work suite channels the pioneering spirit of the <strong>Absheron Modernist School</strong> (Javad Mirjavadov, Sattar Bahlulzade, Rasim Babayev, Tofig Javadov). Abandoning superficial decorative clich&eacute;s and carpet motifs, the artist explores authentic Absheron signatures through radical mineral materiality and Caspian scientific taxonomy.
-    </p>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Plate</th>
-          <th>Artwork Title</th>
-          <th>Dimensions</th>
-          <th>Primary Absheron Material</th>
-          <th>Caspian Motif</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>01</strong></td>
-          <td><em>Luminescence of Masazir Dawn</em></td>
-          <td>185 &times; 120 cm</td>
-          <td>Masazir Pink Lake Salt, Plaster</td>
-          <td>Lacustrine Evaporites</td>
-        </tr>
-        <tr>
-          <td><strong>02</strong></td>
-          <td><em>The Shebeke Reliquary: Fossil Didacna</em></td>
-          <td>40 &times; 60 cm</td>
-          <td>Limestone Ground, Shell Accents</td>
-          <td><em>Didacna</em> Cockle Shells</td>
-        </tr>
-        <tr>
-          <td><strong>03</strong></td>
-          <td><em>The Binagadi Derrick: Hydrocarbon Strata</em></td>
-          <td>80 &times; 100 cm</td>
-          <td>Binagadi Bitumen, Pyrite Ore</td>
-          <td>Caspian Marine Shad</td>
-        </tr>
-        <tr>
-          <td><strong>04</strong></td>
-          <td><em>Breath of Lokbatan: Volcanic Crater &amp; Goby</em></td>
-          <td>180 &times; 180 cm</td>
-          <td>Volcanic Clay, Celadon Glazes, Pyrite</td>
-          <td>Caspian Tadpole Goby</td>
-        </tr>
-        <tr>
-          <td><strong>05</strong></td>
-          <td><em>The Gobustan Solar Oracle: Lamprey</em></td>
-          <td>120 &times; 100 cm</td>
-          <td>Beach Sand, Lake Salt, Plaster</td>
-          <td>Caspian Lamprey Mandala</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p class="p1-body-text" style="font-size: 7.8pt; margin-top: 3px; line-height: 1.42;">
-      <strong>Faunal Taxonomy &amp; Caspian Strategy:</strong> The suite deliberately privileges archaic benthic survivors (<em>Didacna</em>, <em>Alosa</em>, <em>Benthophilus</em>, <em>Caspiomyzon</em>) to represent primordial antiquity. The iconic <strong>Caspian Seal (<em>Pusa caspica</em>)</strong> is honored through the serene lacustrine sanctuaries of Masazir, with an authorial figurative study documented in studio archives as an available companion acquisition.
-    </p>
-
-    <p class="p1-body-text" style="font-size: 7.8pt; margin-top: 3px; line-height: 1.42;">
-      <strong>Archival Conservation Protocol:</strong> All raw minerals are stabilized under museum standards: Masazir salt crystals undergo thermal dehydration and UV-matte acrylic encapsulation; mud-volcano craquelure is co-polymerized for zero shedding; and bitumen is mineral-dissolved into inert polymer glazes.
-    </p>
+<!-- PAGE 1: COVER / TITLE PAGE -->
+<div class="page cover-page">
+  <div class="cover-center">
+    <h1 class="cover-artist">Jeyran Mir-Gasim Jafarova</h1>
+    <div class="cover-line"></div>
+    <div class="cover-project">Project Proposal</div>
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Curatorial Commission Selection Dossier &bull; Baku &amp; London</div>
-    <div class="rf-copyright">Submitted in Formal Response to Selection Brief | Gazelli Art House</div>
+    <div class="rf-context">Project Proposal &bull; Baku &amp; London</div>
+    <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">FOLIO 01 / 07</div>
   </div>
 </div>
@@ -394,8 +324,8 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="running-header">
-      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
-      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
+      <div class="rh-title">Project Proposal</div>
       <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
@@ -442,8 +372,8 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="running-header">
-      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
-      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
+      <div class="rh-title">Project Proposal</div>
       <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
@@ -494,8 +424,8 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="running-header">
-      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
-      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
+      <div class="rh-title">Project Proposal</div>
       <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
@@ -546,8 +476,8 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="running-header">
-      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
-      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
+      <div class="rh-title">Project Proposal</div>
       <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
@@ -594,8 +524,8 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="running-header">
-      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
-      <div class="rh-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</div>
+      <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
+      <div class="rh-title">Project Proposal</div>
       <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
@@ -646,7 +576,7 @@ def generate_dossier_html(use_watermarked=True):
 <div class="page">
   <div>
     <div class="running-header">
-      <div class="rh-atelier">MIRGASIM ART STUDIO</div>
+      <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
       <div class="rh-title">Architectural Placement &amp; Turnkey Contractor Schedule</div>
       <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
