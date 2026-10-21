@@ -1,0 +1,1453 @@
+/* ==========================================================================
+   MIRGASIM ART STUDIO | CURATORIAL VIRTUAL GALLERY
+   Absheron Tectonics: Primordial Matter & Geological Strata
+   Gazelli Art House Commission Exhibition
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --bg-dark: #0c0d0e;
+  --bg-deep: #121417;
+  --bg-panel: rgba(18, 20, 24, 0.82);
+  --bg-glass: rgba(26, 29, 36, 0.72);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(212, 175, 55, 0.35);
+  
+  --gold-primary: #d4af37;
+  --gold-glow: rgba(212, 175, 55, 0.22);
+  --gold-light: #f3e5ab;
+  --caspian-teal: #2a7b88;
+  --masazir-rose: #d98880;
+  
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  
+  /* Dynamic Lighting Variables */
+  --spotlight-intensity: 0.85;
+  --spotlight-temp: #fff3e0; /* 2700K warm standard */
+  --spotlight-x: 50%;
+  --spotlight-y: 35%;
+  --spotlight-size: 800px;
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Transitions */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   TOP CURATORIAL NAVIGATION BAR
+   ========================================================================== */
+.gallery-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  background: linear-gradient(180deg, rgba(10, 11, 13, 0.88) 0%, rgba(10, 11, 13, 0.45) 75%, transparent 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-badge {
+  height: 28px;
+  width: auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.brand-separator {
+  width: 1px;
+  height: 24px;
+  background: var(--border-subtle);
+}
+
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-main {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+}
+
+.brand-sub {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: var(--gold-light);
+  opacity: 0.85;
+}
+
+/* Curatorial Mode Selector Tabs */
+.view-mode-tabs {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  border-radius: 30px;
+  border: 1px solid var(--border-subtle);
+}
+
+.mode-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.mode-tab:hover {
+  color: #fff;
+}
+
+.mode-tab.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mode-tab svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.85;
+}
+
+/* Header Action Controls */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.action-btn.active {
+  background: var(--gold-glow);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+.action-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==========================================================================
+   MAIN VIRTUAL GALLERY WALL STAGE
+   ========================================================================== */
+.gallery-stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  overflow: hidden;
+  transition: background var(--transition-smooth);
+}
+
+/* Wall Material Texture Overlays */
+.gallery-wall-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: all 0.6s var(--ease-cinematic);
+}
+
+/* Wall Styles */
+.wall-limestone {
+  background-color: #23201d;
+  background-image: 
+    radial-gradient(ellipse at 50% 30%, rgba(245, 230, 211, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 20% 80%, rgba(190, 165, 140, 0.05) 0%, transparent 40%),
+    linear-gradient(180deg, #1f1c19 0%, #2a2520 50%, #1c1916 100%);
+}
+
+.wall-limestone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image: radial-gradient(#d6c2ab 0.75px, transparent 0.75px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.wall-white-cube {
+  background-color: #e6e5e0;
+  background-image: 
+    radial-gradient(ellipse at 50% 25%, rgba(255, 255, 255, 0.4) 0%, transparent 75%),
+    linear-gradient(180deg, #d8d7d0 0%, #e8e7e2 40%, #cfcec7 100%);
+}
+
+.wall-white-cube::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image: radial-gradient(#000 0.8px, transparent 0.8px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+.wall-white-cube ~ .artwork-mount .gallery-label-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wall-white-cube ~ .artwork-mount .label-title {
+  color: #111;
+}
+.wall-white-cube ~ .artwork-mount .label-meta {
+  color: #555;
+}
+
+.wall-anthracite {
+  background-color: #141517;
+  background-image: 
+    radial-gradient(ellipse at 50% 30%, rgba(200, 215, 235, 0.05) 0%, transparent 65%),
+    linear-gradient(180deg, #0e0f11 0%, #181a1d 60%, #101113 100%);
+}
+
+.wall-travertine {
+  background-color: #28241e;
+  background-image: 
+    radial-gradient(ellipse at 50% 30%, rgba(240, 220, 185, 0.1) 0%, transparent 70%),
+    linear-gradient(180deg, #221e18 0%, #302a22 60%, #1f1b15 100%);
+}
+
+/* Architectural Floor & Skirting */
+.gallery-floor {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  right: -20%;
+  height: 180px;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(8, 9, 10, 0.95) 0%, #050506 100%);
+  transform-origin: bottom center;
+  transform: perspective(600px) rotateX(42deg);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-skirting {
+  position: absolute;
+  bottom: 125px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(30, 32, 36, 0.9) 0%, rgba(15, 16, 18, 0.95) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+/* Directional Spotlight Cone Overlay */
+.gallery-spotlight-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: radial-gradient(
+    circle var(--spotlight-size) at var(--spotlight-x) var(--spotlight-y),
+    rgba(255, 245, 230, calc(0.35 * var(--spotlight-intensity))) 0%,
+    rgba(255, 235, 205, calc(0.18 * var(--spotlight-intensity))) 35%,
+    rgba(200, 190, 180, calc(0.06 * var(--spotlight-intensity))) 60%,
+    transparent 85%
+  );
+  mix-blend-mode: screen;
+  transition: opacity var(--transition-smooth);
+}
+
+/* Ceiling Track Spotlight Fixtures */
+.ceiling-track {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 20;
+}
+
+.ceiling-lamp {
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 22px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  border: 1px solid #333;
+  z-index: 21;
+}
+
+.ceiling-lamp::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  background: var(--spotlight-temp);
+  border-radius: 2px;
+  box-shadow: 0 0 12px var(--spotlight-temp);
+}
+
+/* ==========================================================================
+   ARTWORK MOUNT & FRAMING SYSTEM
+   ========================================================================== */
+.artwork-mount {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s var(--ease-cinematic), opacity 0.4s ease;
+  user-select: none;
+}
+
+/* Frame Outer Box */
+.frame-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s var(--ease-cinematic);
+}
+
+/* Canvas Canvas Element Container */
+.canvas-inner {
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.artwork-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* FRAME STYLE: Matte Walnut Floater Frame */
+.frame-floater-walnut {
+  background: #231812;
+  border: 14px solid #1c140e;
+  border-image: linear-gradient(135deg, #2b1f17 0%, #18110b 50%, #2e2119 100%) 14;
+  padding: 10px; /* 10mm recessed shadow-line reveal */
+  background: #080808; /* The shadow reveal cavity */
+  box-shadow: 
+    0 24px 50px -10px rgba(0, 0, 0, 0.8),
+    0 10px 20px -5px rgba(0, 0, 0, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.9),
+    inset 0 0 12px rgba(0, 0, 0, 0.9);
+}
+
+.frame-floater-walnut .canvas-inner {
+  box-shadow: 
+    0 0 8px rgba(0, 0, 0, 0.9),
+    2px 3px 12px rgba(0, 0, 0, 0.85);
+}
+
+/* FRAME STYLE: Museum Edge (Unframed Gallery Wrap) */
+.frame-museum-edge {
+  padding: 0;
+  background: transparent;
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.85),
+    0 12px 24px -6px rgba(0, 0, 0, 0.65),
+    -10px 10px 25px rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+}
+
+.frame-museum-edge .canvas-inner {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    inset 3px 3px 8px rgba(255, 255, 255, 0.15),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* FRAME STYLE: Blackened Steel Floater Frame */
+.frame-floater-steel {
+  background: #0d0e10;
+  border: 8px solid #16181b;
+  border-image: linear-gradient(135deg, #2a2c30 0%, #121315 50%, #202226 100%) 8;
+  padding: 8px;
+  background: #050506;
+  box-shadow: 
+    0 25px 55px -10px rgba(0, 0, 0, 0.85),
+    0 10px 20px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* FRAME STYLE: Aged Champagne Brass */
+.frame-floater-brass {
+  background: #080808;
+  border: 12px solid #a38953;
+  border-image: linear-gradient(135deg, #d4be88 0%, #7d6739 40%, #c4aa72 70%, #685329 100%) 12;
+  padding: 10px;
+  box-shadow: 
+    0 25px 55px -10px rgba(0, 0, 0, 0.85),
+    0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* FRAME STYLE: Museum Passe-Partout */
+.frame-passe-partout {
+  background: #f7f6f2; /* Archival white cotton mat */
+  border: 16px solid #2b2520; /* Dark oak frame */
+  padding: 34px 38px;
+  box-shadow: 
+    0 25px 60px -12px rgba(0, 0, 0, 0.8),
+    inset 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.frame-passe-partout .canvas-inner {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    inset 0 2px 5px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   HUMAN SCALE REFERENCE SILHOUETTE (175 cm Architectural Viewer)
+   ========================================================================== */
+.human-scale-figure {
+  position: absolute;
+  bottom: 0;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.5s ease, transform 0.5s var(--ease-cinematic);
+}
+
+.human-scale-figure.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.figure-svg {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+  opacity: 0.85;
+}
+
+.scale-height-label {
+  position: absolute;
+  top: 50%;
+  right: -55px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-family: var(--font-sans);
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   MUSEUM WALL PLACARD / LABEL CARD
+   ========================================================================== */
+.gallery-label-card {
+  position: absolute;
+  bottom: -40px;
+  right: -130px;
+  width: 170px;
+  background: rgba(14, 16, 20, 0.85);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+  padding: 12px 14px;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 12;
+}
+
+.label-artist {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-primary);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.label-title {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.label-meta {
+  font-size: 10px;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+.label-dim {
+  font-size: 9.5px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   INTERACTIVE TACTILE HOTSPOTS (Mineral Inspection Points)
+   ========================================================================== */
+.tactile-hotspot {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.hotspot-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-primary);
+  animation: pulse-ring 2.4s infinite cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hotspot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  box-shadow: 0 0 8px var(--gold-primary);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.tactile-hotspot:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Hotspot Tooltip */
+.hotspot-tooltip {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 220px;
+  background: rgba(14, 16, 20, 0.95);
+  border: 1px solid var(--gold-primary);
+  padding: 10px 12px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s var(--ease-cinematic);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  z-index: 30;
+}
+
+.tactile-hotspot:hover .hotspot-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-title {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 3px;
+}
+
+.tooltip-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   MACRO LOUPE (High-Definition Magnifying Glass)
+   ========================================================================== */
+.macro-loupe {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--gold-primary);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(212, 175, 55, 0.4),
+    inset 0 0 25px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  overflow: hidden;
+  display: none;
+  z-index: 40;
+  background-repeat: no-repeat;
+  cursor: crosshair;
+}
+
+.macro-loupe::after {
+  content: "2.5× TACTILE LOUPE";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: var(--gold-light);
+  font-size: 8.5px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.macro-crosshair {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(to right, transparent 49.5%, rgba(212, 175, 55, 0.3) 50%, transparent 50.5%),
+    linear-gradient(to bottom, transparent 49.5%, rgba(212, 175, 55, 0.3) 50%, transparent 50.5%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   IN-SITU & EXHIBITION PASS-PARTOUT FULL VIEWS
+   ========================================================================== */
+.stage-fullscreen-view {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0b0d;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.stage-fullscreen-view.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fullscreen-img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+.fullscreen-badge {
+  position: absolute;
+  bottom: 120px;
+  background: rgba(14, 16, 20, 0.85);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 18px;
+  border-radius: 30px;
+  color: var(--text-primary);
+  font-size: 12px;
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(10px);
+}
+
+/* ==========================================================================
+   BOTTOM CURATORIAL PROMENADE BAR & THUMBNAILS
+   ========================================================================== */
+.gallery-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: linear-gradient(0deg, rgba(8, 9, 11, 0.96) 0%, rgba(8, 9, 11, 0.82) 75%, transparent 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Artwork Quick Navigation Strip */
+.thumbnail-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 8px 4px;
+  max-width: 60%;
+  scrollbar-width: none;
+}
+
+.thumbnail-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.thumb-item {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  background: #111;
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.3s ease;
+}
+
+.thumb-item:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.thumb-item:hover img {
+  opacity: 0.9;
+}
+
+.thumb-item.active {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px var(--gold-glow);
+  transform: translateY(-3px);
+}
+
+.thumb-item.active img {
+  opacity: 1;
+}
+
+.thumb-number {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  font-size: 8px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1px 3px;
+  border-radius: 2px;
+  color: var(--gold-light);
+}
+
+/* Wall & Lighting Quick Toolbar */
+.quick-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.control-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.control-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-mini {
+  padding: 5px 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-mini:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.btn-mini.active {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+/* Promenade Prev / Next Buttons */
+.nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.arrow-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.06);
+}
+
+.arrow-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ==========================================================================
+   SLIDE-OUT CURATORIAL DOSSIER DRAWER
+   ========================================================================== */
+.curatorial-drawer {
+  position: fixed;
+  top: 0;
+  right: -520px;
+  width: 500px;
+  max-width: 90vw;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(14, 16, 20, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-left: 1px solid var(--border-subtle);
+  box-shadow: -15px 0 45px rgba(0, 0, 0, 0.8);
+  transition: right 0.5s var(--ease-cinematic);
+  display: flex;
+  flex-direction: column;
+}
+
+.curatorial-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  padding: 24px 28px 18px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.drawer-subtitle {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold-primary);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.drawer-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.drawer-az-title {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.drawer-close {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.drawer-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.drawer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-light);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.section-text {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #d1d1d6;
+}
+
+/* Material Badges */
+.mineral-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mineral-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--gold-primary);
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+
+.mineral-title {
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.mineral-desc {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Specs Table */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.specs-table td {
+  padding: 8px 4px;
+  font-size: 11.5px;
+}
+
+.specs-table td:first-child {
+  color: var(--text-muted);
+  width: 40%;
+}
+
+.specs-table td:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Cleat Diagram Visualizer */
+.cleat-diagram {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   MODAL LIGHTING & SETTINGS POPOVER
+   ========================================================================== */
+.popover-menu {
+  position: absolute;
+  top: 74px;
+  right: 28px;
+  width: 320px;
+  background: rgba(16, 18, 22, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 18px;
+  z-index: 60;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popover-menu.open {
+  display: flex;
+}
+
+.popover-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 6px;
+}
+
+.slider-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.slider-input {
+  width: 100%;
+  accent-color: var(--gold-primary);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   WIDESCREEN CURATORIAL WINGS (Eliminating wasted horizontal space)
+   ========================================================================== */
+.triptych-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1720px;
+  height: 100%;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.triptych-container > * {
+  pointer-events: auto;
+}
+
+.stage-wing {
+  width: 310px;
+  background: rgba(18, 20, 24, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.5s var(--ease-cinematic);
+  z-index: 14;
+}
+
+.stage-wing:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
+}
+
+.wing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 8px;
+}
+
+.wing-badge {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-light);
+}
+
+.wing-tag {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.wing-insitu-preview {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  group: hover;
+}
+
+.wing-insitu-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.wing-insitu-preview:hover img {
+  transform: scale(1.05);
+}
+
+.wing-insitu-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 11px;
+  font-family: var(--font-serif);
+}
+
+.wing-desc {
+  font-size: 11.5px;
+  color: #c4c4cc;
+  line-height: 1.5;
+}
+
+.wing-mineral-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wing-mineral-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid var(--gold-primary);
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.wing-mineral-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.wing-mineral-sub {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.wing-specs-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wing-specs-row span:first-child {
+  color: var(--text-muted);
+}
+
+.wing-specs-row span:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Wing Toggle Button in footer */
+.wings-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.wings-toggle-btn.active {
+  color: var(--gold-light);
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.15);
+}
+
+/* ==========================================================================
+   PANORAMIC PROMENADE (Continuous Wide Horizontal Museum Wall)
+   ========================================================================== */
+.panoramic-promenade {
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  display: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.3) transparent;
+  cursor: grab;
+}
+
+.panoramic-promenade:active {
+  cursor: grabbing;
+}
+
+.panoramic-promenade.active {
+  display: flex;
+  align-items: center;
+}
+
+.panoramic-wall-track {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+  padding: 0 160px;
+  min-width: max-content;
+  height: 100%;
+  position: relative;
+}
+
+/* Promenade Artwork Station */
+.promenade-station {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease-cinematic);
+}
+
+.promenade-station:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.promenade-frame {
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.4s ease;
+}
+
+.promenade-station:hover .promenade-frame {
+  box-shadow: 0 25px 60px rgba(212, 175, 55, 0.25), 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.promenade-label {
+  margin-top: 24px;
+  text-align: center;
+  background: rgba(14, 16, 20, 0.85);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 14px;
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+  width: 220px;
+}
+
+.promenade-title {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.promenade-meta {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.promenade-dim {
+  font-size: 9.5px;
+  color: var(--gold-light);
+  margin-top: 4px;
+}
+
+/* Promenade Ceiling Track Lights */
+.promenade-light-cone {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 480px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 240, 220, 0.25) 0%, transparent 75%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+@media (max-width: 1400px) {
+  .stage-wing {
+    width: 260px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .stage-wing {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-header {
+    padding: 0 16px;
+  }
+  .brand-sub {
+    display: none;
+  }
+  .view-mode-tabs .mode-tab span {
+    display: none;
+  }
+  .gallery-label-card {
+    display: none;
+  }
+  .thumbnail-strip {
+    max-width: 100%;
+  }
+  .quick-controls {
+    display: none;
+  }
+}
+

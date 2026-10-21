@@ -94,8 +94,8 @@ def create_luxury_watermark(scale=1.0):
     font_sub = resolve_font("body_regular", sub_size)
     font_tag = resolve_font("title_bold", tag_size)
 
-    title_text = "MIRGASIM ART"
-    sub_text = "ABSHERON TECTONICS  |  GAZELLI COMMISSION 2026"
+    title_text = "JEYRAN MIR-GASIM JAFAROVA"
+    sub_text = "PROJECT PROPOSAL  |  GAZELLI COMMISSION 2026"
     tag_text = "CONFIDENTIAL CURATORIAL PREVIEW"
 
     tw, th = measure_tracked_text(title_text, font_title, tracking=int(4 * scale * ss))
@@ -185,47 +185,47 @@ def apply_watermark(image_path, output_path, position="bottom-right", margin=32)
 CATALOG_METADATA = {
     "01_luminescence_of_masazir_salt_dawn.jpg": {
         "plate": "PLATE 01 / 05",
-        "title_en": "Luminescence of Masazir Dawn",
-        "title_az": "Masazır Şəfəqi: Çəhrayı Duz Gölü",
+        "title_en": "Luminescence of Masazir",
+        "title_az": "Masazır Parıltısı",
         "genre": "Pure Mineral Abstraction / Lacustrine Strata",
-        "dimensions": "185 × 120 cm (Horizontal Landscape Canvas)",
-        "materials": "Genuine Masazir Pink Lake Salt, Porous Absheron Limestone Plaster & Sgraffito",
+        "dimensions": "130 × 100 cm (Horizontal Landscape Canvas)",
+        "materials": "Genuine Masazir Pink Lake Salt, Textured Paste, Heavy Impasto, Oil Paint on Canvas",
         "fauna": "Absheron Lacustrine Strata (Pure geological meditation)",
     },
     "02_the_weaver_of_sunken_shells_didacna.jpg": {
         "plate": "PLATE 02 / 05",
-        "title_en": "The Shebeke Reliquary: Fossil Didacna in Absheron Stone",
-        "title_az": "Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə",
-        "genre": "Mixed-Media Painting on Canvas / Tactile Stone Relief",
-        "dimensions": "40 × 60 cm (Vertical Architectural Canvas)",
-        "materials": "Absheron Coquina Ground, Coastal Beach Sand, Low-Relief Didacna Cockles",
+        "title_en": "The Shebeke Reliquary",
+        "title_az": "Şəbəkə Qalığı",
+        "genre": "Mineral Assemblage & Painting on Canvas / Tactile Coquina Relief",
+        "dimensions": "40 × 60 cm (Vertical Canvas from Brief)",
+        "materials": "Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Oil Paints and Canvas",
         "fauna": "Caspian Cockles (Didacna trigonoides & Didacna pyramidata)",
     },
     "03_keeper_of_the_cold_depths_caspian_shad.jpg": {
         "plate": "PLATE 03 / 05",
-        "title_en": "The Binagadi Derrick: Hydrocarbon Strata & Pyrite Shad",
-        "title_az": "Binaqədi Buruğu: Qara Qızıl və Pirit Şad",
+        "title_en": "Black Gold",
+        "title_az": "Qara Qızıl",
         "genre": "Industrial-Geological Abstraction / Hydrocarbon Matter Painting",
-        "dimensions": "120 × 200 cm (Vertical Panoramic Canvas)",
+        "dimensions": "80 × 100 cm (Vertical Canvas from Brief)",
         "materials": "Pure Binagadi Bitumen, Brassy Pyrite Sulfide Ore, Limestone Ground",
         "fauna": "Caspian Marine Shad (Alosa braschnikowi)",
     },
     "04_breath_of_lokbatan_tadpole_goby.jpg": {
         "plate": "PLATE 04 / 05",
-        "title_en": "Breath of Lokbatan: Volcanic Crater and Armored Goby",
-        "title_az": "Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi",
+        "title_en": "After Hard Day of Work",
+        "title_az": "Ağır İş Günündən Sonra",
         "genre": "Earth-Art Vortex / Geothermal Mineral Painting",
-        "dimensions": "180 × 180 cm (Monumental 1:1 Square Canvas)",
-        "materials": "Subterranean Lokbatan Mud-Volcano Clay, Celadon & Seafoam Glazes, Pyrite Veins",
+        "dimensions": "145 × 145 cm (Monumental 1:1 Square Canvas)",
+        "materials": "Mud volcano, oil paint and canvas",
         "fauna": "Armored Caspian Tadpole Goby (Benthophilus spp.)",
     },
     "05_the_lampreys_vigil_caspian_lamprey.jpg": {
         "plate": "PLATE 05 / 05",
-        "title_en": "The Gobustan Solar Oracle: Ouroboros Lamprey",
-        "title_az": "Qobustan Günəşi: İlanbalığı və Qədim Qaya Təsvirləri",
+        "title_en": "Solar Oracle",
+        "title_az": "Günəş Orakulu",
         "genre": "Mythological Contemporary Altar Piece / Archaeological Totem",
-        "dimensions": "100 × 150 cm (Vertical Portrait Canvas)",
-        "materials": "Absheron Coastal Beach Sand Mandala, Masazir Salt Halos, Gobustan Petroglyphic Sgraffito",
+        "dimensions": "120 × 100 cm (Horizontal Canvas from Brief)",
+        "materials": "Absheron Coastal Beach Sand Mandala, Masazir Salt Halos",
         "fauna": "Caspian Lamprey (Caspiomyzon wagneri)",
     },
 }
@@ -279,7 +279,7 @@ def generate_exhibition_plate(image_path, output_path, meta):
         text_y = pad_top + art_h + int(24 * scale)
 
         # Top Badge / Plate number
-        plate_label = f"M I R G A S I M   A R T   S T U D I O   •   {meta['plate']}"
+        plate_label = f"J E Y R A N   M I R - G A S I M   J A F A R O V A   •   {meta['plate']}"
         tw, _ = measure_tracked_text(plate_label, font_plate, tracking=int(3 * scale))
         render_tracked_text(draw, ((plate_w - tw) // 2, text_y), plate_label, font_plate, (120, 122, 128), tracking=int(3 * scale))
 
@@ -314,7 +314,7 @@ def generate_exhibition_plate(image_path, output_path, meta):
 
         # Curatorial Footer
         text_y += int(16 * scale)
-        footer_text = "Curatorial Commission Proposal for Gazelli Art House • Baku / London • © 2026 Mirgasim Art Studio"
+        footer_text = "Curatorial Commission Proposal for Gazelli Art House • Baku / London • © 2026 Jeyran Mir-Gasim Jafarova"
         tw, _ = measure_tracked_text(footer_text, font_footer, tracking=int(1.5 * scale))
         render_tracked_text(draw, ((plate_w - tw) // 2, text_y), footer_text, font_footer, (150, 152, 158), tracking=int(1.5 * scale))
 
