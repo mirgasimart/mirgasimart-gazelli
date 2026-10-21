@@ -1,7 +1,8 @@
-# Absheron Tectonics: Primordial Matter & Geological Strata
+# Project Proposal
+## Jeyran Mir-Gasim Jafarova
 
 **Commissioning Body**: Gazelli Art House (London / Baku)  
-**Submitting Artist**: Mirgasim Art Studio (Baku, Azerbaijan)  
+**Submitting Artist**: Jeyran Mir-Gasim Jafarova (Baku, Azerbaijan)  
 **Submission Status**: Submitted in Formal Response to the Curatorial Commission Selection Brief  
 **Executive Master Dossier (PDF)**: [MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf](MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf)  
 **Architectural In-Situ Visualizations**: [_insitu/](_insitu/)  
@@ -30,32 +31,6 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 
 ---
 
-## II. Master Catalog of Commission Artworks
-
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                               THE 5-PIECE GEOLOGICAL SUITE                             │
-├──────┬──────────────────────────────────────────┬──────────────┬───────────────────────┤
-│ NO.  │ WORK TITLE                               │ DIMENSIONS   │ ARCHITECTURAL NICHE   │
-├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
-│ 01   │ Luminescence of Masazir Dawn             │ 185 × 120 cm │ Executive Boardroom / │
-│      │ (Masazır Şəfəqi: Çəhrayı Duz Gölü)       │ Horizontal   │ Serene Spa Reception  │
-├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
-│ 02   │ The Shebeke Reliquary: Fossil Didacna    │ 40 × 60 cm   │ VIP Elevator Foyer /  │
-│      │ (Şəbəkə Qalığı: Qədim Didakna və Daş)    │ Vertical     │ Private Dining Niche  │
-├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
-│ 03   │ The Binagadi Derrick: Hydrocarbon Strata │ 80 × 100 cm  │ Transition Corridor / │
-│      │ (Binaqədi Buruğu: Qara Qızıl və Pirit)   │ Vertical     │ Executive Focal Wall  │
-├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
-│ 04   │ Breath of Lokbatan: Volcanic Crater      │ 180 × 180 cm │ Central Grand Salon / │
-│      │ (Lökbatan Nəfəsi: Palçıq Vulkanı)        │ Square 1:1   │ Atrium Feature Wall   │
-├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
-│ 05   │ The Gobustan Solar Oracle: Lamprey       │ 120 × 100 cm │ Ceremonial Vestibule  │
-│      │ (Qobustan Günəşi: İlanbalığı və Qaya)    │ Horizontal   │ Or Gallery Altar Wall │
-└──────┴──────────────────────────────────────────┴──────────────┴───────────────────────┘
-```
-
----
 
 ### Plate 01: *Luminescence of Masazir Dawn*
 *Masazır Şəfəqi: Çəhrayı Duz Gölü*
@@ -220,7 +195,7 @@ To satisfy commercial facilities managers and museum registrars, all raw geologi
 
 ## IV. Turnkey Architectural Specifications & Contractor Integration
 
-As an individual fine artist delivering bespoke masterworks for prime architectural placements, Mirgasim Art Studio supplies completely resolved, turnkey-ready canvases engineered for immediate contractor installation:
+As an individual fine artist delivering bespoke masterworks for prime architectural placements, Jeyran Mir-Gasim Jafarova supplies completely resolved, turnkey-ready canvases engineered for immediate contractor installation:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -249,7 +224,7 @@ As an individual fine artist delivering bespoke masterworks for prime architectu
 
 ## V. Curatorial Material Palette Box ("The Tactile Verification")
 
-Because the essence of the Absheron School lineage resides in the physical materiality of the terrain, Mirgasim Art Studio offers to provide the selection panel with a bespoke **Curatorial Material Palette Box**.
+Because the essence of the Absheron School lineage resides in the physical materiality of the terrain, Jeyran Mir-Gasim Jafarova offers to provide the selection panel with a bespoke **Curatorial Material Palette Box**.
 
 This presentation box contains five cured, non-toxic **15 × 15 cm architectural plaques** representing the exact tactile formulations of each artwork:
 1. **Crystalline Masazir Halite**: Oven-dehydrated lake salt embedded in matte UV-protective acrylic.
@@ -277,8 +252,8 @@ This presentation box contains five cured, non-toxic **15 × 15 cm architectural
 
 ---
 
-**MIRGASIM ART STUDIO**  
+**JEYRAN MIR-GASIM JAFAROVA**  
 Baku, Azerbaijan  
 *Submitted in Formal Response to the Curatorial Commission Selection Brief | Gazelli Art House (London / Baku)*  
 
-<small>*All visual concepts, chemical formulations, and curatorial narratives © 2026 Mirgasim Art Studio. All rights reserved.*</small>
+<small>*All visual concepts, chemical formulations, and curatorial narratives © 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.*</small>

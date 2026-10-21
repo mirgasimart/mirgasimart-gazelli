@@ -148,6 +148,8 @@ def generate_dossier_html(use_watermarked=True):
   /* Page 1: Cover Page */
   .cover-page {{
     text-align: center;
+    height: 297mm;
+    min-height: 297mm;
   }}
 
   .cover-center {{
@@ -363,7 +365,7 @@ def generate_dossier_html(use_watermarked=True):
 
   <div class="running-footer">
     <div class="rf-context">Plate 01: Luminescence of Masazir Dawn</div>
-    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">FOLIO 02 / 07</div>
   </div>
 </div>
@@ -415,7 +417,7 @@ def generate_dossier_html(use_watermarked=True):
 
   <div class="running-footer">
     <div class="rf-context">Plate 02: The Shebeke Reliquary</div>
-    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">FOLIO 03 / 07</div>
   </div>
 </div>
@@ -467,7 +469,7 @@ def generate_dossier_html(use_watermarked=True):
 
   <div class="running-footer">
     <div class="rf-context">Plate 03: The Binagadi Derrick</div>
-    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">FOLIO 04 / 07</div>
   </div>
 </div>
@@ -515,7 +517,7 @@ def generate_dossier_html(use_watermarked=True):
 
   <div class="running-footer">
     <div class="rf-context">Plate 04: Breath of Lokbatan</div>
-    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">FOLIO 05 / 07</div>
   </div>
 </div>
@@ -567,7 +569,7 @@ def generate_dossier_html(use_watermarked=True):
 
   <div class="running-footer">
     <div class="rf-context">Plate 05: The Gobustan Solar Oracle</div>
-    <div class="rf-copyright">&copy; 2026 Mirgasim Art Studio. All rights reserved.</div>
+    <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">FOLIO 06 / 07</div>
   </div>
 </div>
@@ -659,7 +661,7 @@ def generate_dossier_html(use_watermarked=True):
     <div style="background: #fdfbf7; border: 1px solid #e8dfcf; border-radius: 3px; padding: 5px 8px; margin-top: 4px;">
       <div style="font-size: 7.2pt; font-weight: 600; color: #8c734b; text-transform: uppercase; letter-spacing: 0.5px;">Curatorial Material Palette Box ("The Tactile Verification")</div>
       <p style="font-size: 7.2pt; line-height: 1.4; color: #333; margin: 2px 0 0 0;">
-        Mirgasim Art Studio offers to deliver a bespoke hand-crafted presentation box containing five 15 &times; 15 cm cured architectural plaques (Masazir lake salt in UV-acrylic, Lokbatan clay craquelure, cold-polymerized Binagadi bitumen, honed Absheron coquina, and pyrite ore aggregates) for direct tactile review by the selection committee.
+        Jeyran Mir-Gasim Jafarova offers to deliver a bespoke hand-crafted presentation box containing five 15 &times; 15 cm cured architectural plaques (Masazir lake salt in UV-acrylic, Lokbatan clay craquelure, cold-polymerized Binagadi bitumen, honed Absheron coquina, and pyrite ore aggregates) for direct tactile review by the selection committee.
       </p>
     </div>
   </div>
