@@ -1,0 +1,26 @@
+{
+  "name": "Absheron Tectonics | Virtual Curatorial Gallery",
+  "short_name": "Absheron Art",
+  "description": "Interactive Museum Curatorial Hanging Experience for Gazelli Art House Commission by Mirgasim Art Studio.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0c0d0e",
+  "theme_color": "#0c0d0e",
+  "icons": [
+    {
+      "src": "assets/branding/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/branding/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/branding/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
