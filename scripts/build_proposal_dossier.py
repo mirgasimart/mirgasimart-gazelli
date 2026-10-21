@@ -5,10 +5,10 @@ Mirgasim Art Studio - 6-Page Luxury Curatorial Commission Dossier Builder
 Compiles an exact 6-page museum-grade fine art commission proposal:
   - Page 1: Executive Curatorial Statement, Collection Matrix & Caspian Strategy
   - Page 2: Plate 01 — Luminescence of Masazir Dawn (185 × 120 cm)
-  - Page 3: Plate 02 — Fossil Didacna Mandala (145 × 145 cm)
+  - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
   - Page 4: Plate 03 — Black Gold (80 × 100 cm)
   - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
-  - Page 6: Plate 05 — The Gobustan Solar Oracle (120 × 100 cm)
+  - Page 6: Plate 05 — Solar Oracle (120 × 100 cm)
 """
 
 import os
@@ -374,18 +374,18 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 02 &bull; Tactile Shell Assemblage &amp; Mineral Painting</div>
-      <h3 class="plate-title">The Shebeke Reliquary: Fossil Didacna Mandala</h3>
-      <div class="plate-subtitle">Şəbəkə Qalığı: Qədim Didakna Mandalas</div>
+      <h3 class="plate-title">The Shebeke Reliquary</h3>
+      <div class="plate-subtitle">Şəbəkə Qalığı</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="The Shebeke Reliquary: Fossil Didacna Mandala"/>
+      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="The Shebeke Reliquary"/>
     </div>
 
     <table class="specs-grid">
       <tr>
         <td class="spec-name">Dimensions</td>
-        <td class="spec-val"><strong>145 &times; 145 cm</strong> (Square Format Canvas, Specification from Brief)</td>
+        <td class="spec-val"><strong>40 &times; 60 cm</strong> (Vertical Format Canvas, Specification from Brief)</td>
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
@@ -405,7 +405,7 @@ def generate_dossier_html(use_watermarked=True):
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 02: Fossil Didacna Mandala</div>
+    <div class="rf-context">Plate 02: The Shebeke Reliquary</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">03 / 06</div>
   </div>
@@ -511,12 +511,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 05 &bull; Mythological Archaeological Totem</div>
-      <h3 class="plate-title">The Gobustan Solar Oracle: Ouroboros Lamprey</h3>
-      <div class="plate-subtitle">Qobustan Günəşi: İlanbalığı və Qədim Qaya Təsvirləri</div>
+      <h3 class="plate-title">Solar Oracle</h3>
+      <div class="plate-subtitle">Günəş Orakulu</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('05_the_lampreys_vigil_caspian_lamprey.jpg')}" alt="The Gobustan Solar Oracle"/>
+      <img src="{get_img_uri('05_the_lampreys_vigil_caspian_lamprey.jpg')}" alt="Solar Oracle"/>
     </div>
 
     <table class="specs-grid">
@@ -542,7 +542,7 @@ def generate_dossier_html(use_watermarked=True):
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 05: The Gobustan Solar Oracle</div>
+    <div class="rf-context">Plate 05: Solar Oracle</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">06 / 06</div>
   </div>
