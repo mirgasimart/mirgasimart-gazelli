@@ -139,26 +139,87 @@
         <span class="scale-height-label">Human Eye Level (175 cm)</span>
       </div>
 
-      <!-- THE HANGING ARTWORK MOUNT -->
-      <div id="artworkMount" class="artwork-mount">
+      <!-- WIDESCREEN CURATORIAL TRIPTYCH CONTAINER -->
+      <div id="triptychContainer" class="triptych-container">
         
-        <!-- Framing Box Wrapper -->
-        <div id="frameWrapper" class="frame-wrapper frame-floater-walnut">
+        <!-- LEFT WING: ARCHITECTURAL SPATIAL CONTEXT -->
+        <aside id="wingLeft" class="stage-wing wing-left">
+          <div class="wing-header">
+            <span class="wing-badge">Architectural Placement</span>
+            <span id="wingNicheTag" class="wing-tag">Niche</span>
+          </div>
+
+          <div id="wingInsituBtn" class="wing-insitu-preview" title="Click to Expand Full In-Situ Interior View">
+            <img id="wingInsituThumb" src="docs/output/latest/_insitu/insitu_plate_01_masazir_dawn.jpg" alt="In Situ Niche">
+            <div class="wing-insitu-overlay">
+              <span>View Installed In-Situ ↗</span>
+            </div>
+          </div>
+
+          <p id="wingNicheDesc" class="wing-desc">Executive Boardroom or Serene Spa Reception feature wall with direct natural light.</p>
           
-          <!-- Canvas Body -->
-          <div id="canvasInner" class="canvas-inner">
-            <img id="artworkImg" class="artwork-img" src="docs/output/latest/_clean/01_luminescence_of_masazir_salt_dawn.jpg" alt="Artwork on Wall">
-            
-            <!-- Tactile Mineral Inspection Hotspots -->
-            <div id="hotspotContainer"></div>
+          <div class="wing-specs-row">
+            <span>Spatial Scale</span>
+            <span id="wingDimension">185 × 120 cm</span>
+          </div>
+          <div class="wing-specs-row">
+            <span>Lighting Recommendation</span>
+            <span id="wingLighting">2700K Warm Wash (CRI 95+)</span>
+          </div>
+        </aside>
+
+        <!-- CENTER: THE HANGING ARTWORK MOUNT -->
+        <div id="artworkMount" class="artwork-mount">
+          <!-- Framing Box Wrapper -->
+          <div id="frameWrapper" class="frame-wrapper frame-floater-walnut">
+            <!-- Canvas Body -->
+            <div id="canvasInner" class="canvas-inner">
+              <img id="artworkImg" class="artwork-img" src="docs/output/latest/_clean/01_luminescence_of_masazir_salt_dawn.jpg" alt="Artwork on Wall">
+              <!-- Tactile Mineral Inspection Hotspots -->
+              <div id="hotspotContainer"></div>
+            </div>
+          </div>
+
+          <!-- Museum Wall Placard Label -->
+          <div id="labelCard" class="gallery-label-card">
+            <!-- Populated dynamically via JS -->
           </div>
         </div>
 
-        <!-- Museum Wall Placard Label -->
-        <div id="labelCard" class="gallery-label-card">
-          <!-- Populated dynamically via JS -->
-        </div>
+        <!-- RIGHT WING: RAW GEOLOGICAL MINERALS & TURNKEY SPECS -->
+        <aside id="wingRight" class="stage-wing wing-right">
+          <div class="wing-header">
+            <span class="wing-badge">Geological Anatomy</span>
+            <span class="wing-tag">Absheron Minerals</span>
+          </div>
 
+          <div id="wingMineralsList" class="wing-mineral-list">
+            <!-- Populated dynamically -->
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 10px; display: flex; flex-direction: column; gap: 4px;">
+            <div class="wing-specs-row">
+              <span>Chassis Engineering</span>
+              <span id="wingChassis">Cross-Braced Pine + Aluminum</span>
+            </div>
+            <div class="wing-specs-row">
+              <span>Structural Weight</span>
+              <span id="wingWeight">~14.5 kg</span>
+            </div>
+            <div class="wing-specs-row">
+              <span>Mounting Hardware</span>
+              <span id="wingCleats">Dual Aluminum Z-Bars</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- CONTINUOUS PANORAMIC PROMENADE (Wide Multi-Artwork Wall) -->
+      <div id="panoramicPromenade" class="panoramic-promenade">
+        <div id="panoramicTrack" class="panoramic-wall-track">
+          <!-- Populated dynamically via JS with all suite artworks side-by-side -->
+        </div>
       </div>
 
       <!-- MACRO TACTILE LOUPE -->
