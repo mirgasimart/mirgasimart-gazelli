@@ -146,57 +146,18 @@ def generate_dossier_html(use_watermarked=True):
   }}
 
   /* Page 1: Hero Cover Elements */
-  .p1-masthead {{
-    text-align: center;
-    border-bottom: 1.5pt solid #111;
-    padding-bottom: 10px;
-    margin-bottom: 12px;
-  }}
-
-  .brand-wordmark {{
-    font-family: 'Cinzel', serif;
-    font-size: 21pt;
-    font-weight: 700;
-    letter-spacing: 6px;
-    color: #0f0f12;
-    margin: 0;
-    text-transform: uppercase;
-  }}
-
-  .brand-subtitle {{
-    font-size: 7.5pt;
-    letter-spacing: 3.5px;
-    color: #666;
-    margin-top: 4px;
-    text-transform: uppercase;
-    font-weight: 500;
-  }}
-
   .p1-title-box {{
     text-align: center;
-    margin-bottom: 10px;
-  }}
-
-  .dossier-label {{
-    font-size: 7pt;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    color: #8c734b;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 2px 14px;
-    border: 1px solid #d4c4a8;
-    border-radius: 12px;
-    background: #fdfbf7;
-    margin-bottom: 5px;
+    margin-top: 6px;
+    margin-bottom: 14px;
   }}
 
   .dossier-title {{
     font-family: 'Playfair Display', serif;
-    font-size: 18pt;
+    font-size: 21pt;
     font-weight: 600;
     color: #111;
-    margin: 3px 0 2px 0;
+    margin: 0 0 5px 0;
     letter-spacing: -0.2px;
   }}
 
@@ -351,13 +312,7 @@ def generate_dossier_html(use_watermarked=True):
 <!-- PAGE 1: EXECUTIVE CURATORIAL DOSSIER & COLLECTION MATRIX -->
 <div class="page">
   <div>
-    <div class="p1-masthead">
-      <div class="brand-wordmark">MIRGASIM ART STUDIO</div>
-      <div class="brand-subtitle">FINE ART ATELIER &bull; BAKU &bull; AZERBAIJAN</div>
-    </div>
-
     <div class="p1-title-box">
-      <div class="dossier-label">Curatorial Commission Dossier</div>
       <h1 class="dossier-title">Absheron Tectonics: Primordial Matter &amp; Geological Strata</h1>
       <div class="dossier-subtitle">Submitted in Formal Response to the Selection Brief | Gazelli Art House (London / Baku)</div>
     </div>

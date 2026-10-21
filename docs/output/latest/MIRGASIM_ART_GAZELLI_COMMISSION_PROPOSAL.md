@@ -1,5 +1,4 @@
-# MIRGASIM ART STUDIO | Curatorial Commission Proposal & Artist Dossier
-## *Absheron Tectonics: Primordial Matter & Geological Strata*
+# Absheron Tectonics: Primordial Matter & Geological Strata
 
 **Commissioning Body**: Gazelli Art House (London / Baku)  
 **Submitting Artist**: Mirgasim Art Studio (Baku, Azerbaijan)  
