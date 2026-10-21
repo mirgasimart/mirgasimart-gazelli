@@ -52,6 +52,19 @@
 
   <div class="app-container">
     
+    <!-- PULL-TO-REFRESH MOBILE INDICATOR (Android & iPhone Gesture) -->
+    <div id="pullRefreshIndicator" class="pull-refresh-indicator" aria-hidden="true">
+      <div class="pull-refresh-content">
+        <div class="pull-refresh-spinner">
+          <svg class="pull-refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path class="arrow-path" d="M12 4v12m0 0l-4-4m4 4l4-4" />
+            <circle class="spinner-circle" cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" stroke-dasharray="28" stroke-dashoffset="28" />
+          </svg>
+        </div>
+        <span id="pullRefreshText" class="pull-refresh-text">Pull to refresh</span>
+      </div>
+    </div>
+
     <!-- TOP CURATORIAL HEADER -->
     <header class="gallery-header">
       <div class="header-main-row">
