@@ -18,6 +18,7 @@ class GazelliCuratorialGallery {
     this.audioPlaying = false;
     this.audioCtx = null;
     this.audioOscillators = [];
+    this.wingCollapsed = false;
     this.pullReady = false;
     this.currentOffsetX = 0;
     this.currentOffsetY = 0;
