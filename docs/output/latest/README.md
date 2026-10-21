@@ -32,15 +32,15 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 ---
 
 
-### Plate 01: *Luminescence of Masazir Dawn*
-*Masazır Şəfəqi: Çəhrayı Duz Gölü*
+### Plate 01: *Luminescence of Masazir*
+*Masazır Parıltısı*
 
-![Plate 01: Luminescence of Masazir Dawn](_clean/01_luminescence_of_masazir_salt_dawn.jpg)
+![Plate 01: Luminescence of Masazir](_clean/01_luminescence_of_masazir_salt_dawn.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_01_luminescence_of_masazir_salt_dawn.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Executive Salon](_insitu/insitu_plate_01_masazir_dawn.jpg)
 
 - **Genre**: Pure Mineral Abstraction / Lacustrine Strata Painting
-- **Dimensions**: **185 × 120 cm** (Horizontal Landscape Canvas, Specification from Brief)
+- **Dimensions**: **130 × 100 cm** (Horizontal Landscape Canvas, Specification from Brief)
 - **Target Spatial Placement**: Executive Boardroom, Presidential Suite, or Coastal Wellness Reception
 - **Endemic Caspian Focus**: Absheron Lacustrine Strata (*Pure geological meditation; zero figures, zero fauna, zero carpets*)
 - **Selected Absheron Minerals**:

@@ -4,7 +4,7 @@ Mirgasim Art Studio - 6-Page Luxury Curatorial Commission Dossier Builder
 ========================================================================
 Compiles an exact 6-page museum-grade fine art commission proposal:
   - Page 1: Executive Curatorial Statement, Collection Matrix & Caspian Strategy
-  - Page 2: Plate 01 — Luminescence of Masazir Dawn (185 × 120 cm)
+  - Page 2: Plate 01 — Luminescence of Masazir (130 × 100 cm)
   - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
   - Page 4: Plate 03 — Black Gold (80 × 100 cm)
   - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
@@ -331,22 +331,22 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 01 &bull; Pure Mineral Abstraction</div>
-      <h3 class="plate-title">Luminescence of Masazir Dawn</h3>
-      <div class="plate-subtitle">Masazır Şəfəqi: Çəhrayı Duz Gölü</div>
+      <h3 class="plate-title">Luminescence of Masazir</h3>
+      <div class="plate-subtitle">Masazır Parıltısı</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('01_luminescence_of_masazir_salt_dawn.jpg')}" alt="Luminescence of Masazir Dawn"/>
+      <img src="{get_img_uri('01_luminescence_of_masazir_salt_dawn.jpg')}" alt="Luminescence of Masazir"/>
     </div>
 
     <table class="specs-grid">
       <tr>
         <td class="spec-name">Dimensions</td>
-        <td class="spec-val"><strong>185 &times; 120 cm</strong> (Horizontal Landscape Canvas, Specification from Brief)</td>
+        <td class="spec-val"><strong>130 &times; 100 cm</strong> (Horizontal Landscape Canvas, Specification from Brief)</td>
       </tr>
       <tr>
         <td class="spec-name">Materials</td>
-        <td class="spec-val">Genuine Masazir Pink Lake Salt, Porous Absheron Limestone Plaster, Heavy Impasto, Incised Sgraffito</td>
+        <td class="spec-val">Genuine Masazir Pink Lake Salt, Textured Paste, Heavy Impasto, Oil Paint on Canvas</td>
       </tr>
       <tr>
         <td class="spec-name">Concept</td>
@@ -358,7 +358,7 @@ def generate_dossier_html(use_watermarked=True):
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 01: Luminescence of Masazir Dawn</div>
+    <div class="rf-context">Plate 01: Luminescence of Masazir</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">02 / 06</div>
   </div>
