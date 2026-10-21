@@ -51,15 +51,15 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 
 ---
 
-### Plate 02: *The Shebeke Reliquary: Fossil Didacna Mandala*
-*Şəbəkə Qalığı: Qədim Didakna Mandalas*
+### Plate 02: *The Shebeke Reliquary*
+*Şəbəkə Qalığı*
 
-![Plate 02: The Shebeke Reliquary: Fossil Didacna Mandala](_clean/02_the_weaver_of_sunken_shells_didacna.jpg)
+![Plate 02: The Shebeke Reliquary](_clean/02_the_weaver_of_sunken_shells_didacna.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_02_the_weaver_of_sunken_shells_didacna.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Luxury Gallery](_insitu/insitu_plate_02_shebeke_reliquary.jpg)
 
 - **Genre**: Mineral Assemblage & Painting on Canvas / Tactile Coquina Relief
-- **Dimensions**: **145 × 145 cm** (Square Format Canvas, Specification from Brief)
+- **Dimensions**: **40 × 60 cm** (Vertical Format Canvas, Specification from Brief)
 - **Target Spatial Placement**: VIP Reception Lounge, Executive Suite Salon, or Private Dining Feature Wall
 - **Endemic Caspian Organism**: Caspian Cockles (*Didacna trigonoides* & *Didacna pyramidata*)
 - **Selected Absheron Minerals**:
@@ -113,10 +113,10 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 
 ---
 
-### Plate 05: *The Gobustan Solar Oracle: Ouroboros Lamprey*
-*Qobustan Günəşi: İlanbalığı və Qədim Qaya Təsvirləri*
+### Plate 05: *Solar Oracle*
+*Günəş Orakulu*
 
-![Plate 05: The Gobustan Solar Oracle](_clean/05_the_lampreys_vigil_caspian_lamprey.jpg)
+![Plate 05: Solar Oracle](_clean/05_the_lampreys_vigil_caspian_lamprey.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_05_the_lampreys_vigil_caspian_lamprey.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Ceremonial Vestibule](_insitu/insitu_plate_05_gobustan_oracle.jpg)
 
