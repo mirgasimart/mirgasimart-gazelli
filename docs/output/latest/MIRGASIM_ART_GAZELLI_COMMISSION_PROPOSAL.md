@@ -46,7 +46,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Selected Absheron Minerals**:
   - **Masazir Pink Lake Salt**: Genuine crystalline lake salt encrustations integrated directly into the heavy impasto ground, catching natural daylight with subtle prismatic sparkle.
   - **Absheron Limestone & Alabaster Plaster**: Porous cream-and-ochre ground scored with delicate geometric sgraffito lines.
-- **Curatorial Narrative**:
+- **Concept**:
   An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity.
 
 ---
@@ -67,7 +67,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Concentric Didacna Cockle Shells & Mother-of-Pearl**: Hundreds of natural Caspian Didacna bivalve shells arranged in celestial concentric geometry.
   - **Masazir Pink Lake Salt Core**: Raw crystallized lake salt crystals forming an incandescent central halo with turquoise mineral glazes.
   - **Absheron Coastal Beach Sand**: Golden quartz-shell sand borders separating the shell rings.
-- **Curatorial Narrative**:
+- **Concept**:
   An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (*daş yonma*) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian *Didacna* cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
 
 ---
@@ -87,7 +87,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Natural Absheron Bitumen (Binagadi & Fatmai deposits)**: Pure unrefined asphaltite applied in thick, viscous knife-strokes.
   - **Pyrite Mineral Aggregates**: Irregular metallic brassy-gold sulfide crystals embedded into the fish scales.
   - **Absheron Limestone Powder**: Providing chalky white contrast against the black bitumen.
-- **Curatorial Narrative**:
+- **Concept**:
   Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (*Yanar Dağ / Ateshgah*).
 
 ---
@@ -108,7 +108,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Caspian Mineral Glazes**: Luminous celadon, seafoam green, and verdigris pigments evoking thermal spring luminescence.
   - **Metallic Pyrite Infiltration**: Genuine pyrite mineral grains accenting the prehistoric armor plates of the goby.
   - **Incised Sgraffito Lines**: Deep directional fissures carved into the wet clay bed.
-- **Curatorial Narrative**:
+- **Concept**:
   A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (*Benthophilus*) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
 
 ---
@@ -128,7 +128,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Absheron Coastal Beach Sand**: Concentric rings textured with raw beach sand.
   - **Masazir Lake Salt Crystals**: Saline clusters embedded along the cyan-blue outer orbital halo.
   - **Absheron Limestone & Bone Plaster**: Sgraffito incisions depicting Gobustan rock petroglyphs.
-- **Curatorial Narrative**:
+- **Concept**:
   A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
 
 ---
@@ -144,7 +144,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Target Spatial Placement**: Private VIP Wellness Suite, Executive Lounge, or Presidential Antechamber
 - **Endemic Caspian Wildlife**: Caspian Seal (*Pusa caspica*)
 - **Selected Absheron Minerals**: Genuine Masazir pink lake salt encrustations, porous Absheron limestone plaster ground, delicate geometric sgraffito incisions.
-- **Curatorial Narrative**:
+- **Concept**:
   Synthesizing Mirgasim’s iconic visual hallmarks—a melancholic, statuesque Azerbaijani muse with connected dark brows, sculpted hands, and intense gaze—with the raw geological matter of Absheron. Cradled tenderly in her arms is a gentle Caspian seal pup (*Pusa caspica*), its silver-grey mottled coat glistening against modern draped plum-burgundy fabric. The background is a thick, sculptural palette-knife impasto ground in warm ochres and blush tones, embedded with authentic sparkling crystalline clusters of raw pink-and-white Masazir lake salt and incised with delicate geometric sgraffito lines. Zero textiles, zero carpets; pure authorial painterly mastery.
 
 ---

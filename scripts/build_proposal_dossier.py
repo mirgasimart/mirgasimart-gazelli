@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-Mirgasim Art Studio - 7-Page Luxury Curatorial Commission Dossier Builder
+Mirgasim Art Studio - 6-Page Luxury Curatorial Commission Dossier Builder
 ========================================================================
-Compiles an exact 7-page museum-grade fine art commission proposal:
+Compiles an exact 6-page museum-grade fine art commission proposal:
   - Page 1: Executive Curatorial Statement, Collection Matrix & Caspian Strategy
   - Page 2: Plate 01 — Luminescence of Masazir Dawn (185 × 120 cm)
-  - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
+  - Page 3: Plate 02 — Fossil Didacna Mandala (145 × 145 cm)
   - Page 4: Plate 03 — Black Gold (80 × 100 cm)
   - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
   - Page 6: Plate 05 — The Gobustan Solar Oracle (120 × 100 cm)
-  - Page 7: Architectural In-Situ Integration & Turnkey Contractor Schedule
 """
 
 import os
@@ -318,7 +317,7 @@ def generate_dossier_html(use_watermarked=True):
   <div class="running-footer">
     <div class="rf-context"></div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">01 / 07</div>
+    <div class="rf-folio">01 / 06</div>
   </div>
 </div>
 
@@ -328,7 +327,6 @@ def generate_dossier_html(use_watermarked=True):
     <div class="running-header">
       <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
       <div class="rh-title">Project Proposal</div>
-      <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
     <div class="plate-top">
@@ -351,7 +349,7 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val">Genuine Masazir Pink Lake Salt, Porous Absheron Limestone Plaster, Heavy Impasto, Incised Sgraffito</td>
       </tr>
       <tr>
-        <td class="spec-name">Curatorial Concept</td>
+        <td class="spec-name">Concept</td>
         <td class="spec-val">
           An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. (Pure geological abstraction; zero portraits, zero figures, zero carpets).
         </td>
@@ -362,7 +360,7 @@ def generate_dossier_html(use_watermarked=True):
   <div class="running-footer">
     <div class="rf-context">Plate 01: Luminescence of Masazir Dawn</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">02 / 07</div>
+    <div class="rf-folio">02 / 06</div>
   </div>
 </div>
 
@@ -372,7 +370,6 @@ def generate_dossier_html(use_watermarked=True):
     <div class="running-header">
       <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
       <div class="rh-title">Project Proposal</div>
-      <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
     <div class="plate-top">
@@ -399,7 +396,7 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val">Caspian Cockles (<em>Didacna trigonoides</em> &amp; <em>Didacna pyramidata</em>)</td>
       </tr>
       <tr>
-        <td class="spec-name">Curatorial Concept</td>
+        <td class="spec-name">Concept</td>
         <td class="spec-val">
           An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (<em>daş yonma</em>) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian <em>Didacna</em> cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
         </td>
@@ -410,7 +407,7 @@ def generate_dossier_html(use_watermarked=True):
   <div class="running-footer">
     <div class="rf-context">Plate 02: Fossil Didacna Mandala</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">03 / 07</div>
+    <div class="rf-folio">03 / 06</div>
   </div>
 </div>
 
@@ -420,7 +417,6 @@ def generate_dossier_html(use_watermarked=True):
     <div class="running-header">
       <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
       <div class="rh-title">Project Proposal</div>
-      <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
     <div class="plate-top">
@@ -447,7 +443,7 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val">Caspian Marine Shad / Brazhnikov’s Shad (<em>Alosa braschnikowi</em>)</td>
       </tr>
       <tr>
-        <td class="spec-name">Curatorial Concept</td>
+        <td class="spec-name">Concept</td>
         <td class="spec-val">
           Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (<em>Yanar Dağ / Ateshgah</em>).
         </td>
@@ -458,7 +454,7 @@ def generate_dossier_html(use_watermarked=True):
   <div class="running-footer">
     <div class="rf-context">Plate 03: Black Gold</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">04 / 07</div>
+    <div class="rf-folio">04 / 06</div>
   </div>
 </div>
 
@@ -468,7 +464,6 @@ def generate_dossier_html(use_watermarked=True):
     <div class="running-header">
       <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
       <div class="rh-title">Project Proposal</div>
-      <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
     <div class="plate-top">
@@ -491,7 +486,7 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val">Subterranean Lokbatan Mud-Volcano Clay, Luminous Caspian Celadon &amp; Seafoam Glazes, Tactile Mineral Craquelure, Metallic Pyrite Vein Infiltration</td>
       </tr>
       <tr>
-        <td class="spec-name">Curatorial Concept</td>
+        <td class="spec-name">Concept</td>
         <td class="spec-val">
           A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (<em>Benthophilus</em>) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
         </td>
@@ -502,7 +497,7 @@ def generate_dossier_html(use_watermarked=True):
   <div class="running-footer">
     <div class="rf-context">Plate 04: Breath of Lokbatan</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">05 / 07</div>
+    <div class="rf-folio">05 / 06</div>
   </div>
 </div>
 
@@ -512,7 +507,6 @@ def generate_dossier_html(use_watermarked=True):
     <div class="running-header">
       <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
       <div class="rh-title">Project Proposal</div>
-      <div class="rh-body">GAZELLI ART HOUSE</div>
     </div>
 
     <div class="plate-top">
@@ -539,7 +533,7 @@ def generate_dossier_html(use_watermarked=True):
         <td class="spec-val">Caspian Lamprey (<em>Caspiomyzon wagneri</em>)</td>
       </tr>
       <tr>
-        <td class="spec-name">Curatorial Concept</td>
+        <td class="spec-name">Concept</td>
         <td class="spec-val">
           A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt solar mandala. Incised directly into the bone-plaster and limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
         </td>
@@ -550,106 +544,7 @@ def generate_dossier_html(use_watermarked=True):
   <div class="running-footer">
     <div class="rf-context">Plate 05: The Gobustan Solar Oracle</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">06 / 07</div>
-  </div>
-</div>
-
-<!-- PAGE 7: ARCHITECTURAL IN-SITU SIMULATION & TURNKEY INSTALLATION MATRIX -->
-<div class="page">
-  <div>
-    <div class="running-header">
-      <div class="rh-atelier">JEYRAN MIR-GASIM JAFAROVA</div>
-      <div class="rh-title">Architectural Placement &amp; Turnkey Contractor Schedule</div>
-      <div class="rh-body">GAZELLI ART HOUSE</div>
-    </div>
-
-    <div class="plate-top" style="margin-bottom: 4px;">
-      <div class="plate-badge">Spatial Integration &bull; Contractor Specifications</div>
-      <h3 class="plate-title" style="font-size: 13pt;">In-Situ Spatial Context &amp; Structural Mounting Matrix</h3>
-      <div class="plate-subtitle">Photorealistic Architectural Previews on Honed Absheron Coquina Walls</div>
-    </div>
-
-    <!-- Dual In-Situ Image Row -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 6px;">
-      <tr>
-        <td style="width: 50%; padding-right: 5px; text-align: center; vertical-align: top;">
-          <img src="{get_insitu_uri('insitu_plate_01_masazir_dawn.jpg')}" alt="Plate 01 In-Situ" style="width: 100%; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);"/>
-          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 2px;">Plate 01: Honed Coquina Feature Wall &bull; Executive Salon Placement</span>
-        </td>
-        <td style="width: 50%; padding-left: 5px; text-align: center; vertical-align: top;">
-          <img src="{get_insitu_uri('insitu_plate_04_breath_of_lokbatan.jpg')}" alt="Plate 04 In-Situ" style="width: 100%; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);"/>
-          <span style="font-size: 6.8pt; color: #666; font-style: italic; display: block; margin-top: 2px;">Plate 04: Grand Double-Height Atrium &bull; 2700K Ceiling Wash Lighting</span>
-        </td>
-      </tr>
-    </table>
-
-    <table class="data-table" style="font-size: 7.2pt; margin: 4px 0;">
-      <thead>
-        <tr>
-          <th>Plate</th>
-          <th>Dimensions</th>
-          <th>Est. Weight</th>
-          <th>Edge / Framing Profile</th>
-          <th>Rigging Hardware</th>
-          <th>Optimal Lighting</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>01</strong></td>
-          <td>185 &times; 120 cm</td>
-          <td>~14.5 kg</td>
-          <td>Continuous Mineral Wrap / Floater</td>
-          <td>Dual Aluminum Z-Cleats</td>
-          <td>2700K Ceiling Wash (CRI 95+)</td>
-        </tr>
-        <tr>
-          <td><strong>02</strong></td>
-          <td>145 &times; 145 cm</td>
-          <td>~11.8 kg</td>
-          <td>Continuous Coquina Wrap / Floater</td>
-          <td>Dual Aluminum French Cleats</td>
-          <td>2700K-3000K Perimeter Wash</td>
-        </tr>
-        <tr>
-          <td><strong>03</strong></td>
-          <td>80 &times; 100 cm</td>
-          <td>~6.8 kg</td>
-          <td>Bitumen Polymer / Bronze Floater</td>
-          <td>Heavy-Duty French Cleat (50kg)</td>
-          <td>3000K Museum Track Light</td>
-        </tr>
-        <tr>
-          <td><strong>04</strong></td>
-          <td>180 &times; 180 cm</td>
-          <td>~19.5 kg</td>
-          <td>Volcanic Craquelure Wrap</td>
-          <td>Triple Cleats (Seismic Rated)</td>
-          <td>High-CRI 98 Wall Grazing</td>
-        </tr>
-        <tr>
-          <td><strong>05</strong></td>
-          <td>120 &times; 100 cm</td>
-          <td>~8.2 kg</td>
-          <td>Bone Plaster / Oiled Walnut</td>
-          <td>Dual Aluminum Z-Cleats</td>
-          <td>2700K Framing Projector</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div style="background: #fdfbf7; border: 1px solid #e8dfcf; border-radius: 3px; padding: 5px 8px; margin-top: 4px;">
-      <div style="font-size: 7.2pt; font-weight: 600; color: #8c734b; text-transform: uppercase; letter-spacing: 0.5px;">Curatorial Material Palette Box ("The Tactile Verification")</div>
-      <p style="font-size: 7.2pt; line-height: 1.4; color: #333; margin: 2px 0 0 0;">
-        Jeyran Mir-Gasim Jafarova offers to deliver a bespoke hand-crafted presentation box containing five 15 &times; 15 cm cured architectural plaques (Masazir lake salt in UV-acrylic, Lokbatan clay craquelure, cold-polymerized Binagadi bitumen, honed Absheron coquina, and pyrite ore aggregates) for direct tactile review by the selection committee.
-      </p>
-    </div>
-  </div>
-
-  <div class="running-footer">
-    <div class="rf-context">Architectural Specifications &amp; Tactile Material Schedule</div>
-    <div class="rf-copyright">Submitted in Formal Response to Selection Brief | Gazelli Art House</div>
-    <div class="rf-folio">07 / 07</div>
+    <div class="rf-folio">06 / 06</div>
   </div>
 </div>
 
@@ -703,7 +598,7 @@ def build_pdf(use_watermarked=True):
         os.path.abspath(tmp_html)
     ]
 
-    print(f"Compiling 7-Page Luxury PDF Dossier via {browser_bin} (zero browser header/footer artifacts)...")
+    print(f"Compiling 6-Page Luxury PDF Dossier via {browser_bin} (zero browser header/footer artifacts)...")
     res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     if os.path.exists(tmp_html):
         os.remove(tmp_html)
@@ -711,7 +606,7 @@ def build_pdf(use_watermarked=True):
     if os.path.exists(out_pdf):
         shutil.copyfile(out_pdf, readme_pdf)
         size_mb = os.path.getsize(out_pdf) / (1024 * 1024)
-        print(f"SUCCESS: Generated 7-Page Luxury Dossier ({size_mb:.2f} MB):")
+        print(f"SUCCESS: Generated 6-Page Luxury Dossier ({size_mb:.2f} MB):")
         print(f"  -> {out_pdf}")
         print(f"  -> {readme_pdf}")
     else:
@@ -720,7 +615,7 @@ def build_pdf(use_watermarked=True):
         print("Stderr:", res.stderr)
 
 def main():
-    parser = argparse.ArgumentParser(description="Mirgasim Art Studio - 7-Page Luxury PDF Dossier Builder")
+    parser = argparse.ArgumentParser(description="Mirgasim Art Studio - 6-Page Luxury PDF Dossier Builder")
     parser.add_argument("--clean", action="store_true", help="Use unwatermarked master artworks instead of watermarked")
     args = parser.parse_args()
 
