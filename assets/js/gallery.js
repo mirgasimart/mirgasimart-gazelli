@@ -18,8 +18,9 @@ class GazelliCuratorialGallery {
     this.audioPlaying = false;
     this.audioCtx = null;
     this.audioOscillators = [];
-    this.wingCollapsed = false;
     this.pullReady = false;
+    this.currentOffsetX = 0;
+    this.currentOffsetY = 0;
 
     this.cacheDOM();
     this.initAudioEngine();
@@ -339,8 +340,9 @@ class GazelliCuratorialGallery {
       if (this.currentMode === 'gallery' && !isPullRefreshing) {
         if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
           const isScaleActive = this.dom.artworkMount.classList.contains('scale-active-mobile');
-          const baseOffset = isScaleActive ? 24 : 0;
-          this.dom.artworkMount.style.transform = `translateX(${baseOffset + (deltaX * 0.18)}px)`;
+          const baseOffset = isScaleActive ? 24 : (this.currentOffsetX || 0);
+          const currentY = (window.innerWidth <= 768) ? 0 : (this.currentOffsetY || 0);
+          this.dom.artworkMount.style.transform = `translate(${baseOffset + (deltaX * 0.18)}px, ${currentY}px)`;
         }
       }
     }, { passive: true });
@@ -379,8 +381,11 @@ class GazelliCuratorialGallery {
       // Reset elastic horizontal drag transform
       if (this.currentMode === 'gallery') {
         const isScaleActive = this.dom.artworkMount.classList.contains('scale-active-mobile');
-        const offset = (window.innerWidth <= 768 && isScaleActive) ? 'translateX(24px)' : (window.innerWidth <= 768 ? 'none' : this.dom.artworkMount.style.transform);
-        this.dom.artworkMount.style.transform = offset;
+        if (window.innerWidth <= 768) {
+          this.dom.artworkMount.style.transform = isScaleActive ? 'translateX(24px)' : 'none';
+        } else {
+          this.dom.artworkMount.style.transform = `translate(${this.currentOffsetX || 0}px, ${this.currentOffsetY || 0}px)`;
+        }
       }
 
       if (this.currentMode === 'macro') {
@@ -638,6 +643,8 @@ class GazelliCuratorialGallery {
       this.dom.canvasInner.style.width = `${targetWidth}px`;
       this.dom.canvasInner.style.height = `${targetHeight}px`;
 
+      this.currentOffsetX = 0;
+      this.currentOffsetY = 0;
       this.dom.artworkMount.style.transform = 'none';
       this.dom.artworkMount.classList.remove('scale-active-mobile');
       this.dom.humanScaleFigure.classList.remove('visible');
@@ -646,6 +653,8 @@ class GazelliCuratorialGallery {
       // Mobile portrait layout (iPhone, Android)
       const stageH = Math.max(window.innerHeight - 250, 200);
 
+      this.currentOffsetX = this.showHumanScale ? 24 : 0;
+      this.currentOffsetY = 0;
       this.dom.artworkMount.style.transform = this.showHumanScale ? 'translateX(24px)' : 'none';
 
       const availW = this.showHumanScale 
@@ -707,7 +716,34 @@ class GazelliCuratorialGallery {
       const wallCenter = (clearLeft + clearRight) / 2;
       const offsetFromCenter = Math.round(wallCenter - (stageTotalWidth / 2));
 
-      this.dom.artworkMount.style.transform = `translateX(${offsetFromCenter}px)`;
+      // 2. MUSEUM EYE-LEVEL VERTICAL HANGING (58-62 inch / 158 cm centerline standard)
+      // Standard gallery installation aligns the horizontal centerline of the painting with viewer eye-level
+      const stageHeight = this.dom.stage.clientHeight;
+      const floorSkirtingY = 122; // Height of gallery floor skirting from bottom of stage
+      const targetCenterCm = 158; // Standard museum centerline height above gallery floor (158 cm / 62 in)
+      const desiredArtCenterY = floorSkirtingY + Math.round(targetCenterCm * pxPerCm);
+      const defaultCenterY = Math.round(stageHeight / 2);
+
+      // Boundary safety check: Prevent painting from colliding with header bar or floor skirting
+      const minClearCeiling = 32;
+      const minClearSkirting = floorSkirtingY + 28;
+      const halfArtHeight = targetHeight / 2;
+      const maxAllowedCenter = stageHeight - halfArtHeight - minClearCeiling;
+      const minAllowedCenter = minClearSkirting + halfArtHeight;
+
+      let clampedCenter = desiredArtCenterY;
+      if (maxAllowedCenter >= minAllowedCenter) {
+        clampedCenter = Math.min(Math.max(desiredArtCenterY, minAllowedCenter), maxAllowedCenter);
+      } else {
+        // Fallback for compact screens: center evenly in available wall space above skirting
+        clampedCenter = Math.round((minClearSkirting + (stageHeight - minClearCeiling)) / 2);
+      }
+
+      const offsetY = Math.round(-(clampedCenter - defaultCenterY));
+      this.currentOffsetX = offsetFromCenter;
+      this.currentOffsetY = offsetY;
+
+      this.dom.artworkMount.style.transform = `translate(${offsetFromCenter}px, ${offsetY}px)`;
 
       // Ground and align human silhouette relative to the artwork's left frame edge
       const figureOffsetFromArt = -(targetWidth / 2 + 75);
