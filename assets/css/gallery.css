@@ -1899,86 +1899,8 @@ html, body {
    MUSEUM WALL PLACARD (Desktop & Laptop View)
    ========================================================================== */
 @media (min-width: 901px) {
-  .gallery-label-card {
-    position: absolute;
-    top: calc(100% + 18px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    min-width: 250px;
-    max-width: min(92vw, 420px);
-    background: rgba(14, 16, 20, 0.92);
-    border: 1px solid var(--border-gold);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 8px;
-    padding: 10px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 3px;
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7), 0 0 1px rgba(212, 175, 55, 0.4);
-    z-index: 12;
-    pointer-events: auto;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-  }
-
   .gallery-label-card .mobile-swipe-guide {
     display: none;
-  }
-
-  .label-artist {
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold-primary);
-    font-weight: 600;
-  }
-
-  .label-title {
-    font-family: var(--font-serif);
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.25;
-  }
-
-  .label-meta {
-    font-size: 11px;
-    color: var(--text-secondary);
-  }
-
-  .label-dim {
-    font-size: 10.5px;
-    color: var(--gold-light);
-    font-weight: 500;
-    margin-top: 2px;
-  }
-
-  .label-dossier-link {
-    margin-top: 6px;
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: var(--gold-light);
-    font-size: 10.5px;
-    font-family: var(--font-sans);
-    font-weight: 500;
-    padding: 4px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    transition: var(--transition-smooth);
-  }
-
-  .label-dossier-link:hover {
-    background: rgba(212, 175, 55, 0.25);
-    border-color: var(--gold-primary);
-    color: #fff;
-    transform: translateY(-1px);
   }
 }
 
