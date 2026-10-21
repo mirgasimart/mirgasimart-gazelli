@@ -19,6 +19,7 @@ class GazelliCuratorialGallery {
     this.audioCtx = null;
     this.audioOscillators = [];
     this.wingCollapsed = false;
+    this.pullReady = false;
 
     this.cacheDOM();
     this.initAudioEngine();
@@ -48,6 +49,10 @@ class GazelliCuratorialGallery {
       insituBadge: document.getElementById('insituBadge'),
       plateView: document.getElementById('plateView'),
       plateImg: document.getElementById('plateImg'),
+
+      // Mobile Pull-to-Refresh Indicator
+      pullIndicator: document.getElementById('pullRefreshIndicator'),
+      pullText: document.getElementById('pullRefreshText'),
 
       // Widescreen Curatorial Wings
       triptychContainer: document.getElementById('triptychContainer'),
@@ -252,11 +257,12 @@ class GazelliCuratorialGallery {
       this.dom.wingCollapseBtn.addEventListener('click', () => this.toggleWing(true));
     }
 
-    // Native Touch Gestures & Mobile Double-Tap
+    // Native Touch Gestures: Horizontal Artwork Swipe & Pull-to-Refresh
     let touchStartX = 0;
     let touchStartY = 0;
     let touchStartTime = 0;
     let isTouchActive = false;
+    let isPullRefreshing = false;
     let lastTapTime = 0;
 
     // Double-tap on canvas to quickly toggle between Gallery and In-Situ Interior
@@ -272,12 +278,16 @@ class GazelliCuratorialGallery {
       });
     }
 
-    this.dom.stage.addEventListener('touchstart', (e) => {
+    const appEl = document.querySelector('.app-container') || this.dom.stage;
+
+    appEl.addEventListener('touchstart', (e) => {
       if (e.touches.length === 1) {
         touchStartX = e.touches[0].clientX;
         touchStartY = e.touches[0].clientY;
         touchStartTime = Date.now();
         isTouchActive = true;
+        isPullRefreshing = false;
+        this.pullReady = false;
 
         if (this.currentMode === 'macro') {
           this.handleTouchLoupe(e.touches[0]);
@@ -285,33 +295,92 @@ class GazelliCuratorialGallery {
       }
     }, { passive: true });
 
-    this.dom.stage.addEventListener('touchmove', (e) => {
+    appEl.addEventListener('touchmove', (e) => {
       if (!isTouchActive || e.touches.length !== 1) return;
       if (this.currentMode === 'macro') {
         this.handleTouchLoupe(e.touches[0]);
         return;
       }
 
-      // Elastic drag preview when swiping horizontally on mobile
-      if (this.currentMode === 'gallery') {
-        const deltaX = e.touches[0].clientX - touchStartX;
-        const deltaY = e.touches[0].clientY - touchStartY;
+      // If drawer or customizer sheet is open, allow standard vertical scrolling inside them
+      const isDrawerOpen = this.dom.drawer && this.dom.drawer.classList.contains('open');
+      const isSheetOpen = this.dom.mobileCustomizerSheet && this.dom.mobileCustomizerSheet.classList.contains('open');
+      if (isDrawerOpen || isSheetOpen) return;
+
+      const deltaX = e.touches[0].clientX - touchStartX;
+      const deltaY = e.touches[0].clientY - touchStartY;
+
+      // 1. PULL-TO-REFRESH GESTURE (Dominant downward drag from upper area)
+      if (deltaY > 12 && deltaY > Math.abs(deltaX) * 1.15 && touchStartY < window.innerHeight * 0.75) {
+        isPullRefreshing = true;
+        const pullDist = Math.min(deltaY * 0.44, 90);
+
+        if (this.dom.pullIndicator) {
+          this.dom.pullIndicator.classList.add('visible');
+          this.dom.pullIndicator.classList.remove('transitioning');
+          this.dom.pullIndicator.style.transform = `translate(-50%, ${pullDist - 46}px)`;
+
+          const isPrimed = pullDist >= 52;
+          if (isPrimed && !this.pullReady) {
+            this.pullReady = true;
+            this.dom.pullIndicator.classList.add('ready');
+            if (this.dom.pullText) this.dom.pullText.textContent = 'Release to refresh';
+            if (navigator.vibrate) navigator.vibrate(14);
+          } else if (!isPrimed && this.pullReady) {
+            this.pullReady = false;
+            this.dom.pullIndicator.classList.remove('ready');
+            if (this.dom.pullText) this.dom.pullText.textContent = 'Pull to refresh';
+          }
+        }
+        return;
+      }
+
+      // 2. HORIZONTAL ARTWORK SWIPE (Dominant horizontal drag)
+      if (this.currentMode === 'gallery' && !isPullRefreshing) {
         if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
           const isScaleActive = this.dom.artworkMount.classList.contains('scale-active-mobile');
-          const baseOffset = isScaleActive ? 20 : 0;
+          const baseOffset = isScaleActive ? 24 : 0;
           this.dom.artworkMount.style.transform = `translateX(${baseOffset + (deltaX * 0.18)}px)`;
         }
       }
     }, { passive: true });
 
-    this.dom.stage.addEventListener('touchend', (e) => {
+    appEl.addEventListener('touchend', (e) => {
       if (!isTouchActive) return;
       isTouchActive = false;
 
-      // Reset elastic drag transform
+      // 1. PULL-TO-REFRESH RESOLUTION
+      if (isPullRefreshing) {
+        isPullRefreshing = false;
+        if (this.pullReady) {
+          if (this.dom.pullIndicator) {
+            this.dom.pullIndicator.classList.add('refreshing');
+            this.dom.pullIndicator.style.transform = 'translate(-50%, 18px)';
+            if (this.dom.pullText) this.dom.pullText.textContent = 'Refreshing gallery...';
+          }
+          if (navigator.vibrate) navigator.vibrate([15, 35, 15]);
+          setTimeout(() => {
+            window.location.reload();
+          }, 320);
+          return;
+        } else {
+          // Cancelled pull
+          if (this.dom.pullIndicator) {
+            this.dom.pullIndicator.classList.add('transitioning');
+            this.dom.pullIndicator.style.transform = 'translate(-50%, -100%)';
+            setTimeout(() => {
+              this.dom.pullIndicator.classList.remove('visible', 'ready', 'transitioning');
+              this.pullReady = false;
+            }, 350);
+          }
+        }
+      }
+
+      // Reset elastic horizontal drag transform
       if (this.currentMode === 'gallery') {
         const isScaleActive = this.dom.artworkMount.classList.contains('scale-active-mobile');
-        this.dom.artworkMount.style.transform = isScaleActive ? 'translateX(20px)' : 'none';
+        const offset = (window.innerWidth <= 768 && isScaleActive) ? 'translateX(24px)' : (window.innerWidth <= 768 ? 'none' : this.dom.artworkMount.style.transform);
+        this.dom.artworkMount.style.transform = offset;
       }
 
       if (this.currentMode === 'macro') {
