@@ -18,6 +18,7 @@ class GazelliCuratorialGallery {
     this.audioPlaying = false;
     this.audioCtx = null;
     this.audioOscillators = [];
+    this.wingCollapsed = false;
 
     this.cacheDOM();
     this.initAudioEngine();
@@ -52,6 +53,8 @@ class GazelliCuratorialGallery {
       triptychContainer: document.getElementById('triptychContainer'),
       wingLeft: document.getElementById('wingLeft'),
       wingRight: document.getElementById('wingRight'),
+      wingToggleBtn: document.getElementById('wingToggleBtn'),
+      wingCollapseBtn: document.getElementById('wingCollapseBtn'),
       wingInsituBtn: document.getElementById('wingInsituBtn'),
       wingInsituThumb: document.getElementById('wingInsituThumb'),
       wingNicheTag: document.getElementById('wingNicheTag'),
@@ -241,11 +244,33 @@ class GazelliCuratorialGallery {
     this.dom.stage.addEventListener('mousemove', (e) => this.handleMouseMove(e));
     this.dom.stage.addEventListener('mouseleave', () => this.handleMouseLeave());
 
-    // Native Touch Gestures on Mobile (iPhone / Android)
+    // Geological Anatomy Wing Toggle
+    if (this.dom.wingToggleBtn) {
+      this.dom.wingToggleBtn.addEventListener('click', () => this.toggleWing());
+    }
+    if (this.dom.wingCollapseBtn) {
+      this.dom.wingCollapseBtn.addEventListener('click', () => this.toggleWing(true));
+    }
+
+    // Native Touch Gestures & Mobile Double-Tap
     let touchStartX = 0;
     let touchStartY = 0;
     let touchStartTime = 0;
     let isTouchActive = false;
+    let lastTapTime = 0;
+
+    // Double-tap on canvas to quickly toggle between Gallery and In-Situ Interior
+    if (this.dom.canvasInner) {
+      this.dom.canvasInner.addEventListener('touchend', (e) => {
+        const currentTime = Date.now();
+        const tapGap = currentTime - lastTapTime;
+        if (tapGap < 320 && tapGap > 40) {
+          this.setMode(this.currentMode === 'insitu' ? 'gallery' : 'insitu');
+          e.preventDefault();
+        }
+        lastTapTime = currentTime;
+      });
+    }
 
     this.dom.stage.addEventListener('touchstart', (e) => {
       if (e.touches.length === 1) {
@@ -264,12 +289,30 @@ class GazelliCuratorialGallery {
       if (!isTouchActive || e.touches.length !== 1) return;
       if (this.currentMode === 'macro') {
         this.handleTouchLoupe(e.touches[0]);
+        return;
+      }
+
+      // Elastic drag preview when swiping horizontally on mobile
+      if (this.currentMode === 'gallery') {
+        const deltaX = e.touches[0].clientX - touchStartX;
+        const deltaY = e.touches[0].clientY - touchStartY;
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
+          const isScaleActive = this.dom.artworkMount.classList.contains('scale-active-mobile');
+          const baseOffset = isScaleActive ? 20 : 0;
+          this.dom.artworkMount.style.transform = `translateX(${baseOffset + (deltaX * 0.18)}px)`;
+        }
       }
     }, { passive: true });
 
     this.dom.stage.addEventListener('touchend', (e) => {
       if (!isTouchActive) return;
       isTouchActive = false;
+
+      // Reset elastic drag transform
+      if (this.currentMode === 'gallery') {
+        const isScaleActive = this.dom.artworkMount.classList.contains('scale-active-mobile');
+        this.dom.artworkMount.style.transform = isScaleActive ? 'translateX(20px)' : 'none';
+      }
 
       if (this.currentMode === 'macro') {
         this.handleMouseLeave();
@@ -281,8 +324,8 @@ class GazelliCuratorialGallery {
         const deltaY = e.changedTouches[0].clientY - touchStartY;
         const deltaTime = Date.now() - touchStartTime;
 
-        // Valid swipe: horizontal threshold 40px, predominantly horizontal, swift flick under 500ms
-        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY) * 1.3 && deltaTime < 500) {
+        // Valid swipe: horizontal threshold 40px, predominantly horizontal, swift flick under 550ms
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2 && deltaTime < 550) {
           if (deltaX < 0) {
             this.navigate(1); // Swipe left: next artwork
           } else {
@@ -422,19 +465,34 @@ class GazelliCuratorialGallery {
     }
   }
 
+  toggleWing(forceCollapse) {
+    if (typeof forceCollapse === 'boolean') {
+      this.wingCollapsed = forceCollapse;
+    } else {
+      this.wingCollapsed = !this.wingCollapsed;
+    }
+    if (this.dom.wingRight) {
+      this.dom.wingRight.classList.toggle('collapsed', this.wingCollapsed);
+    }
+    if (this.dom.wingToggleBtn) {
+      this.dom.wingToggleBtn.classList.toggle('active', !this.wingCollapsed);
+    }
+    this.applyProportionalDimensions();
+  }
+
   initPanoramicPromenade() {
     if (!this.dom.panoramicTrack) return;
     this.dom.panoramicTrack.innerHTML = '';
 
     const isMobile = window.innerWidth <= 768;
+    const isWidescreen = window.innerWidth >= 1800;
+    const pxPerCm = isMobile ? 1.15 : (isWidescreen ? 2.6 : 1.95);
 
     this.artworks.forEach((art, index) => {
       const station = document.createElement('div');
       station.className = `promenade-station ${index === this.currentIndex ? 'active' : ''}`;
       station.dataset.index = index;
 
-      // Real scale proportional height & width for panoramic promenade
-      const pxPerCm = isMobile ? 1.15 : 1.9;
       const w = Math.round(art.widthCm * pxPerCm);
       const h = Math.round(art.heightCm * pxPerCm);
 
@@ -465,25 +523,45 @@ class GazelliCuratorialGallery {
         e.preventDefault();
       }
     }, { passive: false });
+
+    // Smooth mouse drag-to-scroll on desktop
+    let isMouseDown = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    this.dom.panoramicPromenade.addEventListener('mousedown', (e) => {
+      isMouseDown = true;
+      startX = e.pageX - this.dom.panoramicPromenade.offsetLeft;
+      scrollStart = this.dom.panoramicPromenade.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isMouseDown = false;
+    });
+
+    this.dom.panoramicPromenade.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      e.preventDefault();
+      const x = e.pageX - this.dom.panoramicPromenade.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      this.dom.panoramicPromenade.scrollLeft = scrollStart - walk;
+    });
   }
 
   applyProportionalDimensions() {
     const art = this.artworks[this.currentIndex];
     const isMobile = window.innerWidth <= 768;
+    const isLandscapeMobile = isMobile && window.innerHeight <= 520 && window.innerWidth > window.innerHeight;
     const isTablet = window.innerWidth > 768 && window.innerWidth <= 1100;
+    const isWidescreen = window.innerWidth >= 1800;
 
     let targetWidth, targetHeight, pxPerCm;
 
-    if (isMobile) {
-      // Available stage bounds on mobile phones (iPhone, Android)
-      // Header is ~88-100px, footer is ~72px, placard card is ~70px
-      const stageH = Math.max(window.innerHeight - 250, 200);
-      const stageW = Math.max(window.innerWidth - 32, 260);
-
-      const maxScaleW = stageW / art.widthCm;
-      const maxScaleH = stageH / art.heightCm;
-      pxPerCm = Math.min(maxScaleW, maxScaleH);
-      pxPerCm = Math.max(pxPerCm, 0.9); // sensible mobile floor
+    if (isLandscapeMobile) {
+      // Landscape mobile phone: maximum canvas expansion
+      const availH = Math.max(window.innerHeight - 98, 180);
+      const availW = Math.max(window.innerWidth - 60, 240);
+      pxPerCm = Math.min(availW / art.widthCm, availH / art.heightCm);
 
       targetWidth = Math.round(art.widthCm * pxPerCm);
       targetHeight = Math.round(art.heightCm * pxPerCm);
@@ -491,24 +569,59 @@ class GazelliCuratorialGallery {
       this.dom.canvasInner.style.width = `${targetWidth}px`;
       this.dom.canvasInner.style.height = `${targetHeight}px`;
 
-      // Scale human figure gracefully
+      this.dom.artworkMount.classList.remove('scale-active-mobile');
+      this.dom.humanScaleFigure.classList.remove('visible');
+      this.dom.labelCard.style.right = '';
+    } else if (isMobile) {
+      // Mobile portrait layout (iPhone, Android)
+      const stageH = Math.max(window.innerHeight - 260, 200);
+
+      if (this.showHumanScale) {
+        this.dom.artworkMount.classList.add('scale-active-mobile');
+      } else {
+        this.dom.artworkMount.classList.remove('scale-active-mobile');
+      }
+
+      const availW = this.showHumanScale 
+        ? Math.max(window.innerWidth - 75, 220) 
+        : Math.max(window.innerWidth - 30, 250);
+
+      const maxScaleW = availW / art.widthCm;
+      const maxScaleH = stageH / art.heightCm;
+      pxPerCm = Math.min(maxScaleW, maxScaleH);
+      pxPerCm = Math.max(pxPerCm, 1.0);
+
+      targetWidth = Math.round(art.widthCm * pxPerCm);
+      targetHeight = Math.round(art.heightCm * pxPerCm);
+
+      this.dom.canvasInner.style.width = `${targetWidth}px`;
+      this.dom.canvasInner.style.height = `${targetHeight}px`;
+
       const humanHeightPx = Math.round(175 * pxPerCm);
-      this.dom.figureSvg.style.height = `${Math.min(humanHeightPx, window.innerHeight * 0.45)}px`;
+      this.dom.figureSvg.style.height = `${Math.min(humanHeightPx, stageH * 0.95)}px`;
       this.dom.figureSvg.style.width = 'auto';
 
       this.dom.humanScaleFigure.style.transform = 'none';
       this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
 
-      // Reset placard right offset so CSS handles centering
-      this.dom.labelCard.style.right = 'auto';
+      this.dom.labelCard.style.right = '';
     } else {
-      // Desktop / Laptop proportional scaling
-      const stageH = this.dom.stage.clientHeight - (isTablet ? 150 : 190);
-      const stageW = this.dom.stage.clientWidth - (isTablet ? 140 : 320);
+      // Desktop / Laptop / 4K Ultrawide proportional scaling
+      this.dom.artworkMount.classList.remove('scale-active-mobile');
 
-      const scaleFactorByHeight = Math.min(stageH / 210, 2.7);
-      const scaleFactorByWidth = Math.min(stageW / 210, 2.7);
-      pxPerCm = Math.max(Math.min(scaleFactorByHeight, scaleFactorByWidth), 1.5);
+      const stageH = this.dom.stage.clientHeight - (isTablet ? 160 : 200);
+      const wingIsVisible = window.innerWidth >= 1101 && !this.wingCollapsed;
+      const wingReserved = wingIsVisible ? (isWidescreen ? 420 : 330) : 60;
+      const figureReserved = this.showHumanScale ? 160 : 60;
+      const stageW = this.dom.stage.clientWidth - wingReserved - figureReserved;
+
+      // Allow higher scaling on 1440p / 4K / ultrawide displays
+      const maxScaleCeiling = isWidescreen ? 4.8 : (window.innerWidth >= 1440 ? 3.8 : 3.0);
+      const scaleFactorByHeight = stageH / (art.heightCm + 25);
+      const scaleFactorByWidth = stageW / (art.widthCm + 25);
+
+      pxPerCm = Math.min(scaleFactorByHeight, scaleFactorByWidth);
+      pxPerCm = Math.min(Math.max(pxPerCm, 1.6), maxScaleCeiling);
 
       targetWidth = Math.round(art.widthCm * pxPerCm);
       targetHeight = Math.round(art.heightCm * pxPerCm);
@@ -524,8 +637,8 @@ class GazelliCuratorialGallery {
       this.dom.humanScaleFigure.style.transform = `translateX(${figureOffsetX}px)`;
       this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
 
-      const placardOffsetX = (targetWidth / 2 + 30);
-      this.dom.labelCard.style.right = `${-placardOffsetX}px`;
+      // Centered cleanly beneath frame in CSS
+      this.dom.labelCard.style.right = '';
     }
   }
 
