@@ -541,20 +541,19 @@ html, body {
    ========================================================================== */
 .human-scale-figure {
   position: absolute;
-  bottom: 0;
+  bottom: 122px; /* Grounded squarely on top of gallery floor skirting line! */
+  left: 50%; /* Center reference anchor for precise geometric offset */
   z-index: 15;
   display: flex;
   flex-direction: column;
   align-items: center;
   pointer-events: none;
   opacity: 0;
-  transform: translateX(-40px);
   transition: opacity 0.5s ease, transform 0.5s var(--ease-cinematic);
 }
 
 .human-scale-figure.visible {
   opacity: 1;
-  transform: translateX(0);
 }
 
 .figure-svg {
@@ -579,52 +578,192 @@ html, body {
 }
 
 /* ==========================================================================
-   MUSEUM WALL PLACARD / LABEL CARD
+   MUSEUM WALL PLACARD / TOMBSTONE LABEL (Gazelli Curatorial Specification)
    ========================================================================== */
 .gallery-label-card {
-  position: absolute;
-  bottom: -40px;
-  right: -140px;
-  width: 185px;
-  background: rgba(14, 16, 20, 0.88);
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(12px);
-  padding: 13px 16px;
-  border-radius: 4px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  background: rgba(14, 16, 20, 0.94);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-left: 2.5px solid var(--gold-primary);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 12px 16px;
+  border-radius: 6px;
+  box-shadow: 
+    0 14px 35px rgba(0, 0, 0, 0.65),
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 0 1px rgba(212, 175, 55, 0.4);
+  transition: opacity 0.35s ease, transform 0.45s var(--ease-cinematic);
   z-index: 12;
+  pointer-events: auto;
+  position: relative;
+  user-select: text;
+}
+
+/* Authentic Brass Mounting Studs in the 4 Corners */
+.placard-mount-dots {
+  position: absolute;
+  inset: 5px;
+  pointer-events: none;
+}
+
+.placard-mount-dots span {
+  position: absolute;
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f5e4a8 20%, #c59b27 70%, #685329 100%);
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.9);
+  opacity: 0.7;
+}
+
+.placard-mount-dots .dot-tl { top: 0; left: 0; }
+.placard-mount-dots .dot-tr { top: 0; right: 0; }
+.placard-mount-dots .dot-bl { bottom: 0; left: 0; }
+.placard-mount-dots .dot-br { bottom: 0; right: 0; }
+
+/* Desktop Placard Placement: Mounted on wall to the right of floater frame */
+.gallery-label-card.placard-side-right {
+  position: absolute;
+  left: calc(100% + 24px);
+  right: auto;
+  bottom: 8px;
+  top: auto;
+  transform: none;
+  width: 220px;
+  text-align: left;
+}
+
+/* Desktop Placard Placement: Mounted on wall to the left of floater frame */
+.gallery-label-card.placard-side-left {
+  position: absolute;
+  right: calc(100% + 24px);
+  left: auto;
+  bottom: 8px;
+  top: auto;
+  transform: none;
+  width: 220px;
+  text-align: left;
+}
+
+/* Desktop Placard Placement: Docked below right corner of frame if wide */
+.gallery-label-card.placard-docked-bottom {
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: calc(100% + 14px);
+  bottom: auto;
+  transform: none;
+  width: 260px;
+  text-align: left;
+}
+
+.label-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 2px;
 }
 
 .label-artist {
-  font-size: 10px;
+  font-size: 8.5px;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
   color: var(--gold-primary);
   font-weight: 600;
-  margin-bottom: 3px;
+  font-family: var(--font-sans);
+}
+
+.label-year {
+  font-size: 8.5px;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  letter-spacing: 0.05em;
 }
 
 .label-title {
   font-family: var(--font-serif);
-  font-size: 14.5px;
+  font-size: 15.5px;
   font-weight: 600;
   color: #fff;
   line-height: 1.25;
-  margin-bottom: 5px;
+  margin: 2px 0 1px 0;
 }
 
-.label-meta {
-  font-size: 11px;
+.label-az-title {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--gold-light);
+  opacity: 0.9;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.label-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.45) 0%, rgba(255, 255, 255, 0.06) 65%, transparent 100%);
+  margin: 4px 0 6px 0;
+}
+
+.label-medium {
+  font-size: 10px;
   color: var(--text-secondary);
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .label-dim {
   font-size: 10.5px;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-top: 3px;
+  letter-spacing: 0.02em;
+}
+
+.label-placement {
+  font-size: 9px;
   color: var(--text-muted);
-  margin-top: 5px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.02em;
+}
+
+.placement-pip {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.label-dossier-link {
+  margin-top: 8px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--gold-light);
+  font-size: 10px;
+  font-family: var(--font-sans);
   font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  width: fit-content;
+}
+
+.label-dossier-link:hover {
+  background: rgba(212, 175, 55, 0.22);
+  border-color: var(--gold-primary);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
