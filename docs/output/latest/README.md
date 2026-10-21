@@ -56,28 +56,29 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 
 ---
 
-### Plate 02: *The Shebeke Reliquary: Fossil Didacna in Absheron Stone*
-*Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə*
+### Plate 02: *The Shebeke Reliquary: Fossil Didacna Mandala*
+*Şəbəkə Qalığı: Qədim Didakna Mandalas*
 
-![Plate 02: The Shebeke Reliquary](_clean/02_the_weaver_of_sunken_shells_didacna.jpg)
+![Plate 02: The Shebeke Reliquary: Fossil Didacna Mandala](_clean/02_the_weaver_of_sunken_shells_didacna.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_02_the_weaver_of_sunken_shells_didacna.jpg)  
-> **Architectural In-Situ Simulation**: [View Installed in Corridor Alcove](_insitu/insitu_plate_02_shebeke_reliquary.jpg)
+> **Architectural In-Situ Simulation**: [View Installed in Luxury Gallery](_insitu/insitu_plate_02_shebeke_reliquary.jpg)
 
-- **Genre**: Mixed-Media Painting on Canvas / Tactile Stone Relief
-- **Dimensions**: **40 × 60 cm** (Vertical Architectural Canvas, Specification from Brief)
-- **Target Spatial Placement**: VIP Elevator Vestibule, Intimate Gallery Corridor, or Private Dining Alcove
+- **Genre**: Mineral Assemblage & Painting on Canvas / Tactile Coquina Relief
+- **Dimensions**: **145 × 145 cm** (Square Format Canvas, Specification from Brief)
+- **Target Spatial Placement**: VIP Reception Lounge, Executive Suite Salon, or Private Dining Feature Wall
 - **Endemic Caspian Organism**: Caspian Cockles (*Didacna trigonoides* & *Didacna pyramidata*)
 - **Selected Absheron Minerals**:
-  - **Absheron Limestone & Coquina Primer**: Fine quarry coquina and porous limestone powder integrated into the gesso ground for authentic masonry tooth.
-  - **Absheron Coastal Beach Sand**: Natural quartz-shell sand blended into knife impasto.
-  - **Subtle Natural Caspian Didacna Accents**: Genuine small Didacna bivalve shells embedded in low-relief into the impasto crust.
+  - **Absheron Coquina Limestone & Plaster Ground**: Porous coastal limestone and craquelure clay providing an authentic geological surface.
+  - **Concentric Didacna Cockle Shells & Mother-of-Pearl**: Hundreds of natural Caspian Didacna bivalve shells arranged in celestial concentric geometry.
+  - **Masazir Pink Lake Salt Core**: Raw crystallized lake salt crystals forming an incandescent central halo with turquoise mineral glazes.
+  - **Absheron Coastal Beach Sand**: Golden quartz-shell sand borders separating the shell rings.
 - **Curatorial Narrative**:
-  Celebrating Absheron's ancient stone-carving heritage (*daş yonma*), this intimate vertical painting on canvas captures a weather-worn Shebeke window lattice rendered in thick palette-knife impasto and porous mineral grounds. Behind the painted geometric tracery glow luminous glazes of Caspian turquoise and deep lapis lazuli. The painted surface is enriched with subtle low-relief physical accents—authentic small Didacna cockle shells embedded into the impasto crust—while an elongated painted hand rests against the window aperture, bridging human craftsmanship and deep geological time.
+  An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (*daş yonma*) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian *Didacna* cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
 - **Turnkey Specifications**:
-  - *Edge Treatment*: Gallery-wrapped coquina primer edges or minimal blackened steel floater frame.
-  - *Chassis & Weight*: Solid reinforced wood cradle; estimated weight ~3.2 kg.
-  - *Mounting Hardware*: Single aluminum Z-bar cleat with locking pin.
-  - *Lighting Recommendation*: 2700K–3000K accent spotlight with narrow 15° beam.
+  - *Edge Treatment*: Continuous mineral coquina wrap (unframed) or optional minimal blackened steel shadow-line floater frame.
+  - *Chassis & Weight*: Cross-braced Finnish pine with aluminum reinforcement; estimated weight ~11.8 kg.
+  - *Mounting Hardware*: Dual continuous aluminum French cleats for flush architectural rigidity.
+  - *Lighting Recommendation*: 2700K–3000K warm perimeter wash lighting (CRI 95+).
 
 ---
 
@@ -206,8 +207,8 @@ As an individual fine artist delivering bespoke masterworks for prime architectu
 │ 01   │ 185 × 120 cm │ ~14.5 kg    │ Continuous Mineral Wrap   │ Dual Aluminum Z-Cleats   │ 2700K Ceiling Wash   │
 │      │ Horizontal   │             │ (Optional Dark Walnut)    │ (Flush Wall Attachment)  │ (CRI 95+)            │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
-│ 02   │ 40 × 60 cm   │ ~3.2 kg     │ Gallery Limestone Gesso   │ Single Aluminum Cleat    │ 2700K–3000K Spot     │
-│      │ Vertical     │             │ (Optional Black Steel)    │ With Locking Pin         │ (15° Beam Angle)     │
+│ 02   │ 145 × 145 cm │ ~11.8 kg    │ Continuous Coquina Wrap   │ Dual Aluminum French Cleats│ 2700K–3000K Wash     │
+│      │ Square 1:1   │             │ (Optional Black Steel)    │ (Rigid Flush Cleats)     │ (CRI 95+)            │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
 │ 03   │ 80 × 100 cm  │ ~6.8 kg     │ Bitumen Polymer Edge Wrap │ Heavy-Duty Aluminum Cleat│ 3000K Track Flood    │
 │      │ Vertical     │             │ (Optional Oxidized Bronze)│ Rated to 50 kg           │ (Highlight Pyrite)   │

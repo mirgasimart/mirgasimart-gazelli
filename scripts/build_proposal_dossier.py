@@ -380,43 +380,43 @@ def generate_dossier_html(use_watermarked=True):
     </div>
 
     <div class="plate-top">
-      <div class="plate-badge">Plate 02 &bull; Mixed-Media Painting on Canvas</div>
-      <h3 class="plate-title">The Shebeke Reliquary: Fossil Didacna in Absheron Stone</h3>
-      <div class="plate-subtitle">Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə</div>
+      <div class="plate-badge">Plate 02 &bull; Tactile Shell Assemblage &amp; Mineral Painting</div>
+      <h3 class="plate-title">The Shebeke Reliquary: Fossil Didacna Mandala</h3>
+      <div class="plate-subtitle">Şəbəkə Qalığı: Qədim Didakna Mandalas</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="The Shebeke Reliquary"/>
+      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="The Shebeke Reliquary: Fossil Didacna Mandala"/>
     </div>
 
     <table class="specs-grid">
       <tr>
         <td class="spec-name">Dimensions</td>
-        <td class="spec-val"><strong>40 &times; 60 cm</strong> (Vertical Format Canvas, Specification from Brief)</td>
+        <td class="spec-val"><strong>145 &times; 145 cm</strong> (Square Format Canvas, Specification from Brief)</td>
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
-        <td class="spec-val">Mixed-Media Oil &amp; Mineral Pigments on Stretched Canvas, Absheron Limestone Ground, Heavy Palette-Knife Impasto, Subtle Embedded <em>Didacna</em> Shell Elements, Turquoise &amp; Lapis Lazuli Glazes</td>
+        <td class="spec-val">Absheron Coquina Ground, Concentric Caspian <em>Didacna</em> Shell Assemblage, Mother-of-Pearl Inlay, Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Turquoise &amp; Celadon Mineral Pigments, Volcanic Craquelure Clay, Incised Geometric Sgraffito</td>
       </tr>
       <tr>
         <td class="spec-name">Endemic Organism</td>
-        <td class="spec-val">Caspian Cockle (<em>Didacna trigonoides</em> / <em>Didacna pyramidata</em>)</td>
+        <td class="spec-val">Caspian Cockles (<em>Didacna trigonoides</em> &amp; <em>Didacna pyramidata</em>)</td>
       </tr>
       <tr>
         <td class="spec-name">Curatorial Concept</td>
         <td class="spec-val">
-          An intimate mixed-media painting on canvas honoring Absheron's stone-carving traditions (<em>daş yonma</em>). Thick palette-knife impasto and porous limestone-sand grounds evoke the tactile presence of Baku stone, framing an intricate painted Shebeke geometric window. Luminous glazes of Caspian turquoise and lapis lazuli glow within the tracery, accentuated by finely embedded small <em>Didacna</em> cockle shells providing delicate, low-relief tactile dimensionality to the canvas surface.
+          An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (<em>daş yonma</em>) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian <em>Didacna</em> cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
         </td>
       </tr>
       <tr>
         <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Limestone Gesso Wrap (or blackened steel floater) &bull; Single Aluminum Cleat w/ Locking Pin (~3.2 kg) &bull; 2700K-3000K Spot (15&deg; Beam)</td>
+        <td class="spec-val">Continuous Coquina Mineral Wrap (or blackened steel floater) &bull; Dual Aluminum French Cleats (~11.8 kg) &bull; 2700K–3000K Perimeter Wash Lighting</td>
       </tr>
     </table>
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 02: The Shebeke Reliquary</div>
+    <div class="rf-context">Plate 02: Fossil Didacna Mandala</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">FOLIO 03 / 07</div>
   </div>
@@ -625,11 +625,11 @@ def generate_dossier_html(use_watermarked=True):
         </tr>
         <tr>
           <td><strong>02</strong></td>
-          <td>40 &times; 60 cm</td>
-          <td>~3.2 kg</td>
-          <td>Limestone Gesso / Black Steel</td>
-          <td>Single Cleat w/ Locking Pin</td>
-          <td>2700K-3000K Spot (15&deg;)</td>
+          <td>145 &times; 145 cm</td>
+          <td>~11.8 kg</td>
+          <td>Continuous Coquina Wrap / Floater</td>
+          <td>Dual Aluminum French Cleats</td>
+          <td>2700K-3000K Perimeter Wash</td>
         </tr>
         <tr>
           <td><strong>03</strong></td>
