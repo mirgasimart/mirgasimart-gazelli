@@ -6,7 +6,7 @@ Compiles an exact 7-page museum-grade fine art commission proposal:
   - Page 1: Executive Curatorial Statement, Collection Matrix & Caspian Strategy
   - Page 2: Plate 01 — Luminescence of Masazir Dawn (185 × 120 cm)
   - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
-  - Page 4: Plate 03 — The Binagadi Derrick (80 × 100 cm)
+  - Page 4: Plate 03 — Black Gold (80 × 100 cm)
   - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
   - Page 6: Plate 05 — The Gobustan Solar Oracle (120 × 100 cm)
   - Page 7: Architectural In-Situ Integration & Turnkey Contractor Schedule
@@ -425,12 +425,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 03 &bull; Industrial-Geological Abstraction</div>
-      <h3 class="plate-title">The Binagadi Derrick: Hydrocarbon Strata &amp; Pyrite Shad</h3>
-      <div class="plate-subtitle">Binaqədi Buruğu: Qara Qızıl və Pirit Şad</div>
+      <h3 class="plate-title">Black Gold</h3>
+      <div class="plate-subtitle">Qara Qızıl</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('03_keeper_of_the_cold_depths_caspian_shad.jpg')}" alt="The Binagadi Derrick"/>
+      <img src="{get_img_uri('03_keeper_of_the_cold_depths_caspian_shad.jpg')}" alt="Black Gold"/>
     </div>
 
     <table class="specs-grid">
@@ -456,7 +456,7 @@ def generate_dossier_html(use_watermarked=True):
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 03: The Binagadi Derrick</div>
+    <div class="rf-context">Plate 03: Black Gold</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">04 / 07</div>
   </div>
