@@ -239,49 +239,6 @@ const GALLERY_DATA = [
       { x: 48, y: 76, label: "Gobustan Petroglyph Sgraffito", desc: "Carved reed boat and ritual dancer figures incised in porous stone plaster." },
       { x: 26, y: 38, label: "Caspian Cyan Orbital Ring", desc: "Vibrant azure and salt mineral halo radiating from the ancient sun disk." }
     ]
-  },
-  {
-    id: "study-01",
-    number: "06",
-    roman: "Archive",
-    title: "The Muse of Masazir: Caspian Seal Study",
-    azTitle: "Masazır Pərisi: Xəzər Suiti və Duz Qayası",
-    genre: "Figurative Mineral Portraiture / Geological Matter Painting",
-    widthCm: 100,
-    heightCm: 150,
-    dimensions: "100 × 150 cm (39.4 × 59.1 in)",
-    orientation: "vertical",
-    niche: "Private VIP Wellness Suite / Executive Lounge / Presidential Antechamber",
-    endemicFocus: "Caspian Seal (Pusa caspica)",
-    scientificTaxonomy: "Pusa caspica (Gmelin, 1788)",
-    minerals: [
-      {
-        name: "Genuine Masazir Pink Lake Salt",
-        description: "Encrustations glistening in ambient light across the warm ochre impasto ground."
-      },
-      {
-        name: "Absheron Limestone Plaster",
-        description: "Porous tactile masonry ground scored with delicate geometric sgraffito incisions."
-      }
-    ],
-    curatorialNarrative: "Synthesizing Mirgasim’s iconic visual hallmarks—a melancholic, statuesque Azerbaijani muse with connected dark brows, sculpted hands, and intense gaze—with the raw geological matter of Absheron. Cradled tenderly in her arms is a gentle Caspian seal pup (Pusa caspica), its silver-grey mottled coat glistening against modern draped plum-burgundy fabric. The background is a thick, sculptural palette-knife impasto ground in warm ochres and blush tones, embedded with authentic sparkling crystalline clusters of raw pink-and-white Masazir lake salt and incised with delicate geometric sgraffito lines.",
-    turnkeySpecs: {
-      chassis: "Reinforced wood and aluminum chassis",
-      weight: "10.8 kg",
-      mounting: "Dual aluminum Z-bars",
-      edgeFinish: "Gallery-wrapped blush limestone edges (40mm profile)",
-      lighting: "2700K intimate warm wash lighting"
-    },
-    images: {
-      clean: "docs/output/latest/_studies/the_muse_of_masazir_caspian_seal_study.jpg",
-      insitu: "docs/output/latest/_studies/the_muse_of_masazir_caspian_seal_study.jpg",
-      plate: "docs/output/latest/_studies/the_muse_of_masazir_caspian_seal_study.jpg"
-    },
-    hotspots: [
-      { x: 50, y: 30, label: "Sculpted Absheron Muse", desc: "Iconic Mirgasim features: statuesque gaze, connected dark brows, timeless nobility." },
-      { x: 52, y: 64, label: "Caspian Seal Pup (Pusa caspica)", desc: "Endemic Caspian marine sentinel cradled with profound tenderness." },
-      { x: 78, y: 40, label: "Masazir Halite Crystals", desc: "Pure pink lake salt aggregates glistening along the warm ochre ground." }
-    ]
   }
 ];
 

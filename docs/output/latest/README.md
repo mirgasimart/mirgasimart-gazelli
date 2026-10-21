@@ -98,7 +98,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 > **Architectural In-Situ Simulation**: [View Installed in Grand Salon](_insitu/insitu_plate_04_breath_of_lokbatan.jpg)
 
 - **Genre**: Earth-Art Vortex / Geothermal Mineral Painting
-- **Dimensions**: **180 × 180 cm** (Monumental 1:1 Square Canvas, Specification from Brief)
+- **Dimensions**: **145 × 145 cm** (Monumental 1:1 Square Canvas, Specification from Brief)
 - **Target Spatial Placement**: Grand Central Atrium, Double-Height Salon, or Wellness Mezzanine Feature Wall
 - **Endemic Caspian Wildlife**: Armored Caspian Tadpole Goby (*Benthophilus* spp.)
 - **Selected Absheron Minerals**:
@@ -172,16 +172,16 @@ As an individual fine artist delivering bespoke masterworks for prime architectu
 ├──────┬──────────────┬─────────────┬───────────────────────────┬──────────────────────────┬──────────────────────┤
 │ NO.  │ DIMENSIONS   │ EST. WEIGHT │ EDGE / FRAMING PROFILE    │ RIGGING HARDWARE         │ OPTIMAL LIGHTING     │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
-│ 01   │ 185 × 120 cm │ ~14.5 kg    │ Continuous Mineral Wrap   │ Dual Aluminum Z-Cleats   │ 2700K Ceiling Wash   │
+│ 01   │ 130 × 100 cm │ ~9.5 kg     │ Continuous Mineral Wrap   │ Dual Aluminum Z-Cleats   │ 2700K Ceiling Wash   │
 │      │ Horizontal   │             │ (Optional Dark Walnut)    │ (Flush Wall Attachment)  │ (CRI 95+)            │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
-│ 02   │ 145 × 145 cm │ ~11.8 kg    │ Continuous Coquina Wrap   │ Dual Aluminum French Cleats│ 2700K–3000K Wash     │
-│      │ Square 1:1   │             │ (Optional Black Steel)    │ (Rigid Flush Cleats)     │ (CRI 95+)            │
+│ 02   │ 40 × 60 cm   │ ~3.2 kg     │ Continuous Coquina Wrap   │ Single Aluminum Cleat    │ 2700K–3000K Spot     │
+│      │ Vertical     │             │ (Optional Black Steel)    │ (Locking Flush Mount)    │ (CRI 95+)            │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
 │ 03   │ 80 × 100 cm  │ ~6.8 kg     │ Bitumen Polymer Edge Wrap │ Heavy-Duty Aluminum Cleat│ 3000K Track Flood    │
 │      │ Vertical     │             │ (Optional Oxidized Bronze)│ Rated to 50 kg           │ (Highlight Pyrite)   │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
-│ 04   │ 180 × 180 cm │ ~19.5 kg    │ Deep Clay Craquelure Wrap │ Triple Aluminum Cleats   │ High-CRI 98 Wash     │
+│ 04   │ 145 × 145 cm │ ~12.5 kg    │ Deep Clay Craquelure Wrap │ Dual Aluminum Cleats     │ High-CRI 98 Wash     │
 │      │ Square 1:1   │             │ (Optional Blackened Wood) │ Seismic Rated Rigging    │ (Grazing Texture)    │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
 │ 05   │ 120 × 100 cm │ ~8.2 kg     │ Bone Plaster Gallery Wrap │ Dual Aluminum Z-Cleats   │ 2700K Framing        │
