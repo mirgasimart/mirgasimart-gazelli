@@ -394,30 +394,32 @@ class GazelliCuratorialGallery {
   }
 
   updateWidescreenWings(art) {
-    if (!this.dom.wingLeft || !this.dom.wingRight) return;
+    // Update Left Wing (Architectural Niche Context) if present
+    if (this.dom.wingLeft) {
+      if (this.dom.wingNicheTag) this.dom.wingNicheTag.textContent = `Plate ${art.number}`;
+      if (this.dom.wingInsituThumb) this.dom.wingInsituThumb.src = art.images.insitu;
+      if (this.dom.wingNicheDesc) this.dom.wingNicheDesc.textContent = art.niche;
+      if (this.dom.wingDimension) this.dom.wingDimension.textContent = art.dimensions;
+      if (this.dom.wingLighting) this.dom.wingLighting.textContent = art.turnkeySpecs.lighting.split('(')[0].trim();
+    }
 
-    // Update Left Wing (Architectural Niche Context)
-    this.dom.wingNicheTag.textContent = `Plate ${art.number}`;
-    this.dom.wingInsituThumb.src = art.images.insitu;
-    this.dom.wingNicheDesc.textContent = art.niche;
-    this.dom.wingDimension.textContent = art.dimensions;
-    this.dom.wingLighting.textContent = art.turnkeySpecs.lighting.split('(')[0].trim();
+    // Update Right Wing (Absheron Geological Minerals & Specs) if present
+    if (this.dom.wingRight && this.dom.wingMineralsList) {
+      this.dom.wingMineralsList.innerHTML = '';
+      art.minerals.forEach(min => {
+        const item = document.createElement('div');
+        item.className = 'wing-mineral-item';
+        item.innerHTML = `
+          <div class="wing-mineral-name">${min.name}</div>
+          <div class="wing-mineral-sub">${min.description.slice(0, 85)}...</div>
+        `;
+        this.dom.wingMineralsList.appendChild(item);
+      });
 
-    // Update Right Wing (Absheron Geological Minerals & Specs)
-    this.dom.wingMineralsList.innerHTML = '';
-    art.minerals.forEach(min => {
-      const item = document.createElement('div');
-      item.className = 'wing-mineral-item';
-      item.innerHTML = `
-        <div class="wing-mineral-name">${min.name}</div>
-        <div class="wing-mineral-sub">${min.description.slice(0, 85)}...</div>
-      `;
-      this.dom.wingMineralsList.appendChild(item);
-    });
-
-    this.dom.wingChassis.textContent = art.turnkeySpecs.chassis.split('with')[0].trim();
-    this.dom.wingWeight.textContent = art.turnkeySpecs.weight;
-    this.dom.wingCleats.textContent = art.turnkeySpecs.mounting.split('(')[0].trim();
+      if (this.dom.wingChassis) this.dom.wingChassis.textContent = art.turnkeySpecs.chassis.split('with')[0].trim();
+      if (this.dom.wingWeight) this.dom.wingWeight.textContent = art.turnkeySpecs.weight;
+      if (this.dom.wingCleats) this.dom.wingCleats.textContent = art.turnkeySpecs.mounting.split('(')[0].trim();
+    }
   }
 
   initPanoramicPromenade() {
