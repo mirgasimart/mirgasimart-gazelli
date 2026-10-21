@@ -94,8 +94,8 @@ def create_luxury_watermark(scale=1.0):
     font_sub = resolve_font("body_regular", sub_size)
     font_tag = resolve_font("title_bold", tag_size)
 
-    title_text = "MIRGASIM ART"
-    sub_text = "ABSHERON TECTONICS  |  GAZELLI COMMISSION 2026"
+    title_text = "JEYRAN MIR-GASIM JAFAROVA"
+    sub_text = "PROJECT PROPOSAL  |  GAZELLI COMMISSION 2026"
     tag_text = "CONFIDENTIAL CURATORIAL PREVIEW"
 
     tw, th = measure_tracked_text(title_text, font_title, tracking=int(4 * scale * ss))
@@ -194,11 +194,11 @@ CATALOG_METADATA = {
     },
     "02_the_weaver_of_sunken_shells_didacna.jpg": {
         "plate": "PLATE 02 / 05",
-        "title_en": "The Shebeke Reliquary: Fossil Didacna in Absheron Stone",
-        "title_az": "Şəbəkə Qalığı: Qədim Didakna və Daş Pəncərə",
-        "genre": "Mixed-Media Painting on Canvas / Tactile Stone Relief",
-        "dimensions": "40 × 60 cm (Vertical Architectural Canvas)",
-        "materials": "Absheron Coquina Ground, Coastal Beach Sand, Low-Relief Didacna Cockles",
+        "title_en": "The Shebeke Reliquary: Fossil Didacna Mandala",
+        "title_az": "Şəbəkə Qalığı: Qədim Didakna Mandalas",
+        "genre": "Mineral Assemblage & Painting on Canvas / Tactile Coquina Relief",
+        "dimensions": "145 × 145 cm (Square Canvas from Brief)",
+        "materials": "Absheron Coquina Ground, Concentric Didacna Shells, Masazir Salt Core, Beach Sand & Craquelure",
         "fauna": "Caspian Cockles (Didacna trigonoides & Didacna pyramidata)",
     },
     "03_keeper_of_the_cold_depths_caspian_shad.jpg": {
@@ -279,7 +279,7 @@ def generate_exhibition_plate(image_path, output_path, meta):
         text_y = pad_top + art_h + int(24 * scale)
 
         # Top Badge / Plate number
-        plate_label = f"M I R G A S I M   A R T   S T U D I O   •   {meta['plate']}"
+        plate_label = f"J E Y R A N   M I R - G A S I M   J A F A R O V A   •   {meta['plate']}"
         tw, _ = measure_tracked_text(plate_label, font_plate, tracking=int(3 * scale))
         render_tracked_text(draw, ((plate_w - tw) // 2, text_y), plate_label, font_plate, (120, 122, 128), tracking=int(3 * scale))
 
@@ -314,7 +314,7 @@ def generate_exhibition_plate(image_path, output_path, meta):
 
         # Curatorial Footer
         text_y += int(16 * scale)
-        footer_text = "Curatorial Commission Proposal for Gazelli Art House • Baku / London • © 2026 Mirgasim Art Studio"
+        footer_text = "Curatorial Commission Proposal for Gazelli Art House • Baku / London • © 2026 Jeyran Mir-Gasim Jafarova"
         tw, _ = measure_tracked_text(footer_text, font_footer, tracking=int(1.5 * scale))
         render_tracked_text(draw, ((plate_w - tw) // 2, text_y), footer_text, font_footer, (150, 152, 158), tracking=int(1.5 * scale))
 

@@ -147,7 +147,7 @@ def main():
 
     items = [
         ("01_luminescence_of_masazir_salt_dawn.jpg", "insitu_plate_01_masazir_dawn.jpg", "horizontal", "Plate 01: Luminescence of Masazir Dawn (185 × 120 cm)"),
-        ("02_the_weaver_of_sunken_shells_didacna.jpg", "insitu_plate_02_shebeke_reliquary.jpg", "vertical", "Plate 02: The Shebeke Reliquary (40 × 60 cm)"),
+        ("02_the_weaver_of_sunken_shells_didacna.jpg", "insitu_plate_02_shebeke_reliquary.jpg", "vertical", "Plate 02: The Shebeke Reliquary: Fossil Didacna Mandala (145 × 145 cm)"),
         ("03_keeper_of_the_cold_depths_caspian_shad.jpg", "insitu_plate_03_binagadi_derrick.jpg", "vertical", "Plate 03: The Binagadi Derrick (120 × 200 cm)"),
         ("04_breath_of_lokbatan_tadpole_goby.jpg", "insitu_plate_04_breath_of_lokbatan.jpg", "vertical", "Plate 04: Breath of Lokbatan (180 × 180 cm)"),
         ("05_the_lampreys_vigil_caspian_lamprey.jpg", "insitu_plate_05_gobustan_oracle.jpg", "vertical", "Plate 05: The Gobustan Solar Oracle (100 × 150 cm)")
