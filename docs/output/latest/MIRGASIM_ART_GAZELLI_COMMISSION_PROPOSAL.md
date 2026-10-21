@@ -45,14 +45,14 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 │ 02   │ The Shebeke Reliquary: Fossil Didacna    │ 40 × 60 cm   │ VIP Elevator Foyer /  │
 │      │ (Şəbəkə Qalığı: Qədim Didakna və Daş)    │ Vertical     │ Private Dining Niche  │
 ├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
-│ 03   │ The Binagadi Derrick: Hydrocarbon Strata │ 120 × 200 cm │ Transition Corridor / │
-│      │ (Binaqədi Buruğu: Qara Qızıl və Pirit)   │ Panoramic    │ Double-Height Lobby   │
+│ 03   │ The Binagadi Derrick: Hydrocarbon Strata │ 80 × 100 cm  │ Transition Corridor / │
+│      │ (Binaqədi Buruğu: Qara Qızıl və Pirit)   │ Vertical     │ Executive Focal Wall  │
 ├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
 │ 04   │ Breath of Lokbatan: Volcanic Crater      │ 180 × 180 cm │ Central Grand Salon / │
 │      │ (Lökbatan Nəfəsi: Palçıq Vulkanı)        │ Square 1:1   │ Atrium Feature Wall   │
 ├──────┼──────────────────────────────────────────┼──────────────┼───────────────────────┤
-│ 05   │ The Gobustan Solar Oracle: Lamprey       │ 100 × 150 cm │ Ceremonial Vestibule  │
-│      │ (Qobustan Günəşi: İlanbalığı və Qaya)    │ Portrait     │ Or Gallery Altar Wall │
+│ 05   │ The Gobustan Solar Oracle: Lamprey       │ 120 × 100 cm │ Ceremonial Vestibule  │
+│      │ (Qobustan Günəşi: İlanbalığı və Qaya)    │ Horizontal   │ Or Gallery Altar Wall │
 └──────┴──────────────────────────────────────────┴──────────────┴───────────────────────┘
 ```
 
@@ -115,8 +115,8 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 > **Architectural In-Situ Simulation**: [View Installed in Double-Height Lobby](_insitu/insitu_plate_03_binagadi_derrick.jpg)
 
 - **Genre**: Industrial-Geological Abstraction / Hydrocarbon Matter Painting
-- **Dimensions**: **120 × 200 cm** (Vertical Panoramic Canvas, Specification from Brief)
-- **Target Spatial Placement**: High-Traffic Transition Corridor, Monumental Lobby Wall, or Aviation VIP Lounge
+- **Dimensions**: **80 × 100 cm** (Vertical Canvas, Specification from Brief)
+- **Target Spatial Placement**: High-Traffic Transition Corridor, Executive Focal Wall, or Aviation VIP Lounge
 - **Endemic Caspian Wildlife**: Caspian Marine Shad / Brazhnikov’s Shad (*Alosa braschnikowi*)
 - **Selected Absheron Minerals**:
   - **Natural Absheron Bitumen (Binagadi & Fatmai deposits)**: Pure unrefined asphaltite applied in thick, viscous knife-strokes.
@@ -126,8 +126,8 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (*Yanar Dağ / Ateshgah*).
 - **Turnkey Specifications**:
   - *Edge Treatment*: Polymerized bitumen continuous edge or dark oxidized bronze floater frame.
-  - *Chassis & Weight*: Aluminum-reinforced cross-braced chassis; estimated weight ~16.0 kg.
-  - *Mounting Hardware*: Dual continuous heavy-duty aluminum French cleats.
+  - *Chassis & Weight*: Solid cross-braced Finnish pine chassis with aluminum cradle; estimated weight ~6.8 kg.
+  - *Mounting Hardware*: Heavy-duty aircraft-grade aluminum French cleat (Z-bar).
   - *Lighting Recommendation*: 3000K museum track lighting to catch pyrite metallic facets.
 
 ---
@@ -166,7 +166,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 > **Architectural In-Situ Simulation**: [View Installed in Ceremonial Vestibule](_insitu/insitu_plate_05_gobustan_oracle.jpg)
 
 - **Genre**: Mythological Contemporary Altar Piece / Archaeological Totem
-- **Dimensions**: **100 × 150 cm** (Vertical Portrait Canvas, Specification from Brief)
+- **Dimensions**: **120 × 100 cm** (Horizontal Canvas, Specification from Brief)
 - **Target Spatial Placement**: Ceremonial Foyer, Executive Reception, or Gallery Altar Niche
 - **Endemic Caspian Wildlife**: Caspian Lamprey (*Caspiomyzon wagneri*)
 - **Selected Absheron Minerals**:
@@ -177,7 +177,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
 - **Turnkey Specifications**:
   - *Edge Treatment*: Mineral-plaster gallery edge or dark oiled walnut floater frame.
-  - *Chassis & Weight*: Anti-warp aluminum-cradled stretcher; estimated weight ~11.0 kg.
+  - *Chassis & Weight*: Anti-warp aluminum-cradled stretcher; estimated weight ~8.2 kg.
   - *Mounting Hardware*: Dual aluminum Z-bar cleat set.
   - *Lighting Recommendation*: Dedicated 2700K framing projector or adjustable gimbal spotlight.
 
@@ -235,14 +235,14 @@ As an individual fine artist delivering bespoke masterworks for prime architectu
 │ 02   │ 40 × 60 cm   │ ~3.2 kg     │ Gallery Limestone Gesso   │ Single Aluminum Cleat    │ 2700K–3000K Spot     │
 │      │ Vertical     │             │ (Optional Black Steel)    │ With Locking Pin         │ (15° Beam Angle)     │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
-│ 03   │ 120 × 200 cm │ ~16.0 kg    │ Bitumen Polymer Edge Wrap │ Dual Continuous Cleats   │ 3000K Track Flood    │
-│      │ Panoramic    │             │ (Optional Oxidized Bronze)│ Rated to 80 kg           │ (Highlight Pyrite)   │
+│ 03   │ 80 × 100 cm  │ ~6.8 kg     │ Bitumen Polymer Edge Wrap │ Heavy-Duty Aluminum Cleat│ 3000K Track Flood    │
+│      │ Vertical     │             │ (Optional Oxidized Bronze)│ Rated to 50 kg           │ (Highlight Pyrite)   │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
 │ 04   │ 180 × 180 cm │ ~19.5 kg    │ Deep Clay Craquelure Wrap │ Triple Aluminum Cleats   │ High-CRI 98 Wash     │
 │      │ Square 1:1   │             │ (Optional Blackened Wood) │ Seismic Rated Rigging    │ (Grazing Texture)    │
 ├──────┼──────────────┼─────────────┼───────────────────────────┼──────────────────────────┼──────────────────────┤
-│ 05   │ 100 × 150 cm │ ~11.0 kg    │ Bone Plaster Gallery Wrap │ Dual Aluminum Z-Cleats   │ 2700K Framing        │
-│      │ Portrait     │             │ (Optional Oiled Walnut)   │ Micro-Adjustable Level   │ Projector / Gimbal   │
+│ 05   │ 120 × 100 cm │ ~8.2 kg     │ Bone Plaster Gallery Wrap │ Dual Aluminum Z-Cleats   │ 2700K Framing        │
+│      │ Horizontal   │             │ (Optional Oiled Walnut)   │ Micro-Adjustable Level   │ Projector / Gimbal   │
 └──────┴──────────────┴─────────────┴───────────────────────────┴──────────────────────────┴──────────────────────┘
 ```
 

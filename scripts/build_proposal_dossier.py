@@ -6,7 +6,7 @@ Compiles an exact 7-page museum-grade fine art commission proposal:
   - Page 1: Executive Curatorial Statement, Collection Matrix & Caspian Strategy
   - Page 2: Plate 01 — Luminescence of Masazir Dawn (185 × 120 cm)
   - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
-  - Page 4: Plate 03 — The Binagadi Derrick (120 × 200 cm)
+  - Page 4: Plate 03 — The Binagadi Derrick (80 × 100 cm)
   - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
   - Page 6: Plate 05 — The Gobustan Solar Oracle (100 × 150 cm)
   - Page 7: Architectural In-Situ Integration & Turnkey Contractor Schedule
@@ -398,7 +398,7 @@ def generate_dossier_html(use_watermarked=True):
         <tr>
           <td><strong>03</strong></td>
           <td><em>The Binagadi Derrick: Hydrocarbon Strata</em></td>
-          <td>120 &times; 200 cm</td>
+          <td>80 &times; 100 cm</td>
           <td>Binagadi Bitumen, Pyrite Ore</td>
           <td>Caspian Marine Shad</td>
         </tr>
@@ -557,7 +557,7 @@ def generate_dossier_html(use_watermarked=True):
     <table class="specs-grid">
       <tr>
         <td class="spec-name">Dimensions</td>
-        <td class="spec-val"><strong>120 &times; 200 cm</strong> (Vertical Panoramic Canvas, Specification from Brief)</td>
+        <td class="spec-val"><strong>80 &times; 100 cm</strong> (Vertical Format Canvas, Specification from Brief)</td>
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
@@ -575,7 +575,7 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
       <tr>
         <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Bitumen Polymer Continuous Wrap &bull; Dual Heavy-Duty French Cleats (~16.0 kg) &bull; 3000K Museum Track Lighting (Highlight Pyrite)</td>
+        <td class="spec-val">Bitumen Polymer Continuous Wrap &bull; Heavy-Duty French Cleat (~6.8 kg) &bull; 3000K Museum Track Lighting (Highlight Pyrite)</td>
       </tr>
     </table>
   </div>
@@ -746,10 +746,10 @@ def generate_dossier_html(use_watermarked=True):
         </tr>
         <tr>
           <td><strong>03</strong></td>
-          <td>120 &times; 200 cm</td>
-          <td>~16.0 kg</td>
+          <td>80 &times; 100 cm</td>
+          <td>~6.8 kg</td>
           <td>Bitumen Polymer / Bronze Floater</td>
-          <td>Dual Continuous Cleats (80kg)</td>
+          <td>Heavy-Duty French Cleat (50kg)</td>
           <td>3000K Museum Track Light</td>
         </tr>
         <tr>
