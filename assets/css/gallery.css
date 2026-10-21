@@ -235,6 +235,17 @@ html, body {
   display: none;
 }
 
+/* Desktop & Laptop Geological Anatomy Wing Toggle */
+.btn-wing-toggle {
+  display: flex;
+}
+
+@media (max-width: 1100px) {
+  .btn-wing-toggle {
+    display: none !important;
+  }
+}
+
 .btn-pdf-download {
   background: rgba(212, 175, 55, 0.15) !important;
   border-color: var(--gold-primary) !important;
@@ -1226,6 +1237,34 @@ html, body {
 .stage-wing.wing-right:hover {
   border-color: rgba(212, 175, 55, 0.3);
   transform: translateY(calc(-50% - 2px));
+}
+
+.stage-wing.collapsed {
+  opacity: 0 !important;
+  transform: translateY(-50%) translateX(calc(100% + 60px)) !important;
+  pointer-events: none !important;
+}
+
+.wing-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+  transition: var(--transition-smooth);
+}
+
+.wing-close-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.2);
 }
 
 .wing-header {
