@@ -9,24 +9,28 @@ const GALLERY_DATA = [
     id: "plate-01",
     number: "01",
     roman: "I",
-    title: "Luminescence of Masazir Dawn",
-    azTitle: "Masazır Şəfəqi: Çəhrayı Duz Gölü",
+    title: "Luminescence of Masazir",
+    azTitle: "Masazır Parıltısı",
     genre: "Pure Mineral Abstraction / Lacustrine Strata Painting",
-    widthCm: 185,
-    heightCm: 120,
-    dimensions: "185 × 120 cm (72.8 × 47.2 in)",
+    widthCm: 130,
+    heightCm: 100,
+    dimensions: "130 × 100 cm (51.2 × 39.4 in)",
     orientation: "horizontal",
     niche: "Executive Boardroom / Presidential Suite / Coastal Wellness Reception",
     endemicFocus: "Absheron Lacustrine Strata (Pure geological meditation; zero figures, zero fauna, zero carpets)",
     scientificTaxonomy: "Artemia salina / Saline micro-algal Dunaliella salina mineral salts",
     minerals: [
       {
-        name: "Masazir Pink Lake Salt",
-        description: "Genuine crystalline lake salt encrustations integrated directly into the heavy impasto ground, catching natural daylight with subtle prismatic sparkle."
+        name: "Genuine Masazir Pink Lake Salt",
+        description: "Raw crystalline lake salt encrustations embedded directly into the impasto ground, catching ambient light."
       },
       {
-        name: "Absheron Limestone & Alabaster Plaster",
-        description: "Porous cream-and-ochre ground scored with delicate geometric sgraffito lines."
+        name: "Textured Paste & Heavy Impasto",
+        description: "High-relief textural modeling sculpted with palette knife."
+      },
+      {
+        name: "Oil Paint on Canvas",
+        description: "Translucent layered oil glazes creating delicate atmospheric gradients."
       }
     ],
     curatorialNarrative: "An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity.",

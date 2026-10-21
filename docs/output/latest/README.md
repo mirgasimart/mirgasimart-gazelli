@@ -43,9 +43,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Dimensions**: **130 × 100 cm** (Horizontal Landscape Canvas, Specification from Brief)
 - **Target Spatial Placement**: Executive Boardroom, Presidential Suite, or Coastal Wellness Reception
 - **Endemic Caspian Focus**: Absheron Lacustrine Strata (*Pure geological meditation; zero figures, zero fauna, zero carpets*)
-- **Selected Absheron Minerals**:
-  - **Masazir Pink Lake Salt**: Genuine crystalline lake salt encrustations integrated directly into the heavy impasto ground, catching natural daylight with subtle prismatic sparkle.
-  - **Absheron Limestone & Alabaster Plaster**: Porous cream-and-ochre ground scored with delicate geometric sgraffito lines.
+- **Materials**: Genuine Masazir Pink Lake Salt, Textured Paste, Heavy Impasto, Oil Paint on Canvas
 - **Concept**:
   An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity.
 

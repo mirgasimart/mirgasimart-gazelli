@@ -146,7 +146,7 @@ def main():
     os.makedirs(insitu_dir, exist_ok=True)
 
     items = [
-        ("01_luminescence_of_masazir_salt_dawn.jpg", "insitu_plate_01_masazir_dawn.jpg", "horizontal", "Plate 01: Luminescence of Masazir Dawn (185 × 120 cm)"),
+        ("01_luminescence_of_masazir_salt_dawn.jpg", "insitu_plate_01_masazir_dawn.jpg", "horizontal", "Plate 01: Luminescence of Masazir (130 × 100 cm)"),
         ("02_the_weaver_of_sunken_shells_didacna.jpg", "insitu_plate_02_shebeke_reliquary.jpg", "vertical", "Plate 02: The Shebeke Reliquary (40 × 60 cm)"),
         ("03_keeper_of_the_cold_depths_caspian_shad.jpg", "insitu_plate_03_binagadi_derrick.jpg", "vertical", "Plate 03: Black Gold (80 × 100 cm)"),
         ("04_breath_of_lokbatan_tadpole_goby.jpg", "insitu_plate_04_breath_of_lokbatan.jpg", "vertical", "Plate 04: Breath of Lokbatan (180 × 180 cm)"),

@@ -185,11 +185,11 @@ def apply_watermark(image_path, output_path, position="bottom-right", margin=32)
 CATALOG_METADATA = {
     "01_luminescence_of_masazir_salt_dawn.jpg": {
         "plate": "PLATE 01 / 05",
-        "title_en": "Luminescence of Masazir Dawn",
-        "title_az": "Masazır Şəfəqi: Çəhrayı Duz Gölü",
+        "title_en": "Luminescence of Masazir",
+        "title_az": "Masazır Parıltısı",
         "genre": "Pure Mineral Abstraction / Lacustrine Strata",
-        "dimensions": "185 × 120 cm (Horizontal Landscape Canvas)",
-        "materials": "Genuine Masazir Pink Lake Salt, Porous Absheron Limestone Plaster & Sgraffito",
+        "dimensions": "130 × 100 cm (Horizontal Landscape Canvas)",
+        "materials": "Genuine Masazir Pink Lake Salt, Textured Paste, Heavy Impasto, Oil Paint on Canvas",
         "fauna": "Absheron Lacustrine Strata (Pure geological meditation)",
     },
     "02_the_weaver_of_sunken_shells_didacna.jpg": {
