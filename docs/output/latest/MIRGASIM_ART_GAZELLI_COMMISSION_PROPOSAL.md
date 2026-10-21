@@ -72,10 +72,10 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 
 ---
 
-### Plate 03: *The Binagadi Derrick: Hydrocarbon Strata & Pyrite Shad*
-*Binaqədi Buruğu: Qara Qızıl və Pirit Şad*
+### Plate 03: *Black Gold*
+*Qara Qızıl*
 
-![Plate 03: The Binagadi Derrick](_clean/03_keeper_of_the_cold_depths_caspian_shad.jpg)
+![Plate 03: Black Gold](_clean/03_keeper_of_the_cold_depths_caspian_shad.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_03_keeper_of_the_cold_depths_caspian_shad.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Double-Height Lobby](_insitu/insitu_plate_03_binagadi_derrick.jpg)
 

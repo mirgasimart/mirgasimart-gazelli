@@ -203,8 +203,8 @@ CATALOG_METADATA = {
     },
     "03_keeper_of_the_cold_depths_caspian_shad.jpg": {
         "plate": "PLATE 03 / 05",
-        "title_en": "The Binagadi Derrick: Hydrocarbon Strata & Pyrite Shad",
-        "title_az": "Binaqədi Buruğu: Qara Qızıl və Pirit Şad",
+        "title_en": "Black Gold",
+        "title_az": "Qara Qızıl",
         "genre": "Industrial-Geological Abstraction / Hydrocarbon Matter Painting",
         "dimensions": "120 × 200 cm (Vertical Panoramic Canvas)",
         "materials": "Pure Binagadi Bitumen, Brassy Pyrite Sulfide Ore, Limestone Ground",
