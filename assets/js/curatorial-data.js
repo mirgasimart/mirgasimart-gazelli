@@ -153,9 +153,9 @@ const GALLERY_DATA = [
     title: "Breath of Lokbatan: Volcanic Crater and Armored Goby",
     azTitle: "Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi",
     genre: "Earth-Art Vortex / Geothermal Mineral Painting",
-    widthCm: 180,
-    heightCm: 180,
-    dimensions: "180 × 180 cm (70.9 × 70.9 in)",
+    widthCm: 145,
+    heightCm: 145,
+    dimensions: "145 × 145 cm (57.1 × 57.1 in)",
     orientation: "square",
     niche: "Grand Central Atrium / Double-Height Salon / Wellness Mezzanine Feature Wall",
     endemicFocus: "Armored Caspian Tadpole Goby (Benthophilus spp.)",
@@ -177,8 +177,8 @@ const GALLERY_DATA = [
     curatorialNarrative: "A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (Benthophilus) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.",
     turnkeySpecs: {
       chassis: "Dual-aluminum cross-braced cradled chassis",
-      weight: "19.5 kg",
-      mounting: "Triple heavy-duty aircraft-grade aluminum French cleats",
+      weight: "12.5 kg",
+      mounting: "Dual heavy-duty aircraft-grade aluminum French cleats",
       edgeFinish: "Continuous volcanic craquelure wrap (50mm profile)",
       lighting: "High-CRI (98) wall wash lighting grazing from above to accent deep craquelure shadows"
     },

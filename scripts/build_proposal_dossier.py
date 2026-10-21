@@ -7,7 +7,7 @@ Compiles an exact 6-page museum-grade fine art commission proposal:
   - Page 2: Plate 01 — Luminescence of Masazir (130 × 100 cm)
   - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
   - Page 4: Plate 03 — Black Gold (80 × 100 cm)
-  - Page 5: Plate 04 — Breath of Lokbatan (180 × 180 cm)
+  - Page 5: Plate 04 — Breath of Lokbatan (145 × 145 cm)
   - Page 6: Plate 05 — Solar Oracle (120 × 100 cm)
 """
 
@@ -479,7 +479,7 @@ def generate_dossier_html(use_watermarked=True):
     <table class="specs-grid">
       <tr>
         <td class="spec-name">Dimensions</td>
-        <td class="spec-val"><strong>180 &times; 180 cm</strong> (Monumental Square Format 1:1, Specification from Brief)</td>
+        <td class="spec-val"><strong>145 &times; 145 cm</strong> (Monumental Square Format 1:1, Specification from Brief)</td>
       </tr>
       <tr>
         <td class="spec-name">Materials</td>
