@@ -1150,8 +1150,286 @@ html, body {
 }
 
 /* ==========================================================================
+   WIDESCREEN CURATORIAL WINGS (Eliminating wasted horizontal space)
+   ========================================================================== */
+.triptych-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1720px;
+  height: 100%;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.triptych-container > * {
+  pointer-events: auto;
+}
+
+.stage-wing {
+  width: 310px;
+  background: rgba(18, 20, 24, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.5s var(--ease-cinematic);
+  z-index: 14;
+}
+
+.stage-wing:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
+}
+
+.wing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 8px;
+}
+
+.wing-badge {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-light);
+}
+
+.wing-tag {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.wing-insitu-preview {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  group: hover;
+}
+
+.wing-insitu-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.wing-insitu-preview:hover img {
+  transform: scale(1.05);
+}
+
+.wing-insitu-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 11px;
+  font-family: var(--font-serif);
+}
+
+.wing-desc {
+  font-size: 11.5px;
+  color: #c4c4cc;
+  line-height: 1.5;
+}
+
+.wing-mineral-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wing-mineral-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid var(--gold-primary);
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.wing-mineral-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.wing-mineral-sub {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.wing-specs-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wing-specs-row span:first-child {
+  color: var(--text-muted);
+}
+
+.wing-specs-row span:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Wing Toggle Button in footer */
+.wings-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.wings-toggle-btn.active {
+  color: var(--gold-light);
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.15);
+}
+
+/* ==========================================================================
+   PANORAMIC PROMENADE (Continuous Wide Horizontal Museum Wall)
+   ========================================================================== */
+.panoramic-promenade {
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  display: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.3) transparent;
+  cursor: grab;
+}
+
+.panoramic-promenade:active {
+  cursor: grabbing;
+}
+
+.panoramic-promenade.active {
+  display: flex;
+  align-items: center;
+}
+
+.panoramic-wall-track {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+  padding: 0 160px;
+  min-width: max-content;
+  height: 100%;
+  position: relative;
+}
+
+/* Promenade Artwork Station */
+.promenade-station {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease-cinematic);
+}
+
+.promenade-station:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.promenade-frame {
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.4s ease;
+}
+
+.promenade-station:hover .promenade-frame {
+  box-shadow: 0 25px 60px rgba(212, 175, 55, 0.25), 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.promenade-label {
+  margin-top: 24px;
+  text-align: center;
+  background: rgba(14, 16, 20, 0.85);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 14px;
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+  width: 220px;
+}
+
+.promenade-title {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.promenade-meta {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.promenade-dim {
+  font-size: 9.5px;
+  color: var(--gold-light);
+  margin-top: 4px;
+}
+
+/* Promenade Ceiling Track Lights */
+.promenade-light-cone {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 480px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 240, 220, 0.25) 0%, transparent 75%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* ==========================================================================
    RESPONSIVE STYLES
    ========================================================================== */
+@media (max-width: 1400px) {
+  .stage-wing {
+    width: 260px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .stage-wing {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .gallery-header {
     padding: 0 16px;
@@ -1172,3 +1450,4 @@ html, body {
     display: none;
   }
 }
+
