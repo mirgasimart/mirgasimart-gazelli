@@ -215,7 +215,7 @@ CATALOG_METADATA = {
         "title_en": "Breath of Lokbatan: Volcanic Crater and Armored Goby",
         "title_az": "Lökbatan Nəfəsi: Palçıq Vulkanı və Zirehli Qobi",
         "genre": "Earth-Art Vortex / Geothermal Mineral Painting",
-        "dimensions": "180 × 180 cm (Monumental 1:1 Square Canvas)",
+        "dimensions": "145 × 145 cm (Monumental 1:1 Square Canvas)",
         "materials": "Subterranean Lokbatan Mud-Volcano Clay, Celadon & Seafoam Glazes, Pyrite Veins",
         "fauna": "Armored Caspian Tadpole Goby (Benthophilus spp.)",
     },
