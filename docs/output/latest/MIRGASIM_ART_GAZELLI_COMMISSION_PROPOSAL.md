@@ -183,6 +183,27 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 
 ---
 
+### Atelier Companion Study: *The Muse of Masazir (Caspian Seal)*
+*Masazır Pərisi: Xəzər Suiti və Duz Qayası*
+
+![The Muse of Masazir: Caspian Seal](_studies/the_muse_of_masazir_caspian_seal_study.jpg)
+> **Atelier Archive Reference**: [Full Archival Study](_studies/the_muse_of_masazir_caspian_seal_study.jpg)
+
+- **Genre**: Figurative Mineral Portraiture / Geological Matter Painting
+- **Dimensions**: **100 × 150 cm** (Vertical Portrait Canvas, Specification from Brief)
+- **Target Spatial Placement**: Private VIP Wellness Suite, Executive Lounge, or Presidential Antechamber
+- **Endemic Caspian Wildlife**: Caspian Seal (*Pusa caspica*)
+- **Selected Absheron Minerals**: Genuine Masazir pink lake salt encrustations, porous Absheron limestone plaster ground, delicate geometric sgraffito incisions.
+- **Curatorial Narrative**:
+  Synthesizing Mirgasim’s iconic visual hallmarks—a melancholic, statuesque Azerbaijani muse with connected dark brows, sculpted hands, and intense gaze—with the raw geological matter of Absheron. Cradled tenderly in her arms is a gentle Caspian seal pup (*Pusa caspica*), its silver-grey mottled coat glistening against modern draped plum-burgundy fabric. The background is a thick, sculptural palette-knife impasto ground in warm ochres and blush tones, embedded with authentic sparkling crystalline clusters of raw pink-and-white Masazir lake salt and incised with delicate geometric sgraffito lines. Zero textiles, zero carpets; pure authorial painterly mastery.
+- **Turnkey Specifications**:
+  - *Edge Treatment*: Gallery-wrapped blush limestone edges or dark American walnut floater frame.
+  - *Chassis & Weight*: Aluminum-reinforced cross-braced stretcher; estimated weight ~11.0 kg.
+  - *Mounting Hardware*: Dual aluminum Z-bar cleat set.
+  - *Lighting Recommendation*: Warm 2700K soft wash lighting grazing down the crystalline salt background.
+
+---
+
 ## III. Archival Conservation & Chemical Stability Protocol
 
 To satisfy commercial facilities managers and museum registrars, all raw geological matter is stabilized under strict archival standards:

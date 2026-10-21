@@ -817,21 +817,27 @@ def build_pdf(use_watermarked=True):
     with open(tmp_html, "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    out_pdf = "docs/output/latest/MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf"
-    readme_pdf = "docs/output/latest/README.pdf"
+    out_pdf = os.path.abspath("docs/output/latest/MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf")
+    readme_pdf = os.path.abspath("docs/output/latest/README.pdf")
+
+    # Strictly remove pre-existing files to ensure fresh generation
+    if os.path.exists(out_pdf):
+        os.remove(out_pdf)
+    if os.path.exists(readme_pdf):
+        os.remove(readme_pdf)
 
     browser_bin = find_browser_executable()
     cmd = [
         browser_bin,
-        "--headless",
+        "--headless=new",
         "--disable-gpu",
         "--no-pdf-header-footer",
         f"--print-to-pdf={out_pdf}",
-        f"file:///{os.path.abspath(tmp_html).replace(os.sep, '/')}"
+        os.path.abspath(tmp_html)
     ]
 
     print(f"Compiling 7-Page Luxury PDF Dossier via {browser_bin} (zero browser header/footer artifacts)...")
-    res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     if os.path.exists(tmp_html):
         os.remove(tmp_html)
 
@@ -843,7 +849,8 @@ def build_pdf(use_watermarked=True):
         print(f"  -> {readme_pdf}")
     else:
         print("ERROR: Failed to generate PDF dossier.")
-        print(res.stderr.decode(errors='ignore'))
+        print("Stdout:", res.stdout)
+        print("Stderr:", res.stderr)
 
 def main():
     parser = argparse.ArgumentParser(description="Mirgasim Art Studio - 7-Page Luxury PDF Dossier Builder")
