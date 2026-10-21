@@ -316,9 +316,9 @@ def generate_dossier_html(use_watermarked=True):
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Project Proposal &bull; Baku &amp; London</div>
+    <div class="rf-context"></div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">FOLIO 01 / 07</div>
+    <div class="rf-folio">01 / 07</div>
   </div>
 </div>
 
@@ -356,17 +356,13 @@ def generate_dossier_html(use_watermarked=True):
           An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. (Pure geological abstraction; zero portraits, zero figures, zero carpets).
         </td>
       </tr>
-      <tr>
-        <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Mineral Impasto Continuous Wrap (or dark walnut floater) &bull; Dual Aluminum French Cleats (~14.5 kg) &bull; 2700K Warm Wash Lighting</td>
-      </tr>
     </table>
   </div>
 
   <div class="running-footer">
     <div class="rf-context">Plate 01: Luminescence of Masazir Dawn</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">FOLIO 02 / 07</div>
+    <div class="rf-folio">02 / 07</div>
   </div>
 </div>
 
@@ -408,17 +404,13 @@ def generate_dossier_html(use_watermarked=True):
           An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (<em>daş yonma</em>) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian <em>Didacna</em> cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
         </td>
       </tr>
-      <tr>
-        <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Continuous Coquina Mineral Wrap (or blackened steel floater) &bull; Dual Aluminum French Cleats (~11.8 kg) &bull; 2700K–3000K Perimeter Wash Lighting</td>
-      </tr>
     </table>
   </div>
 
   <div class="running-footer">
     <div class="rf-context">Plate 02: Fossil Didacna Mandala</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">FOLIO 03 / 07</div>
+    <div class="rf-folio">03 / 07</div>
   </div>
 </div>
 
@@ -460,17 +452,13 @@ def generate_dossier_html(use_watermarked=True):
           Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (<em>Yanar Dağ / Ateshgah</em>).
         </td>
       </tr>
-      <tr>
-        <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Bitumen Polymer Continuous Wrap &bull; Heavy-Duty French Cleat (~6.8 kg) &bull; 3000K Museum Track Lighting (Highlight Pyrite)</td>
-      </tr>
     </table>
   </div>
 
   <div class="running-footer">
     <div class="rf-context">Plate 03: The Binagadi Derrick</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">FOLIO 04 / 07</div>
+    <div class="rf-folio">04 / 07</div>
   </div>
 </div>
 
@@ -508,17 +496,13 @@ def generate_dossier_html(use_watermarked=True):
           A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (<em>Benthophilus</em>) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
         </td>
       </tr>
-      <tr>
-        <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Volcanic Craquelure Gallery Wrap &bull; Triple Aluminum French Cleats (~19.5 kg) &bull; High-CRI 98 Wall Wash (Grazing Texture)</td>
-      </tr>
     </table>
   </div>
 
   <div class="running-footer">
     <div class="rf-context">Plate 04: Breath of Lokbatan</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">FOLIO 05 / 07</div>
+    <div class="rf-folio">05 / 07</div>
   </div>
 </div>
 
@@ -560,17 +544,13 @@ def generate_dossier_html(use_watermarked=True):
           A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt solar mandala. Incised directly into the bone-plaster and limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
         </td>
       </tr>
-      <tr>
-        <td class="spec-name">Turnkey Mounting</td>
-        <td class="spec-val">Bone Plaster Gallery Edge (or oiled walnut floater) &bull; Dual Aluminum Z-Cleats (~8.2 kg) &bull; 2700K Framing Projector / Gimbal</td>
-      </tr>
     </table>
   </div>
 
   <div class="running-footer">
     <div class="rf-context">Plate 05: The Gobustan Solar Oracle</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
-    <div class="rf-folio">FOLIO 06 / 07</div>
+    <div class="rf-folio">06 / 07</div>
   </div>
 </div>
 
@@ -669,7 +649,7 @@ def generate_dossier_html(use_watermarked=True):
   <div class="running-footer">
     <div class="rf-context">Architectural Specifications &amp; Tactile Material Schedule</div>
     <div class="rf-copyright">Submitted in Formal Response to Selection Brief | Gazelli Art House</div>
-    <div class="rf-folio">FOLIO 07 / 07</div>
+    <div class="rf-folio">07 / 07</div>
   </div>
 </div>
 

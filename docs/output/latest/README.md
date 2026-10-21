@@ -48,11 +48,6 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Absheron Limestone & Alabaster Plaster**: Porous cream-and-ochre ground scored with delicate geometric sgraffito lines.
 - **Curatorial Narrative**:
   An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity.
-- **Turnkey Specifications**:
-  - *Edge Treatment*: Continuous mineral gallery-wrap (unframed) or optional 10mm recessed matte dark walnut shadow-line floater frame.
-  - *Chassis & Weight*: Cross-braced Finnish pine with aluminum cradle; estimated weight ~14.5 kg.
-  - *Mounting Hardware*: Dual continuous aluminum French cleats (Z-bars) for flush high-traffic stability.
-  - *Lighting Recommendation*: 2700K warm-white recessed ceiling wash lighting (CRI 95+).
 
 ---
 
@@ -74,11 +69,6 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Absheron Coastal Beach Sand**: Golden quartz-shell sand borders separating the shell rings.
 - **Curatorial Narrative**:
   An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (*daş yonma*) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian *Didacna* cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
-- **Turnkey Specifications**:
-  - *Edge Treatment*: Continuous mineral coquina wrap (unframed) or optional minimal blackened steel shadow-line floater frame.
-  - *Chassis & Weight*: Cross-braced Finnish pine with aluminum reinforcement; estimated weight ~11.8 kg.
-  - *Mounting Hardware*: Dual continuous aluminum French cleats for flush architectural rigidity.
-  - *Lighting Recommendation*: 2700K–3000K warm perimeter wash lighting (CRI 95+).
 
 ---
 
@@ -99,11 +89,6 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Absheron Limestone Powder**: Providing chalky white contrast against the black bitumen.
 - **Curatorial Narrative**:
   Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (*Yanar Dağ / Ateshgah*).
-- **Turnkey Specifications**:
-  - *Edge Treatment*: Polymerized bitumen continuous edge or dark oxidized bronze floater frame.
-  - *Chassis & Weight*: Solid cross-braced Finnish pine chassis with aluminum cradle; estimated weight ~6.8 kg.
-  - *Mounting Hardware*: Heavy-duty aircraft-grade aluminum French cleat (Z-bar).
-  - *Lighting Recommendation*: 3000K museum track lighting to catch pyrite metallic facets.
 
 ---
 
@@ -125,11 +110,6 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Incised Sgraffito Lines**: Deep directional fissures carved into the wet clay bed.
 - **Curatorial Narrative**:
   A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (*Benthophilus*) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
-- **Turnkey Specifications**:
-  - *Edge Treatment*: Continuous volcanic craquelure wrap or custom recessed matte black floater frame.
-  - *Chassis & Weight*: Dual-aluminum cross-braced cradled chassis; estimated weight ~19.5 kg.
-  - *Mounting Hardware*: Triple heavy-duty aircraft-grade aluminum French cleats.
-  - *Lighting Recommendation*: High-CRI (98) wall wash lighting grazing from above to accent deep craquelure shadows.
 
 ---
 
@@ -150,11 +130,6 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Absheron Limestone & Bone Plaster**: Sgraffito incisions depicting Gobustan rock petroglyphs.
 - **Curatorial Narrative**:
   A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
-- **Turnkey Specifications**:
-  - *Edge Treatment*: Mineral-plaster gallery edge or dark oiled walnut floater frame.
-  - *Chassis & Weight*: Anti-warp aluminum-cradled stretcher; estimated weight ~8.2 kg.
-  - *Mounting Hardware*: Dual aluminum Z-bar cleat set.
-  - *Lighting Recommendation*: Dedicated 2700K framing projector or adjustable gimbal spotlight.
 
 ---
 
@@ -171,11 +146,6 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Selected Absheron Minerals**: Genuine Masazir pink lake salt encrustations, porous Absheron limestone plaster ground, delicate geometric sgraffito incisions.
 - **Curatorial Narrative**:
   Synthesizing Mirgasim’s iconic visual hallmarks—a melancholic, statuesque Azerbaijani muse with connected dark brows, sculpted hands, and intense gaze—with the raw geological matter of Absheron. Cradled tenderly in her arms is a gentle Caspian seal pup (*Pusa caspica*), its silver-grey mottled coat glistening against modern draped plum-burgundy fabric. The background is a thick, sculptural palette-knife impasto ground in warm ochres and blush tones, embedded with authentic sparkling crystalline clusters of raw pink-and-white Masazir lake salt and incised with delicate geometric sgraffito lines. Zero textiles, zero carpets; pure authorial painterly mastery.
-- **Turnkey Specifications**:
-  - *Edge Treatment*: Gallery-wrapped blush limestone edges or dark American walnut floater frame.
-  - *Chassis & Weight*: Aluminum-reinforced cross-braced stretcher; estimated weight ~11.0 kg.
-  - *Mounting Hardware*: Dual aluminum Z-bar cleat set.
-  - *Lighting Recommendation*: Warm 2700K soft wash lighting grazing down the crystalline salt background.
 
 ---
 
