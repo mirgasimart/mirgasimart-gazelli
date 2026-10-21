@@ -225,7 +225,7 @@ CATALOG_METADATA = {
         "title_az": "Günəş Orakulu",
         "genre": "Mythological Contemporary Altar Piece / Archaeological Totem",
         "dimensions": "120 × 100 cm (Horizontal Canvas from Brief)",
-        "materials": "Absheron Coastal Beach Sand Mandala, Masazir Salt Halos, Gobustan Petroglyphic Sgraffito",
+        "materials": "Absheron Coastal Beach Sand Mandala, Masazir Salt Halos",
         "fauna": "Caspian Lamprey (Caspiomyzon wagneri)",
     },
 }

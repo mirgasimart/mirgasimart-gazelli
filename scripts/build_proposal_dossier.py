@@ -526,7 +526,7 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
-        <td class="spec-val">Absheron Coastal Beach Sand Mandala, Masazir Salt Encrustations, Incised Gobustan Petroglyphic Sgraffito, Oil &amp; Bone Plaster on Linen</td>
+        <td class="spec-val">Absheron Coastal Beach Sand Mandala, Masazir Salt Encrustations, Oil &amp; Bone Plaster on Linen</td>
       </tr>
       <tr>
         <td class="spec-name">Endemic Wildlife</td>

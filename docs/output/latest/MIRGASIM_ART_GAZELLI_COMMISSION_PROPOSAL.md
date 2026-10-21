@@ -114,10 +114,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Dimensions**: **120 × 100 cm** (Horizontal Canvas, Specification from Brief)
 - **Target Spatial Placement**: Ceremonial Foyer, Executive Reception, or Gallery Altar Niche
 - **Endemic Caspian Wildlife**: Caspian Lamprey (*Caspiomyzon wagneri*)
-- **Selected Absheron Minerals**:
-  - **Absheron Coastal Beach Sand**: Concentric rings textured with raw beach sand.
-  - **Masazir Lake Salt Crystals**: Saline clusters embedded along the cyan-blue outer orbital halo.
-  - **Absheron Limestone & Bone Plaster**: Sgraffito incisions depicting Gobustan rock petroglyphs.
+- **Materials**: Absheron Coastal Beach Sand Mandala, Masazir Salt Encrustations, Oil & Bone Plaster on Linen
 - **Concept**:
   A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
 
