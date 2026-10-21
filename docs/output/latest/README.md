@@ -60,11 +60,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Dimensions**: **40 × 60 cm** (Vertical Format Canvas, Specification from Brief)
 - **Target Spatial Placement**: VIP Reception Lounge, Executive Suite Salon, or Private Dining Feature Wall
 - **Endemic Caspian Organism**: Caspian Cockles (*Didacna trigonoides* & *Didacna pyramidata*)
-- **Selected Absheron Minerals**:
-  - **Absheron Coquina Limestone & Plaster Ground**: Porous coastal limestone and craquelure clay providing an authentic geological surface.
-  - **Concentric Didacna Cockle Shells & Mother-of-Pearl**: Hundreds of natural Caspian Didacna bivalve shells arranged in celestial concentric geometry.
-  - **Masazir Pink Lake Salt Core**: Raw crystallized lake salt crystals forming an incandescent central halo with turquoise mineral glazes.
-  - **Absheron Coastal Beach Sand**: Golden quartz-shell sand borders separating the shell rings.
+- **Materials**: Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Oil Paints and Canvas
 - **Concept**:
   An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (*daş yonma*) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian *Didacna* cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
 

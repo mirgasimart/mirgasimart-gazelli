@@ -68,16 +68,16 @@ const GALLERY_DATA = [
     scientificTaxonomy: "Didacna trigonoides (Pall.) & Didacna pyramidata (Grimm)",
     minerals: [
       {
-        name: "Absheron Limestone & Coquina Primer",
-        description: "Fine quarry coquina and porous limestone powder integrated into gesso ground for authentic masonry tooth."
+        name: "Crystalline Masazir Pink Lake Salt",
+        description: "Genuine crystallized halite clusters embedded directly into the impasto crust."
       },
       {
-        name: "Natural Caspian Didacna Accents",
-        description: "Genuine small Didacna bivalve shells embedded in low-relief into the impasto crust."
+        name: "Fine Absheron Beach Sand",
+        description: "Natural quartz-shell beach sand blended into impasto for tactile friction."
       },
       {
-        name: "Absheron Coastal Beach Sand",
-        description: "Natural quartz-shell sand blended into knife impasto for tactile friction."
+        name: "Oil Paints & Canvas",
+        description: "Artist-grade professional oil colors on stretched linen canvas."
       }
     ],
     curatorialNarrative: "Celebrating Absheron's ancient stone-carving heritage (daş yonma), this intimate vertical painting on canvas captures a weather-worn Shebeke window lattice rendered in thick palette-knife impasto and porous mineral grounds. Behind the painted geometric tracery glow luminous glazes of Caspian turquoise and deep lapis lazuli. The painted surface is enriched with subtle low-relief physical accents—authentic small Didacna cockle shells embedded into the impasto crust—while an elongated painted hand rests against the window aperture, bridging human craftsmanship and deep geological time.",

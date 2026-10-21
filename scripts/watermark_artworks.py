@@ -198,7 +198,7 @@ CATALOG_METADATA = {
         "title_az": "Şəbəkə Qalığı",
         "genre": "Mineral Assemblage & Painting on Canvas / Tactile Coquina Relief",
         "dimensions": "40 × 60 cm (Vertical Canvas from Brief)",
-        "materials": "Absheron Coquina Ground, Concentric Didacna Shells, Masazir Salt Core, Beach Sand & Craquelure",
+        "materials": "Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Oil Paints and Canvas",
         "fauna": "Caspian Cockles (Didacna trigonoides & Didacna pyramidata)",
     },
     "03_keeper_of_the_cold_depths_caspian_shad.jpg": {
