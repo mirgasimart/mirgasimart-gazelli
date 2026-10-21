@@ -23,6 +23,7 @@ class GazelliCuratorialGallery {
     this.initAudioEngine();
     this.bindEvents();
     this.renderThumbnails();
+    this.initPanoramicPromenade();
     this.updateArtwork(0);
   }
 
@@ -46,6 +47,25 @@ class GazelliCuratorialGallery {
       insituBadge: document.getElementById('insituBadge'),
       plateView: document.getElementById('plateView'),
       plateImg: document.getElementById('plateImg'),
+
+      // Widescreen Curatorial Wings
+      triptychContainer: document.getElementById('triptychContainer'),
+      wingLeft: document.getElementById('wingLeft'),
+      wingRight: document.getElementById('wingRight'),
+      wingInsituBtn: document.getElementById('wingInsituBtn'),
+      wingInsituThumb: document.getElementById('wingInsituThumb'),
+      wingNicheTag: document.getElementById('wingNicheTag'),
+      wingNicheDesc: document.getElementById('wingNicheDesc'),
+      wingDimension: document.getElementById('wingDimension'),
+      wingLighting: document.getElementById('wingLighting'),
+      wingMineralsList: document.getElementById('wingMineralsList'),
+      wingChassis: document.getElementById('wingChassis'),
+      wingWeight: document.getElementById('wingWeight'),
+      wingCleats: document.getElementById('wingCleats'),
+
+      // Panoramic Promenade
+      panoramicPromenade: document.getElementById('panoramicPromenade'),
+      panoramicTrack: document.getElementById('panoramicTrack'),
       
       // Bottom & Controls
       thumbnailStrip: document.getElementById('thumbnailStrip'),
@@ -148,6 +168,11 @@ class GazelliCuratorialGallery {
     // Keyboard shortcuts
     document.addEventListener('keydown', (e) => this.handleKeyboard(e));
 
+    // In-situ preview button in left wing
+    if (this.dom.wingInsituBtn) {
+      this.dom.wingInsituBtn.addEventListener('click', () => this.setMode('insitu'));
+    }
+
     // Resize handler to recalculate real-world scale
     window.addEventListener('resize', () => this.applyProportionalDimensions());
   }
@@ -192,11 +217,85 @@ class GazelliCuratorialGallery {
 
       this.applyProportionalDimensions();
       this.updatePlacardLabel();
+      this.updateWidescreenWings(art);
       this.renderHotspots();
       this.updateDrawerContent();
 
       this.dom.artworkMount.style.opacity = '1';
     }, 200);
+  }
+
+  updateWidescreenWings(art) {
+    if (!this.dom.wingLeft || !this.dom.wingRight) return;
+
+    // Update Left Wing (Architectural Niche Context)
+    this.dom.wingNicheTag.textContent = `Plate ${art.number}`;
+    this.dom.wingInsituThumb.src = art.images.insitu;
+    this.dom.wingNicheDesc.textContent = art.niche;
+    this.dom.wingDimension.textContent = art.dimensions;
+    this.dom.wingLighting.textContent = art.turnkeySpecs.lighting.split('(')[0].trim();
+
+    // Update Right Wing (Absheron Geological Minerals & Specs)
+    this.dom.wingMineralsList.innerHTML = '';
+    art.minerals.forEach(min => {
+      const item = document.createElement('div');
+      item.className = 'wing-mineral-item';
+      item.innerHTML = `
+        <div class="wing-mineral-name">${min.name}</div>
+        <div class="wing-mineral-sub">${min.description.slice(0, 85)}...</div>
+      `;
+      this.dom.wingMineralsList.appendChild(item);
+    });
+
+    this.dom.wingChassis.textContent = art.turnkeySpecs.chassis.split('with')[0].trim();
+    this.dom.wingWeight.textContent = art.turnkeySpecs.weight;
+    this.dom.wingCleats.textContent = art.turnkeySpecs.mounting.split('(')[0].trim();
+  }
+
+  initPanoramicPromenade() {
+    if (!this.dom.panoramicTrack) return;
+    this.dom.panoramicTrack.innerHTML = '';
+
+    // Standard human scale figure in panoramic promenade
+    const baseHeight = 360; // px reference for tall works
+
+    this.artworks.forEach((art, index) => {
+      const station = document.createElement('div');
+      station.className = `promenade-station ${index === this.currentIndex ? 'active' : ''}`;
+      station.dataset.index = index;
+
+      // Real scale proportional height & width for panoramic promenade
+      const pxPerCm = 1.9;
+      const w = Math.round(art.widthCm * pxPerCm);
+      const h = Math.round(art.heightCm * pxPerCm);
+
+      station.innerHTML = `
+        <div class="promenade-light-cone"></div>
+        <div class="promenade-frame frame-floater-walnut">
+          <img src="${art.images.clean}" alt="${art.title}" style="width: ${w}px; height: ${h}px; object-fit: cover; display: block;">
+        </div>
+        <div class="promenade-label">
+          <div class="promenade-title">${art.title}</div>
+          <div class="promenade-meta">${art.genre}</div>
+          <div class="promenade-dim">${art.dimensions}</div>
+        </div>
+      `;
+
+      station.addEventListener('click', () => {
+        this.updateArtwork(index);
+        this.setMode('gallery');
+      });
+
+      this.dom.panoramicTrack.appendChild(station);
+    });
+
+    // Horizontal wheel scroll support
+    this.dom.panoramicPromenade.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        this.dom.panoramicPromenade.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    }, { passive: false });
   }
 
   applyProportionalDimensions() {
@@ -276,19 +375,31 @@ class GazelliCuratorialGallery {
     });
 
     // Reset views
+    if (this.dom.triptychContainer) this.dom.triptychContainer.style.display = 'none';
     this.dom.artworkMount.style.display = 'none';
+    if (this.dom.humanScaleFigure) this.dom.humanScaleFigure.style.display = 'none';
     this.dom.insituView.classList.remove('active');
     this.dom.plateView.classList.remove('active');
     this.dom.macroLoupe.style.display = 'none';
+    if (this.dom.panoramicPromenade) {
+      this.dom.panoramicPromenade.classList.remove('active');
+    }
 
     if (mode === 'gallery') {
+      if (this.dom.triptychContainer) this.dom.triptychContainer.style.display = 'flex';
       this.dom.artworkMount.style.display = 'flex';
+      if (this.dom.humanScaleFigure) this.dom.humanScaleFigure.style.display = 'flex';
       this.renderHotspots();
+    } else if (mode === 'panoramic') {
+      if (this.dom.panoramicPromenade) {
+        this.dom.panoramicPromenade.classList.add('active');
+      }
     } else if (mode === 'insitu') {
       this.dom.insituView.classList.add('active');
     } else if (mode === 'plate') {
       this.dom.plateView.classList.add('active');
     } else if (mode === 'macro') {
+      if (this.dom.triptychContainer) this.dom.triptychContainer.style.display = 'flex';
       this.dom.artworkMount.style.display = 'flex';
       this.dom.hotspotContainer.innerHTML = ''; // clear hotspots in loupe mode
     }
