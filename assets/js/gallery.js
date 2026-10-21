@@ -11,7 +11,7 @@ class GazelliCuratorialGallery {
     this.currentMode = 'gallery'; // 'gallery' | 'insitu' | 'plate' | 'macro'
     this.currentWall = 'limestone';
     this.currentFrame = 'floater-walnut';
-    this.showHumanScale = true;
+    this.showHumanScale = false;
     this.mouseSpotlight = true;
     this.spotlightIntensity = 0.85;
     this.spotlightTemp = 2700; // Kelvin
