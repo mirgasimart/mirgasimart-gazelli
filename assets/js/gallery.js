@@ -17,9 +17,7 @@ class GazelliCuratorialGallery {
     this.spotlightTemp = 2700; // Kelvin
     this.audioPlaying = false;
     this.audioCtx = null;
-    this.audioOscillators = [];
-    this.wingCollapsed = false;
-    this.pullReady = false;
+    this.wingCollapsed = true;
     this.currentOffsetX = 0;
     this.currentOffsetY = 0;
 
@@ -51,10 +49,6 @@ class GazelliCuratorialGallery {
       insituBadge: document.getElementById('insituBadge'),
       plateView: document.getElementById('plateView'),
       plateImg: document.getElementById('plateImg'),
-
-      // Mobile Pull-to-Refresh Indicator
-      pullIndicator: document.getElementById('pullRefreshIndicator'),
-      pullText: document.getElementById('pullRefreshText'),
 
       // Widescreen Curatorial Wings
       triptychContainer: document.getElementById('triptychContainer'),
@@ -259,12 +253,11 @@ class GazelliCuratorialGallery {
       this.dom.wingCollapseBtn.addEventListener('click', () => this.toggleWing(true));
     }
 
-    // Native Touch Gestures: Horizontal Artwork Swipe & Pull-to-Refresh
+    // Native Touch Gestures: Horizontal Artwork Swipe
     let touchStartX = 0;
     let touchStartY = 0;
     let touchStartTime = 0;
     let isTouchActive = false;
-    let isPullRefreshing = false;
     let lastTapTime = 0;
 
     // Double-tap on canvas to quickly toggle between Gallery and In-Situ Interior
@@ -288,8 +281,6 @@ class GazelliCuratorialGallery {
         touchStartY = e.touches[0].clientY;
         touchStartTime = Date.now();
         isTouchActive = true;
-        isPullRefreshing = false;
-        this.pullReady = false;
 
         if (this.currentMode === 'macro') {
           this.handleTouchLoupe(e.touches[0]);
@@ -312,33 +303,8 @@ class GazelliCuratorialGallery {
       const deltaX = e.touches[0].clientX - touchStartX;
       const deltaY = e.touches[0].clientY - touchStartY;
 
-      // 1. PULL-TO-REFRESH GESTURE (Dominant downward drag from upper area)
-      if (deltaY > 12 && deltaY > Math.abs(deltaX) * 1.15 && touchStartY < window.innerHeight * 0.75) {
-        isPullRefreshing = true;
-        const pullDist = Math.min(deltaY * 0.44, 90);
-
-        if (this.dom.pullIndicator) {
-          this.dom.pullIndicator.classList.add('visible');
-          this.dom.pullIndicator.classList.remove('transitioning');
-          this.dom.pullIndicator.style.transform = `translate(-50%, ${pullDist - 46}px)`;
-
-          const isPrimed = pullDist >= 52;
-          if (isPrimed && !this.pullReady) {
-            this.pullReady = true;
-            this.dom.pullIndicator.classList.add('ready');
-            if (this.dom.pullText) this.dom.pullText.textContent = 'Release to refresh';
-            if (navigator.vibrate) navigator.vibrate(14);
-          } else if (!isPrimed && this.pullReady) {
-            this.pullReady = false;
-            this.dom.pullIndicator.classList.remove('ready');
-            if (this.dom.pullText) this.dom.pullText.textContent = 'Pull to refresh';
-          }
-        }
-        return;
-      }
-
-      // 2. HORIZONTAL ARTWORK SWIPE (Dominant horizontal drag)
-      if (this.currentMode === 'gallery' && !isPullRefreshing) {
+      // Elastic horizontal artwork drag
+      if (this.currentMode === 'gallery') {
         if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
           const isScaleActive = this.dom.artworkMount.classList.contains('scale-active-mobile');
           const baseOffset = isScaleActive ? 24 : (this.currentOffsetX || 0);
@@ -351,33 +317,6 @@ class GazelliCuratorialGallery {
     appEl.addEventListener('touchend', (e) => {
       if (!isTouchActive) return;
       isTouchActive = false;
-
-      // 1. PULL-TO-REFRESH RESOLUTION
-      if (isPullRefreshing) {
-        isPullRefreshing = false;
-        if (this.pullReady) {
-          if (this.dom.pullIndicator) {
-            this.dom.pullIndicator.classList.add('refreshing');
-            this.dom.pullIndicator.style.transform = 'translate(-50%, 18px)';
-            if (this.dom.pullText) this.dom.pullText.textContent = 'Refreshing gallery...';
-          }
-          if (navigator.vibrate) navigator.vibrate([15, 35, 15]);
-          setTimeout(() => {
-            window.location.reload();
-          }, 320);
-          return;
-        } else {
-          // Cancelled pull
-          if (this.dom.pullIndicator) {
-            this.dom.pullIndicator.classList.add('transitioning');
-            this.dom.pullIndicator.style.transform = 'translate(-50%, -100%)';
-            setTimeout(() => {
-              this.dom.pullIndicator.classList.remove('visible', 'ready', 'transitioning');
-              this.pullReady = false;
-            }, 350);
-          }
-        }
-      }
 
       // Reset elastic horizontal drag transform
       if (this.currentMode === 'gallery') {
@@ -685,19 +624,28 @@ class GazelliCuratorialGallery {
       // Desktop / Laptop / 4K Ultrawide proportional scaling
       this.dom.artworkMount.classList.remove('scale-active-mobile');
 
-      const stageH = this.dom.stage.clientHeight - (isTablet ? 150 : 190);
+      const stageTotalWidth = this.dom.stage.clientWidth;
+      const stageTotalHeight = this.dom.stage.clientHeight;
+      const floorSkirtingY = 125; // Height of gallery floor skirting
+
+      // Available wall height between skirting and top header (with 50px headroom)
+      const wallAvailableH = stageTotalHeight - floorSkirtingY - 50;
+
+      // Available wall width
       const wingIsVisible = window.innerWidth >= 1101 && !this.wingCollapsed;
       const wingReserved = wingIsVisible ? (isWidescreen ? 420 : 340) : 60;
       const figureReserved = this.showHumanScale ? 160 : 60;
-      const stageW = this.dom.stage.clientWidth - wingReserved - figureReserved;
+      const wallAvailableW = stageTotalWidth - wingReserved - figureReserved;
 
-      // Allow higher scaling on 1440p / 4K / ultrawide displays
-      const maxScaleCeiling = isWidescreen ? 4.8 : (window.innerWidth >= 1440 ? 3.8 : 3.0);
-      const scaleFactorByHeight = stageH / (art.heightCm + 25);
-      const scaleFactorByWidth = stageW / (art.widthCm + 25);
+      // Real scale calibration:
+      // The 175cm human viewer and artwork top edge (hung with centerline at 158cm) must fit with headroom
+      const totalPhysicalHeightNeeded = Math.max(175 + 30, 158 + (art.heightCm / 2) + 25);
+      const scaleByHeight = wallAvailableH / totalPhysicalHeightNeeded;
+      const scaleByWidth = wallAvailableW / (art.widthCm + 40);
 
-      pxPerCm = Math.min(scaleFactorByHeight, scaleFactorByWidth);
-      pxPerCm = Math.min(Math.max(pxPerCm, 1.6), maxScaleCeiling);
+      const maxScaleCeiling = isWidescreen ? 2.8 : (window.innerWidth >= 1440 ? 2.5 : 2.2);
+      pxPerCm = Math.min(scaleByHeight, scaleByWidth);
+      pxPerCm = Math.min(Math.max(pxPerCm, 1.4), maxScaleCeiling);
 
       targetWidth = Math.round(art.widthCm * pxPerCm);
       targetHeight = Math.round(art.heightCm * pxPerCm);
@@ -710,34 +658,28 @@ class GazelliCuratorialGallery {
       this.dom.figureSvg.style.width = 'auto';
 
       // 1. TRUE WALL CENTERING:
-      // Center the artwork in the unobstructed wall space between the left screen edge and the right wing
-      const stageTotalWidth = this.dom.stage.clientWidth;
-      const clearLeft = this.showHumanScale ? 140 : 40;
+      const figureWidth = Math.round(humanHeightPx * (100 / 360));
+      const clearLeft = this.showHumanScale ? (figureWidth + 70) : 40;
       const clearRight = stageTotalWidth - (wingIsVisible ? (isWidescreen ? 420 : 340) : 40);
       const wallCenter = (clearLeft + clearRight) / 2;
       const offsetFromCenter = Math.round(wallCenter - (stageTotalWidth / 2));
 
-      // 2. MUSEUM EYE-LEVEL VERTICAL HANGING (58-62 inch / 158 cm centerline standard)
-      // Standard gallery installation aligns the horizontal centerline of the painting with viewer eye-level
-      const stageHeight = this.dom.stage.clientHeight;
-      const floorSkirtingY = 122; // Height of gallery floor skirting from bottom of stage
-      const targetCenterCm = 158; // Standard museum centerline height above gallery floor (158 cm / 62 in)
-      const desiredArtCenterY = floorSkirtingY + Math.round(targetCenterCm * pxPerCm);
-      const defaultCenterY = Math.round(stageHeight / 2);
+      // 2. MUSEUM EYE-LEVEL VERTICAL HANGING (58-62 inch / 158 cm centerline standard):
+      const desiredArtCenterY = floorSkirtingY + Math.round(158 * pxPerCm);
+      const defaultCenterY = Math.round(stageTotalHeight / 2);
 
       // Boundary safety check: Prevent painting from colliding with header bar or floor skirting
       const minClearCeiling = 32;
       const minClearSkirting = floorSkirtingY + 28;
       const halfArtHeight = targetHeight / 2;
-      const maxAllowedCenter = stageHeight - halfArtHeight - minClearCeiling;
+      const maxAllowedCenter = stageTotalHeight - halfArtHeight - minClearCeiling;
       const minAllowedCenter = minClearSkirting + halfArtHeight;
 
       let clampedCenter = desiredArtCenterY;
       if (maxAllowedCenter >= minAllowedCenter) {
         clampedCenter = Math.min(Math.max(desiredArtCenterY, minAllowedCenter), maxAllowedCenter);
       } else {
-        // Fallback for compact screens: center evenly in available wall space above skirting
-        clampedCenter = Math.round((minClearSkirting + (stageHeight - minClearCeiling)) / 2);
+        clampedCenter = Math.round((minClearSkirting + (stageTotalHeight - minClearCeiling)) / 2);
       }
 
       const offsetY = Math.round(-(clampedCenter - defaultCenterY));
@@ -746,14 +688,13 @@ class GazelliCuratorialGallery {
 
       this.dom.artworkMount.style.transform = `translate(${offsetFromCenter}px, ${offsetY}px)`;
 
-      // Ground and align human silhouette relative to the artwork's left frame edge
-      const figureOffsetFromArt = -(targetWidth / 2 + 75);
-      const figureTotalX = offsetFromCenter + figureOffsetFromArt;
-      this.dom.humanScaleFigure.style.transform = `translateX(${figureTotalX}px)`;
+      // 3. HUMAN SILHOUETTE: Positioned cleanly to the LEFT of the artwork with a 35px gap
+      const artLeftEdge = offsetFromCenter - (targetWidth / 2);
+      const figureCenterX = artLeftEdge - 35 - (figureWidth / 2);
+      this.dom.humanScaleFigure.style.transform = `translateX(${figureCenterX}px) translateX(-50%)`;
       this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
 
-      // 2. CURATORIAL PLACARD / TOMBSTONE PLACEMENT:
-      // Calculate unobstructed space to the right and left of the artwork frame
+      // 4. CURATORIAL PLACARD / TOMBSTONE PLACEMENT:
       const artRightEdgeX = (stageTotalWidth / 2) + offsetFromCenter + (targetWidth / 2);
       const rightAvailable = clearRight - artRightEdgeX;
       const leftAvailable = (stageTotalWidth / 2) + offsetFromCenter - (targetWidth / 2) - clearLeft;
@@ -761,13 +702,10 @@ class GazelliCuratorialGallery {
       this.dom.labelCard.className = 'gallery-label-card';
 
       if (rightAvailable >= 235) {
-        // Primary Museum Position: Mounted to the right of the floater frame at eye-level
         this.dom.labelCard.classList.add('placard-side-right');
       } else if (!this.showHumanScale || leftAvailable >= 235) {
-        // Secondary Museum Position: Mounted to the left of the floater frame
         this.dom.labelCard.classList.add('placard-side-left');
       } else {
-        // Fallback for monumental width works on compact screens: Docked neatly under right corner of frame
         this.dom.labelCard.classList.add('placard-docked-bottom');
       }
     }
@@ -776,11 +714,11 @@ class GazelliCuratorialGallery {
   updatePlacardLabel() {
     const art = this.artworks[this.currentIndex];
     const mediumText = art.minerals && art.minerals.length > 0 
-      ? art.minerals.map(m => m.name).slice(0, 2).join(' · ') 
-      : (art.genre || 'Oil and Raw Absheron Minerals on Canvas');
+      ? art.minerals[0].name
+      : (art.genre || 'Oil & Raw Absheron Minerals');
 
-    const placementNiche = art.niche ? art.niche.split('/')[0].trim() : 'Curatorial Commission';
-
+    // Rule of Three: (1) Studio & Year, (2) Master Title, (3) Scale & Key Medium
+    // Everything else is discovered seamlessly via Curatorial Dossier
     this.dom.labelCard.innerHTML = `
       <div class="placard-mount-dots">
         <span class="dot-tl"></span>
@@ -793,16 +731,11 @@ class GazelliCuratorialGallery {
         <span class="label-year">2026</span>
       </div>
       <div class="label-title">${art.title}</div>
-      <div class="label-az-title">${art.azTitle}</div>
-      <div class="label-divider"></div>
-      <div class="label-medium">${mediumText}</div>
-      <div class="label-dim">${art.dimensions}</div>
-      <div class="label-placement"><span class="placement-pip"></span>${placementNiche}</div>
+      <div class="label-dim">${art.dimensions} · ${mediumText}</div>
       <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)" title="Inspect Full Technical & Mineral Specifications">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         <span>Curatorial Dossier & Specs ↗</span>
       </button>
-      <div class="mobile-swipe-guide">← Swipe to explore Caspian suite →</div>
     `;
   }
 
