@@ -51,12 +51,12 @@ def generate_dossier_html(use_watermarked=True):
 
   body {{
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #1a1a1a;
+    color: #111114;
     background: #ffffff;
-    line-height: 1.45;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
-    font-size: 9pt;
+    font-size: 9.6pt;
   }}
 
   /* Exact A4 Page Container with Controlled Bleed Margins */
@@ -84,10 +84,10 @@ def generate_dossier_html(use_watermarked=True):
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.6pt solid #d4c9b8;
+    border-bottom: 0.8pt solid #d4c9b8;
     padding-bottom: 5px;
     margin-bottom: 8px;
-    font-size: 6.8pt;
+    font-size: 7.5pt;
     letter-spacing: 1.5px;
     text-transform: uppercase;
   }}
@@ -95,15 +95,16 @@ def generate_dossier_html(use_watermarked=True):
   .running-header .rh-atelier {{
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #111114;
     letter-spacing: 2px;
+    font-size: 8pt;
   }}
 
   .running-header .rh-title {{
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 7.8pt;
-    color: #666;
+    font-size: 8.5pt;
+    color: #444;
     letter-spacing: 0.5px;
     text-transform: none;
   }}
@@ -120,28 +121,30 @@ def generate_dossier_html(use_watermarked=True):
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 0.6pt solid #d4c9b8;
+    border-top: 0.8pt solid #d4c9b8;
     padding-top: 5px;
     margin-top: 6px;
-    font-size: 6.8pt;
-    color: #888;
+    font-size: 7.2pt;
+    color: #444;
     letter-spacing: 0.5px;
   }}
 
   .running-footer .rf-context {{
-    color: #666;
+    color: #333;
+    font-weight: 500;
   }}
 
   .running-footer .rf-copyright {{
-    color: #999;
-    font-size: 6.2pt;
+    color: #666;
+    font-size: 6.8pt;
   }}
 
   .running-footer .rf-folio {{
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #111;
     letter-spacing: 1.5px;
+    font-size: 7.8pt;
   }}
 
   /* Page 1: Cover Page */
@@ -223,10 +226,10 @@ def generate_dossier_html(use_watermarked=True):
     display: inline-block;
     background: #111;
     color: #fff;
-    font-size: 7pt;
+    font-size: 7.5pt;
     font-weight: 600;
     letter-spacing: 1.5px;
-    padding: 2px 7px;
+    padding: 2.5px 8px;
     text-transform: uppercase;
     border-radius: 2px;
     margin-bottom: 3px;
@@ -234,7 +237,7 @@ def generate_dossier_html(use_watermarked=True):
 
   h3.plate-title {{
     font-family: 'Playfair Display', serif;
-    font-size: 13.5pt;
+    font-size: 15.5pt;
     font-weight: 600;
     color: #111;
     margin: 0;
@@ -243,9 +246,9 @@ def generate_dossier_html(use_watermarked=True):
 
   .plate-subtitle {{
     font-style: italic;
-    font-size: 8.8pt;
-    color: #666;
-    margin: 1px 0 4px 0;
+    font-size: 9.8pt;
+    color: #444;
+    margin: 2px 0 5px 0;
   }}
 
   .artwork-showcase {{
@@ -259,7 +262,7 @@ def generate_dossier_html(use_watermarked=True):
 
   .artwork-showcase img {{
     max-width: 100%;
-    max-height: 340px;
+    max-height: 320px;
     height: auto;
     display: inline-block;
     border-radius: 2px;
@@ -270,35 +273,36 @@ def generate_dossier_html(use_watermarked=True):
     width: 100%;
     border-collapse: collapse;
     margin: 6px 0;
-    font-size: 8pt;
+    font-size: 9.4pt;
+    line-height: 1.5;
   }}
 
   .specs-grid td {{
-    padding: 3.5px 7px;
-    border-bottom: 1px solid #f0ece5;
+    padding: 4.5px 8px;
+    border-bottom: 1px solid #e8e3dc;
     vertical-align: top;
   }}
 
   .specs-grid td.spec-name {{
     width: 25%;
-    font-weight: 600;
-    color: #555;
+    font-weight: 700;
+    color: #222;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: #fcfbfa;
-    border-right: 1px solid #f0ece5;
-    font-size: 7.2pt;
+    background: #faf8f5;
+    border-right: 1px solid #e8e3dc;
+    font-size: 8pt;
   }}
 
   .specs-grid td.spec-val {{
     width: 75%;
-    color: #111;
+    color: #1a1a1a;
   }}
 
   .curatorial-narrative {{
-    font-size: 8.2pt;
-    line-height: 1.46;
-    color: #2a2a2a;
+    font-size: 9.4pt;
+    line-height: 1.52;
+    color: #1a1a1a;
     margin: 4px 0;
     text-align: justify;
   }}
