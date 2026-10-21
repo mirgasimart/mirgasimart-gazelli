@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0c0d0e">
   <title>Absheron Tectonics | Virtual Curatorial Gallery & Hanging View</title>
   <meta name="description" content="Interactive Museum Curatorial Hanging Experience for Gazelli Art House Commission by Mirgasim Art Studio. Features true architectural scale, dynamic gallery lighting, frame options, and raw mineral analysis.">
 
@@ -19,23 +22,64 @@
     
     <!-- TOP CURATORIAL HEADER -->
     <header class="gallery-header">
-      <div class="brand-section">
-        <img src="assets/branding/mirgasimart_wordmark_light_badge.png" alt="Mirgasim Art Studio" class="brand-badge" onerror="this.style.display='none'">
-        <div class="brand-titles">
-          <span class="brand-main">Absheron Tectonics</span>
-          <span class="brand-sub">Gazelli Art House Curatorial Commission Suite</span>
+      <div class="header-main-row">
+        <div class="brand-section">
+          <img src="assets/branding/mirgasimart_wordmark_light_badge.png" alt="Mirgasim Art Studio" class="brand-badge" onerror="this.style.display='none'">
+          <div class="brand-titles">
+            <span class="brand-main">Absheron Tectonics</span>
+            <span class="brand-sub">Gazelli Art House Curatorial Commission Suite</span>
+          </div>
+        </div>
+
+        <!-- CURATORIAL ACTIONS & CONTROLS -->
+        <div class="header-actions">
+          <!-- Scale Reference Toggle -->
+          <button id="scaleToggleBtn" class="action-btn active btn-scale-toggle" title="Toggle 175cm Human Scale Silhouette (Key: S)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v8m-4-5l4-1 4 1m-5 9l1-4 1 4"/></svg>
+            <span class="action-label">Scale (175 cm)</span>
+          </button>
+
+          <!-- Lighting Popover Toggle -->
+          <button id="lightingToggleBtn" class="action-btn btn-lighting-toggle" title="Gallery Lighting Settings (Key: L)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <span class="action-label">Lighting</span>
+          </button>
+
+          <!-- Ambient Gallery Soundscape -->
+          <button id="audioToggleBtn" class="action-btn btn-audio-toggle" title="Synthesized Caspian Ambient Tone (Key: A)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+            <span class="action-label">Atmosphere</span>
+          </button>
+
+          <!-- Mobile Quick Customizer Trigger (Finishes & Framing) -->
+          <button id="mobileCustomizerTrigger" class="action-btn btn-customizer-toggle" title="Wall & Frame Finishes">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span class="action-label">Finishes</span>
+          </button>
+
+          <!-- Curatorial Dossier Slideout -->
+          <button id="drawerOpenBtn" class="action-btn btn-dossier-toggle" title="Open Curatorial & Technical Dossier (Key: I)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="action-label">Dossier</span>
+          </button>
+
+          <!-- Executive PDF Master Dossier -->
+          <a id="pdfDownloadBtn" href="docs/output/latest/MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf" target="_blank" class="action-btn btn-pdf-download" style="text-decoration: none;" title="Download Official Curatorial Master Dossier (7-Page PDF)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            <span class="action-label">PDF</span>
+          </a>
         </div>
       </div>
 
       <!-- VIEW MODE SWITCHER TABS -->
-      <nav class="view-mode-tabs" aria-label="Viewing Modes">
+      <nav id="viewModeTabs" class="view-mode-tabs" aria-label="Viewing Modes">
         <button class="mode-tab active" data-mode="gallery" title="Gallery Wall Hanging View (Key: G)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <span>Hanging Stage</span>
         </button>
         <button class="mode-tab" data-mode="panoramic" title="Continuous Panoramic Multi-Artwork Wall (Key: W)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="1"/><line x1="8" y1="7" x2="8" y2="17"/><line x1="16" y1="7" x2="16" y2="17"/></svg>
-          <span>Panoramic Promenade</span>
+          <span>Panoramic Walk</span>
         </button>
         <button class="mode-tab" data-mode="insitu" title="Architectural In-Situ Interior (Key: N)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -50,44 +94,14 @@
           <span>Tactile Loupe</span>
         </button>
       </nav>
-
-      <!-- CURATORIAL ACTIONS & CONTROLS -->
-      <div class="header-actions">
-        <!-- Scale Reference Toggle -->
-        <button id="scaleToggleBtn" class="action-btn active" title="Toggle 175cm Human Scale Silhouette (Key: S)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v8m-4-5l4-1 4 1m-5 9l1-4 1 4"/></svg>
-          <span>Human Scale (175 cm)</span>
-        </button>
-
-        <!-- Lighting Popover Toggle -->
-        <button id="lightingToggleBtn" class="action-btn" title="Gallery Lighting Settings (Key: L)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <span>Lighting</span>
-        </button>
-
-        <!-- Ambient Gallery Soundscape -->
-        <button id="audioToggleBtn" class="action-btn" title="Synthesized Caspian Ambient Tone (Key: A)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
-          <span>Atmosphere</span>
-        </button>
-
-        <!-- Curatorial Dossier Slideout -->
-        <button id="drawerOpenBtn" class="action-btn" title="Open Curatorial & Technical Dossier (Key: I)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          <span>Curatorial Dossier</span>
-        </button>
-
-        <!-- Executive PDF Master Dossier -->
-        <a href="docs/output/latest/MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf" target="_blank" class="action-btn" style="text-decoration: none; background: rgba(212, 175, 55, 0.15); border-color: var(--gold-primary); color: var(--gold-light);" title="Download Official Curatorial Master Dossier (7-Page PDF)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
-          <span>Executive Dossier (PDF)</span>
-        </a>
-      </div>
     </header>
 
-    <!-- LIGHTING SETTINGS POPOVER -->
+    <!-- LIGHTING SETTINGS POPOVER (Desktop Dropdown & Mobile Fallback) -->
     <div id="lightingPopover" class="popover-menu">
-      <div class="popover-title">Curatorial Lighting Controls</div>
+      <div class="popover-header">
+        <div class="popover-title">Curatorial Lighting Controls</div>
+        <button id="lightingCloseBtn" class="popover-close-btn" aria-label="Close">✕</button>
+      </div>
       
       <div class="slider-row">
         <div class="slider-header">
@@ -106,7 +120,7 @@
       </div>
 
       <div class="slider-row" style="flex-direction: row; align-items: center; justify-content: space-between;">
-        <span style="font-size: 11px; color: var(--text-secondary);">Interactive Follow-Mouse Beam</span>
+        <span style="font-size: 11px; color: var(--text-secondary);">Interactive Follow-Beam</span>
         <input type="checkbox" id="mouseSpotToggle" checked style="accent-color: var(--gold-primary);">
       </div>
     </div>
@@ -381,8 +395,86 @@
           </div>
         </div>
 
+        <!-- Direct PDF Download inside Drawer for Mobile Convenience -->
+        <div class="drawer-section" style="padding-bottom: 24px;">
+          <a href="docs/output/latest/MIRGASIM_ART_GAZELLI_COMMISSION_DOSSIER.pdf" target="_blank" class="drawer-pdf-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            <span>Download Official Master Dossier (PDF)</span>
+          </a>
+        </div>
+
       </div>
     </aside>
+
+    <!-- MOBILE CURATORIAL CUSTOMIZER BOTTOM SHEET -->
+    <div id="mobileCustomizerSheet" class="mobile-sheet">
+      <div class="mobile-sheet-backdrop" id="customizerBackdrop"></div>
+      <div class="mobile-sheet-panel">
+        <div class="mobile-sheet-handle"></div>
+        <div class="mobile-sheet-header">
+          <div class="mobile-sheet-title">Curatorial Finishes & Lighting</div>
+          <button id="customizerCloseBtn" class="mobile-sheet-close" aria-label="Close Customizer">✕</button>
+        </div>
+        <div class="mobile-sheet-content">
+          <!-- Wall Plaster Selection -->
+          <div class="sheet-section">
+            <span class="sheet-label">Absheron Wall Plaster</span>
+            <div class="sheet-pill-grid" id="mobileWallOptions">
+              <button class="sheet-pill active" data-wall="limestone">Limestone</button>
+              <button class="sheet-pill" data-wall="white-cube">White Cube</button>
+              <button class="sheet-pill" data-wall="anthracite">Anthracite</button>
+              <button class="sheet-pill" data-wall="travertine">Travertine</button>
+            </div>
+          </div>
+
+          <!-- Turnkey Framing Selection -->
+          <div class="sheet-section">
+            <span class="sheet-label">Turnkey Framing</span>
+            <div class="sheet-pill-grid" id="mobileFrameOptions">
+              <button class="sheet-pill active" data-frame="floater-walnut">Walnut Floater</button>
+              <button class="sheet-pill" data-frame="museum-edge">Museum Wrap</button>
+              <button class="sheet-pill" data-frame="floater-steel">Steel</button>
+              <button class="sheet-pill" data-frame="floater-brass">Brass</button>
+              <button class="sheet-pill" data-frame="passe-partout">Passe-Partout</button>
+            </div>
+          </div>
+
+          <!-- Human Scale & Audio Toggles -->
+          <div class="sheet-section sheet-toggle-row">
+            <div>
+              <div class="sheet-toggle-label">175 cm Human Scale Reference</div>
+              <div class="sheet-toggle-sub">Architectural viewer proportion</div>
+            </div>
+            <button id="mobileScaleSwitch" class="sheet-switch active">ON</button>
+          </div>
+
+          <div class="sheet-section sheet-toggle-row">
+            <div>
+              <div class="sheet-toggle-label">Caspian Ambient Soundscape</div>
+              <div class="sheet-toggle-sub">Synthesized geological atmosphere</div>
+            </div>
+            <button id="mobileAudioSwitch" class="sheet-switch">OFF</button>
+          </div>
+
+          <!-- Lighting Sliders -->
+          <div class="sheet-section">
+            <div class="slider-header">
+              <span>Spotlight Intensity</span>
+              <span id="mobileIntensityVal">85%</span>
+            </div>
+            <input type="range" id="mobileIntensitySlider" class="slider-input" min="0.2" max="1.0" step="0.05" value="0.85">
+          </div>
+
+          <div class="sheet-section">
+            <div class="slider-header">
+              <span>Color Temperature</span>
+              <span id="mobileTempVal">2700K (Warm Gallery)</span>
+            </div>
+            <input type="range" id="mobileTempSlider" class="slider-input" min="2400" max="4500" step="100" value="2700">
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 

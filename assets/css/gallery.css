@@ -64,8 +64,10 @@ html, body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   position: relative;
   overflow: hidden;
+  touch-action: manipulation;
 }
 
 /* ==========================================================================
@@ -82,16 +84,21 @@ html, body {
   align-items: center;
   justify-content: space-between;
   padding: 0 28px;
-  background: linear-gradient(180deg, rgba(10, 11, 13, 0.88) 0%, rgba(10, 11, 13, 0.45) 75%, transparent 100%);
+  background: linear-gradient(180deg, rgba(10, 11, 13, 0.92) 0%, rgba(10, 11, 13, 0.6) 80%, transparent 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.header-main-row {
+  display: contents;
+}
+
 .brand-section {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
 .brand-badge {
@@ -119,6 +126,7 @@ html, body {
   text-transform: uppercase;
   color: #fff;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .brand-sub {
@@ -128,15 +136,17 @@ html, body {
   letter-spacing: 0.05em;
   color: var(--gold-light);
   opacity: 0.85;
+  white-space: nowrap;
 }
 
 /* Curatorial Mode Selector Tabs */
 .view-mode-tabs {
   display: flex;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
   padding: 4px;
   border-radius: 30px;
   border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
 }
 
 .mode-tab {
@@ -154,6 +164,7 @@ html, body {
   letter-spacing: 0.04em;
   cursor: pointer;
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .mode-tab:hover {
@@ -170,13 +181,15 @@ html, body {
   width: 14px;
   height: 14px;
   opacity: 0.85;
+  flex-shrink: 0;
 }
 
 /* Header Action Controls */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .action-btn {
@@ -186,13 +199,14 @@ html, body {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
-  padding: 7px 14px;
+  padding: 7px 13px;
   border-radius: 6px;
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .action-btn:hover {
@@ -210,6 +224,18 @@ html, body {
 .action-btn svg {
   width: 14px;
   height: 14px;
+  flex-shrink: 0;
+}
+
+/* Mobile Customizer Trigger hidden by default on desktop */
+.btn-customizer-toggle {
+  display: none;
+}
+
+.btn-pdf-download {
+  background: rgba(212, 175, 55, 0.15) !important;
+  border-color: var(--gold-primary) !important;
+  color: var(--gold-light) !important;
 }
 
 /* ==========================================================================
