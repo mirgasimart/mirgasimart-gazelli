@@ -102,7 +102,7 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Turnkey Specifications**:
   - *Edge Treatment*: Gallery-wrapped coquina primer edges or minimal blackened steel floater frame.
   - *Chassis & Weight*: Solid reinforced wood cradle; estimated weight ~3.2 kg.
-  - *Mounting Hardware*: Single aluminum Z-bar cleat with locking screw.
+  - *Mounting Hardware*: Single aluminum Z-bar cleat with locking pin.
   - *Lighting Recommendation*: 2700K–3000K accent spotlight with narrow 15° beam.
 
 ---
