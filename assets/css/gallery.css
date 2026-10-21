@@ -95,6 +95,7 @@ html, body {
 }
 
 .brand-section {
+  order: 1;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -141,6 +142,7 @@ html, body {
 
 /* Curatorial Mode Selector Tabs */
 .view-mode-tabs {
+  order: 2;
   display: flex;
   background: rgba(0, 0, 0, 0.45);
   padding: 4px;
@@ -186,6 +188,7 @@ html, body {
 
 /* Header Action Controls */
 .header-actions {
+  order: 3;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1245,7 +1248,6 @@ html, body {
   overflow: hidden;
   border: 1px solid var(--border-subtle);
   cursor: pointer;
-  group: hover;
 }
 
 .wing-insitu-preview img {
@@ -1441,39 +1443,760 @@ html, body {
 }
 
 /* ==========================================================================
-   RESPONSIVE STYLES
+   MOBILE CURATORIAL BOTTOM SHEET & MODAL STYLES
    ========================================================================== */
+.popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+.popover-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: none;
+}
+
+.popover-close-btn:hover {
+  color: #fff;
+}
+
+/* Mobile Sheet Drawer */
+.mobile-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+.mobile-sheet.open {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.mobile-sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.mobile-sheet.open .mobile-sheet-backdrop {
+  opacity: 1;
+}
+
+.mobile-sheet-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 84vh;
+  background: rgba(18, 20, 24, 0.98);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-top: 1px solid var(--border-gold);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -15px 45px rgba(0, 0, 0, 0.85);
+  transform: translateY(100%);
+  transition: transform 0.4s var(--ease-cinematic);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 18px calc(env(safe-area-inset-bottom, 0px) + 20px) 18px;
+}
+
+.mobile-sheet.open .mobile-sheet-panel {
+  transform: translateY(0);
+}
+
+.mobile-sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  margin: 0 auto 12px auto;
+}
+
+.mobile-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 14px;
+}
+
+.mobile-sheet-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.mobile-sheet-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: var(--transition-smooth);
+}
+
+.mobile-sheet-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.mobile-sheet-content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 4px;
+}
+
+.sheet-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sheet-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-light);
+}
+
+.sheet-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.sheet-pill {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.sheet-pill:hover, .sheet-pill:active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.sheet-pill.active {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.sheet-toggle-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sheet-toggle-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.sheet-toggle-sub {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.sheet-switch {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.sheet-switch.active {
+  background: var(--gold-primary);
+  color: #0c0d0e;
+  border-color: var(--gold-primary);
+}
+
+/* Drawer PDF Button */
+.drawer-pdf-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(212, 175, 55, 0.16);
+  border: 1px solid var(--gold-primary);
+  border-radius: 6px;
+  color: var(--gold-light);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.drawer-pdf-btn:hover, .drawer-pdf-btn:active {
+  background: rgba(212, 175, 55, 0.28);
+  color: #fff;
+}
+
+.drawer-pdf-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Hotspot active state for mobile touchscreen */
+.tactile-hotspot.active {
+  transform: translate(-50%, -50%) scale(1.25);
+  z-index: 35;
+}
+
+.tactile-hotspot.active .hotspot-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* Hide mobile swipe guide by default on desktop/laptops */
+.mobile-swipe-guide {
+  display: none;
+}
+
+/* On wide laptops & desktops where wings are active, hide redundant floating placard */
+@media (min-width: 1101px) {
+  .gallery-label-card {
+    display: none !important;
+  }
+}
+
+/* Compact Laptops (1100px - 1400px) */
 @media (max-width: 1400px) {
   .stage-wing {
     width: 260px;
     padding: 14px;
   }
+  .triptych-container {
+    padding: 0 20px;
+  }
 }
 
+/* Small Laptops & Tablets Landscape (901px - 1100px) */
 @media (max-width: 1100px) {
   .stage-wing {
     display: none;
   }
+  .gallery-header {
+    padding: 0 20px;
+  }
 }
 
+/* Tablets Portrait & Large Phones (<= 900px) */
 @media (max-width: 900px) {
   .gallery-header {
-    padding: 0 16px;
+    height: auto;
+    flex-direction: column;
+    padding: calc(env(safe-area-inset-top, 0px) + 8px) 16px 10px 16px;
+    gap: 10px;
+    background: rgba(10, 11, 13, 0.94);
   }
+
+  .header-main-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .brand-sub {
     display: none;
   }
-  .view-mode-tabs .mode-tab span {
+
+  .brand-main {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  .brand-badge {
+    height: 24px;
+  }
+
+  /* Mode Switcher Tabs as Smooth Horizontal Bar */
+  .view-mode-tabs {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 3px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .view-mode-tabs::-webkit-scrollbar {
     display: none;
   }
-  .gallery-label-card {
+
+  .mode-tab {
+    padding: 7px 12px;
+    font-size: 11px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .mode-tab span {
+    display: inline;
+  }
+
+  /* Header action buttons on mobile */
+  .header-actions {
+    gap: 8px;
+  }
+
+  .action-btn .action-label {
     display: none;
   }
-  .thumbnail-strip {
-    max-width: 100%;
+
+  .action-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 8px;
   }
+
+  /* Hide human scale toggle button from top header on small screens; available via customizer */
+  .btn-scale-toggle {
+    display: none;
+  }
+
+  /* Reveal Finishes Customizer on mobile */
+  .btn-customizer-toggle {
+    display: flex;
+  }
+
+  .gallery-stage {
+    padding-top: 100px;
+    padding-bottom: 84px;
+  }
+
+  /* Hide desktop quick controls in footer */
   .quick-controls {
     display: none;
   }
+
+  .thumbnail-strip {
+    max-width: 78%;
+  }
 }
+
+/* Mobile Phones: iPhone, Android (<= 768px) */
+@media (max-width: 768px) {
+  .app-container {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .gallery-header {
+    padding: calc(env(safe-area-inset-top, 0px) + 6px) 12px 8px 12px;
+    gap: 8px;
+  }
+
+  .brand-section {
+    gap: 10px;
+  }
+
+  .brand-badge {
+    height: 22px;
+  }
+
+  .brand-main {
+    font-size: 11.5px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .action-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Stage adjustments */
+  .gallery-stage {
+    perspective: none;
+    padding-top: 104px;
+    padding-bottom: 78px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ceiling-track, .ceiling-lamp {
+    display: none;
+  }
+
+  .gallery-floor {
+    height: 110px;
+    transform: perspective(400px) rotateX(32deg);
+  }
+
+  .gallery-skirting {
+    bottom: 80px;
+  }
+
+  /* Artwork Mount centered with integrated mobile label card */
+  .triptych-container {
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .artwork-mount {
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    max-width: 95vw;
+  }
+
+  /* Mobile Placard Card */
+  .gallery-label-card {
+    position: static;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    max-width: 330px;
+    margin: 12px auto 0 auto;
+    text-align: center;
+    background: rgba(14, 16, 20, 0.9);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .label-artist {
+    font-size: 8.5px;
+    letter-spacing: 0.12em;
+  }
+
+  .label-title {
+    font-size: 13.5px;
+    line-height: 1.25;
+  }
+
+  .label-meta {
+    font-size: 10px;
+    color: var(--text-secondary);
+  }
+
+  .label-dim {
+    font-size: 9.5px;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .label-dossier-link {
+    margin-top: 5px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: var(--gold-light);
+    font-size: 10px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+  }
+
+  .label-dossier-link:active {
+    background: rgba(212, 175, 55, 0.25);
+  }
+
+  .mobile-swipe-guide {
+    font-size: 9px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Human Scale Figure on mobile: positioned at screen edge with subtle reference */
+  .human-scale-figure {
+    position: absolute;
+    bottom: 74px;
+    left: 8px;
+    z-index: 6;
+    pointer-events: none;
+    opacity: 0;
+    transform: none !important;
+  }
+
+  .human-scale-figure.visible {
+    opacity: 0.7;
+  }
+
+  .scale-height-label {
+    font-size: 8px;
+    padding: 1px 4px;
+    right: auto;
+    left: 20px;
+  }
+
+  /* Bottom Promenade Footer */
+  .gallery-footer {
+    height: 72px;
+    padding: 0 8px calc(env(safe-area-inset-bottom, 0px) + 6px) 8px;
+    background: linear-gradient(0deg, rgba(8, 9, 11, 0.98) 0%, rgba(8, 9, 11, 0.88) 100%);
+  }
+
+  .thumbnail-strip {
+    max-width: 76%;
+    gap: 8px;
+    padding: 2px;
+  }
+
+  .thumb-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+  }
+
+  .arrow-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .arrow-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Popover Menu as Bottom Sheet on Mobile */
+  .popover-menu {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 16px 20px calc(env(safe-area-inset-bottom, 0px) + 18px) 20px;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.85);
+    border-top: 1px solid var(--border-gold);
+    z-index: 110;
+  }
+
+  .popover-close-btn {
+    display: flex;
+  }
+
+  /* Slide-Out Curatorial Drawer on Mobile: Full-Screen App Experience */
+  .curatorial-drawer {
+    width: 100vw;
+    max-width: 100vw;
+    right: -100vw;
+    border-left: none;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .drawer-header {
+    padding: 16px 20px 12px 20px;
+  }
+
+  .drawer-title {
+    font-size: 19px;
+  }
+
+  .drawer-content {
+    padding: 16px 20px calc(24px + env(safe-area-inset-bottom, 0px)) 20px;
+    gap: 18px;
+  }
+
+  /* Fullscreen In-Situ & Plate on Mobile */
+  .fullscreen-img {
+    max-width: 95vw;
+    max-height: calc(100dvh - 180px);
+  }
+
+  .fullscreen-badge {
+    bottom: 84px;
+    font-size: 10.5px;
+    padding: 6px 14px;
+  }
+
+  /* Panoramic Promenade Mobile Track */
+  .panoramic-wall-track {
+    gap: 60px;
+    padding: 0 40px;
+  }
+
+  .promenade-station {
+    transform: none !important;
+  }
+
+  .promenade-label {
+    width: 170px;
+    padding: 6px 10px;
+    margin-top: 14px;
+  }
+
+  .promenade-title {
+    font-size: 11.5px;
+  }
+
+  /* Tactile Loupe Mobile Dimensions */
+  .macro-loupe {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Extra Small Phones: iPhone SE, Galaxy A-series (<= 380px) */
+@media (max-width: 380px) {
+  .brand-main {
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+  }
+
+  .action-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .action-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .thumb-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .thumbnail-strip {
+    max-width: 72%;
+    gap: 6px;
+  }
+
+  .gallery-label-card {
+    max-width: 290px;
+    padding: 6px 10px;
+  }
+
+  .label-title {
+    font-size: 12.5px;
+  }
+}
+
+/* Landscape Mode on Mobile Phones */
+@media (max-height: 520px) and (orientation: landscape) {
+  .gallery-header {
+    height: 48px;
+    flex-direction: row;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .header-main-row {
+    display: contents;
+  }
+
+  .view-mode-tabs {
+    width: auto;
+    padding: 2px;
+  }
+
+  .mode-tab {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+
+  .mode-tab span {
+    display: none;
+  }
+
+  .gallery-stage {
+    padding-top: 52px;
+    padding-bottom: 58px;
+  }
+
+  .gallery-footer {
+    height: 54px;
+    padding: 0 10px;
+  }
+
+  .thumb-item {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gallery-label-card {
+    display: none;
+  }
+
+  .human-scale-figure {
+    display: none !important;
+  }
+}
+
 

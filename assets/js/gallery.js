@@ -76,9 +76,22 @@ class GazelliCuratorialGallery {
       drawerCloseBtn: document.getElementById('drawerCloseBtn'),
       lightingPopover: document.getElementById('lightingPopover'),
       lightingToggleBtn: document.getElementById('lightingToggleBtn'),
+      lightingCloseBtn: document.getElementById('lightingCloseBtn'),
       audioToggleBtn: document.getElementById('audioToggleBtn'),
       scaleToggleBtn: document.getElementById('scaleToggleBtn'),
       
+      // Mobile Customizer Bottom Sheet
+      mobileCustomizerTrigger: document.getElementById('mobileCustomizerTrigger'),
+      mobileCustomizerSheet: document.getElementById('mobileCustomizerSheet'),
+      customizerCloseBtn: document.getElementById('customizerCloseBtn'),
+      customizerBackdrop: document.getElementById('customizerBackdrop'),
+      mobileScaleSwitch: document.getElementById('mobileScaleSwitch'),
+      mobileAudioSwitch: document.getElementById('mobileAudioSwitch'),
+      mobileIntensitySlider: document.getElementById('mobileIntensitySlider'),
+      mobileIntensityVal: document.getElementById('mobileIntensityVal'),
+      mobileTempSlider: document.getElementById('mobileTempSlider'),
+      mobileTempVal: document.getElementById('mobileTempVal'),
+
       // Sliders & inputs
       intensitySlider: document.getElementById('intensitySlider'),
       tempSlider: document.getElementById('tempSlider'),
@@ -88,9 +101,9 @@ class GazelliCuratorialGallery {
   }
 
   bindEvents() {
-    // Mode tabs
+    // Mode tabs (Desktop and Mobile)
     document.querySelectorAll('.mode-tab').forEach(tab => {
-      tab.addEventListener('click', (e) => {
+      tab.addEventListener('click', () => {
         const mode = tab.dataset.mode;
         this.setMode(mode);
       });
@@ -104,11 +117,17 @@ class GazelliCuratorialGallery {
     this.dom.drawerOpenBtn.addEventListener('click', () => this.toggleDrawer(true));
     this.dom.drawerCloseBtn.addEventListener('click', () => this.toggleDrawer(false));
 
-    // Popover
+    // Popover toggle (Lighting controls)
     this.dom.lightingToggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       this.dom.lightingPopover.classList.toggle('open');
     });
+
+    if (this.dom.lightingCloseBtn) {
+      this.dom.lightingCloseBtn.addEventListener('click', () => {
+        this.dom.lightingPopover.classList.remove('open');
+      });
+    }
 
     document.addEventListener('click', (e) => {
       if (!this.dom.lightingPopover.contains(e.target) && e.target !== this.dom.lightingToggleBtn) {
@@ -116,28 +135,103 @@ class GazelliCuratorialGallery {
       }
     });
 
-    // Human scale toggle
+    // Mobile Customizer Bottom Sheet events
+    if (this.dom.mobileCustomizerTrigger) {
+      this.dom.mobileCustomizerTrigger.addEventListener('click', () => {
+        this.toggleMobileCustomizer(true);
+      });
+    }
+    if (this.dom.customizerCloseBtn) {
+      this.dom.customizerCloseBtn.addEventListener('click', () => {
+        this.toggleMobileCustomizer(false);
+      });
+    }
+    if (this.dom.customizerBackdrop) {
+      this.dom.customizerBackdrop.addEventListener('click', () => {
+        this.toggleMobileCustomizer(false);
+      });
+    }
+
+    // Human scale toggle (desktop button)
     this.dom.scaleToggleBtn.addEventListener('click', () => {
       this.showHumanScale = !this.showHumanScale;
       this.dom.scaleToggleBtn.classList.toggle('active', this.showHumanScale);
+      if (this.dom.mobileScaleSwitch) {
+        this.dom.mobileScaleSwitch.classList.toggle('active', this.showHumanScale);
+        this.dom.mobileScaleSwitch.textContent = this.showHumanScale ? 'ON' : 'OFF';
+      }
       this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
     });
+
+    // Mobile Scale Switch
+    if (this.dom.mobileScaleSwitch) {
+      this.dom.mobileScaleSwitch.addEventListener('click', () => {
+        this.showHumanScale = !this.showHumanScale;
+        this.dom.mobileScaleSwitch.classList.toggle('active', this.showHumanScale);
+        this.dom.mobileScaleSwitch.textContent = this.showHumanScale ? 'ON' : 'OFF';
+        this.dom.scaleToggleBtn.classList.toggle('active', this.showHumanScale);
+        this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
+      });
+    }
 
     // Audio atmosphere toggle
     this.dom.audioToggleBtn.addEventListener('click', () => {
       this.toggleAudioAtmosphere();
+      if (this.dom.mobileAudioSwitch) {
+        this.dom.mobileAudioSwitch.classList.toggle('active', this.audioPlaying);
+        this.dom.mobileAudioSwitch.textContent = this.audioPlaying ? 'ON' : 'OFF';
+      }
     });
 
-    // Lighting controls
+    if (this.dom.mobileAudioSwitch) {
+      this.dom.mobileAudioSwitch.addEventListener('click', () => {
+        this.toggleAudioAtmosphere();
+        this.dom.mobileAudioSwitch.classList.toggle('active', this.audioPlaying);
+        this.dom.mobileAudioSwitch.textContent = this.audioPlaying ? 'ON' : 'OFF';
+      });
+    }
+
+    // Lighting controls (Desktop sliders)
     this.dom.intensitySlider.addEventListener('input', (e) => {
       this.spotlightIntensity = parseFloat(e.target.value);
+      const pct = Math.round(this.spotlightIntensity * 100);
+      document.getElementById('intensityVal').textContent = `${pct}%`;
+      if (this.dom.mobileIntensityVal) this.dom.mobileIntensityVal.textContent = `${pct}%`;
+      if (this.dom.mobileIntensitySlider) this.dom.mobileIntensitySlider.value = e.target.value;
       this.updateLightingPhysics();
     });
 
     this.dom.tempSlider.addEventListener('input', (e) => {
       this.spotlightTemp = parseInt(e.target.value);
+      const label = this.spotlightTemp <= 2800 ? '2700K (Warm Gallery)' : this.spotlightTemp <= 3400 ? '3200K (Neutral White)' : '4200K (Cool Daylight)';
+      document.getElementById('tempVal').textContent = label;
+      if (this.dom.mobileTempVal) this.dom.mobileTempVal.textContent = label;
+      if (this.dom.mobileTempSlider) this.dom.mobileTempSlider.value = e.target.value;
       this.updateLightingPhysics();
     });
+
+    // Mobile sliders syncing with desktop
+    if (this.dom.mobileIntensitySlider) {
+      this.dom.mobileIntensitySlider.addEventListener('input', (e) => {
+        this.spotlightIntensity = parseFloat(e.target.value);
+        this.dom.intensitySlider.value = e.target.value;
+        const pct = Math.round(this.spotlightIntensity * 100);
+        document.getElementById('intensityVal').textContent = `${pct}%`;
+        if (this.dom.mobileIntensityVal) this.dom.mobileIntensityVal.textContent = `${pct}%`;
+        this.updateLightingPhysics();
+      });
+    }
+
+    if (this.dom.mobileTempSlider) {
+      this.dom.mobileTempSlider.addEventListener('input', (e) => {
+        this.spotlightTemp = parseInt(e.target.value);
+        this.dom.tempSlider.value = e.target.value;
+        const label = this.spotlightTemp <= 2800 ? '2700K (Warm Gallery)' : this.spotlightTemp <= 3400 ? '3200K (Neutral White)' : '4200K (Cool Daylight)';
+        document.getElementById('tempVal').textContent = label;
+        if (this.dom.mobileTempVal) this.dom.mobileTempVal.textContent = label;
+        this.updateLightingPhysics();
+      });
+    }
 
     this.dom.mouseSpotToggle.addEventListener('change', (e) => {
       this.mouseSpotlight = e.target.checked;
@@ -147,21 +241,92 @@ class GazelliCuratorialGallery {
     this.dom.stage.addEventListener('mousemove', (e) => this.handleMouseMove(e));
     this.dom.stage.addEventListener('mouseleave', () => this.handleMouseLeave());
 
-    // Wall texture buttons
+    // Native Touch Gestures on Mobile (iPhone / Android)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+    let isTouchActive = false;
+
+    this.dom.stage.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchStartTime = Date.now();
+        isTouchActive = true;
+
+        if (this.currentMode === 'macro') {
+          this.handleTouchLoupe(e.touches[0]);
+        }
+      }
+    }, { passive: true });
+
+    this.dom.stage.addEventListener('touchmove', (e) => {
+      if (!isTouchActive || e.touches.length !== 1) return;
+      if (this.currentMode === 'macro') {
+        this.handleTouchLoupe(e.touches[0]);
+      }
+    }, { passive: true });
+
+    this.dom.stage.addEventListener('touchend', (e) => {
+      if (!isTouchActive) return;
+      isTouchActive = false;
+
+      if (this.currentMode === 'macro') {
+        this.handleMouseLeave();
+        return;
+      }
+
+      if (e.changedTouches.length === 1) {
+        const deltaX = e.changedTouches[0].clientX - touchStartX;
+        const deltaY = e.changedTouches[0].clientY - touchStartY;
+        const deltaTime = Date.now() - touchStartTime;
+
+        // Valid swipe: horizontal threshold 40px, predominantly horizontal, swift flick under 500ms
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY) * 1.3 && deltaTime < 500) {
+          if (deltaX < 0) {
+            this.navigate(1); // Swipe left: next artwork
+          } else {
+            this.navigate(-1); // Swipe right: previous artwork
+          }
+        }
+      }
+    }, { passive: true });
+
+    // Wall texture buttons (Desktop toolbar)
     document.querySelectorAll('[data-wall]').forEach(btn => {
       btn.addEventListener('click', () => {
         this.setWall(btn.dataset.wall);
-        document.querySelectorAll('[data-wall]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        document.querySelectorAll('[data-wall]').forEach(b => b.classList.toggle('active', b.dataset.wall === btn.dataset.wall));
+        document.querySelectorAll('#mobileWallOptions .sheet-pill').forEach(b => b.classList.toggle('active', b.dataset.wall === btn.dataset.wall));
       });
     });
 
-    // Frame style buttons
+    // Mobile Wall Plaster pills
+    document.querySelectorAll('#mobileWallOptions .sheet-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.setWall(btn.dataset.wall);
+        document.querySelectorAll('#mobileWallOptions .sheet-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('[data-wall]').forEach(b => b.classList.toggle('active', b.dataset.wall === btn.dataset.wall));
+      });
+    });
+
+    // Frame style buttons (Desktop toolbar)
     document.querySelectorAll('[data-frame]').forEach(btn => {
       btn.addEventListener('click', () => {
         this.setFrame(btn.dataset.frame);
-        document.querySelectorAll('[data-frame]').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('[data-frame]').forEach(b => b.classList.toggle('active', b.dataset.frame === btn.dataset.frame));
+        document.querySelectorAll('#mobileFrameOptions .sheet-pill').forEach(b => b.classList.toggle('active', b.dataset.frame === btn.dataset.frame));
+      });
+    });
+
+    // Mobile Framing pills
+    document.querySelectorAll('#mobileFrameOptions .sheet-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.setFrame(btn.dataset.frame);
+        document.querySelectorAll('#mobileFrameOptions .sheet-pill').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        document.querySelectorAll('[data-frame]').forEach(b => b.classList.toggle('active', b.dataset.frame === btn.dataset.frame));
       });
     });
 
@@ -175,6 +340,9 @@ class GazelliCuratorialGallery {
 
     // Resize handler to recalculate real-world scale
     window.addEventListener('resize', () => this.applyProportionalDimensions());
+    window.addEventListener('orientationchange', () => {
+      setTimeout(() => this.applyProportionalDimensions(), 150);
+    });
   }
 
   renderThumbnails() {
@@ -256,8 +424,7 @@ class GazelliCuratorialGallery {
     if (!this.dom.panoramicTrack) return;
     this.dom.panoramicTrack.innerHTML = '';
 
-    // Standard human scale figure in panoramic promenade
-    const baseHeight = 360; // px reference for tall works
+    const isMobile = window.innerWidth <= 768;
 
     this.artworks.forEach((art, index) => {
       const station = document.createElement('div');
@@ -265,7 +432,7 @@ class GazelliCuratorialGallery {
       station.dataset.index = index;
 
       // Real scale proportional height & width for panoramic promenade
-      const pxPerCm = 1.9;
+      const pxPerCm = isMobile ? 1.15 : 1.9;
       const w = Math.round(art.widthCm * pxPerCm);
       const h = Math.round(art.heightCm * pxPerCm);
 
@@ -300,37 +467,64 @@ class GazelliCuratorialGallery {
 
   applyProportionalDimensions() {
     const art = this.artworks[this.currentIndex];
-    
-    // Scale reference: map cm to screen pixels proportionally
-    // Maximum canvas bounds based on stage height/width
-    const stageH = this.dom.stage.clientHeight - 190; // room for track light and floor
-    const stageW = this.dom.stage.clientWidth - 320; // room for placard & scale figure
+    const isMobile = window.innerWidth <= 768;
+    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1100;
 
-    // Physical reference: Largest artwork is Plate 03 (200cm tall) or Plate 01 (185cm wide)
-    // Scale factor: pixels per cm
-    const scaleFactorByHeight = Math.min(stageH / 210, 2.7);
-    const scaleFactorByWidth = Math.min(stageW / 210, 2.7);
-    const pxPerCm = Math.max(Math.min(scaleFactorByHeight, scaleFactorByWidth), 1.6);
+    let targetWidth, targetHeight, pxPerCm;
 
-    const targetWidth = Math.round(art.widthCm * pxPerCm);
-    const targetHeight = Math.round(art.heightCm * pxPerCm);
+    if (isMobile) {
+      // Available stage bounds on mobile phones (iPhone, Android)
+      // Header is ~88-100px, footer is ~72px, placard card is ~70px
+      const stageH = Math.max(window.innerHeight - 250, 200);
+      const stageW = Math.max(window.innerWidth - 32, 260);
 
-    this.dom.canvasInner.style.width = `${targetWidth}px`;
-    this.dom.canvasInner.style.height = `${targetHeight}px`;
+      const maxScaleW = stageW / art.widthCm;
+      const maxScaleH = stageH / art.heightCm;
+      pxPerCm = Math.min(maxScaleW, maxScaleH);
+      pxPerCm = Math.max(pxPerCm, 0.9); // sensible mobile floor
 
-    // Position & Scale the 175cm Human Figure
-    const humanHeightPx = Math.round(175 * pxPerCm);
-    this.dom.figureSvg.style.height = `${humanHeightPx}px`;
-    this.dom.figureSvg.style.width = 'auto';
+      targetWidth = Math.round(art.widthCm * pxPerCm);
+      targetHeight = Math.round(art.heightCm * pxPerCm);
 
-    // Position human silhouette standing on floor slightly to the left of the artwork
-    const figureOffsetX = -(targetWidth / 2 + 75);
-    this.dom.humanScaleFigure.style.transform = `translateX(${figureOffsetX}px)`;
-    this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
+      this.dom.canvasInner.style.width = `${targetWidth}px`;
+      this.dom.canvasInner.style.height = `${targetHeight}px`;
 
-    // Position Placard card to the bottom right of the canvas
-    const placardOffsetX = (targetWidth / 2 + 30);
-    this.dom.labelCard.style.right = `${-placardOffsetX}px`;
+      // Scale human figure gracefully
+      const humanHeightPx = Math.round(175 * pxPerCm);
+      this.dom.figureSvg.style.height = `${Math.min(humanHeightPx, window.innerHeight * 0.45)}px`;
+      this.dom.figureSvg.style.width = 'auto';
+
+      this.dom.humanScaleFigure.style.transform = 'none';
+      this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
+
+      // Reset placard right offset so CSS handles centering
+      this.dom.labelCard.style.right = 'auto';
+    } else {
+      // Desktop / Laptop proportional scaling
+      const stageH = this.dom.stage.clientHeight - (isTablet ? 150 : 190);
+      const stageW = this.dom.stage.clientWidth - (isTablet ? 140 : 320);
+
+      const scaleFactorByHeight = Math.min(stageH / 210, 2.7);
+      const scaleFactorByWidth = Math.min(stageW / 210, 2.7);
+      pxPerCm = Math.max(Math.min(scaleFactorByHeight, scaleFactorByWidth), 1.5);
+
+      targetWidth = Math.round(art.widthCm * pxPerCm);
+      targetHeight = Math.round(art.heightCm * pxPerCm);
+
+      this.dom.canvasInner.style.width = `${targetWidth}px`;
+      this.dom.canvasInner.style.height = `${targetHeight}px`;
+
+      const humanHeightPx = Math.round(175 * pxPerCm);
+      this.dom.figureSvg.style.height = `${humanHeightPx}px`;
+      this.dom.figureSvg.style.width = 'auto';
+
+      const figureOffsetX = -(targetWidth / 2 + 75);
+      this.dom.humanScaleFigure.style.transform = `translateX(${figureOffsetX}px)`;
+      this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
+
+      const placardOffsetX = (targetWidth / 2 + 30);
+      this.dom.labelCard.style.right = `${-placardOffsetX}px`;
+    }
   }
 
   updatePlacardLabel() {
@@ -338,9 +532,13 @@ class GazelliCuratorialGallery {
     this.dom.labelCard.innerHTML = `
       <div class="label-artist">Mirgasim Art Studio</div>
       <div class="label-title">${art.title}</div>
-      <div class="label-meta">${art.genre}</div>
-      <div class="label-meta">${art.minerals[0].name} on Canvas</div>
+      <div class="label-meta">${art.azTitle} · ${art.genre}</div>
       <div class="label-dim">${art.dimensions}</div>
+      <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>Curatorial Dossier & Specs ↗</span>
+      </button>
+      <div class="mobile-swipe-guide">← Swipe to explore Caspian suite →</div>
     `;
   }
 
@@ -363,8 +561,56 @@ class GazelliCuratorialGallery {
           <div class="tooltip-desc">${spot.desc}</div>
         </div>
       `;
+      
+      // Tap toggle for mobile screens
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const wasActive = el.classList.contains('active');
+        document.querySelectorAll('.tactile-hotspot').forEach(h => h.classList.remove('active'));
+        if (!wasActive) el.classList.add('active');
+      });
+
       this.dom.hotspotContainer.appendChild(el);
     });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.tactile-hotspot').forEach(h => h.classList.remove('active'));
+    });
+  }
+
+  toggleMobileCustomizer(open) {
+    if (this.dom.mobileCustomizerSheet) {
+      this.dom.mobileCustomizerSheet.classList.toggle('open', open);
+    }
+  }
+
+  handleTouchLoupe(touch) {
+    if (this.currentMode !== 'macro') return;
+    const canvasRect = this.dom.canvasInner.getBoundingClientRect();
+    const inCanvas = (
+      touch.clientX >= canvasRect.left &&
+      touch.clientX <= canvasRect.right &&
+      touch.clientY >= canvasRect.top &&
+      touch.clientY <= canvasRect.bottom
+    );
+
+    if (inCanvas) {
+      this.dom.macroLoupe.style.display = 'block';
+      const offset = window.innerWidth <= 768 ? 80 : 100;
+      this.dom.macroLoupe.style.left = `${touch.clientX - offset}px`;
+      this.dom.macroLoupe.style.top = `${touch.clientY - offset - 30}px`;
+
+      const relX = (touch.clientX - canvasRect.left) / canvasRect.width;
+      const relY = (touch.clientY - canvasRect.top) / canvasRect.height;
+      const art = this.artworks[this.currentIndex];
+
+      this.dom.macroLoupe.style.backgroundImage = `url("${art.images.clean}")`;
+      const zoom = 2.6;
+      this.dom.macroLoupe.style.backgroundSize = `${canvasRect.width * zoom}px ${canvasRect.height * zoom}px`;
+      this.dom.macroLoupe.style.backgroundPosition = `${-((relX * canvasRect.width * zoom) - offset)}px ${-((relY * canvasRect.height * zoom) - offset)}px`;
+    } else {
+      this.dom.macroLoupe.style.display = 'none';
+    }
   }
 
   setMode(mode) {
