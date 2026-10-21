@@ -1181,7 +1181,7 @@ html, body {
 .triptych-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   max-width: 1720px;
   height: 100%;
@@ -1211,9 +1211,16 @@ html, body {
   z-index: 14;
 }
 
-.stage-wing:hover {
+.stage-wing.wing-right {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stage-wing.wing-right:hover {
   border-color: rgba(212, 175, 55, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(calc(-50% - 2px));
 }
 
 .wing-header {
