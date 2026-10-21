@@ -1340,7 +1340,7 @@ html, body {
   width: 100%;
   max-width: 1720px;
   height: 100%;
-  padding: 0 40px;
+  padding: 0 40px 48px 40px;
   position: relative;
   z-index: 10;
   pointer-events: none;
