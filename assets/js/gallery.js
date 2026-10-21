@@ -711,9 +711,23 @@ class GazelliCuratorialGallery {
 
     if (inCanvas) {
       this.dom.macroLoupe.style.display = 'block';
-      const offset = window.innerWidth <= 768 ? 80 : 100;
-      this.dom.macroLoupe.style.left = `${touch.clientX - offset}px`;
-      this.dom.macroLoupe.style.top = `${touch.clientY - offset - 30}px`;
+      const loupeRadius = window.innerWidth <= 768 ? 80 : 100;
+      const loupeDiam = loupeRadius * 2;
+
+      let targetX = touch.clientX - loupeRadius;
+      let targetY = touch.clientY - loupeRadius - 40;
+
+      // Safe viewport boundary clamping so loupe never clips off screen
+      const minX = 10;
+      const maxX = window.innerWidth - loupeDiam - 10;
+      const minY = 60; // clear header
+      const maxY = window.innerHeight - loupeDiam - 75; // clear footer
+
+      targetX = Math.max(minX, Math.min(maxX, targetX));
+      targetY = Math.max(minY, Math.min(maxY, targetY));
+
+      this.dom.macroLoupe.style.left = `${targetX}px`;
+      this.dom.macroLoupe.style.top = `${targetY}px`;
 
       const relX = (touch.clientX - canvasRect.left) / canvasRect.width;
       const relY = (touch.clientY - canvasRect.top) / canvasRect.height;
@@ -722,7 +736,7 @@ class GazelliCuratorialGallery {
       this.dom.macroLoupe.style.backgroundImage = `url("${art.images.clean}")`;
       const zoom = 2.6;
       this.dom.macroLoupe.style.backgroundSize = `${canvasRect.width * zoom}px ${canvasRect.height * zoom}px`;
-      this.dom.macroLoupe.style.backgroundPosition = `${-((relX * canvasRect.width * zoom) - offset)}px ${-((relY * canvasRect.height * zoom) - offset)}px`;
+      this.dom.macroLoupe.style.backgroundPosition = `${-((relX * canvasRect.width * zoom) - loupeRadius)}px ${-((relY * canvasRect.height * zoom) - loupeRadius)}px`;
     } else {
       this.dom.macroLoupe.style.display = 'none';
     }
@@ -732,7 +746,11 @@ class GazelliCuratorialGallery {
     this.currentMode = mode;
 
     document.querySelectorAll('.mode-tab').forEach(tab => {
-      tab.classList.toggle('active', tab.dataset.mode === mode);
+      const isActive = tab.dataset.mode === mode;
+      tab.classList.toggle('active', isActive);
+      if (isActive && window.innerWidth <= 900) {
+        tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     });
 
     // Reset views
