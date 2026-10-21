@@ -35,11 +35,18 @@ You operate simultaneously as a **Senior Curatorial Director** and a **Principal
   - **2 Monumental Horizon Works**: Architectural dynamism, pyrite ore, deep hydrocarbon bitumen, solar petroglyphs. Perfect for high-traffic transition zones, grand elevator vestibules, and double-height lobbies.
 - This dual offering ensures the panel cannot reject the submission for being "too quiet" or "too aggressive."
 
-### 4. Perceived Value Multiplier (The $4,000 Trojan Horse)
+### 4. Perceived Value Multiplier (The $4,000 Trojan Horse & Unbundled Scale Reality)
 - If the intermediary sets a budget ceiling around **$4,000 per piece**:
   - The presentation, dossier typography, photography, and material narrative must look like **$25,000 museum acquisitions**.
   - A $4,000 piece that looks like $4,000 gets negotiated down to $2,500.
   - A $4,000 piece that carries the aesthetic gravitas, framing specs, and curatorial narrative of a museum masterpiece feels like an unbelievable steal that the developer will rush to lock in before the artist changes their mind.
+- **Unbundled Market Reality & Cross-Subsidization Rule**:
+  - The $4,000 USD (~6,800 AZN) flat benchmark is a **portfolio-blended flat average**, NOT an authentic per-piece market value.
+  - Across the suite, surface area varies 13.5-fold (from 40 × 60 cm @ 0.24 m² to 180 × 180 cm @ 3.24 m²).
+  - Work 02 (40 × 60 cm) heavily cross-subsidizes Work 04 (180 × 180 cm). At flat $4,000, Work 02 yields 97.5% net margin, while Work 04 is discounted by 45% against fair market value.
+  - **Cherry-Picking Defense**: If the client attempts to break the suite and buy individual works, never sell large statement canvases at $4,000. Enforce unbundled architectural scale pricing: 40×60 cm (₼2,500 / $1,470), 100×150 cm (₼6,500 / $3,820), 185×120 cm (₼8,800 / $5,180), 120×200 cm (₼9,500 / $5,590), 180×180 cm (₼12,500 / $7,350).
+  - See detailed internal intelligence in [CONFIDENTIAL_MARKET_PRICING_AND_VALUATION_INTELLIGENCE.md](file:///c:/Users/rjjaf/repos/mirgasimart-gazelli/docs/strategy/CONFIDENTIAL_MARKET_PRICING_AND_VALUATION_INTELLIGENCE.md).
+
 
 ### 5. Architectural Inevitability (Contextual Proof)
 - Decision-makers lack the visual imagination to see a flat JPG and imagine how it commands a luxury space.

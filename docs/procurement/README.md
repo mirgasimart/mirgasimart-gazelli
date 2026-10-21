@@ -30,6 +30,12 @@ This dedicated subfolder contains the full procurement strategy, financial budge
 5. **[Automated Budget Calculator Script](../../scripts/generate_procurement_budget.py)**:
    - Python script (`python3 scripts/generate_procurement_budget.py`) that recalculates the entire budget, updates exchange rates, and re-exports the CSV file.
 
+6. **[Confidential Commercial Valuation & Market Pricing Intelligence](../strategy/CONFIDENTIAL_MARKET_PRICING_AND_VALUATION_INTELLIGENCE.md)**:
+   - Deep local market intelligence (AZN / USD) benchmarked across Baku contemporary galleries (Q Gallery, YAY, Gazelli Art House) and regional auctions.
+   - Scale-based per-work valuation matrix analyzing the 13.5x surface area disparity across the suite.
+   - Cost-vs-revenue margins (90.7% net atelier profit) and cross-subsidization mechanics under the $4,000 flat ceiling.
+   - Negotiation playbook and cherry-picking defense for unbundled sales.
+
 ---
 
 *© 2026 Mirgasim Art Studio. All rights reserved.*
