@@ -205,16 +205,16 @@ const GALLERY_DATA = [
     scientificTaxonomy: "Caspiomyzon wagneri (Kessler, 1870)",
     minerals: [
       {
-        name: "Gobustan Limestone & Bone Plaster",
-        description: "Sgraffito incisions depicting prehistoric petroglyphs (reed boats, hunters, and sacred solar bulls)."
-      },
-      {
         name: "Absheron Coastal Beach Sand",
         description: "Concentric rings textured with coarse raw beach sand and quartz grit."
       },
       {
         name: "Masazir Lake Salt Clusters",
         description: "Saline crystals embedded along the cyan-blue outer orbital halo."
+      },
+      {
+        name: "Oil & Bone Plaster on Linen",
+        description: "Layered artist-grade oil pigments and archival mineral plaster."
       }
     ],
     curatorialNarrative: "A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.",
