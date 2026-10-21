@@ -569,21 +569,18 @@ class GazelliCuratorialGallery {
       this.dom.canvasInner.style.width = `${targetWidth}px`;
       this.dom.canvasInner.style.height = `${targetHeight}px`;
 
+      this.dom.artworkMount.style.transform = 'none';
       this.dom.artworkMount.classList.remove('scale-active-mobile');
       this.dom.humanScaleFigure.classList.remove('visible');
-      this.dom.labelCard.style.right = '';
+      this.dom.labelCard.className = 'gallery-label-card placard-mobile';
     } else if (isMobile) {
       // Mobile portrait layout (iPhone, Android)
-      const stageH = Math.max(window.innerHeight - 260, 200);
+      const stageH = Math.max(window.innerHeight - 250, 200);
 
-      if (this.showHumanScale) {
-        this.dom.artworkMount.classList.add('scale-active-mobile');
-      } else {
-        this.dom.artworkMount.classList.remove('scale-active-mobile');
-      }
+      this.dom.artworkMount.style.transform = this.showHumanScale ? 'translateX(24px)' : 'none';
 
       const availW = this.showHumanScale 
-        ? Math.max(window.innerWidth - 75, 220) 
+        ? Math.max(window.innerWidth - 80, 220) 
         : Math.max(window.innerWidth - 30, 250);
 
       const maxScaleW = availW / art.widthCm;
@@ -604,14 +601,14 @@ class GazelliCuratorialGallery {
       this.dom.humanScaleFigure.style.transform = 'none';
       this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
 
-      this.dom.labelCard.style.right = '';
+      this.dom.labelCard.className = 'gallery-label-card placard-mobile';
     } else {
       // Desktop / Laptop / 4K Ultrawide proportional scaling
       this.dom.artworkMount.classList.remove('scale-active-mobile');
 
-      const stageH = this.dom.stage.clientHeight - (isTablet ? 160 : 200);
+      const stageH = this.dom.stage.clientHeight - (isTablet ? 150 : 190);
       const wingIsVisible = window.innerWidth >= 1101 && !this.wingCollapsed;
-      const wingReserved = wingIsVisible ? (isWidescreen ? 420 : 330) : 60;
+      const wingReserved = wingIsVisible ? (isWidescreen ? 420 : 340) : 60;
       const figureReserved = this.showHumanScale ? 160 : 60;
       const stageW = this.dom.stage.clientWidth - wingReserved - figureReserved;
 
@@ -633,24 +630,70 @@ class GazelliCuratorialGallery {
       this.dom.figureSvg.style.height = `${humanHeightPx}px`;
       this.dom.figureSvg.style.width = 'auto';
 
-      const figureOffsetX = -(targetWidth / 2 + 75);
-      this.dom.humanScaleFigure.style.transform = `translateX(${figureOffsetX}px)`;
+      // 1. TRUE WALL CENTERING:
+      // Center the artwork in the unobstructed wall space between the left screen edge and the right wing
+      const stageTotalWidth = this.dom.stage.clientWidth;
+      const clearLeft = this.showHumanScale ? 140 : 40;
+      const clearRight = stageTotalWidth - (wingIsVisible ? (isWidescreen ? 420 : 340) : 40);
+      const wallCenter = (clearLeft + clearRight) / 2;
+      const offsetFromCenter = Math.round(wallCenter - (stageTotalWidth / 2));
+
+      this.dom.artworkMount.style.transform = `translateX(${offsetFromCenter}px)`;
+
+      // Ground and align human silhouette relative to the artwork's left frame edge
+      const figureOffsetFromArt = -(targetWidth / 2 + 75);
+      const figureTotalX = offsetFromCenter + figureOffsetFromArt;
+      this.dom.humanScaleFigure.style.transform = `translateX(${figureTotalX}px)`;
       this.dom.humanScaleFigure.classList.toggle('visible', this.showHumanScale);
 
-      // Centered cleanly beneath frame in CSS
-      this.dom.labelCard.style.right = '';
+      // 2. CURATORIAL PLACARD / TOMBSTONE PLACEMENT:
+      // Calculate unobstructed space to the right and left of the artwork frame
+      const artRightEdgeX = (stageTotalWidth / 2) + offsetFromCenter + (targetWidth / 2);
+      const rightAvailable = clearRight - artRightEdgeX;
+      const leftAvailable = (stageTotalWidth / 2) + offsetFromCenter - (targetWidth / 2) - clearLeft;
+
+      this.dom.labelCard.className = 'gallery-label-card';
+
+      if (rightAvailable >= 235) {
+        // Primary Museum Position: Mounted to the right of the floater frame at eye-level
+        this.dom.labelCard.classList.add('placard-side-right');
+      } else if (!this.showHumanScale || leftAvailable >= 235) {
+        // Secondary Museum Position: Mounted to the left of the floater frame
+        this.dom.labelCard.classList.add('placard-side-left');
+      } else {
+        // Fallback for monumental width works on compact screens: Docked neatly under right corner of frame
+        this.dom.labelCard.classList.add('placard-docked-bottom');
+      }
     }
   }
 
   updatePlacardLabel() {
     const art = this.artworks[this.currentIndex];
+    const mediumText = art.minerals && art.minerals.length > 0 
+      ? art.minerals.map(m => m.name).slice(0, 2).join(' · ') 
+      : (art.genre || 'Oil and Raw Absheron Minerals on Canvas');
+
+    const placementNiche = art.niche ? art.niche.split('/')[0].trim() : 'Curatorial Commission';
+
     this.dom.labelCard.innerHTML = `
-      <div class="label-artist">Mirgasim Art Studio</div>
+      <div class="placard-mount-dots">
+        <span class="dot-tl"></span>
+        <span class="dot-tr"></span>
+        <span class="dot-bl"></span>
+        <span class="dot-br"></span>
+      </div>
+      <div class="label-header-row">
+        <span class="label-artist">Mirgasim Art Studio</span>
+        <span class="label-year">2026</span>
+      </div>
       <div class="label-title">${art.title}</div>
-      <div class="label-meta">${art.azTitle} · ${art.genre}</div>
+      <div class="label-az-title">${art.azTitle}</div>
+      <div class="label-divider"></div>
+      <div class="label-medium">${mediumText}</div>
       <div class="label-dim">${art.dimensions}</div>
-      <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <div class="label-placement"><span class="placement-pip"></span>${placementNiche}</div>
+      <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)" title="Inspect Full Technical & Mineral Specifications">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         <span>Curatorial Dossier & Specs ↗</span>
       </button>
       <div class="mobile-swipe-guide">← Swipe to explore Caspian suite →</div>
