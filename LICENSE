@@ -1,0 +1,60 @@
+# Licenses & Intellectual Property Rights
+
+This repository contains both the interactive software codebase for the virtual curatorial gallery and the original fine art, curatorial texts, and architectural proposals created by **Mirgasim Art Studio (Jeyran Mir-Gasim Jafarova)** for the **Gazelli Art House Curatorial Commission**.
+
+Accordingly, the contents are licensed under the following terms:
+
+---
+
+## 1. Software & Code Engine License (MIT License)
+
+The code in this repository—including the interactive virtual gallery web application (`index.html`, `assets/css/gallery.css`, `assets/js/gallery.js`), automation scripts (`scripts/`), and styling definitions—is licensed under the **MIT License**:
+
+```text
+MIT License
+
+Copyright (c) 2026 Mirgasim Art Studio & Rashad Jafarov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 2. Fine Artworks, Curatorial Dossier & Visual Assets
+
+All original fine artworks, preliminary studies, architectural in-situ mockups, exhibition plates, high-resolution imagery, and curatorial narrative texts contained within this repository are the exclusive intellectual property of:
+
+**Artist**: Jeyran Mir-Gasim Jafarova  
+**Studio**: Mirgasim Art Studio (Baku, Azerbaijan)  
+**Curatorial Commission**: Gazelli Art House (London / Baku)  
+**Copyright**: © 2026 Jeyran Mir-Gasim Jafarova. All Rights Reserved.
+
+These creative visual assets and curatorial texts are licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)**:
+
+* **Attribution**: You must give appropriate credit to *Mirgasim Art Studio / Jeyran Mir-Gasim Jafarova* and provide a link to the original work.
+* **Non-Commercial**: You may not use the material for commercial purposes without prior written authorization from the artist or Gazelli Art House.
+* **No Derivatives**: If you remix, transform, or build upon the material, you may not distribute the modified material.
+
+To view a copy of this license, visit [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+---
+
+For commercial licensing inquiries, institutional acquisitions, or architectural commissions:
+* **Gallery Representation**: Gazelli Art House (London / Baku) — [info@gazelliarthouse.com](mailto:info@gazelliarthouse.com)
+* **Atelier Direct**: Mirgasim Art Studio (Baku, Azerbaijan)
