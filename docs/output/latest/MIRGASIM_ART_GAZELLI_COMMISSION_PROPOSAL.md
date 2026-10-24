@@ -32,10 +32,10 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 ---
 
 
-### Plate 01: *Luminescence of Masazir*
-*Masazır Parıltısı*
+### Plate 01: *Pink Moon*
+*Çəhrayı Ay*
 
-![Plate 01: Luminescence of Masazir](_clean/01_luminescence_of_masazir_salt_dawn.jpg)
+![Plate 01: Pink Moon](_clean/01_luminescence_of_masazir_salt_dawn.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_01_luminescence_of_masazir_salt_dawn.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Executive Salon](_insitu/insitu_plate_01_masazir_dawn.jpg)
 
@@ -45,14 +45,14 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Endemic Caspian Focus**: Absheron Lacustrine Strata (*Pure geological meditation; zero figures, zero fauna, zero carpets*)
 - **Materials**: Genuine Masazir Pink Lake Salt, Textured Paste, Heavy Impasto, Oil Paint on Canvas
 - **Concept**:
-  An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity.
+  Where saline water turns to rose mist at dawn. Thick crystalline salt sculpted by the palette knife, holding the silent breath of an ancient Caspian morning before humankind had a name for time.
 
 ---
 
-### Plate 02: *The Shebeke Reliquary*
-*Şəbəkə Qalığı*
+### Plate 02: *Across the Universe*
+*Kainat Boyu*
 
-![Plate 02: The Shebeke Reliquary](_clean/02_the_weaver_of_sunken_shells_didacna.jpg)
+![Plate 02: Across the Universe](_clean/02_the_weaver_of_sunken_shells_didacna.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_02_the_weaver_of_sunken_shells_didacna.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Luxury Gallery](_insitu/insitu_plate_02_shebeke_reliquary.jpg)
 
@@ -62,14 +62,14 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Endemic Caspian Organism**: Caspian Cockles (*Didacna trigonoides* & *Didacna pyramidata*)
 - **Materials**: Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Oil Paints and Canvas
 - **Concept**:
-  An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (*daş yonma*) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian *Didacna* cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
+  Centuries of tides carved into sacred stone Shebeke geometry. Concentric rings of fossilized Caspian cockles radiate from a saline core—a celestial calendar measuring eternity in mother-of-pearl.
 
 ---
 
-### Plate 03: *Black Gold*
-*Qara Qızıl*
+### Plate 03: *Paint It Black*
+*Qara Qızıl (Black Gold)*
 
-![Plate 03: Black Gold](_clean/03_keeper_of_the_cold_depths_caspian_shad.jpg)
+![Plate 03: Paint It Black](_clean/03_keeper_of_the_cold_depths_caspian_shad.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_03_keeper_of_the_cold_depths_caspian_shad.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Double-Height Lobby](_insitu/insitu_plate_03_binagadi_derrick.jpg)
 
@@ -81,26 +81,24 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
   - **Natural Absheron Bitumen (Binagadi & Fatmai deposits)**: Pure unrefined asphaltite applied in viscous palette-knife knife-strokes.
   - **Pyrite Mineral Aggregates (FeS₂)**: Irregular metallic brassy-gold sulfide crystals embedded into fish scales and scutes.
   - **Absheron Limestone Ground & Oxidized Gold**: Providing chalky contrast and metallurgical antiquity.
-- **Concept (Variation 1 — Primary Master)**:
-  Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (*Yanar Dağ / Ateshgah*).
+- **Concept**:
+  The earth bleeding memory. Charred derrick scaffolding drowned in raw Binagadi bitumen, where an armored marine shad gleams with subterranean pyrite above eternal gas fire. Three iterations of an unfinished industrial reckoning.
 
 #### Three Curatorial Variations for Plate 03:
-For this critical central work, the atelier presents **three curatorial variations** exploring distinct institutional matter-painting aesthetics:
+For this central work, the atelier presents **three curatorial variations** exploring distinct institutional matter-painting lineages:
 * **Variation 1: *Primary Master*** ([View Clean Master](_clean/03_keeper_of_the_cold_depths_caspian_shad.jpg))  
   *Geometric wooden derrick scaffolding slicing across visceral Binagadi bitumen slabs, with a golden pyrite-studded marine shad leaping above eternal subterranean gas fire.*
 * **Variation 2: *The Industrial Cretti*** ([View Archival Plate](_studies/plate_03_variation_2_industrial_cretti.jpg))  
-  *Matter Abstraction in the lineage of Alberto Burri’s Grande Cretto and Antoni Tàpies; massive dried mud-volcano field cleft by a violent vertical fault line of viscous, deep-relief black bitumen and embedded rusted iron plates.*
+  *Alberto Burri & Antoni Tàpies Lineage: Fault-Line Matter Painting; deeply cracked Lokbatan volcanic mud craquelure on raw linen, cleft by a vertical fault line of viscous obsidian bitumen and embedded rusted iron plates.*
 * **Variation 3: *The Tectonic Obliteration*** ([View Archival Plate](_studies/plate_03_variation_1_tectonic_obliteration.jpg))  
-  *Matter Painting in the lineage of Anselm Kiefer and Javad Mirjavadov; deeply cracked Lokbatan mud craquelure, charred derrick timber skeletons, and fossilized sturgeon scutes embedded in relief.*
-
-
+  *Anselm Kiefer & Javad Mirjavadov Lineage: Excavated Archaeological Relic; charred, splintered derrick timbers and rusted angle-trusses crushed into the asphalt earth, with fossilized sturgeon scutes in heavy relief.*
 
 ---
 
-### Plate 04: *After Hard Day of Work*
-*Ağır İş Günündən Sonra*
+### Plate 04: *A Hard Day's Night*
+*Ağır Bir Günün Gecəsi*
 
-![Plate 04: After Hard Day of Work](_clean/04_breath_of_lokbatan_tadpole_goby.jpg)
+![Plate 04: A Hard Day's Night](_clean/04_breath_of_lokbatan_tadpole_goby.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_04_breath_of_lokbatan_tadpole_goby.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Grand Salon](_insitu/insitu_plate_04_breath_of_lokbatan.jpg)
 
@@ -110,14 +108,14 @@ For this critical central work, the atelier presents **three curatorial variatio
 - **Endemic Caspian Wildlife**: Armored Caspian Tadpole Goby (*Benthophilus* spp.)
 - **Materials**: Mud volcano, oil paint and canvas
 - **Concept**:
-  A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (*Benthophilus*) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
+  The quiet exhaustion of a planet. Millions of years of subterranean pressure exhaled onto canvas—cracked volcanic clay and geothermal celadon resting in the dark stillness after eruption.
 
 ---
 
-### Plate 05: *Solar Oracle*
-*Günəş Orakulu*
+### Plate 05: *Here Comes the Sun*
+*Günəş Doğur*
 
-![Plate 05: Solar Oracle](_clean/05_the_lampreys_vigil_caspian_lamprey.jpg)
+![Plate 05: Here Comes the Sun](_clean/05_the_lampreys_vigil_caspian_lamprey.jpg)
 > **Museum Archival Edition**: [View Mounted Exhibition Passe-Partout Plate](_exhibition_plates/plate_05_the_lampreys_vigil_caspian_lamprey.jpg)  
 > **Architectural In-Situ Simulation**: [View Installed in Ceremonial Vestibule](_insitu/insitu_plate_05_gobustan_oracle.jpg)
 
@@ -127,7 +125,7 @@ For this critical central work, the atelier presents **three curatorial variatio
 - **Endemic Caspian Wildlife**: Caspian Lamprey (*Caspiomyzon wagneri*)
 - **Materials**: Absheron Coastal Beach Sand Mandala, Masazir Salt Encrustations, Oil & Bone Plaster on Linen
 - **Concept**:
-  A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
+  Twelve thousand years ago, hunters etched a boat carrying the sun across rock. An archaic Caspian lamprey loops through gold dust and beach sand, completing an eternal circle of return.
 
 ---
 
