@@ -20,6 +20,7 @@ class GazelliCuratorialGallery {
     this.wingCollapsed = true;
     this.currentOffsetX = 0;
     this.currentOffsetY = 0;
+    this.currentVariationIndex = 0;
 
     this.cacheDOM();
     this.initAudioEngine();
@@ -42,6 +43,13 @@ class GazelliCuratorialGallery {
       figureSvg: document.getElementById('figureSvg'),
       hotspotContainer: document.getElementById('hotspotContainer'),
       macroLoupe: document.getElementById('macroLoupe'),
+
+      // Interactive Variation Switcher Badge
+      variationBadge: document.getElementById('variationBadge'),
+      variationPill: document.getElementById('variationPill'),
+      variationNum: document.getElementById('variationNum'),
+      variationTitle: document.getElementById('variationTitle'),
+      variationDots: document.getElementById('variationDots'),
       
       // Fullscreen alternative views
       insituView: document.getElementById('insituView'),
@@ -395,6 +403,37 @@ class GazelliCuratorialGallery {
       this.dom.wingInsituBtn.addEventListener('click', () => this.setMode('insitu'));
     }
 
+    // Interactive Variation Switcher on Canvas & Floating Badge
+    if (this.dom.canvasInner) {
+      this.dom.canvasInner.addEventListener('click', (e) => {
+        // Prevent triggering if clicking directly on a tactile hotspot
+        if (e.target.closest('.tactile-hotspot')) return;
+        if (this.currentMode === 'gallery') {
+          const art = this.artworks[this.currentIndex];
+          if (art.variations && art.variations.length > 1) {
+            this.nextVariation();
+          }
+        }
+      });
+    }
+
+    if (this.dom.variationPill) {
+      this.dom.variationPill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.nextVariation();
+      });
+    }
+
+    if (this.dom.variationDots) {
+      this.dom.variationDots.addEventListener('click', (e) => {
+        const dot = e.target.closest('.var-dot');
+        if (dot && dot.dataset.varIdx !== undefined) {
+          e.stopPropagation();
+          this.setVariation(parseInt(dot.dataset.varIdx, 10));
+        }
+      });
+    }
+
     // Resize handler to recalculate real-world scale
     window.addEventListener('resize', () => this.applyProportionalDimensions());
     window.addEventListener('orientationchange', () => {
@@ -440,6 +479,17 @@ class GazelliCuratorialGallery {
       this.dom.plateImg.src = art.images.plate;
       this.dom.insituBadge.textContent = `Architectural Placement: ${art.niche}`;
 
+      // Variations management
+      this.currentVariationIndex = 0;
+      if (art.variations && art.variations.length > 1) {
+        if (this.dom.variationBadge) this.dom.variationBadge.style.display = 'flex';
+        this.dom.canvasInner.classList.add('has-variations');
+        this.updateVariationBadge(0);
+      } else {
+        if (this.dom.variationBadge) this.dom.variationBadge.style.display = 'none';
+        this.dom.canvasInner.classList.remove('has-variations');
+      }
+
       this.applyProportionalDimensions();
       this.updatePlacardLabel();
       this.updateWidescreenWings(art);
@@ -448,6 +498,78 @@ class GazelliCuratorialGallery {
 
       this.dom.artworkMount.style.opacity = '1';
     }, 200);
+  }
+
+  nextVariation() {
+    const art = this.artworks[this.currentIndex];
+    if (!art.variations || art.variations.length <= 1) return;
+    const nextIdx = (this.currentVariationIndex + 1) % art.variations.length;
+    this.setVariation(nextIdx);
+  }
+
+  setVariation(vIndex) {
+    const art = this.artworks[this.currentIndex];
+    if (!art.variations || !art.variations[vIndex]) return;
+    this.currentVariationIndex = vIndex;
+    const v = art.variations[vIndex];
+
+    this.dom.canvasInner.style.transition = 'opacity 0.22s ease';
+    this.dom.canvasInner.style.opacity = '0.35';
+
+    setTimeout(() => {
+      this.dom.artworkImg.src = v.image;
+      if (this.dom.plateImg) this.dom.plateImg.src = v.plate || v.image;
+      this.updateVariationBadge(vIndex);
+      this.updatePlacardLabel();
+      if (v.hotspots) {
+        this.renderVariationHotspots(v.hotspots);
+      }
+      this.dom.canvasInner.style.opacity = '1';
+    }, 180);
+  }
+
+  updateVariationBadge(vIndex) {
+    const art = this.artworks[this.currentIndex];
+    if (!art.variations || !art.variations[vIndex]) return;
+    const v = art.variations[vIndex];
+
+    if (this.dom.variationNum) {
+      this.dom.variationNum.textContent = `VARIATION ${v.number} / ${art.variations.length}`;
+    }
+    if (this.dom.variationTitle) {
+      this.dom.variationTitle.textContent = `${v.label} • ${v.subtitle.split('•')[0].trim()}`;
+    }
+    if (this.dom.variationDots) {
+      this.dom.variationDots.querySelectorAll('.var-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === vIndex);
+      });
+    }
+  }
+
+  renderVariationHotspots(hotspots) {
+    this.dom.hotspotContainer.innerHTML = '';
+    if (!hotspots || this.currentMode !== 'gallery') return;
+    hotspots.forEach(spot => {
+      const el = document.createElement('div');
+      el.className = 'tactile-hotspot';
+      el.style.left = `${spot.x}%`;
+      el.style.top = `${spot.y}%`;
+      el.innerHTML = `
+        <div class="hotspot-pulse"></div>
+        <div class="hotspot-dot"></div>
+        <div class="hotspot-tooltip">
+          <div class="tooltip-title">${spot.label}</div>
+          <div class="tooltip-desc">${spot.desc}</div>
+        </div>
+      `;
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const wasActive = el.classList.contains('active');
+        document.querySelectorAll('.tactile-hotspot').forEach(h => h.classList.remove('active'));
+        if (!wasActive) el.classList.add('active');
+      });
+      this.dom.hotspotContainer.appendChild(el);
+    });
   }
 
   updateWidescreenWings(art) {
@@ -717,6 +839,12 @@ class GazelliCuratorialGallery {
       ? art.minerals[0].name
       : (art.genre || 'Oil & Raw Absheron Minerals');
 
+    let varSubtitle = '';
+    if (art.variations && art.variations.length > 1) {
+      const currentVar = art.variations[this.currentVariationIndex] || art.variations[0];
+      varSubtitle = `<div class="label-var-hint" style="color: var(--gold-primary); font-size: 11px; margin-top: 2px; font-weight: 500;">Variation ${currentVar.number}: ${currentVar.label}</div>`;
+    }
+
     // Rule of Three: (1) Studio & Year, (2) Master Title, (3) Scale & Key Medium
     // Everything else is discovered seamlessly via Curatorial Dossier
     this.dom.labelCard.innerHTML = `
@@ -731,6 +859,7 @@ class GazelliCuratorialGallery {
         <span class="label-year">2026</span>
       </div>
       <div class="label-title">${art.title}</div>
+      ${varSubtitle}
       <div class="label-dim">${art.dimensions} · ${mediumText}</div>
       <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)" title="Inspect Full Technical & Mineral Specifications">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
