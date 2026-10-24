@@ -405,8 +405,35 @@ class GazelliCuratorialGallery {
       this.dom.wingInsituBtn.addEventListener('click', () => this.setMode('insitu'));
     }
 
-    // Interactive Variation Switcher on Canvas & Floating Badge
+    // Interactive Variation Switcher on Canvas & Floating Badge (Touch & Click)
     if (this.dom.canvasInner) {
+      let canvasTouchStartX = 0;
+      let canvasTouchStartY = 0;
+      let canvasTouchStartTime = 0;
+
+      this.dom.canvasInner.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          canvasTouchStartX = e.touches[0].clientX;
+          canvasTouchStartY = e.touches[0].clientY;
+          canvasTouchStartTime = Date.now();
+        }
+      }, { passive: true });
+
+      this.dom.canvasInner.addEventListener('touchend', (e) => {
+        if (e.target.closest('.tactile-hotspot')) return;
+        if (this.currentMode === 'gallery') {
+          const art = this.artworks[this.currentIndex];
+          if (art.variations && art.variations.length > 1) {
+            const touch = e.changedTouches[0];
+            const dist = Math.hypot(touch.clientX - canvasTouchStartX, touch.clientY - canvasTouchStartY);
+            const duration = Date.now() - canvasTouchStartTime;
+            if (dist < 12 && duration < 350) {
+              this.nextVariation();
+            }
+          }
+        }
+      });
+
       this.dom.canvasInner.addEventListener('click', (e) => {
         // Prevent triggering if clicking directly on a tactile hotspot
         if (e.target.closest('.tactile-hotspot')) return;
@@ -432,6 +459,17 @@ class GazelliCuratorialGallery {
         if (dot && dot.dataset.varIdx !== undefined) {
           e.stopPropagation();
           this.setVariation(parseInt(dot.dataset.varIdx, 10));
+        }
+      });
+    }
+
+    // Mobile Customizer Sheet Variations pills
+    if (this.dom.mobileVariationOptions) {
+      this.dom.mobileVariationOptions.addEventListener('click', (e) => {
+        const pill = e.target.closest('.sheet-pill');
+        if (pill && pill.dataset.varIdx !== undefined) {
+          this.setVariation(parseInt(pill.dataset.varIdx, 10));
+          this.toggleMobileCustomizer(false);
         }
       });
     }
