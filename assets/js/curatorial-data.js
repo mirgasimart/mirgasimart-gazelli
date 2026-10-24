@@ -567,6 +567,7 @@ const FRAME_STYLES = [
 ];
 
 // Trilingual Dictionary (Canonical 3: English Default, Azerbaijani, Russian)
+// Trilingual Dictionary (Canonical 3: English Default, Azerbaijani, Russian)
 const I18N = {
   en: {
     langCode: "EN",
@@ -575,15 +576,22 @@ const I18N = {
     brandSub: "Gazelli Art House Curatorial Commission Suite",
     modes: {
       gallery: "Stage",
+      galleryTitle: "Gallery Wall Hanging View (Key: G)",
       panoramic: "Walk",
-      macro: "Loupe"
+      panoramicTitle: "Continuous Panoramic Multi-Artwork Wall (Key: W)",
+      macro: "Loupe",
+      macroTitle: "Macro Mineral Loupe Inspection (Key: M)"
     },
     actions: {
       scale: "Scale",
+      scaleTitle: "Toggle 175cm Human Scale Silhouette (Key: S)",
       finishes: "Finishes",
       minerals: "Minerals",
+      mineralsTitle: "Toggle Absheron Minerals & Engineering Specs Panel (Key: E)",
       dossier: "Dossier",
-      more: "More"
+      dossierTitle: "Open Curatorial & Technical Dossier (Key: I)",
+      more: "More",
+      moreTitle: "Curatorial Environment & Options (Key: O)"
     },
     placard: {
       artist: "Mirgasim Art Studio",
@@ -591,19 +599,54 @@ const I18N = {
       dossierLink: "Curatorial Dossier & Specs ↗",
       variation: "Variation"
     },
+    badge: {
+      variation: "VARIATION",
+      tapHint: "(Tap canvas to switch)"
+    },
+    scale: {
+      label: "175 cm Eye Level"
+    },
+    wing: {
+      badge: "Geological Anatomy",
+      tag: "Absheron Minerals",
+      chassis: "Chassis Engineering",
+      chassisVal: "Anti-Warp Pine + Aluminum Stretcher",
+      weight: "Structural Weight",
+      mounting: "Mounting Hardware",
+      mountingVal: "Dual Aluminum Z-Bars"
+    },
+    finishes: {
+      title: "Wall Plaster & Turnkey Framing",
+      wallSurface: "Absheron Wall Plaster",
+      framing: "Turnkey Framing",
+      limestone: "Limestone",
+      plaster: "Plaster",
+      anthracite: "Anthracite",
+      walnut: "Walnut",
+      wrap: "Wrap",
+      steel: "Steel",
+      mobileTitle: "Curatorial Finishes & Lighting",
+      lightingHeading: "Architectural Lighting",
+      atmosphereHeading: "Caspian Atmosphere",
+      scaleHeading: "175cm Scale Silhouette"
+    },
     drawer: {
       title: "Curatorial & Technical Dossier",
       statement: "Curatorial Statement",
       anatomy: "Absheron Geological Mineral Anatomy",
       specs: "Turnkey Architectural Specifications",
+      studies: "Suite Companion Studies (Rule of Three)",
       chassis: "Chassis",
       weight: "Weight",
       mounting: "Mounting",
       edgeFinish: "Edge Finish",
-      lighting: "Lighting",
+      lighting: "Lighting Calibration",
       niche: "Architectural Placement",
       endemic: "Endemic Ecology & Lineage",
-      paletteBoxPrompt: "Physical Material Palette Box (15 × 15 cm cured plaques) available upon formal curatorial request."
+      paletteBoxTitle: "Curatorial Material Palette Box",
+      paletteBoxPrompt: "Physical Material Palette Box (15 × 15 cm cured plaques) available upon formal curatorial request.",
+      btnPaletteRequest: "Request Material Palette Box",
+      btnDownloadPdf: "Download Curatorial Proposal (PDF)"
     },
     popover: {
       title: "Curatorial Environment",
@@ -614,14 +657,13 @@ const I18N = {
       soundscapeSub: "Synthesized geological atmosphere",
       insitu: "In-Situ Interior Room",
       insituSub: "Architectural placement view",
-      downloadPdf: "Download Curatorial Proposal (PDF)"
+      viewBtn: "VIEW",
+      downloadPdf: "Download Curatorial Proposal (PDF)",
+      shortcuts: "Keyboard Shortcuts"
     },
-    finishes: {
-      title: "Wall Plaster & Turnkey Framing",
-      wallSurface: "Wall Plaster Surface",
-      framing: "Turnkey Framing",
-      variations: "Curatorial Variations",
-      paletteBox: "Curatorial Material Palette Box"
+    fullscreen: {
+      insituBadgePrefix: "Architectural Placement",
+      plateEdition: "Gazelli Art House Official Archival Pass-Partout Edition"
     }
   },
   az: {
@@ -631,15 +673,22 @@ const I18N = {
     brandSub: "Gazelli Art House Kuratorluq Sifarişi Süitası",
     modes: {
       gallery: "Səhnə",
+      galleryTitle: "Qalereya Divar Görünüşü (Düymə: G)",
       panoramic: "Gəzinti",
-      macro: "Böyüdücü"
+      panoramicTitle: "Davamlı Panoramik Divar (Düymə: W)",
+      macro: "Böyüdücü",
+      macroTitle: "Makro Mineral İncələmə (Düymə: M)"
     },
     actions: {
       scale: "Miqyas",
+      scaleTitle: "175 sm İnsan Siluetini Göstər/Gizlət (Düymə: S)",
       finishes: "Tərtibat",
       minerals: "Minerallar",
+      mineralsTitle: "Abşeron Mineralları və Mühəndislik Paneli (Düymə: E)",
       dossier: "Dosye",
-      more: "Daha Çox"
+      dossierTitle: "Kurator və Texniki Dosyeni Aç (Düymə: I)",
+      more: "Ətraflı",
+      moreTitle: "Kuratorluq Mühiti və Tənzimləmələr (Düymə: O)"
     },
     placard: {
       artist: "Mirqasım İncəsənət Emalatxanası",
@@ -647,19 +696,54 @@ const I18N = {
       dossierLink: "Kurator Dosyesi və Spesifikasiyalar ↗",
       variation: "Variasiya"
     },
+    badge: {
+      variation: "VARİASİYA",
+      tapHint: "(Dəyişmək üçün kətana toxunun)"
+    },
+    scale: {
+      label: "175 sm Göz Səviyyəsi"
+    },
+    wing: {
+      badge: "Geoloji Anatomiya",
+      tag: "Abşeron Mineralları",
+      chassis: "Şassi Mühəndisliyi",
+      chassisVal: "Deformasiyaya Davamlı Şam + Alüminium",
+      weight: "Konstruksiya Çəkisi",
+      mounting: "Montaj Avadanlığı",
+      mountingVal: "Qoşa Alüminium Z-Reykaları"
+    },
+    finishes: {
+      title: "Divar Suvağı və Çərçivə Tərtibatı",
+      wallSurface: "Abşeron Divar Suvağı",
+      framing: "Çərçivə Tərtibatı",
+      limestone: "Əhəngdaşı",
+      plaster: "Ağ Suvaq",
+      anthracite: "Antrasit",
+      walnut: "Qoz Ağacı",
+      wrap: "Kətan Qatı",
+      steel: "Polad",
+      mobileTitle: "Kuratorluq Tərtibatı və İşıqlandırma",
+      lightingHeading: "Memarlıq İşıqlandırması",
+      atmosphereHeading: "Xəzər Atmosferi",
+      scaleHeading: "175 sm İnsan Silueti"
+    },
     drawer: {
       title: "Kurator və Texniki Dosye",
       statement: "Kurator Bəyanatı",
       anatomy: "Abşeron Geoloji Mineral Anatomiyası",
       specs: "Memarlıq və Quraşdırma Spesifikasiyaları",
+      studies: "Kolleksiya Tədqiqat Əsərləri (Üçlük Qaydası)",
       chassis: "Şassi",
       weight: "Çəki",
       mounting: "Montaj",
       edgeFinish: "Kənar Tərtibatı",
-      lighting: "İşıqlandırma",
+      lighting: "İşıqlandırma Kalibrasiyası",
       niche: "Memarlıq Məkanı",
       endemic: "Endemik Ekologiya və İrs",
-      paletteBoxPrompt: "Fiziki Material Qutusu (15 × 15 sm nümunə lövhələri) rəsmi kurator sorğusu ilə təqdim olunur."
+      paletteBoxTitle: "Fiziki Material Nümunələri Qutusu",
+      paletteBoxPrompt: "Fiziki Material Qutusu (15 × 15 sm bərkimiş lövhələr) rəsmi kurator sorğusu ilə təqdim olunur.",
+      btnPaletteRequest: "Material Qutusunu Sorğu Et",
+      btnDownloadPdf: "Təklif Kataloqunu Yüklə (PDF)"
     },
     popover: {
       title: "Mühit Tənzimləmələri",
@@ -670,14 +754,13 @@ const I18N = {
       soundscapeSub: "Sintez edilmiş geoloji atmosfer",
       insitu: "İnteryer Baxışı",
       insituSub: "Memarlıq yerləşdirmə görünüşü",
-      downloadPdf: "Təklif Kataloqunu Yüklə (PDF)"
+      viewBtn: "BAX",
+      downloadPdf: "Təklif Kataloqunu Yüklə (PDF)",
+      shortcuts: "Klaviatura Qısayolları"
     },
-    finishes: {
-      title: "Divar Suvağı və Çərçivə Tərtibatı",
-      wallSurface: "Divar Səthi",
-      framing: "Çərçivə",
-      variations: "Müəllif Variasiyaları",
-      paletteBox: "Fiziki Material Nümunələri"
+    fullscreen: {
+      insituBadgePrefix: "Memarlıq Məkanı",
+      plateEdition: "Gazelli Art House Rəsmi Arxiv Paspartu Nəşri"
     }
   },
   ru: {
@@ -687,15 +770,22 @@ const I18N = {
     brandSub: "Кураторская Сюита для Gazelli Art House",
     modes: {
       gallery: "Сцена",
+      galleryTitle: "Вид Стены Галереи (Клавиша: G)",
       panoramic: "Галерея",
-      macro: "Лупа"
+      panoramicTitle: "Непрерывная Панорамная Стена (Клавиша: W)",
+      macro: "Лупа",
+      macroTitle: "Макро-Осмотр Минералов (Клавиша: M)"
     },
     actions: {
       scale: "Масштаб",
+      scaleTitle: "Переключить Силуэт Человека 175 см (Клавиша: S)",
       finishes: "Отделка",
       minerals: "Минералы",
+      mineralsTitle: "Панель Минералов Апшерона и Спецификаций (Клавиша: E)",
       dossier: "Досье",
-      more: "Еще"
+      dossierTitle: "Открыть Кураторское и Техническое Досье (Клавиша: I)",
+      more: "Еще",
+      moreTitle: "Кураторская Среда и Настройки (Клавиша: O)"
     },
     placard: {
       artist: "Арт-Студия Миргасим",
@@ -703,19 +793,54 @@ const I18N = {
       dossierLink: "Кураторское Досье и Спецификации ↗",
       variation: "Вариация"
     },
+    badge: {
+      variation: "ВАРИАЦИЯ",
+      tapHint: "(Нажмите на холст для переключения)"
+    },
+    scale: {
+      label: "175 см Уровень Глаз"
+    },
+    wing: {
+      badge: "Геологическая Анатомия",
+      tag: "Минералы Апшерона",
+      chassis: "Инженерия Подрамника",
+      chassisVal: "Усиленный Подрамник Сосна + Алюминий",
+      weight: "Вес Конструкции",
+      mounting: "Монтажная Фурнитура",
+      mountingVal: "Двойные Алюминиевые Z-Планки"
+    },
+    finishes: {
+      title: "Штукатурка Стен и Обрамление",
+      wallSurface: "Штукатурка Стен Апшерона",
+      framing: "Обрамление Под Ключ",
+      limestone: "Известняк",
+      plaster: "Штукатурка",
+      anthracite: "Антрацит",
+      walnut: "Орех",
+      wrap: "Галерейный",
+      steel: "Сталь",
+      mobileTitle: "Кураторская Отделка и Освещение",
+      lightingHeading: "Архитектурное Освещение",
+      atmosphereHeading: "Каспийская Атмосфера",
+      scaleHeading: "Силуэт Масштаба 175 см"
+    },
     drawer: {
       title: "Кураторское и Техническое Досье",
       statement: "Кураторское Описание",
       anatomy: "Геологическая Анатомия Минералов",
       specs: "Архитектурные Спецификации Под Ключ",
+      studies: "Исследования Сюиты (Правило Трех)",
       chassis: "Подрамник",
       weight: "Вес",
       mounting: "Крепление",
       edgeFinish: "Обработка Края",
-      lighting: "Освещение",
+      lighting: "Калибровка Освещения",
       niche: "Архитектурное Размещение",
       endemic: "Эндемическая Экология и Линия",
-      paletteBoxPrompt: "Физический бокс с образцами минералов (плитки 15 × 15 см) доступен по кураторскому запросу."
+      paletteBoxTitle: "Бокс с Образцами Минералов",
+      paletteBoxPrompt: "Физический бокс с образцами минералов (плитки 15 × 15 см) доступен по официальному кураторскому запросу.",
+      btnPaletteRequest: "Запросить Бокс с Образцами",
+      btnDownloadPdf: "Скачать Каталог Предложения (PDF)"
     },
     popover: {
       title: "Кураторская Среда",
@@ -726,14 +851,13 @@ const I18N = {
       soundscapeSub: "Синтезированная геологическая атмосфера",
       insitu: "Интерьер In-Situ",
       insituSub: "Архитектурное размещение",
-      downloadPdf: "Скачать Каталог Предложения (PDF)"
+      viewBtn: "ОБЗОР",
+      downloadPdf: "Скачать Каталог Предложения (PDF)",
+      shortcuts: "Горячие Клавиши"
     },
-    finishes: {
-      title: "Штукатурка Стен и Обрамление",
-      wallSurface: "Поверхность Стены",
-      framing: "Обрамление",
-      variations: "Кураторские Вариации",
-      paletteBox: "Бокс с Образцами Материалов"
+    fullscreen: {
+      insituBadgePrefix: "Архитектурное Размещение",
+      plateEdition: "Официальное Архивное Издание Паспарту Gazelli Art House"
     }
   }
 };
