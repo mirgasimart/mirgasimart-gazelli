@@ -670,6 +670,13 @@ class GazelliCuratorialGallery {
     if (this.dom.variationDots) {
       this.dom.variationDots.querySelectorAll('.var-dot').forEach((dot, i) => {
         dot.classList.toggle('active', i === vIndex);
+        if (art.variations && art.variations[i]) {
+          const opt = art.variations[i];
+          let optLabel = opt.label;
+          if (this.currentLang === 'az' && opt.azLabel) optLabel = opt.azLabel;
+          if (this.currentLang === 'ru' && opt.ruLabel) optLabel = opt.ruLabel;
+          dot.setAttribute('title', `${vTag} ${opt.number}: ${optLabel}`);
+        }
       });
     }
 
