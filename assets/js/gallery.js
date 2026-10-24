@@ -773,7 +773,8 @@ class GazelliCuratorialGallery {
       this.dom.labelCard.className = 'gallery-label-card placard-mobile';
     } else if (isMobile) {
       // Mobile portrait layout (iPhone, Android)
-      const stageH = Math.max(window.innerHeight - 250, 200);
+      const hasVars = art.variations && art.variations.length > 1;
+      const stageH = Math.max(window.innerHeight - (hasVars ? 295 : 240), 180);
 
       this.currentOffsetX = this.showHumanScale ? 24 : 0;
       this.currentOffsetY = 0;
@@ -899,10 +900,29 @@ class GazelliCuratorialGallery {
       ? art.minerals[0].name
       : (art.genre || 'Oil & Raw Absheron Minerals');
 
-    let varSubtitle = '';
+    let varSwitcherHtml = '';
     if (art.variations && art.variations.length > 1) {
       const currentVar = art.variations[this.currentVariationIndex] || art.variations[0];
-      varSubtitle = `<div class="label-var-hint" style="color: var(--gold-primary); font-size: 11px; margin-top: 2px; font-weight: 500;">Variation ${currentVar.number}: ${currentVar.label}</div>`;
+      const pills = art.variations.map((v, i) => `
+        <button class="placard-var-pill ${i === this.currentVariationIndex ? 'active' : ''}" 
+                data-var-idx="${i}"
+                title="${v.subtitle}">
+          <span class="p-var-num">${v.number}</span>
+          <span class="p-var-name">${v.label.replace('Primary ', '')}</span>
+        </button>
+      `).join('');
+
+      varSwitcherHtml = `
+        <div class="placard-variations-bar" id="placardVariationsBar">
+          <div class="p-var-header">
+            <span class="p-var-tag">CURATORIAL VARIATIONS</span>
+            <span class="p-var-active">${currentVar.number} / ${art.variations.length}</span>
+          </div>
+          <div class="placard-var-pills">
+            ${pills}
+          </div>
+        </div>
+      `;
     }
 
     // Rule of Three: (1) Studio & Year, (2) Master Title, (3) Scale & Key Medium
@@ -919,13 +939,25 @@ class GazelliCuratorialGallery {
         <span class="label-year">2026</span>
       </div>
       <div class="label-title">${art.title}</div>
-      ${varSubtitle}
+      ${varSwitcherHtml}
       <div class="label-dim">${art.dimensions} · ${mediumText}</div>
       <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)" title="Inspect Full Technical & Mineral Specifications">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         <span>Curatorial Dossier & Specs ↗</span>
       </button>
     `;
+
+    // Bind event to placard variation pills
+    const varBar = this.dom.labelCard.querySelector('#placardVariationsBar');
+    if (varBar) {
+      varBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('.placard-var-pill');
+        if (btn && btn.dataset.varIdx !== undefined) {
+          e.stopPropagation();
+          this.setVariation(parseInt(btn.dataset.varIdx, 10));
+        }
+      });
+    }
   }
 
   renderHotspots() {
@@ -1111,7 +1143,26 @@ class GazelliCuratorialGallery {
     const studiesSec = document.getElementById('drawerStudiesSection');
     const studiesGrid = document.getElementById('drawerStudiesGrid');
     if (studiesSec && studiesGrid) {
-      if (art.images.studies && art.images.studies.length) {
+      if (art.variations && art.variations.length > 1) {
+        studiesSec.style.display = 'block';
+        studiesGrid.innerHTML = '';
+        art.variations.forEach((v, idx) => {
+          const card = document.createElement('div');
+          card.className = `study-card ${idx === this.currentVariationIndex ? 'active' : ''}`;
+          card.innerHTML = `
+            <img src="${v.image}" alt="${v.label}" loading="lazy">
+            <div class="study-card-title">
+              <span style="color: var(--gold-primary); font-weight: 700;">Variation ${v.number}:</span> ${v.label}
+              <div style="font-size: 10px; color: #8e8e98; margin-top: 2px;">${v.subtitle.split('•')[0].trim()}</div>
+            </div>
+          `;
+          card.addEventListener('click', () => {
+            this.setVariation(idx);
+            this.toggleDrawer(false);
+          });
+          studiesGrid.appendChild(card);
+        });
+      } else if (art.images.studies && art.images.studies.length) {
         studiesSec.style.display = 'block';
         studiesGrid.innerHTML = '';
         art.images.studies.forEach(study => {

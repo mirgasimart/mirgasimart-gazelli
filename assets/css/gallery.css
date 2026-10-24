@@ -535,6 +535,89 @@ html, body {
   box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
 }
 
+/* Placard Embedded Variations Bar */
+.placard-variations-bar {
+  margin: 6px 0 8px 0;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.p-var-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 9.5px;
+}
+
+.p-var-tag {
+  color: var(--gold-primary);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 8.5px;
+}
+
+.p-var-active {
+  color: #c8c8d2;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 9px;
+}
+
+.placard-var-pills {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+
+.placard-var-pill {
+  flex: 1;
+  padding: 6px 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #d0d0d8;
+  font-size: 10.5px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  min-height: 32px;
+  white-space: nowrap;
+}
+
+.placard-var-pill .p-var-num {
+  font-weight: 700;
+  color: var(--gold-primary);
+  font-size: 10px;
+}
+
+.placard-var-pill:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold-primary);
+  color: #ffffff;
+}
+
+.placard-var-pill.active {
+  background: rgba(212, 175, 55, 0.22);
+  border-color: var(--gold-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.study-card.active {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.4);
+}
+
 /* Frame Outer Box */
 .frame-wrapper {
   position: relative;
@@ -2379,6 +2462,43 @@ html, body {
   /* When 175cm figure is active on mobile, shift artwork right so they do not collide */
   .artwork-mount.scale-active-mobile {
     transform: translateX(20px);
+  }
+
+  /* Mobile Variation Switcher Badge & Placard Controls */
+  .variation-badge-bar {
+    max-width: 92vw;
+    margin-bottom: 6px;
+    padding: 4px 10px;
+    gap: 8px;
+    font-size: 11px;
+    z-index: 30;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+  }
+
+  .variation-hint {
+    display: none;
+  }
+
+  .variation-badge-pill {
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .var-dot {
+    width: 22px;
+    height: 22px;
+    font-size: 10px;
+  }
+
+  .placard-variations-bar {
+    margin: 4px 0 6px 0;
+    padding: 5px 6px;
+  }
+
+  .placard-var-pill {
+    padding: 7px 4px;
+    font-size: 10px;
+    min-height: 36px;
   }
 
   /* Mobile Placard Card */
