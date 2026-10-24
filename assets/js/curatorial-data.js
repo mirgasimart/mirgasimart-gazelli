@@ -53,6 +53,59 @@ const GALLERY_DATA = [
       { x: 32, y: 48, label: "Masazir Pink Salt Crystals", desc: "Genuine crystallized halite clusters embedded in thick oil impasto." },
       { x: 68, y: 35, label: "Atmospheric Saline Gradient", desc: "Glazed blush and dawn-rose pigments evoking geothermal lake reflections." },
       { x: 45, y: 78, label: "Incised Sgraffito Fissures", desc: "Razor-carved directional strata lines exposing the coquina limestone primer." }
+    ],
+    variations: [
+      {
+        index: 0,
+        number: "1",
+        label: "Primary Master",
+        azLabel: "Əsas Əsər",
+        ruLabel: "Основной Шедевр",
+        subtitle: "Atmospheric Saline Dawn • Lacustrine Gradient",
+        image: "docs/output/latest/_clean/01_luminescence_of_masazir_salt_dawn.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_01_masazir_dawn.jpg",
+        plate: "docs/output/latest/_exhibition_plates/plate_01_luminescence_of_masazir_salt_dawn.jpg",
+        desc: "Where saline water turns to rose mist at dawn. Thick crystalline salt sculpted by the palette knife, holding the silent breath of an ancient Caspian morning.",
+        hotspots: [
+          { x: 32, y: 48, label: "Masazir Pink Salt Crystals", desc: "Genuine crystallized halite clusters embedded in thick oil impasto." },
+          { x: 68, y: 35, label: "Atmospheric Saline Gradient", desc: "Glazed blush and dawn-rose pigments evoking geothermal lake reflections." },
+          { x: 45, y: 78, label: "Incised Sgraffito Fissures", desc: "Razor-carved directional strata lines exposing the coquina limestone primer." }
+        ]
+      },
+      {
+        index: 1,
+        number: "2",
+        label: "Evaporite Strata",
+        azLabel: "Buxarlanma Qatları",
+        ruLabel: "Слои Эвапоритов",
+        subtitle: "Sedimentary Salt Terraces • Sgraffito Chalk Ridge",
+        image: "docs/output/latest/_studies/plate_01_variation_2_lacustrine_strata.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_01_masazir_dawn.jpg",
+        plate: "docs/output/latest/_studies/plate_01_variation_2_lacustrine_strata.jpg",
+        desc: "Horizontal geological sedimentary bands of Masazir lake salt and compressed coquina limestone, scored with deep razor sgraffito lines.",
+        hotspots: [
+          { x: 50, y: 35, label: "Horizontal Evaporite Ridge", desc: "Layered geological salt bands cured with heavy palette knife impasto." },
+          { x: 25, y: 65, label: "Chalk Sgraffito Groove", desc: "Incised tectonic lines exposing the Absheron coquina limestone foundation." },
+          { x: 75, y: 55, label: "Saline Blush Glaze", desc: "Dunaliella salina micro-algae organic pigments locked in cold wax medium." }
+        ]
+      },
+      {
+        index: 2,
+        number: "3",
+        label: "Halite Crust",
+        azLabel: "Qalit Qabığı",
+        ruLabel: "Галитовая Корка",
+        subtitle: "Heavy Sculptural Relief • High-Texture Encrustation",
+        image: "docs/output/latest/_studies/plate_01_variation_3_halite_crystallization.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_01_masazir_dawn.jpg",
+        plate: "docs/output/latest/_studies/plate_01_variation_3_halite_crystallization.jpg",
+        desc: "Monumental clusters of genuine crystallized halite mineral encrusted directly into heavy textured impasto paste catching ambient gallery lighting.",
+        hotspots: [
+          { x: 40, y: 50, label: "Macro Halite Clusters", desc: "Sculptural crystalline lake salt encrustations projecting 8mm off canvas." },
+          { x: 65, y: 30, label: "Saline Craquelure Bed", desc: "Dry lake-bed contraction cracks formed during natural solar evaporation." },
+          { x: 30, y: 75, label: "Rose Quartz Impasto", desc: "Coarse Absheron beach quartz sand blended into dawn-tinted oil paste." }
+        ]
+      }
     ]
   },
   {
@@ -103,6 +156,59 @@ const GALLERY_DATA = [
       { x: 50, y: 25, label: "Carved Shebeke Lattice", desc: "Geometric architectural stone tracery inspired by Palace of the Shirvanshahs." },
       { x: 38, y: 70, label: "Fossil Didacna Cockles", desc: "Prehistoric Caspian bivalve fossils anchored into mineral plaster." },
       { x: 62, y: 55, label: "Turquoise & Lapis Glaze", desc: "Translucent Caspian deep-water hues glowing behind masonry fretwork." }
+    ],
+    variations: [
+      {
+        index: 0,
+        number: "1",
+        label: "Primary Master",
+        azLabel: "Əsas Əsər",
+        ruLabel: "Основной Шедевр",
+        subtitle: "Sacred Stone Shebeke • Concentric Cockle Halo",
+        image: "docs/output/latest/_clean/02_the_weaver_of_sunken_shells_didacna.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
+        plate: "docs/output/latest/_exhibition_plates/plate_02_the_weaver_of_sunken_shells_didacna.jpg",
+        desc: "Concentric rings of fossilized Caspian cockles (Didacna) radiating from a crystalline saline core—a celestial calendar measuring eternity in mother-of-pearl.",
+        hotspots: [
+          { x: 50, y: 45, label: "Concentric Shebeke Reliquary", desc: "Sacred Islamic architectural stone tracery rendered in fossilized Caspian cockles." },
+          { x: 35, y: 68, label: "Didacna Shell Clusters", desc: "Endemic Caspian bivalves (Didacna trigonoides) set in deep mineral relief." },
+          { x: 65, y: 25, label: "Crystalline Halite Halo", desc: "Masazir lake salt encrustations catching grazing accent lighting." }
+        ]
+      },
+      {
+        index: 1,
+        number: "2",
+        label: "Coastal Mosaic",
+        azLabel: "Sahil Mozaikası",
+        ruLabel: "Прибрежная Мозаика",
+        subtitle: "Radial Didacna Cluster • Beach Quartz Grit",
+        image: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
+        plate: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
+        desc: "Dense tactile mosaic of fossilized Caspian cockles embedded in heavy Absheron beach sand and warm quarry plaster.",
+        hotspots: [
+          { x: 48, y: 40, label: "Fossil Shell Radial Field", desc: "Concentric rings of weathered marine cockles bound in chalk paste." },
+          { x: 28, y: 60, label: "Absheron Quartz Grit", desc: "Unrefined coastal sand creating high-friction matte surface texture." },
+          { x: 70, y: 50, label: "Mother-of-Pearl Aperture", desc: "Abraded nacre reflections catching ambient illumination." }
+        ]
+      },
+      {
+        index: 2,
+        number: "3",
+        label: "Shell Monolith",
+        azLabel: "Qabıq Monoliti",
+        ruLabel: "Монолит Раковин",
+        subtitle: "Vertical Quarry Strata • Scored Nacre Relief",
+        image: "docs/output/latest/_studies/plate_02_variation_3_shell_monolith.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
+        plate: "docs/output/latest/_studies/plate_02_variation_3_shell_monolith.jpg",
+        desc: "A solitary vertical limestone stele bearing scored geometric apertures, iridescent shell fragments, and fine quartz sand impasto.",
+        hotspots: [
+          { x: 50, y: 35, label: "Monolithic Vertical Axis", desc: "Carved coquina stone relief evoking an ancient Baku portal stela." },
+          { x: 40, y: 65, label: "Embedded Didacna Valves", desc: "Submerged marine shell valves fossilized into limestone matrix." },
+          { x: 60, y: 55, label: "Scored Sgraffito Tracery", desc: "Deep geometric Shebeke fretwork incised with sculptor's chisel." }
+        ]
+      }
     ]
   },
   {
@@ -247,6 +353,59 @@ const GALLERY_DATA = [
       { x: 50, y: 50, label: "Geothermal Crater Vortex", desc: "Concentric impasto vortex evoking the pulsating throat of Lokbatan mud volcano." },
       { x: 65, y: 62, label: "Armored Benthophilus Goby", desc: "Archaic armored benthic fish adorned with raw metallic pyrite crystals." },
       { x: 28, y: 34, label: "Volcanic Clay Craquelure", desc: "Authentic mud clay dried into deep geological fractures and tactile fissures." }
+    ],
+    variations: [
+      {
+        index: 0,
+        number: "1",
+        label: "Primary Master",
+        azLabel: "Əsas Əsər",
+        ruLabel: "Основной Шедевр",
+        subtitle: "Geothermal Crater Vortex • Armored Tadpole Goby",
+        image: "docs/output/latest/_clean/04_breath_of_lokbatan_tadpole_goby.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_04_breath_of_lokbatan.jpg",
+        plate: "docs/output/latest/_exhibition_plates/plate_04_breath_of_lokbatan_tadpole_goby.jpg",
+        desc: "The quiet exhaustion of a planet. Cracked volcanic clay and geothermal celadon swirling around the pulsating vent of Lokbatan mud volcano.",
+        hotspots: [
+          { x: 50, y: 50, label: "Geothermal Crater Vortex", desc: "Concentric impasto vortex evoking the pulsating throat of Lokbatan mud volcano." },
+          { x: 65, y: 62, label: "Armored Benthophilus Goby", desc: "Archaic armored benthic fish adorned with raw metallic pyrite crystals." },
+          { x: 28, y: 34, label: "Volcanic Clay Craquelure", desc: "Authentic mud clay dried into deep geological fractures and tactile fissures." }
+        ]
+      },
+      {
+        index: 1,
+        number: "2",
+        label: "Celadon Caldera",
+        azLabel: "Seladon Kalderası",
+        ruLabel: "Селадоновая Кальдера",
+        subtitle: "Concentric Clay Eruption • Pale Celadon Mineral Glaze",
+        image: "docs/output/latest/_studies/plate_04_variation_2_celadon_caldera.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_04_breath_of_lokbatan.jpg",
+        plate: "docs/output/latest/_studies/plate_04_variation_2_celadon_caldera.jpg",
+        desc: "Rhythmic concentric rings of drying geothermal mud and pale celadon pigment expanding outwards from the central vent.",
+        hotspots: [
+          { x: 48, y: 48, label: "Caldera Vent Core", desc: "Subterranean pressure epicentre modeled in thick volcanic clay." },
+          { x: 72, y: 35, label: "Celadon Glaze Wash", desc: "Rare copper-iron mineral silicate washes layered over raw linen." },
+          { x: 30, y: 68, label: "Desiccation Fissures", desc: "Natural evaporative shrinkage craquelure forming organic radial fractures." }
+        ]
+      },
+      {
+        index: 2,
+        number: "3",
+        label: "Abyssal Eruption",
+        azLabel: "Abissal Püskürmə",
+        ruLabel: "Абиссальное Извержение",
+        subtitle: "Deep Emerald & Volcanic Ash • High-Relief Craquelure",
+        image: "docs/output/latest/_studies/plate_04_variation_3_abyssal_caldera.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_04_breath_of_lokbatan.jpg",
+        plate: "docs/output/latest/_studies/plate_04_variation_3_abyssal_caldera.jpg",
+        desc: "Deep tectonic fissures and abyssal emerald-charcoal craquelure documenting the cooling tectonic earth in heavy tactile relief.",
+        hotspots: [
+          { x: 55, y: 45, label: "Tectonic Fractures", desc: "Profound 12mm deep relief fissures sculpted in polymerized mud slurry." },
+          { x: 35, y: 30, label: "Volcanic Ash Glaze", desc: "Mineral ash and charcoal grounds creating dramatic light absorption." },
+          { x: 60, y: 70, label: "Pyrite Inclusions", desc: "Subterranean brassy sulfide crystals gleaming amidst dark earth." }
+        ]
+      }
     ]
   },
   {
@@ -297,6 +456,59 @@ const GALLERY_DATA = [
       { x: 50, y: 46, label: "Solar Mandala & Ouroboros", desc: "The ancient Caspian lamprey coiled into an eternal cosmic solar wheel." },
       { x: 48, y: 76, label: "Gobustan Petroglyph Sgraffito", desc: "Carved reed boat and ritual dancer figures incised in porous stone plaster." },
       { x: 26, y: 38, label: "Caspian Cyan Orbital Ring", desc: "Vibrant azure and salt mineral halo radiating from the ancient sun disk." }
+    ],
+    variations: [
+      {
+        index: 0,
+        number: "1",
+        label: "Primary Master",
+        azLabel: "Əsas Əsər",
+        ruLabel: "Основной Шедевр",
+        subtitle: "Solar Mandala & Ouroboros • Caspian Lamprey",
+        image: "docs/output/latest/_clean/05_the_lampreys_vigil_caspian_lamprey.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_05_gobustan_oracle.jpg",
+        plate: "docs/output/latest/_exhibition_plates/plate_05_the_lampreys_vigil_caspian_lamprey.jpg",
+        desc: "Twelve thousand years ago, hunters etched a boat carrying the sun across rock. An archaic Caspian lamprey loops through gold dust and beach sand, completing an eternal circle of return.",
+        hotspots: [
+          { x: 50, y: 46, label: "Solar Mandala & Ouroboros", desc: "The ancient Caspian lamprey coiled into an eternal cosmic solar wheel." },
+          { x: 48, y: 76, label: "Gobustan Petroglyph Sgraffito", desc: "Carved reed boat and ritual dancer figures incised in porous stone plaster." },
+          { x: 26, y: 38, label: "Caspian Cyan Orbital Ring", desc: "Vibrant azure and salt mineral halo radiating from the ancient sun disk." }
+        ]
+      },
+      {
+        index: 1,
+        number: "2",
+        label: "Gobustan Solar Disc",
+        azLabel: "Qobustan Günəş Diski",
+        ruLabel: "Гобустанский Солнечный Диск",
+        subtitle: "Petroglyphic Sgraffito • Cyan Orbital Halo",
+        image: "docs/output/latest/_studies/plate_05_variation_2_gobustan_disc.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_05_gobustan_oracle.jpg",
+        plate: "docs/output/latest/_studies/plate_05_variation_2_gobustan_disc.jpg",
+        desc: "Archaic reed boat petroglyphs carved into bone plaster, surrounded by a luminous cyan-salt halo and gold dust orbit.",
+        hotspots: [
+          { x: 48, y: 42, label: "Solar Disc Center", desc: "Brushed 24k gold leaf and Masazir salt forming a radiant solar core." },
+          { x: 68, y: 58, label: "Sgraffito Reed Boat", desc: "Ancient petroglyph silhouettes scored deeply into coarse limestone plaster." },
+          { x: 30, y: 65, label: "Azure Saline Orbital", desc: "Concentric cyan-blue mineral halo reflecting Caspian seawater." }
+        ]
+      },
+      {
+        index: 2,
+        number: "3",
+        label: "Cosmic Wheel Totem",
+        azLabel: "Kosmik Çarx Totemi",
+        ruLabel: "Тотем Космического Колеса",
+        subtitle: "Prehistoric Altar Stele • Concentric Sand Halos",
+        image: "docs/output/latest/_studies/plate_05_variation_3_cosmic_wheel.jpg",
+        insitu: "docs/output/latest/_insitu/insitu_plate_05_gobustan_oracle.jpg",
+        plate: "docs/output/latest/_studies/plate_05_variation_3_cosmic_wheel.jpg",
+        desc: "Deeply textured coarse beach sand and quartz grit arranged in monumental concentric solar rings around an ancient Caspian totem.",
+        hotspots: [
+          { x: 50, y: 48, label: "Concentric Quartz Rings", desc: "Textured beach sand bands sculpted in high relief around the central axis." },
+          { x: 35, y: 32, label: "Bone Plaster Ground", desc: "Porous Absheron coquina and chalk primer cured with archival beeswax." },
+          { x: 65, y: 68, label: "Archaic Totem Loop", desc: "Prehistoric Caspian aquatic totem coiled in eternal astronomical return." }
+        ]
+      }
     ]
   }
 ];
