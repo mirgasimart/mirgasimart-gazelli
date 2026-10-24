@@ -874,8 +874,7 @@ class GazelliCuratorialGallery {
       this.dom.labelCard.className = 'gallery-label-card placard-mobile';
     } else if (isMobile) {
       // Mobile portrait layout (iPhone, Android)
-      const hasVars = art.variations && art.variations.length > 1;
-      const stageH = Math.max(window.innerHeight - (hasVars ? 295 : 240), 180);
+      const stageH = Math.max(window.innerHeight - 235, 190);
 
       this.currentOffsetX = this.showHumanScale ? 24 : 0;
       this.currentOffsetY = 0;
@@ -1238,12 +1237,17 @@ class GazelliCuratorialGallery {
         studiesSec.style.display = 'block';
         studiesGrid.innerHTML = '';
         art.variations.forEach((v, idx) => {
+          let vLabel = v.label;
+          if (this.currentLang === 'az' && v.azLabel) vLabel = v.azLabel;
+          if (this.currentLang === 'ru' && v.ruLabel) vLabel = v.ruLabel;
+          const vWord = this.currentLang === 'az' ? 'Variasiya' : (this.currentLang === 'ru' ? 'Вариация' : 'Variation');
+
           const card = document.createElement('div');
           card.className = `study-card ${idx === this.currentVariationIndex ? 'active' : ''}`;
           card.innerHTML = `
-            <img src="${v.image}" alt="${v.label}" loading="lazy">
+            <img src="${v.image}" alt="${vLabel}" loading="lazy">
             <div class="study-card-title">
-              <span style="color: var(--gold-primary); font-weight: 700;">Variation ${v.number}:</span> ${v.label}
+              <span style="color: var(--gold-primary); font-weight: 700;">${vWord} ${v.number}:</span> ${vLabel}
               <div style="font-size: 10px; color: #8e8e98; margin-top: 2px;">${v.subtitle.split('•')[0].trim()}</div>
             </div>
           `;
@@ -1473,7 +1477,7 @@ class GazelliCuratorialGallery {
 
     const t = window.I18N[lang];
 
-    // 1. Update 2-character toggle button label
+    // 1. Update 2-character toggle button label & tooltip
     const langLabel = document.getElementById('langLabel');
     if (langLabel) langLabel.textContent = t.langCode;
     const langToggleBtn = document.getElementById('langToggleBtn');
@@ -1489,25 +1493,167 @@ class GazelliCuratorialGallery {
     const brandSub = document.querySelector('.brand-sub');
     if (brandSub) brandSub.textContent = t.brandSub;
 
-    // 3. Update Mode Tabs
-    const tabGallery = document.querySelector('.mode-tab[data-mode="gallery"] span');
-    if (tabGallery) tabGallery.textContent = t.modes.gallery;
-    const tabPanoramic = document.querySelector('.mode-tab[data-mode="panoramic"] span');
-    if (tabPanoramic) tabPanoramic.textContent = t.modes.panoramic;
-    const tabMacro = document.querySelector('.mode-tab[data-mode="macro"] span');
-    if (tabMacro) tabMacro.textContent = t.modes.macro;
+    // 3. Update Mode Tabs & Tooltips
+    const tabGallery = document.querySelector('.mode-tab[data-mode="gallery"]');
+    if (tabGallery) {
+      const span = tabGallery.querySelector('span');
+      if (span) span.textContent = t.modes.gallery;
+      if (t.modes.galleryTitle) tabGallery.title = t.modes.galleryTitle;
+    }
+    const tabPanoramic = document.querySelector('.mode-tab[data-mode="panoramic"]');
+    if (tabPanoramic) {
+      const span = tabPanoramic.querySelector('span');
+      if (span) span.textContent = t.modes.panoramic;
+      if (t.modes.panoramicTitle) tabPanoramic.title = t.modes.panoramicTitle;
+    }
+    const tabMacro = document.querySelector('.mode-tab[data-mode="macro"]');
+    if (tabMacro) {
+      const span = tabMacro.querySelector('span');
+      if (span) span.textContent = t.modes.macro;
+      if (t.modes.macroTitle) tabMacro.title = t.modes.macroTitle;
+    }
 
-    // 4. Update Header Action Buttons
-    const scaleBtnLabel = document.querySelector('#scaleToggleBtn .action-label');
-    if (scaleBtnLabel) scaleBtnLabel.textContent = t.actions.scale;
-    const wingBtnLabel = document.querySelector('#wingToggleBtn .action-label');
-    if (wingBtnLabel) wingBtnLabel.textContent = t.actions.minerals;
-    const drawerBtnLabel = document.querySelector('#drawerOpenBtn .action-label');
-    if (drawerBtnLabel) drawerBtnLabel.textContent = t.actions.dossier;
-    const moreBtnLabel = document.querySelector('#moreMenuBtn .action-label');
-    if (moreBtnLabel) moreBtnLabel.textContent = t.actions.more;
+    // 4. Update Header Action Buttons & Tooltips
+    const scaleBtn = document.getElementById('scaleToggleBtn');
+    if (scaleBtn) {
+      const lbl = scaleBtn.querySelector('.action-label');
+      if (lbl) lbl.textContent = t.actions.scale;
+      if (t.actions.scaleTitle) scaleBtn.title = t.actions.scaleTitle;
+    }
+    const wingBtn = document.getElementById('wingToggleBtn');
+    if (wingBtn) {
+      const lbl = wingBtn.querySelector('.action-label');
+      if (lbl) lbl.textContent = t.actions.minerals;
+      if (t.actions.mineralsTitle) wingBtn.title = t.actions.mineralsTitle;
+    }
+    const drawerBtn = document.getElementById('drawerOpenBtn');
+    if (drawerBtn) {
+      const lbl = drawerBtn.querySelector('.action-label');
+      if (lbl) lbl.textContent = t.actions.dossier;
+      if (t.actions.dossierTitle) drawerBtn.title = t.actions.dossierTitle;
+    }
+    const moreBtn = document.getElementById('moreMenuBtn');
+    if (moreBtn) {
+      const lbl = moreBtn.querySelector('.action-label');
+      if (lbl) lbl.textContent = t.actions.more;
+      if (t.actions.moreTitle) moreBtn.title = t.actions.moreTitle;
+    }
 
-    // 5. Update Curatorial Dossier Drawer Headings
+    // 5. Update Scale Height Label
+    const scaleHeightLabel = document.querySelector('.scale-height-label');
+    if (scaleHeightLabel && t.scale) scaleHeightLabel.textContent = t.scale.label;
+
+    // 6. Update Right Wing Panel (Minerals & Engineering Specs)
+    const wingBadge = document.querySelector('.wing-badge');
+    if (wingBadge && t.wing) wingBadge.textContent = t.wing.badge;
+    const wingTag = document.querySelector('.wing-tag');
+    if (wingTag && t.wing) wingTag.textContent = t.wing.tag;
+    const wingSpecsRows = document.querySelectorAll('#wingRight .wing-specs-row span:first-child');
+    if (wingSpecsRows.length >= 3 && t.wing) {
+      wingSpecsRows[0].textContent = t.wing.chassis;
+      wingSpecsRows[1].textContent = t.wing.weight;
+      wingSpecsRows[2].textContent = t.wing.mounting;
+    }
+    const wingChassis = document.getElementById('wingChassis');
+    if (wingChassis && t.wing) wingChassis.textContent = t.wing.chassisVal;
+    const wingCleats = document.getElementById('wingCleats');
+    if (wingCleats && t.wing) wingCleats.textContent = t.wing.mountingVal;
+
+    // 7. Update Desktop Footer Quick Controls
+    const footerControlLabels = document.querySelectorAll('.gallery-footer .control-label');
+    if (footerControlLabels.length >= 2 && t.finishes) {
+      footerControlLabels[0].textContent = t.finishes.wallSurface;
+      footerControlLabels[1].textContent = t.finishes.framing;
+    }
+    const btnLimestone = document.querySelector('.quick-controls [data-wall="limestone"]');
+    if (btnLimestone && t.finishes) btnLimestone.textContent = t.finishes.limestone;
+    const btnWhiteCube = document.querySelector('.quick-controls [data-wall="white-cube"]');
+    if (btnWhiteCube && t.finishes) btnWhiteCube.textContent = t.finishes.plaster;
+    const btnAnthracite = document.querySelector('.quick-controls [data-wall="anthracite"]');
+    if (btnAnthracite && t.finishes) btnAnthracite.textContent = t.finishes.anthracite;
+
+    const btnWalnut = document.querySelector('.quick-controls [data-frame="floater-walnut"]');
+    if (btnWalnut && t.finishes) btnWalnut.textContent = t.finishes.walnut;
+    const btnWrap = document.querySelector('.quick-controls [data-frame="museum-edge"]');
+    if (btnWrap && t.finishes) btnWrap.textContent = t.finishes.wrap;
+    const btnSteel = document.querySelector('.quick-controls [data-frame="floater-steel"]');
+    if (btnSteel && t.finishes) btnSteel.textContent = t.finishes.steel;
+
+    // 8. Update Three-Dot Overflow Popover Menu
+    const popoverTitle = document.querySelector('.popover-title');
+    if (popoverTitle && t.popover) popoverTitle.textContent = t.popover.title;
+    const popoverFinishesTitle = document.getElementById('popoverFinishesTitle');
+    if (popoverFinishesTitle && t.finishes) popoverFinishesTitle.textContent = t.finishes.title;
+    const popoverFinishesBtn = document.getElementById('popoverFinishesBtn');
+    if (popoverFinishesBtn && t.popover) popoverFinishesBtn.textContent = t.popover.viewBtn || 'VIEW';
+
+    const popoverSliderHeaders = document.querySelectorAll('#lightingPopover .slider-header span:first-child');
+    if (popoverSliderHeaders.length >= 2 && t.popover) {
+      popoverSliderHeaders[0].textContent = t.popover.intensity;
+      popoverSliderHeaders[1].textContent = t.popover.temp;
+    }
+    const followBeamLabel = document.querySelector('#lightingPopover .slider-row span[style*="font-size: 11px"]');
+    if (followBeamLabel && t.popover) followBeamLabel.textContent = t.popover.followBeam;
+
+    const envToggleLabels = document.querySelectorAll('#lightingPopover .popover-row-toggle div div:first-child');
+    const envToggleSubs = document.querySelectorAll('#lightingPopover .popover-row-toggle div div:last-child');
+    if (envToggleLabels.length && t.popover) {
+      envToggleLabels.forEach(labelEl => {
+        const txt = labelEl.textContent.trim();
+        if (txt.includes('Soundscape') || txt.includes('Səs') || txt.includes('Звуки')) {
+          labelEl.textContent = t.popover.soundscape;
+        } else if (txt.includes('In-Situ') || txt.includes('İnteryer') || txt.includes('Интерьер')) {
+          labelEl.textContent = t.popover.insitu;
+        }
+      });
+      envToggleSubs.forEach(subEl => {
+        const txt = subEl.textContent.trim();
+        if (txt.includes('atmosphere') || txt.includes('atmosfer')) {
+          subEl.textContent = t.popover.soundscapeSub;
+        } else if (txt.includes('placement') || txt.includes('görünüşü') || txt.includes('размещение')) {
+          subEl.textContent = t.popover.insituSub;
+        }
+      });
+    }
+
+    const downloadLinks = document.querySelectorAll('a[href*="PROPOSAL.pdf"], .btn-catalog-download, .drawer-pdf-btn, .drawer-header-pdf');
+    downloadLinks.forEach(link => {
+      const span = link.querySelector('span');
+      if (span && link.classList.contains('drawer-pdf-btn') && t.drawer.btnDownloadPdf) {
+        span.textContent = t.drawer.btnDownloadPdf;
+      } else if (span && link.classList.contains('drawer-header-pdf')) {
+        span.textContent = 'PDF';
+      }
+    });
+
+    // 9. Update Mobile Customizer Sheet
+    const mobileSheetTitle = document.querySelector('.mobile-sheet-title');
+    if (mobileSheetTitle && t.finishes) mobileSheetTitle.textContent = t.finishes.mobileTitle;
+    const mobileSheetLabels = document.querySelectorAll('#mobileCustomizerSheet .sheet-label');
+    mobileSheetLabels.forEach(lbl => {
+      const txt = lbl.textContent.trim();
+      if (txt.includes('Plaster') || txt.includes('Suvağ') || txt.includes('Штукатурка')) {
+        lbl.textContent = t.finishes.wallSurface;
+      } else if (txt.includes('Framing') || txt.includes('Çərçivə') || txt.includes('Обрамление')) {
+        lbl.textContent = t.finishes.framing;
+      }
+    });
+
+    const mBtnLimestone = document.querySelector('#mobileWallOptions [data-wall="limestone"]');
+    if (mBtnLimestone && t.finishes) mBtnLimestone.textContent = t.finishes.limestone;
+    const mBtnWhiteCube = document.querySelector('#mobileWallOptions [data-wall="white-cube"]');
+    if (mBtnWhiteCube && t.finishes) mBtnWhiteCube.textContent = t.finishes.plaster;
+    const mBtnAnthracite = document.querySelector('#mobileWallOptions [data-wall="anthracite"]');
+    if (mBtnAnthracite && t.finishes) mBtnAnthracite.textContent = t.finishes.anthracite;
+
+    const mBtnWalnut = document.querySelector('#mobileFrameOptions [data-frame="floater-walnut"]');
+    if (mBtnWalnut && t.finishes) mBtnWalnut.textContent = t.finishes.walnut;
+    const mBtnWrap = document.querySelector('#mobileFrameOptions [data-frame="museum-edge"]');
+    if (mBtnWrap && t.finishes) mBtnWrap.textContent = t.finishes.wrap;
+    const mBtnSteel = document.querySelector('#mobileFrameOptions [data-frame="floater-steel"]');
+    if (mBtnSteel && t.finishes) mBtnSteel.textContent = t.finishes.steel;
+
+    // 10. Update Curatorial Dossier Drawer Headings
     const drawerTitle = document.querySelector('.drawer-title');
     if (drawerTitle) drawerTitle.textContent = t.drawer.title;
     const drawerStatementHeading = document.getElementById('drawerStatementHeading');
@@ -1516,9 +1662,20 @@ class GazelliCuratorialGallery {
     if (drawerAnatomyHeading) drawerAnatomyHeading.textContent = t.drawer.anatomy;
     const drawerSpecsHeading = document.getElementById('drawerSpecsHeading');
     if (drawerSpecsHeading) drawerSpecsHeading.textContent = t.drawer.specs;
+    const studiesHeading = document.getElementById('drawerStudiesHeading');
+    if (studiesHeading && t.drawer) studiesHeading.textContent = t.drawer.studies;
 
-    // 6. Update Artwork Placard, Variations & Curatorial Drawer
+    // 11. Fullscreen Badges
     const currentArt = this.artworks[this.currentIndex];
+    if (this.dom.insituBadge && t.fullscreen && currentArt) {
+      this.dom.insituBadge.textContent = `${t.fullscreen.insituBadgePrefix}: ${currentArt.niche}`;
+    }
+    const plateBadge = document.querySelector('#plateView .fullscreen-badge');
+    if (plateBadge && t.fullscreen) {
+      plateBadge.textContent = t.fullscreen.plateEdition;
+    }
+
+    // 12. Update Artwork Placard, Variations & Curatorial Drawer Content
     if (currentArt) {
       this.renderMobileVariationPills(currentArt);
       this.updateVariationBadge(this.currentVariationIndex);
