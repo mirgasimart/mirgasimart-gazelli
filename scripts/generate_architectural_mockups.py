@@ -146,11 +146,11 @@ def main():
     os.makedirs(insitu_dir, exist_ok=True)
 
     items = [
-        ("01_luminescence_of_masazir_salt_dawn.jpg", "insitu_plate_01_masazir_dawn.jpg", "horizontal", "Plate 01: Luminescence of Masazir (130 × 100 cm)"),
-        ("02_the_weaver_of_sunken_shells_didacna.jpg", "insitu_plate_02_shebeke_reliquary.jpg", "vertical", "Plate 02: The Shebeke Reliquary (40 × 60 cm)"),
-        ("03_keeper_of_the_cold_depths_caspian_shad.jpg", "insitu_plate_03_binagadi_derrick.jpg", "vertical", "Plate 03: Black Gold (80 × 100 cm)"),
-        ("04_breath_of_lokbatan_tadpole_goby.jpg", "insitu_plate_04_breath_of_lokbatan.jpg", "vertical", "Plate 04: After Hard Day of Work (145 × 145 cm)"),
-        ("05_the_lampreys_vigil_caspian_lamprey.jpg", "insitu_plate_05_gobustan_oracle.jpg", "horizontal", "Plate 05: Solar Oracle (120 × 100 cm)")
+        ("01_luminescence_of_masazir_salt_dawn.jpg", "insitu_plate_01_masazir_dawn.jpg", "horizontal", "Plate 01: Pink Moon (130 × 100 cm)"),
+        ("02_the_weaver_of_sunken_shells_didacna.jpg", "insitu_plate_02_shebeke_reliquary.jpg", "vertical", "Plate 02: Across the Universe (40 × 60 cm)"),
+        ("03_keeper_of_the_cold_depths_caspian_shad.jpg", "insitu_plate_03_binagadi_derrick.jpg", "vertical", "Plate 03: Paint It Black (80 × 100 cm)"),
+        ("04_breath_of_lokbatan_tadpole_goby.jpg", "insitu_plate_04_breath_of_lokbatan.jpg", "vertical", "Plate 04: A Hard Day's Night (145 × 145 cm)"),
+        ("05_the_lampreys_vigil_caspian_lamprey.jpg", "insitu_plate_05_gobustan_oracle.jpg", "horizontal", "Plate 05: Here Comes the Sun (120 × 100 cm)")
     ]
 
     for clean_file, out_file, orient, title in items:
