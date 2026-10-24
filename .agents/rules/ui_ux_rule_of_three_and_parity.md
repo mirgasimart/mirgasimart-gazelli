@@ -45,3 +45,32 @@ Desktop web and mobile phone experiences must remain strictly on par:
   - `[ Dossier ]` (full curatorial statement, specs & PDF download)
   - `[ ··· ]` (overflow environment popover)
 - **Single-Word Button Labels**: Avoid multi-word button labels. Use concise, evocative single words (`Stage`, `Walk`, `Loupe`, `Scale`, `Minerals`, `Dossier`, `More`).
+
+---
+
+## 4. Single Fixed Brand Identity Rule
+To maintain museum-grade dignity and avoid commercial visual noise:
+- **One Fixed Location**: Brand logo medallion, studio seal, and series title ("Absheron Tectonics") are permanently anchored in **one fixed place**: the Top Curatorial Header (`.brand-section`).
+- **No Redundant Repetition**: Never repeat "Mirgasim Art Studio" or the studio year on artwork placards, labels, or secondary cards. The artwork placard under each canvas must function as a pure museum tombstone displaying only the artwork title, curatorial variation selector, physical dimensions & medium, and the Curatorial Dossier link.
+- **Vertical Height Priority**: On mobile viewports, eliminating redundant artist headers from placards saves 30–35px of vertical screen real estate, letting the painting expand and breathe without crowding bottom controls.
+
+---
+
+## 5. Trilingual System & 2-Character Language Toggle
+- **Canonical 3 Languages**:
+  1. `EN` (English — Canonical Default)
+  2. `AZ` (Azerbaijani — Endemic Cultural Heritage)
+  3. `RU` (Russian — Regional Academic Lineage)
+- **2-Character Toggle (`#langToggleBtn`)**:
+  - Displays as a sleek, 2-character glassmorphic badge (`EN` / `AZ` / `RU`) anchored directly beside the brand titles in the top header.
+  - Tapping cycles `EN` -> `AZ` -> `RU` -> `EN` with an instant tactile micro-pulse.
+  - Synchronizes brand titles, viewing mode tabs, action buttons, artwork titles, and curatorial narratives across the entire application, persisting preference in `localStorage`.
+
+---
+
+## 6. Universal Interactivity & Cross-Mode Feedback
+- **Zero "Dead" Clicks**: Never present a button that fails to produce immediate visual feedback when tapped.
+- **Cross-Mode Intelligence**:
+  - Tapping `Scale` while in `Walk` (panoramic) or `Loupe` (macro) mode seamlessly switches to `Stage` (1:1 gallery) view and highlights the human scale figure.
+  - Tapping `Minerals` on mobile/tablets or while in `Walk`/`Loupe` mode smoothly opens the Curatorial Dossier and scrolls directly to the Absheron Geological Mineral Anatomy section.
+  - Tapping thumbnails in the bottom strip while in `Walk` mode smoothly scrolls the promenade to the selected artwork station.
