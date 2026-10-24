@@ -111,26 +111,26 @@ const GALLERY_DATA = [
     dimensions: "80 × 100 cm (31.5 × 39.4 in)",
     orientation: "vertical",
     niche: "High-Traffic Transition Corridor / Executive Wall / Aviation VIP Lounge",
-    endemicFocus: "Caspian Marine Shad / Brazhnikov’s Shad (Alosa braschnikowi)",
-    scientificTaxonomy: "Alosa braschnikowi (Borodin, 1904)",
+    endemicFocus: "Caspian Sturgeon (Acipenser gueldenstaedtii) & Marine Shad",
+    scientificTaxonomy: "Acipenser gueldenstaedtii (Brandt & Ratzeburg, 1833)",
     minerals: [
       {
         name: "Natural Absheron Bitumen (Binagadi & Fatmai)",
-        description: "Pure unrefined asphaltite applied in thick, viscous knife-strokes, curing to a deep matte-gloss hydrocarbon black."
+        description: "Pure unrefined asphaltite applied in heavy 8–10mm sculptural palette-knife impasto ridges, curing to an obsidian matte-gloss crust."
       },
       {
         name: "Pyrite Mineral Aggregates (FeS₂)",
-        description: "Irregular metallic brassy-gold sulfide crystals embedded into the fish scales, catching ambient gallery lighting."
+        description: "Irregular metallic brassy-gold sulfide crystals embedded into the dorsal scutes, catching ambient gallery lighting."
       },
       {
-        name: "Absheron Limestone Powder",
-        description: "Chalky white contrast scored across the black bitumen field."
+        name: "Oxidized 24k Gold Leaf & Limestone Powder",
+        description: "Abraded precious leaf and Absheron chalk scored into the bitumen field, evoking metallurgical antiquity."
       }
     ],
-    curatorialNarrative: "Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (Yanar Dağ / Ateshgah), synthesizing Baku's hydrocarbon heritage with natural marine vitality.",
+    curatorialNarrative: "Confronting Baku's historic status as the pioneer of world petroleum, a towering, suffocating surge of sculptural Binagadi bitumen sweeps across the canvas in visceral palette-knife impasto ridges. Entangled within the black asphalt wave are charred, splintered wooden oil derrick beams and corroded iron cables from historic Bibi-Heybat fields. Emerging from the dark tar like a prehistoric amber relic, an armored Caspian sturgeon glows under museum raking light with raw pyrite and abraded 24k gold leaf above the eternal subterranean gas flame (Yanar Dağ).",
     turnkeySpecs: {
       chassis: "Solid cross-braced Finnish pine with aluminum cradle",
-      weight: "6.8 kg",
+      weight: "7.2 kg",
       mounting: "Heavy-duty aluminum French cleat (Z-bar)",
       edgeFinish: "Polymerized bitumen continuous edge (45mm profile)",
       lighting: "3000K museum track lighting to catch pyrite metallic facets"
@@ -138,12 +138,16 @@ const GALLERY_DATA = [
     images: {
       clean: "docs/output/latest/_clean/03_keeper_of_the_cold_depths_caspian_shad.jpg",
       insitu: "docs/output/latest/_insitu/insitu_plate_03_binagadi_derrick.jpg",
-      plate: "docs/output/latest/_exhibition_plates/plate_03_keeper_of_the_cold_depths_caspian_shad.jpg"
+      plate: "docs/output/latest/_exhibition_plates/plate_03_keeper_of_the_cold_depths_caspian_shad.jpg",
+      studies: [
+        { title: "Variation 3A: The Tectonic Obliteration (Kiefer Lineage)", path: "docs/output/latest/_studies/plate_03_variation_1_tectonic_obliteration.jpg" },
+        { title: "Variation 3B: The Industrial Cretti (Burri Lineage)", path: "docs/output/latest/_studies/plate_03_variation_2_industrial_cretti.jpg" }
+      ]
     },
     hotspots: [
-      { x: 42, y: 22, label: "Derrick Structural Beams", desc: "Minimalist geometric scaffolding echoing early Absheron oil derricks." },
-      { x: 55, y: 52, label: "Pyrite-Studded Caspian Shad", desc: "Natural brassy pyrite flakes encrusted on Alosa braschnikowi scales." },
-      { x: 48, y: 85, label: "Viscous Binagadi Bitumen", desc: "Subterranean heavy asphaltite matrix cured with archival beeswax." }
+      { x: 38, y: 18, label: "Charred Bibi-Heybat Derrick", desc: "Splintered wooden structural scaffolding swallowed by the black bitumen surge." },
+      { x: 58, y: 56, label: "Pyrite & Gold-Encrusted Sturgeon", desc: "Fossilized dorsal scutes sculpted with raw brassy pyrite ore and abraded 24k gold leaf." },
+      { x: 48, y: 92, label: "Subterranean Gas Embers", desc: "Smoldering fissure breathing the eternal geothermal heat of Yanar Dağ." }
     ]
   },
   {
