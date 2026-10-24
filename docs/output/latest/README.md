@@ -76,13 +76,22 @@ The faunal motifs across this suite deliberately privilege **archaic benthic org
 - **Genre**: Industrial-Geological Abstraction / Hydrocarbon Matter Painting
 - **Dimensions**: **80 × 100 cm** (Vertical Canvas, Specification from Brief)
 - **Target Spatial Placement**: High-Traffic Transition Corridor, Executive Focal Wall, or Aviation VIP Lounge
-- **Endemic Caspian Wildlife**: Caspian Marine Shad / Brazhnikov’s Shad (*Alosa braschnikowi*)
+- **Endemic Caspian Wildlife**: Caspian Sturgeon (*Acipenser gueldenstaedtii*) & Marine Shad (*Alosa braschnikowi*)
 - **Selected Absheron Minerals**:
-  - **Natural Absheron Bitumen (Binagadi & Fatmai deposits)**: Pure unrefined asphaltite applied in thick, viscous knife-strokes.
-  - **Pyrite Mineral Aggregates**: Irregular metallic brassy-gold sulfide crystals embedded into the fish scales.
-  - **Absheron Limestone Powder**: Providing chalky white contrast against the black bitumen.
+  - **Natural Absheron Bitumen (Binagadi & Fatmai deposits)**: Pure unrefined asphaltite applied in heavy, 8–10 mm sculptural palette-knife impasto ridges.
+  - **Pyrite Mineral Aggregates**: Irregular metallic brassy-gold sulfide crystals embedded directly into the dorsal scutes.
+  - **Oxidized 24k Gold Leaf**: Scuffed and abraded across relief surfaces to evoke ancient metallurgical patina.
+  - **Absheron Coquina & Limestone Powder**: Chalky mineral ground contrasting against deep bitumen.
 - **Concept**:
-  Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (*Yanar Dağ / Ateshgah*).
+  Confronting Baku's historic status as the pioneer of world petroleum, a towering, suffocating surge of sculptural Binagadi bitumen sweeps across the canvas in visceral palette-knife impasto ridges. Entangled within the black asphalt wave are charred, splintered wooden oil derrick beams and corroded iron cables from the historic Bibi-Heybat fields, being slowly digested by tectonic deep time. Emerging from the dark tar like a prehistoric amber relic, an armored Caspian sturgeon glows under museum raking light with raw brassy pyrite ore aggregates and abraded 24-karat gold leaf. At the subterranean base, a deep volcanic fissure reveals dim, smoldering orange embers of eternal natural gas (*Yanar Dağ*), uniting chthonic energy with prehistoric biological resilience.
+
+#### Curatorial Studies & Variations for Plate 03:
+In addition to the primary master canvas, the atelier has developed two specialized companion studies exploring alternative institutional iterations:
+* **Variation 3A: *The Tectonic Obliteration*** ([View Archival Plate](_studies/plate_03_variation_1_tectonic_obliteration.jpg))  
+  *Matter Painting in the lineage of Anselm Kiefer and Javad Mirjavadov; deeply cracked Lokbatan mud craquelure, charred derrick timber skeletons, and fossilized sturgeon scutes embedded in relief.*
+* **Variation 3B: *The Industrial Cretti*** ([View Archival Plate](_studies/plate_03_variation_2_industrial_cretti.jpg))  
+  *Matter Abstraction in the lineage of Alberto Burri’s Grande Cretto and Antoni Tàpies; massive dried mud-volcano field cleft by a violent vertical fault line of viscous, deep-relief black bitumen and oxidized gold seams.*
+
 
 ---
 
