@@ -260,10 +260,17 @@ html, body {
   }
 }
 
+/* Desktop Header: Rule of 3 - strictly 3 primary actions: Scale, Minerals, Dossier */
+.btn-audio-toggle,
+.btn-lighting-toggle,
 .btn-pdf-download {
-  background: rgba(212, 175, 55, 0.15) !important;
-  border-color: var(--gold-primary) !important;
-  color: var(--gold-light) !important;
+  display: none !important;
+}
+
+.btn-scale-toggle,
+.btn-wing-toggle,
+.btn-dossier-toggle {
+  display: flex !important;
 }
 
 /* ==========================================================================
