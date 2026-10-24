@@ -1557,7 +1557,12 @@ class GazelliCuratorialGallery {
     const drawerSpecsHeading = document.getElementById('drawerSpecsHeading');
     if (drawerSpecsHeading) drawerSpecsHeading.textContent = t.drawer.specs;
 
-    // 6. Update Artwork Placard & Curatorial Drawer
+    // 6. Update Artwork Placard, Variations & Curatorial Drawer
+    const currentArt = this.artworks[this.currentIndex];
+    if (currentArt) {
+      this.renderMobileVariationPills(currentArt);
+      this.updateVariationBadge(this.currentVariationIndex);
+    }
     this.updatePlacardLabel();
     this.updateDrawerContent();
   }
