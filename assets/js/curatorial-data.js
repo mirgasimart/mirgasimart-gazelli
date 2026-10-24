@@ -11,6 +11,7 @@ const GALLERY_DATA = [
     roman: "I",
     title: "Pink Moon",
     azTitle: "Çəhrayı Ay",
+    ruTitle: "Розовая Луна",
     genre: "Pure Mineral Abstraction / Lacustrine Strata Painting",
     widthCm: 130,
     heightCm: 100,
@@ -34,6 +35,8 @@ const GALLERY_DATA = [
       }
     ],
     curatorialNarrative: "Where saline water turns to rose mist at dawn. Thick crystalline salt sculpted by the palette knife, holding the silent breath of an ancient Caspian morning before humankind had a name for time.",
+    azCuratorial: "Səhər şəfəqində duzlu suların çəhrayı dumana çevrildiyi məkan. İnsan hələ zamana ad verməmişdən əvvəl qədim Xəzər sübhünün səssiz nəfəsini saxlayan, palitrası ilə yonulmuş Masazır gölünün qalın kristalları.",
+    ruCuratorial: "Там, где соленая вода на рассвете обращается в розовый туман. Кристаллы соли Масазыра, вылепленные мастихином, хранят дыхание древнего Каспийского утра до того, как человек дал имя времени.",
     turnkeySpecs: {
       chassis: "Cross-braced Finnish pine with aluminum cradle",
       weight: "14.5 kg",
@@ -58,6 +61,7 @@ const GALLERY_DATA = [
     roman: "II",
     title: "Across the Universe",
     azTitle: "Kainat Boyu",
+    ruTitle: "Сквозь Вселенную",
     genre: "Mixed-Media Painting on Canvas / Tactile Stone Relief",
     widthCm: 40,
     heightCm: 60,
@@ -81,6 +85,8 @@ const GALLERY_DATA = [
       }
     ],
     curatorialNarrative: "Centuries of tides carved into sacred stone Shebeke geometry. Concentric rings of fossilized Caspian cockles radiate from a saline core—a celestial calendar measuring eternity in mother-of-pearl.",
+    azCuratorial: "Müqəddəs daş Şəbəkə həndəsəsinə həkk olunmuş əsrlərin qabarmaları. Duzlu mərkəzdən şüalanan fosilləşmiş Didakna qabıqlarının konsentrik halqaları — sədəf içində əbədiyyəti ölçən səma təqvimi.",
+    ruCuratorial: "Века приливов, запечатленные в сакральной геометрии Шебеке. Концентрические кольца ископаемых раковин Дидакна лучатся от соляного ядра — небесный календарь, отмеряющий вечность в перламутре.",
     turnkeySpecs: {
       chassis: "Solid reinforced wood cradle",
       weight: "3.2 kg",
@@ -105,6 +111,7 @@ const GALLERY_DATA = [
     roman: "III",
     title: "Paint It Black",
     azTitle: "Qara Qızıl",
+    ruTitle: "Черное Золото",
     subtitle: "Black Gold / Qara Qızıl",
     genre: "Industrial-Geological Abstraction / Hydrocarbon Matter Painting",
     widthCm: 80,
@@ -129,6 +136,8 @@ const GALLERY_DATA = [
       }
     ],
     curatorialNarrative: "The earth bleeding memory. Charred derrick scaffolding drowned in raw Binagadi bitumen, where an armored marine shad gleams with subterranean pyrite above eternal gas fire. Three iterations of an unfinished industrial reckoning.",
+    azCuratorial: "Yaddaşı qanayan torpaq. Qatran qara Binaqədi bitumunda batmış kömürləşmiş buruq qülləsi, burada zirehli dəniz siyənəyi əbədi qaz alovu üzərində yeraltı piritlə parıldayır. Bitməmiş sənaye hesablaşmasının üç təkrarlanması.",
+    ruCuratorial: "Земля, истекающая памятью. Обугленные леса буровых вышек в вязком бинагадинском битуме, где чешуя каспийской сельди сияет золотым пиритом над вечным огнем недр. Три итерации незавершенного индустриального расплаты.",
     turnkeySpecs: {
       chassis: "Solid cross-braced Finnish pine with aluminum cradle",
       weight: "6.8 kg",
@@ -200,6 +209,7 @@ const GALLERY_DATA = [
     roman: "IV",
     title: "A Hard Day's Night",
     azTitle: "Ağır Bir Günün Gecəsi",
+    ruTitle: "Вечер Трудного Дня",
     genre: "Earth-Art Vortex / Geothermal Mineral Painting",
     widthCm: 145,
     heightCm: 145,
@@ -219,6 +229,8 @@ const GALLERY_DATA = [
       }
     ],
     curatorialNarrative: "The quiet exhaustion of a planet. Millions of years of subterranean pressure exhaled onto canvas—cracked volcanic clay and geothermal celadon resting in the dark stillness after eruption.",
+    azCuratorial: "Bir planetin sakit yorğunluğu. Kətana sovrulmuş milyonlarla illik yeraltı təzyiq — püskürmədən sonrakı qaranlıq sükutda dincələn çatlamış vulkan gil və geotermal seladon.",
+    ruCuratorial: "Тихое истощение планеты. Миллионы лет подземного давления выдохнуты на холст — потрескавшаяся глина вулкана Локбатан и геотермальный селадон в темном безмолвии после извержения.",
     turnkeySpecs: {
       chassis: "Dual-aluminum cross-braced cradled chassis",
       weight: "12.5 kg",
@@ -243,6 +255,7 @@ const GALLERY_DATA = [
     roman: "V",
     title: "Here Comes the Sun",
     azTitle: "Günəş Doğur",
+    ruTitle: "Всходит Солнце",
     genre: "Mythological Contemporary Altar Piece / Archaeological Totem",
     widthCm: 120,
     heightCm: 100,
@@ -266,6 +279,8 @@ const GALLERY_DATA = [
       }
     ],
     curatorialNarrative: "Twelve thousand years ago, hunters etched a boat carrying the sun across rock. An archaic Caspian lamprey loops through gold dust and beach sand, completing an eternal circle of return.",
+    azCuratorial: "On iki min il əvvəl ovçular daş üzərində günəşi daşıyan qayıq həkk etdilər. Qədim Xəzər ilanbalığı qızıl tozu və çimərlik qumundan keçərək əbədi qayıdış dövrəsini tamamlayır.",
+    ruCuratorial: "Двенадцать тысяч лет назад охотники высекли в скале лодку, несущую солнце. Древняя каспийская минога огибает солнечный диск из золотой пыли и песка, замыкая вечный круг возвращения.",
     turnkeySpecs: {
       chassis: "Anti-warp aluminum-cradled stretcher",
       weight: "8.2 kg",
