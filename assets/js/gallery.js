@@ -1010,19 +1010,26 @@ class GazelliCuratorialGallery {
     let varSwitcherHtml = '';
     if (art.variations && art.variations.length > 1) {
       const currentVar = art.variations[this.currentVariationIndex] || art.variations[0];
-      const pills = art.variations.map((v, i) => `
+      const varTag = this.currentLang === 'az' ? 'KURATOR VARİASİYALARI' : (this.currentLang === 'ru' ? 'КУРАТОРСКИЕ ВАРИАЦИИ' : 'CURATORIAL VARIATIONS');
+      const pills = art.variations.map((v, i) => {
+        let vLabel = v.label;
+        if (this.currentLang === 'az' && v.azLabel) vLabel = v.azLabel;
+        if (this.currentLang === 'ru' && v.ruLabel) vLabel = v.ruLabel;
+        const shortName = vLabel.replace(/^(Primary|Əsas|Основной)\s+/i, '');
+        return `
         <button class="placard-var-pill ${i === this.currentVariationIndex ? 'active' : ''}" 
                 data-var-idx="${i}"
                 title="${v.subtitle}">
           <span class="p-var-num">${v.number}</span>
-          <span class="p-var-name">${v.label.replace('Primary ', '')}</span>
+          <span class="p-var-name">${shortName}</span>
         </button>
-      `).join('');
+      `;
+      }).join('');
 
       varSwitcherHtml = `
         <div class="placard-variations-bar" id="placardVariationsBar">
           <div class="p-var-header">
-            <span class="p-var-tag">CURATORIAL VARIATIONS</span>
+            <span class="p-var-tag">${varTag}</span>
             <span class="p-var-active">${currentVar.number} / ${art.variations.length}</span>
           </div>
           <div class="placard-var-pills">
@@ -1476,6 +1483,10 @@ class GazelliCuratorialGallery {
         const nextWall = WALL_SURFACES[nextWallIdx].id;
         this.setWall(nextWall);
         document.querySelectorAll('[data-wall]').forEach(b => b.classList.toggle('active', b.dataset.wall === nextWall));
+        break;
+      case 'v':
+      case 'V':
+        this.nextVariation();
         break;
       case '1':
       case '2':
