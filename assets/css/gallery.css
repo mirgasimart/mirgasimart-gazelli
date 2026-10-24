@@ -154,6 +154,46 @@ html, body {
   white-space: nowrap;
 }
 
+/* 2-Character Language Toggle Button */
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  min-width: 32px;
+  padding: 0 7px;
+  background: rgba(22, 24, 30, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+  color: var(--gold-light);
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left: 8px;
+}
+
+.lang-toggle-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(255, 215, 0, 0.75);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+.lang-toggle-btn:active,
+.lang-toggle-btn.lang-switched {
+  transform: scale(0.92);
+  background: rgba(212, 175, 55, 0.35);
+  border-color: var(--gold-primary);
+  color: #fff;
+}
+
 /* Curatorial Mode Selector Tabs */
 .view-mode-tabs {
   order: 2;
@@ -252,12 +292,6 @@ html, body {
 /* Desktop & Laptop Geological Anatomy Wing Toggle */
 .btn-wing-toggle {
   display: flex;
-}
-
-@media (max-width: 1100px) {
-  .btn-wing-toggle {
-    display: none !important;
-  }
 }
 
 /* Desktop Header: Rule of 3 - strictly 3 primary actions: Scale, Minerals, Dossier */
@@ -2377,15 +2411,15 @@ html, body {
     border-radius: 8px;
   }
 
-  /* Mobile Header: Rule of 3 - strictly 3 primary actions: Finishes, Minerals, Dossier */
-  .btn-scale-toggle,
+  /* Mobile Header: Strict Parity Rule of 3 (Scale, Minerals, Dossier + More) */
   .btn-lighting-toggle,
   .btn-audio-toggle,
-  .btn-pdf-download {
+  .btn-pdf-download,
+  .btn-customizer-toggle {
     display: none !important;
   }
 
-  .btn-customizer-toggle,
+  .btn-scale-toggle,
   .btn-wing-toggle,
   .btn-dossier-toggle,
   .btn-more-toggle {
@@ -2527,7 +2561,7 @@ html, body {
     min-height: 36px;
   }
 
-  /* Mobile Placard Card */
+  /* Mobile Placard Card - Height Optimized & De-cluttered */
   .gallery-label-card {
     position: static;
     right: auto !important;
@@ -2535,53 +2569,55 @@ html, body {
     left: auto !important;
     transform: none !important;
     width: 100%;
-    max-width: 340px;
-    margin: 10px auto 0 auto;
+    max-width: 320px;
+    margin: 4px auto 0 auto;
     text-align: center;
     background: rgba(14, 16, 20, 0.92);
     border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    padding: 8px 14px;
+    border-radius: 6px;
+    padding: 5px 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+    gap: 2px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
   }
 
+  .gallery-label-card .label-header-row {
+    display: none !important;
+  }
+
   .label-artist {
-    font-size: 8.5px;
-    letter-spacing: 0.14em;
-    color: var(--gold-primary);
+    display: none !important;
   }
 
   .label-title {
-    font-size: 14px;
-    line-height: 1.25;
+    font-size: 13px;
+    line-height: 1.2;
   }
 
   .label-meta {
-    font-size: 10px;
+    font-size: 9.5px;
     color: var(--text-secondary);
   }
 
   .label-dim {
-    font-size: 9.5px;
+    font-size: 9px;
     color: var(--gold-light);
     font-weight: 600;
   }
 
   .label-dossier-link {
-    margin-top: 5px;
+    margin-top: 3px;
     background: rgba(212, 175, 55, 0.12);
     border: 1px solid rgba(212, 175, 55, 0.35);
     color: var(--gold-light);
-    font-size: 10px;
+    font-size: 9.5px;
     font-family: var(--font-sans);
     font-weight: 500;
-    padding: 5px 12px;
+    padding: 3px 10px;
     border-radius: 4px;
     cursor: pointer;
     display: inline-flex;

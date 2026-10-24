@@ -69,15 +69,10 @@
 
         <!-- CURATORIAL ACTIONS & CONTROLS (PARITY TRIO + THREE-DOT OVERFLOW) -->
         <div class="header-actions">
-          <!-- 1. Scale Reference (Desktop) / Finishes (Mobile) -->
+          <!-- 1. Scale Reference (175cm Human Silhouette) -->
           <button id="scaleToggleBtn" class="action-btn btn-scale-toggle" title="Toggle 175cm Human Scale Silhouette (Key: S)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v8m-4-5l4-1 4 1m-5 9l1-4 1 4"/></svg>
             <span class="action-label">Scale</span>
-          </button>
-
-          <button id="mobileCustomizerTrigger" class="action-btn btn-customizer-toggle" title="Wall Plasters & Turnkey Framing">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            <span class="action-label">Finishes</span>
           </button>
 
           <!-- 2. Geological Mineral Anatomy -->
@@ -92,7 +87,7 @@
             <span class="action-label">Dossier</span>
           </button>
 
-          <!-- 4. Three-Dot Overflow Menu (Lighting, Atmosphere, PDF, In-Situ) -->
+          <!-- 4. Three-Dot Overflow Menu (Lighting, Atmosphere, PDF, In-Situ, Finishes) -->
           <button id="moreMenuBtn" class="action-btn btn-more-toggle" title="Curatorial Environment & Options (Key: O)" aria-label="More Options">
             <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
             <span class="action-label">More</span>
@@ -107,7 +102,7 @@
           <span>Stage</span>
         </button>
         <button class="mode-tab" data-mode="panoramic" title="Continuous Panoramic Multi-Artwork Wall (Key: W)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="1"/><line x1="8" y1="7" x2="8" y2="17"/><line x1="16" y1="7" x2="16" y2="17"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="1"/><line x1="8" y1="7" x2="8" y2="17"/><line x1="16" y1="16" x2="16" y2="17"/></svg>
           <span>Walk</span>
         </button>
         <button class="mode-tab" data-mode="macro" title="Macro Mineral Loupe Inspection (Key: M)">
@@ -122,6 +117,15 @@
       <div class="popover-header">
         <div class="popover-title">Curatorial Environment</div>
         <button id="lightingCloseBtn" class="popover-close-btn" aria-label="Close">✕</button>
+      </div>
+      
+      <!-- Finishes: Wall Plaster & Turnkey Framing -->
+      <div class="popover-row-toggle" style="padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <div>
+          <div style="font-size: 11px; font-weight: 500; color: #fff;">Wall Plaster & Framing</div>
+          <div style="font-size: 10px; color: var(--text-muted);">Curatorial finishes & variations</div>
+        </div>
+        <button id="popoverFinishesBtn" class="sheet-switch" style="padding: 3px 10px; font-size: 10px;">ADJUST</button>
       </div>
       
       <!-- Lighting Sliders -->
