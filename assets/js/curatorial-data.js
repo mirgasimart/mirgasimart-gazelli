@@ -347,3 +347,180 @@ const FRAME_STYLES = [
     class: "frame-floater-steel"
   }
 ];
+
+// Trilingual Dictionary (Canonical 3: English Default, Azerbaijani, Russian)
+const I18N = {
+  en: {
+    langCode: "EN",
+    langName: "English",
+    brandTitle: "Absheron Tectonics",
+    brandSub: "Gazelli Art House Curatorial Commission Suite",
+    modes: {
+      gallery: "Stage",
+      panoramic: "Walk",
+      macro: "Loupe"
+    },
+    actions: {
+      scale: "Scale",
+      finishes: "Finishes",
+      minerals: "Minerals",
+      dossier: "Dossier",
+      more: "More"
+    },
+    placard: {
+      artist: "Mirgasim Art Studio",
+      year: "2026",
+      dossierLink: "Curatorial Dossier & Specs ↗",
+      variation: "Variation"
+    },
+    drawer: {
+      title: "Curatorial & Technical Dossier",
+      statement: "Curatorial Statement",
+      anatomy: "Absheron Geological Mineral Anatomy",
+      specs: "Turnkey Architectural Specifications",
+      chassis: "Chassis",
+      weight: "Weight",
+      mounting: "Mounting",
+      edgeFinish: "Edge Finish",
+      lighting: "Lighting",
+      niche: "Architectural Placement",
+      endemic: "Endemic Ecology & Lineage",
+      paletteBoxPrompt: "Physical Material Palette Box (15 × 15 cm cured plaques) available upon formal curatorial request."
+    },
+    popover: {
+      title: "Curatorial Environment",
+      intensity: "Spotlight Intensity",
+      temp: "Color Temperature",
+      followBeam: "Interactive Follow-Beam",
+      soundscape: "Caspian Soundscape",
+      soundscapeSub: "Synthesized geological atmosphere",
+      insitu: "In-Situ Interior Room",
+      insituSub: "Architectural placement view",
+      downloadPdf: "Download Curatorial Proposal (PDF)"
+    },
+    finishes: {
+      title: "Wall Plaster & Turnkey Framing",
+      wallSurface: "Wall Plaster Surface",
+      framing: "Turnkey Framing",
+      variations: "Curatorial Variations",
+      paletteBox: "Curatorial Material Palette Box"
+    }
+  },
+  az: {
+    langCode: "AZ",
+    langName: "Azərbaycan",
+    brandTitle: "Abşeron Tektonikası",
+    brandSub: "Gazelli Art House Kuratorluq Sifarişi Süitası",
+    modes: {
+      gallery: "Səhnə",
+      panoramic: "Gəzinti",
+      macro: "Böyüdücü"
+    },
+    actions: {
+      scale: "Miqyas",
+      finishes: "Tərtibat",
+      minerals: "Minerallar",
+      dossier: "Dosye",
+      more: "Daha Çox"
+    },
+    placard: {
+      artist: "Mirqasım İncəsənət Emalatxanası",
+      year: "2026",
+      dossierLink: "Kurator Dosyesi və Spesifikasiyalar ↗",
+      variation: "Variasiya"
+    },
+    drawer: {
+      title: "Kurator və Texniki Dosye",
+      statement: "Kurator Bəyanatı",
+      anatomy: "Abşeron Geoloji Mineral Anatomiyası",
+      specs: "Memarlıq və Quraşdırma Spesifikasiyaları",
+      chassis: "Şassi",
+      weight: "Çəki",
+      mounting: "Montaj",
+      edgeFinish: "Kənar Tərtibatı",
+      lighting: "İşıqlandırma",
+      niche: "Memarlıq Məkanı",
+      endemic: "Endemik Ekologiya və İrs",
+      paletteBoxPrompt: "Fiziki Material Qutusu (15 × 15 sm nümunə lövhələri) rəsmi kurator sorğusu ilə təqdim olunur."
+    },
+    popover: {
+      title: "Mühit Tənzimləmələri",
+      intensity: "Projektor İntensivliyi",
+      temp: "Rəng Hərarəti",
+      followBeam: "İnteraktiv İşıq Şüası",
+      soundscape: "Xəzər Səs Mənzərəsi",
+      soundscapeSub: "Sintez edilmiş geoloji atmosfer",
+      insitu: "İnteryer Baxışı",
+      insituSub: "Memarlıq yerləşdirmə görünüşü",
+      downloadPdf: "Təklif Kataloqunu Yüklə (PDF)"
+    },
+    finishes: {
+      title: "Divar Suvağı və Çərçivə Tərtibatı",
+      wallSurface: "Divar Səthi",
+      framing: "Çərçivə",
+      variations: "Müəllif Variasiyaları",
+      paletteBox: "Fiziki Material Nümunələri"
+    }
+  },
+  ru: {
+    langCode: "RU",
+    langName: "Русский",
+    brandTitle: "Тектоника Апшерона",
+    brandSub: "Кураторская Сюита для Gazelli Art House",
+    modes: {
+      gallery: "Сцена",
+      panoramic: "Галерея",
+      macro: "Лупа"
+    },
+    actions: {
+      scale: "Масштаб",
+      finishes: "Отделка",
+      minerals: "Минералы",
+      dossier: "Досье",
+      more: "Еще"
+    },
+    placard: {
+      artist: "Арт-Студия Миргасим",
+      year: "2026",
+      dossierLink: "Кураторское Досье и Спецификации ↗",
+      variation: "Вариация"
+    },
+    drawer: {
+      title: "Кураторское и Техническое Досье",
+      statement: "Кураторское Описание",
+      anatomy: "Геологическая Анатомия Минералов",
+      specs: "Архитектурные Спецификации Под Ключ",
+      chassis: "Подрамник",
+      weight: "Вес",
+      mounting: "Крепление",
+      edgeFinish: "Обработка Края",
+      lighting: "Освещение",
+      niche: "Архитектурное Размещение",
+      endemic: "Эндемическая Экология и Линия",
+      paletteBoxPrompt: "Физический бокс с образцами минералов (плитки 15 × 15 см) доступен по кураторскому запросу."
+    },
+    popover: {
+      title: "Кураторская Среда",
+      intensity: "Яркость Спотлайта",
+      temp: "Цветовая Температура",
+      followBeam: "Интерактивный Луч",
+      soundscape: "Звуки Каспия",
+      soundscapeSub: "Синтезированная геологическая атмосфера",
+      insitu: "Интерьер In-Situ",
+      insituSub: "Архитектурное размещение",
+      downloadPdf: "Скачать Каталог Предложения (PDF)"
+    },
+    finishes: {
+      title: "Штукатурка Стен и Обрамление",
+      wallSurface: "Поверхность Стены",
+      framing: "Обрамление",
+      variations: "Кураторские Вариации",
+      paletteBox: "Бокс с Образцами Материалов"
+    }
+  }
+};
+
+window.GALLERY_DATA = GALLERY_DATA;
+window.WALL_SURFACES = WALL_SURFACES;
+window.FRAME_STYLES = FRAME_STYLES;
+window.I18N = I18N;
