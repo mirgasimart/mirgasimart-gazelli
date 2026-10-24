@@ -881,7 +881,9 @@ class GazelliCuratorialGallery {
       this.dom.labelCard.className = 'gallery-label-card placard-mobile';
     } else if (isMobile) {
       // Mobile portrait layout (iPhone, Android)
-      const stageH = Math.max(window.innerHeight - 235, 190);
+      // Overhead budget: Header (86px) + Footer (72px) + Variation Badge (42px) + Placard (46px) + Breathing Margins (34px) = 280px
+      const verticalOverhead = 280;
+      const stageH = Math.max(window.innerHeight - verticalOverhead, 160);
 
       this.currentOffsetX = this.showHumanScale ? 24 : 0;
       this.currentOffsetY = 0;
@@ -894,7 +896,7 @@ class GazelliCuratorialGallery {
       const maxScaleW = availW / art.widthCm;
       const maxScaleH = stageH / art.heightCm;
       pxPerCm = Math.min(maxScaleW, maxScaleH);
-      pxPerCm = Math.max(pxPerCm, 1.0);
+      pxPerCm = Math.max(pxPerCm, 0.85);
 
       targetWidth = Math.round(art.widthCm * pxPerCm);
       targetHeight = Math.round(art.heightCm * pxPerCm);
