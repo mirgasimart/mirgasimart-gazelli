@@ -133,12 +133,6 @@ class GazelliCuratorialGallery {
     this.dom.drawerOpenBtn.addEventListener('click', () => this.toggleDrawer(true));
     this.dom.drawerCloseBtn.addEventListener('click', () => this.toggleDrawer(false));
 
-    // Brand Medallion Seal click opens Curatorial & Technical Dossier
-    const brandBadge = document.querySelector('.brand-badge');
-    if (brandBadge) {
-      brandBadge.addEventListener('click', () => this.toggleDrawer(true));
-    }
-
     // Popover toggle (Curatorial Environment & More Menu '···')
     const moreMenuBtn = document.getElementById('moreMenuBtn');
     const toggleOverflow = (e) => {
@@ -1007,36 +1001,14 @@ class GazelliCuratorialGallery {
       ? art.minerals[0].name
       : (art.genre || 'Oil & Raw Absheron Minerals');
 
-    let varSwitcherHtml = '';
+    let varSubtitle = '';
     if (art.variations && art.variations.length > 1) {
       const currentVar = art.variations[this.currentVariationIndex] || art.variations[0];
-      const varTag = this.currentLang === 'az' ? 'KURATOR VARİASİYALARI' : (this.currentLang === 'ru' ? 'КУРАТОРСКИЕ ВАРИАЦИИ' : 'CURATORIAL VARIATIONS');
-      const pills = art.variations.map((v, i) => {
-        let vLabel = v.label;
-        if (this.currentLang === 'az' && v.azLabel) vLabel = v.azLabel;
-        if (this.currentLang === 'ru' && v.ruLabel) vLabel = v.ruLabel;
-        const shortName = vLabel.replace(/^(Primary|Əsas|Основной)\s+/i, '');
-        return `
-        <button class="placard-var-pill ${i === this.currentVariationIndex ? 'active' : ''}" 
-                data-var-idx="${i}"
-                title="${v.subtitle}">
-          <span class="p-var-num">${v.number}</span>
-          <span class="p-var-name">${shortName}</span>
-        </button>
-      `;
-      }).join('');
-
-      varSwitcherHtml = `
-        <div class="placard-variations-bar" id="placardVariationsBar">
-          <div class="p-var-header">
-            <span class="p-var-tag">${varTag}</span>
-            <span class="p-var-active">${currentVar.number} / ${art.variations.length}</span>
-          </div>
-          <div class="placard-var-pills">
-            ${pills}
-          </div>
-        </div>
-      `;
+      const vTag = t && t.badge ? t.badge.variation : (this.currentLang === 'az' ? 'VARİASİYA' : (this.currentLang === 'ru' ? 'ВАРИАЦИЯ' : 'VARIATION'));
+      let vLabel = currentVar.label;
+      if (this.currentLang === 'az' && currentVar.azLabel) vLabel = currentVar.azLabel;
+      if (this.currentLang === 'ru' && currentVar.ruLabel) vLabel = currentVar.ruLabel;
+      varSubtitle = `<div class="label-var-hint" style="color: var(--gold-primary); font-size: 11px; margin-top: 3px; font-weight: 500;">${vTag} ${currentVar.number}: ${vLabel}</div>`;
     }
 
     // Museum Placard: Single fixed brand identity is established in top header;
@@ -1056,25 +1028,13 @@ class GazelliCuratorialGallery {
         <span class="dot-br"></span>
       </div>
       <div class="label-title">${displayTitle}</div>
-      ${varSwitcherHtml}
+      ${varSubtitle}
       <div class="label-dim">${art.dimensions} · ${mediumText}</div>
       <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)" title="Inspect Full Technical & Mineral Specifications">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         <span>${dossierLinkText}</span>
       </button>
     `;
-
-    // Bind event to placard variation pills
-    const varBar = this.dom.labelCard.querySelector('#placardVariationsBar');
-    if (varBar) {
-      varBar.addEventListener('click', (e) => {
-        const btn = e.target.closest('.placard-var-pill');
-        if (btn && btn.dataset.varIdx !== undefined) {
-          e.stopPropagation();
-          this.setVariation(parseInt(btn.dataset.varIdx, 10));
-        }
-      });
-    }
   }
 
   renderHotspots() {
