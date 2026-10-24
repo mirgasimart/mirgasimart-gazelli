@@ -662,11 +662,16 @@ class GazelliCuratorialGallery {
     if (!art.variations || !art.variations[vIndex]) return;
     const v = art.variations[vIndex];
 
+    const vTag = this.currentLang === 'az' ? 'VARİASİYA' : (this.currentLang === 'ru' ? 'ВАРИАЦИЯ' : 'VARIATION');
+    let vLabel = v.label;
+    if (this.currentLang === 'az' && v.azLabel) vLabel = v.azLabel;
+    if (this.currentLang === 'ru' && v.ruLabel) vLabel = v.ruLabel;
+
     if (this.dom.variationNum) {
-      this.dom.variationNum.textContent = `VARIATION ${v.number} / ${art.variations.length}`;
+      this.dom.variationNum.textContent = `${vTag} ${v.number} / ${art.variations.length}`;
     }
     if (this.dom.variationTitle) {
-      this.dom.variationTitle.textContent = `${v.label} • ${v.subtitle.split('•')[0].trim()}`;
+      this.dom.variationTitle.textContent = `${vLabel} • ${v.subtitle.split('•')[0].trim()}`;
     }
     if (this.dom.variationDots) {
       this.dom.variationDots.querySelectorAll('.var-dot').forEach((dot, i) => {
