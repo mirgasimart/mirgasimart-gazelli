@@ -131,23 +131,46 @@ class GazelliCuratorialGallery {
     this.dom.drawerOpenBtn.addEventListener('click', () => this.toggleDrawer(true));
     this.dom.drawerCloseBtn.addEventListener('click', () => this.toggleDrawer(false));
 
-    // Popover toggle (Lighting controls)
-    this.dom.lightingToggleBtn.addEventListener('click', (e) => {
+    // Popover toggle (Curatorial Environment & More Menu '···')
+    const moreMenuBtn = document.getElementById('moreMenuBtn');
+    const toggleOverflow = (e) => {
       e.stopPropagation();
-      this.dom.lightingPopover.classList.toggle('open');
-    });
+      if (this.dom.lightingPopover) {
+        this.dom.lightingPopover.classList.toggle('open');
+      }
+    };
+
+    if (moreMenuBtn) {
+      moreMenuBtn.addEventListener('click', toggleOverflow);
+    }
+    if (this.dom.lightingToggleBtn) {
+      this.dom.lightingToggleBtn.addEventListener('click', toggleOverflow);
+    }
 
     if (this.dom.lightingCloseBtn) {
       this.dom.lightingCloseBtn.addEventListener('click', () => {
-        this.dom.lightingPopover.classList.remove('open');
+        if (this.dom.lightingPopover) this.dom.lightingPopover.classList.remove('open');
       });
     }
 
     document.addEventListener('click', (e) => {
-      if (!this.dom.lightingPopover.contains(e.target) && e.target !== this.dom.lightingToggleBtn) {
+      if (this.dom.lightingPopover && 
+          !this.dom.lightingPopover.contains(e.target) && 
+          (!moreMenuBtn || !moreMenuBtn.contains(e.target)) && 
+          (!this.dom.lightingToggleBtn || !this.dom.lightingToggleBtn.contains(e.target))) {
         this.dom.lightingPopover.classList.remove('open');
       }
     });
+
+    const popoverInsituBtn = document.getElementById('popoverInsituBtn');
+    if (popoverInsituBtn) {
+      popoverInsituBtn.addEventListener('click', () => {
+        const nextMode = this.currentMode === 'insitu' ? 'gallery' : 'insitu';
+        this.setMode(nextMode);
+        popoverInsituBtn.textContent = nextMode === 'insitu' ? 'EXIT' : 'VIEW';
+        popoverInsituBtn.classList.toggle('active', nextMode === 'insitu');
+      });
+    }
 
     // Mobile Customizer Bottom Sheet events
     if (this.dom.mobileCustomizerTrigger) {

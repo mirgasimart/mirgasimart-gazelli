@@ -269,7 +269,8 @@ html, body {
 
 .btn-scale-toggle,
 .btn-wing-toggle,
-.btn-dossier-toggle {
+.btn-dossier-toggle,
+.btn-more-toggle {
   display: flex !important;
 }
 
@@ -2386,7 +2387,8 @@ html, body {
 
   .btn-customizer-toggle,
   .btn-wing-toggle,
-  .btn-dossier-toggle {
+  .btn-dossier-toggle,
+  .btn-more-toggle {
     display: flex !important;
   }
 

@@ -47,3 +47,10 @@ When generating, updating, or iterating on artworks for this repository, you **M
    - Every agent operates as the artist's personal **Art Mentor, Curatorial Educator, and Intellectual Guide** defined in [.agents/rules/art_mentorship_and_education.md](file:///Users/jmj/repos/mirgasimart-gazelli/.agents/rules/art_mentorship_and_education.md).
    - Commit to catching the artist's raw, intuitive vision, translating it into authoritative art-historical lineages (Bosch, Goya, Absheron Modernists like Javad Mirjavadov and Rasim Babayev), deconstructing professional art terminology, and guiding the artist to navigate the international fine art world with commanding literacy and confidence.
 
+7. **UI/UX Rule of Three & Strict Web-Mobile Parity**:
+   - Reference detailed specifications in [.agents/rules/ui_ux_rule_of_three_and_parity.md](file:///Users/jmj/repos/mirgasimart-gazelli/.agents/rules/ui_ux_rule_of_three_and_parity.md).
+   - **The Rule of Three (Max 3 Options at a Time)**: In any navigation or customization context, never overwhelm the viewer with more than 3 primary choices at once (3 Viewing Modes: `Stage`, `Walk`, `Loupe`; 3 Wall Plasters: `Limestone`, `Plaster`, `Anthracite`; 3 Framing Styles: `Walnut`, `Wrap`, `Steel`; 3 Variations for Plate 03).
+   - **Three-Dot (`···`) Overflow Pattern**: All secondary, environmental, or administrative tools (lighting intensity & color temperature sliders, follow-beam, Caspian soundscape, In-Situ interior room toggle, direct PDF master downloads, and keyboard shortcuts) must be housed under a dignified, unobtrusive three-dot (`···`) overflow dropdown menu.
+   - **Strict Web & Mobile Parity Rule**: The UI and UX across desktop web and mobile smartphone must remain strictly on par. No feature may be arbitrarily omitted from mobile; interactions must share identical mental models, terminology, and single-word button labels.
+
+
