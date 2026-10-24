@@ -185,8 +185,8 @@ def apply_watermark(image_path, output_path, position="bottom-right", margin=32)
 CATALOG_METADATA = {
     "01_luminescence_of_masazir_salt_dawn.jpg": {
         "plate": "PLATE 01 / 05",
-        "title_en": "Luminescence of Masazir",
-        "title_az": "Masazır Parıltısı",
+        "title_en": "Pink Moon",
+        "title_az": "Çəhrayı Ay",
         "genre": "Pure Mineral Abstraction / Lacustrine Strata",
         "dimensions": "130 × 100 cm (Horizontal Landscape Canvas)",
         "materials": "Genuine Masazir Pink Lake Salt, Textured Paste, Heavy Impasto, Oil Paint on Canvas",
@@ -194,8 +194,8 @@ CATALOG_METADATA = {
     },
     "02_the_weaver_of_sunken_shells_didacna.jpg": {
         "plate": "PLATE 02 / 05",
-        "title_en": "The Shebeke Reliquary",
-        "title_az": "Şəbəkə Qalığı",
+        "title_en": "Across the Universe",
+        "title_az": "Kainat Boyu",
         "genre": "Mineral Assemblage & Painting on Canvas / Tactile Coquina Relief",
         "dimensions": "40 × 60 cm (Vertical Canvas from Brief)",
         "materials": "Crystalline Masazir Pink Lake Salt, Fine Beach Sand, Oil Paints and Canvas",
@@ -203,7 +203,7 @@ CATALOG_METADATA = {
     },
     "03_keeper_of_the_cold_depths_caspian_shad.jpg": {
         "plate": "PLATE 03 / 05",
-        "title_en": "Black Gold",
+        "title_en": "Paint It Black",
         "title_az": "Qara Qızıl",
         "genre": "Industrial-Geological Abstraction / Hydrocarbon Matter Painting",
         "dimensions": "80 × 100 cm (Vertical Canvas from Brief)",
@@ -212,8 +212,8 @@ CATALOG_METADATA = {
     },
     "04_breath_of_lokbatan_tadpole_goby.jpg": {
         "plate": "PLATE 04 / 05",
-        "title_en": "After Hard Day of Work",
-        "title_az": "Ağır İş Günündən Sonra",
+        "title_en": "A Hard Day's Night",
+        "title_az": "Ağır Bir Günün Gecəsi",
         "genre": "Earth-Art Vortex / Geothermal Mineral Painting",
         "dimensions": "145 × 145 cm (Monumental 1:1 Square Canvas)",
         "materials": "Mud volcano, oil paint and canvas",
@@ -221,8 +221,8 @@ CATALOG_METADATA = {
     },
     "05_the_lampreys_vigil_caspian_lamprey.jpg": {
         "plate": "PLATE 05 / 05",
-        "title_en": "Solar Oracle",
-        "title_az": "Günəş Orakulu",
+        "title_en": "Here Comes the Sun",
+        "title_az": "Günəş Doğur",
         "genre": "Mythological Contemporary Altar Piece / Archaeological Totem",
         "dimensions": "120 × 100 cm (Horizontal Canvas from Brief)",
         "materials": "Absheron Coastal Beach Sand Mandala, Masazir Salt Halos",
