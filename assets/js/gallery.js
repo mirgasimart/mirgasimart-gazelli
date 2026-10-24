@@ -97,6 +97,8 @@ class GazelliCuratorialGallery {
       mobileCustomizerSheet: document.getElementById('mobileCustomizerSheet'),
       customizerCloseBtn: document.getElementById('customizerCloseBtn'),
       customizerBackdrop: document.getElementById('customizerBackdrop'),
+      mobileVariationsSection: document.getElementById('mobileVariationsSection'),
+      mobileVariationOptions: document.getElementById('mobileVariationOptions'),
       mobileScaleSwitch: document.getElementById('mobileScaleSwitch'),
       mobileAudioSwitch: document.getElementById('mobileAudioSwitch'),
       mobileIntensitySlider: document.getElementById('mobileIntensitySlider'),
