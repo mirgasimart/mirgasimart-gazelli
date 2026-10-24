@@ -523,10 +523,12 @@ class GazelliCuratorialGallery {
       this.currentVariationIndex = 0;
       if (art.variations && art.variations.length > 1) {
         if (this.dom.variationBadge) this.dom.variationBadge.style.display = 'flex';
+        if (this.dom.mobileVariationsSection) this.dom.mobileVariationsSection.style.display = 'block';
         this.dom.canvasInner.classList.add('has-variations');
         this.updateVariationBadge(0);
       } else {
         if (this.dom.variationBadge) this.dom.variationBadge.style.display = 'none';
+        if (this.dom.mobileVariationsSection) this.dom.mobileVariationsSection.style.display = 'none';
         this.dom.canvasInner.classList.remove('has-variations');
       }
 
@@ -583,6 +585,24 @@ class GazelliCuratorialGallery {
       this.dom.variationDots.querySelectorAll('.var-dot').forEach((dot, i) => {
         dot.classList.toggle('active', i === vIndex);
       });
+    }
+
+    // Sync mobile customizer pills
+    if (this.dom.mobileVariationOptions) {
+      this.dom.mobileVariationOptions.querySelectorAll('.sheet-pill').forEach((pill, i) => {
+        pill.classList.toggle('active', i === vIndex);
+      });
+    }
+
+    // Sync placard pills
+    if (this.dom.labelCard) {
+      this.dom.labelCard.querySelectorAll('.placard-var-pill').forEach((pill, i) => {
+        pill.classList.toggle('active', i === vIndex);
+      });
+      const counterEl = this.dom.labelCard.querySelector('.p-var-active');
+      if (counterEl) {
+        counterEl.textContent = `${v.number} / ${art.variations.length}`;
+      }
     }
   }
 
