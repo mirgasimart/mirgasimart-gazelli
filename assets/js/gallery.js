@@ -918,6 +918,31 @@ class GazelliCuratorialGallery {
       mineralsContainer.appendChild(card);
     });
 
+    // Curatorial Companion Studies / Variations
+    const studiesSec = document.getElementById('drawerStudiesSection');
+    const studiesGrid = document.getElementById('drawerStudiesGrid');
+    if (studiesSec && studiesGrid) {
+      if (art.images.studies && art.images.studies.length) {
+        studiesSec.style.display = 'block';
+        studiesGrid.innerHTML = '';
+        art.images.studies.forEach(study => {
+          const card = document.createElement('div');
+          card.className = 'study-card';
+          card.innerHTML = `
+            <img src="${study.path}" alt="${study.title}" loading="lazy">
+            <div class="study-card-title">${study.title}</div>
+          `;
+          card.addEventListener('click', () => {
+            this.dom.artworkImg.src = study.path;
+            this.toggleDrawer(false);
+          });
+          studiesGrid.appendChild(card);
+        });
+      } else {
+        studiesSec.style.display = 'none';
+      }
+    }
+
     // Specifications
     document.getElementById('specWeight').textContent = art.turnkeySpecs.weight;
     document.getElementById('specChassis').textContent = art.turnkeySpecs.chassis;

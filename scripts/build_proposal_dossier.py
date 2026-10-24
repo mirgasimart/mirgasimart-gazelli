@@ -440,16 +440,16 @@ def generate_dossier_html(use_watermarked=True):
       </tr>
       <tr>
         <td class="spec-name">Medium / Techniques</td>
-        <td class="spec-val">Raw Unrefined Binagadi Bitumen, Pyrite Sulfide Aggregates, Chalky Limestone Contrast Sgraffito, Oil &amp; Industrial Asphaltite Knife Impasto</td>
+        <td class="spec-val">Raw Unrefined Binagadi Bitumen (8–10mm Knife Impasto), Pyrite Sulfide Ore, Abraded 24k Gold Leaf, Charred Bibi-Heybat Derrick Timbers, Chalky Coquina Dust</td>
       </tr>
       <tr>
         <td class="spec-name">Endemic Wildlife</td>
-        <td class="spec-val">Caspian Marine Shad / Brazhnikov’s Shad (<em>Alosa braschnikowi</em>)</td>
+        <td class="spec-val">Caspian Sturgeon (<em>Acipenser gueldenstaedtii</em>) &amp; Marine Shad (<em>Alosa braschnikowi</em>)</td>
       </tr>
       <tr>
         <td class="spec-name">Concept</td>
         <td class="spec-val">
-          Confronting Baku's historic role as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (<em>Yanar Dağ / Ateshgah</em>).
+          Confronting Baku's historic status as the pioneer of world petroleum, a towering, suffocating surge of sculptural Binagadi bitumen sweeps across the canvas in visceral palette-knife impasto ridges. Entangled within the black asphalt wave are charred, splintered wooden oil derrick beams and corroded iron cables from historic Bibi-Heybat fields. Emerging from the dark tar like a prehistoric amber relic, an armored Caspian sturgeon glows under museum raking light with raw brassy pyrite ore aggregates and abraded 24-karat gold leaf above the eternal subterranean gas flame (<em>Yanar Dağ</em>). Supplemented by two curated atelier studies: Variation 3A (<em>The Tectonic Obliteration</em>) and Variation 3B (<em>The Industrial Cretti</em>).
         </td>
       </tr>
     </table>
