@@ -2485,10 +2485,11 @@ html, body {
   /* Stage adjustments */
   .gallery-stage {
     perspective: none;
-    padding-top: 104px;
-    padding-bottom: 78px;
+    padding-top: 86px;
+    padding-bottom: 72px;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
 
   .ceiling-track, .ceiling-lamp {
@@ -2527,12 +2528,16 @@ html, body {
   /* Mobile Variation Switcher Badge & Placard Controls */
   .variation-badge-bar {
     max-width: 92vw;
-    margin-bottom: 6px;
-    padding: 4px 10px;
-    gap: 8px;
+    margin: 0 auto 6px auto;
+    padding: 4px 12px;
+    gap: 10px;
     font-size: 11px;
-    z-index: 30;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+    z-index: 35;
+    background: rgba(12, 14, 18, 0.94);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.8), 0 0 10px rgba(212, 175, 55, 0.18);
+    flex-shrink: 0;
   }
 
   .variation-hint {
@@ -2542,12 +2547,55 @@ html, body {
   .variation-badge-pill {
     font-size: 11px;
     gap: 6px;
+    cursor: pointer;
+  }
+
+  .variation-num {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gold-primary, #d4af37);
+    letter-spacing: 0.06em;
+  }
+
+  .variation-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #f0f0f5;
+  }
+
+  .variation-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .var-dot {
-    width: 22px;
-    height: 22px;
-    font-size: 10px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: #e2e2ec;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+    padding: 0;
+    line-height: 1;
+  }
+
+  .var-dot.active {
+    background: var(--gold-primary, #d4af37);
+    border-color: #ffd700;
+    color: #0c0e12;
+    font-weight: 800;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+    transform: scale(1.08);
   }
 
   .placard-variations-bar {
