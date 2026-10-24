@@ -2038,7 +2038,7 @@ html, body {
 
 .sheet-pill-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
 
@@ -2369,14 +2369,18 @@ html, body {
     border-radius: 8px;
   }
 
-  /* Hide human scale toggle button from top header on small screens; available via customizer */
-  .btn-scale-toggle {
-    display: none;
+  /* Mobile Header: Rule of 3 - strictly 3 primary actions: Finishes, Minerals, Dossier */
+  .btn-scale-toggle,
+  .btn-lighting-toggle,
+  .btn-audio-toggle,
+  .btn-pdf-download {
+    display: none !important;
   }
 
-  /* Reveal Finishes Customizer on mobile */
-  .btn-customizer-toggle {
-    display: flex;
+  .btn-customizer-toggle,
+  .btn-wing-toggle,
+  .btn-dossier-toggle {
+    display: flex !important;
   }
 
   .gallery-stage {
