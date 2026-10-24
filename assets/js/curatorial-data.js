@@ -9,8 +9,8 @@ const GALLERY_DATA = [
     id: "plate-01",
     number: "01",
     roman: "I",
-    title: "Luminescence of Masazir",
-    azTitle: "Masazır Parıltısı",
+    title: "Pink Moon",
+    azTitle: "Çəhrayı Ay",
     genre: "Pure Mineral Abstraction / Lacustrine Strata Painting",
     widthCm: 130,
     heightCm: 100,
@@ -33,7 +33,7 @@ const GALLERY_DATA = [
         description: "Translucent layered oil glazes creating delicate atmospheric gradients."
       }
     ],
-    curatorialNarrative: "An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity.",
+    curatorialNarrative: "Where saline water turns to rose mist at dawn. Thick crystalline salt sculpted by the palette knife, holding the silent breath of an ancient Caspian morning before humankind had a name for time.",
     turnkeySpecs: {
       chassis: "Cross-braced Finnish pine with aluminum cradle",
       weight: "14.5 kg",
@@ -56,8 +56,8 @@ const GALLERY_DATA = [
     id: "plate-02",
     number: "02",
     roman: "II",
-    title: "The Shebeke Reliquary",
-    azTitle: "Şəbəkə Qalığı",
+    title: "Across the Universe",
+    azTitle: "Kainat Boyu",
     genre: "Mixed-Media Painting on Canvas / Tactile Stone Relief",
     widthCm: 40,
     heightCm: 60,
@@ -80,7 +80,7 @@ const GALLERY_DATA = [
         description: "Artist-grade professional oil colors on stretched linen canvas."
       }
     ],
-    curatorialNarrative: "Celebrating Absheron's ancient stone-carving heritage (daş yonma), this intimate vertical painting on canvas captures a weather-worn Shebeke window lattice rendered in thick palette-knife impasto and porous mineral grounds. Behind the painted geometric tracery glow luminous glazes of Caspian turquoise and deep lapis lazuli. The painted surface is enriched with subtle low-relief physical accents—authentic small Didacna cockle shells embedded into the impasto crust—while an elongated painted hand rests against the window aperture, bridging human craftsmanship and deep geological time.",
+    curatorialNarrative: "Centuries of tides carved into sacred stone Shebeke geometry. Concentric rings of fossilized Caspian cockles radiate from a saline core—a celestial calendar measuring eternity in mother-of-pearl.",
     turnkeySpecs: {
       chassis: "Solid reinforced wood cradle",
       weight: "3.2 kg",
@@ -103,8 +103,9 @@ const GALLERY_DATA = [
     id: "plate-03",
     number: "03",
     roman: "III",
-    title: "Black Gold",
+    title: "Paint It Black",
     azTitle: "Qara Qızıl",
+    subtitle: "Black Gold / Qara Qızıl",
     genre: "Industrial-Geological Abstraction / Hydrocarbon Matter Painting",
     widthCm: 80,
     heightCm: 100,
@@ -127,7 +128,7 @@ const GALLERY_DATA = [
         description: "Abraded precious leaf and Absheron chalk scored into the bitumen field, evoking metallurgical antiquity."
       }
     ],
-    curatorialNarrative: "Confronting Baku's historic status as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (Yanar Dağ / Ateshgah). Developed with two curated companion variations: Variation 2 (The Industrial Cretti) and Variation 3 (The Tectonic Obliteration).",
+    curatorialNarrative: "The earth bleeding memory. Charred derrick scaffolding drowned in raw Binagadi bitumen, where an armored marine shad gleams with subterranean pyrite above eternal gas fire. Three iterations of an unfinished industrial reckoning.",
     turnkeySpecs: {
       chassis: "Solid cross-braced Finnish pine with aluminum cradle",
       weight: "6.8 kg",
@@ -197,8 +198,8 @@ const GALLERY_DATA = [
     id: "plate-04",
     number: "04",
     roman: "IV",
-    title: "After Hard Day of Work",
-    azTitle: "Ağır İş Günündən Sonra",
+    title: "A Hard Day's Night",
+    azTitle: "Ağır Bir Günün Gecəsi",
     genre: "Earth-Art Vortex / Geothermal Mineral Painting",
     widthCm: 145,
     heightCm: 145,
@@ -217,7 +218,7 @@ const GALLERY_DATA = [
         description: "Masterwork oil pigments and mineral glazes on heavy linen canvas."
       }
     ],
-    curatorialNarrative: "A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (Benthophilus) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.",
+    curatorialNarrative: "The quiet exhaustion of a planet. Millions of years of subterranean pressure exhaled onto canvas—cracked volcanic clay and geothermal celadon resting in the dark stillness after eruption.",
     turnkeySpecs: {
       chassis: "Dual-aluminum cross-braced cradled chassis",
       weight: "12.5 kg",
@@ -240,8 +241,8 @@ const GALLERY_DATA = [
     id: "plate-05",
     number: "05",
     roman: "V",
-    title: "Solar Oracle",
-    azTitle: "Günəş Orakulu",
+    title: "Here Comes the Sun",
+    azTitle: "Günəş Doğur",
     genre: "Mythological Contemporary Altar Piece / Archaeological Totem",
     widthCm: 120,
     heightCm: 100,
@@ -264,7 +265,7 @@ const GALLERY_DATA = [
         description: "Layered artist-grade oil pigments and archival mineral plaster."
       }
     ],
-    curatorialNarrative: "A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt mandala. Carved directly into the limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.",
+    curatorialNarrative: "Twelve thousand years ago, hunters etched a boat carrying the sun across rock. An archaic Caspian lamprey loops through gold dust and beach sand, completing an eternal circle of return.",
     turnkeySpecs: {
       chassis: "Anti-warp aluminum-cradled stretcher",
       weight: "8.2 kg",
