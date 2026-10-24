@@ -996,6 +996,7 @@ class GazelliCuratorialGallery {
 
   updatePlacardLabel() {
     const art = this.artworks[this.currentIndex];
+    const t = window.I18N ? window.I18N[this.currentLang || 'en'] : null;
     const mediumText = art.minerals && art.minerals.length > 0 
       ? art.minerals[0].name
       : (art.genre || 'Oil & Raw Absheron Minerals');
@@ -1016,7 +1017,6 @@ class GazelliCuratorialGallery {
     if (this.currentLang === 'az' && art.azTitle) displayTitle = art.azTitle;
     if (this.currentLang === 'ru' && art.ruTitle) displayTitle = art.ruTitle;
 
-    const t = window.I18N ? window.I18N[this.currentLang || 'en'] : null;
     const dossierLinkText = t ? t.placard.dossierLink : 'Curatorial Dossier & Specs ↗';
 
     this.dom.labelCard.innerHTML = `
