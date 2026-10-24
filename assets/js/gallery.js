@@ -133,6 +133,12 @@ class GazelliCuratorialGallery {
     this.dom.drawerOpenBtn.addEventListener('click', () => this.toggleDrawer(true));
     this.dom.drawerCloseBtn.addEventListener('click', () => this.toggleDrawer(false));
 
+    // Brand Medallion Seal click opens Curatorial & Technical Dossier
+    const brandBadge = document.querySelector('.brand-badge');
+    if (brandBadge) {
+      brandBadge.addEventListener('click', () => this.toggleDrawer(true));
+    }
+
     // Popover toggle (Curatorial Environment & More Menu '···')
     const moreMenuBtn = document.getElementById('moreMenuBtn');
     const toggleOverflow = (e) => {
