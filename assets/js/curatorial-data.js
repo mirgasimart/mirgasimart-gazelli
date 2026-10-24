@@ -286,7 +286,7 @@ const GALLERY_DATA = [
   }
 ];
 
-// Architectural wall surface options
+// Architectural wall surface options (Canonical 3)
 const WALL_SURFACES = [
   {
     id: "limestone",
@@ -308,17 +308,10 @@ const WALL_SURFACES = [
     subtitle: "Moody dark gallery with high drama",
     bgClass: "wall-anthracite",
     ambientLight: "rgba(215, 225, 240, 0.08)"
-  },
-  {
-    id: "travertine",
-    name: "Warm Travertine Stone",
-    subtitle: "Geological golden vein texture",
-    bgClass: "wall-travertine",
-    ambientLight: "rgba(240, 220, 190, 0.14)"
   }
 ];
 
-// Framing options
+// Turnkey Framing options (Canonical 3)
 const FRAME_STYLES = [
   {
     id: "floater-walnut",
@@ -337,17 +330,5 @@ const FRAME_STYLES = [
     name: "Blackened Steel Floater",
     description: "Razor-thin industrial anthracite floater profile",
     class: "frame-floater-steel"
-  },
-  {
-    id: "floater-brass",
-    name: "Aged Champagne Brass",
-    description: "Warm burnished metallic profile catching spotlight facets",
-    class: "frame-floater-brass"
-  },
-  {
-    id: "passe-partout",
-    name: "Museum Mat & Glass",
-    description: "Archival cotton rag passe-partout with natural oak box frame",
-    class: "frame-passe-partout"
   }
 ];
