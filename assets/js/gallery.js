@@ -595,6 +595,7 @@ class GazelliCuratorialGallery {
         if (this.dom.variationBadge) this.dom.variationBadge.style.display = 'flex';
         if (this.dom.mobileVariationsSection) this.dom.mobileVariationsSection.style.display = 'block';
         this.dom.canvasInner.classList.add('has-variations');
+        this.renderMobileVariationPills(art);
         this.updateVariationBadge(0);
       } else {
         if (this.dom.variationBadge) this.dom.variationBadge.style.display = 'none';
@@ -610,6 +611,22 @@ class GazelliCuratorialGallery {
 
       this.dom.artworkMount.style.opacity = '1';
     }, 200);
+  }
+
+  renderMobileVariationPills(art) {
+    if (!this.dom.mobileVariationOptions || !art.variations) return;
+    this.dom.mobileVariationOptions.innerHTML = '';
+    art.variations.forEach((v, vi) => {
+      const btn = document.createElement('button');
+      btn.className = `sheet-pill ${vi === this.currentVariationIndex ? 'active' : ''}`;
+      btn.dataset.varIdx = vi;
+      let label = v.label;
+      if (this.currentLang === 'az' && v.azLabel) label = v.azLabel;
+      if (this.currentLang === 'ru' && v.ruLabel) label = v.ruLabel;
+      const shortName = label.replace(/^(Primary|Əsas|Основной)\s+/i, '').split(' ')[0];
+      btn.textContent = `${v.number}. ${shortName}`;
+      this.dom.mobileVariationOptions.appendChild(btn);
+    });
   }
 
   nextVariation() {
