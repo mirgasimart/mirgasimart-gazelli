@@ -4,11 +4,11 @@ Mirgasim Art Studio - 6-Page Luxury Curatorial Commission Dossier Builder
 ========================================================================
 Compiles an exact 6-page museum-grade fine art commission proposal:
   - Page 1: Executive Curatorial Statement, Collection Matrix & Caspian Strategy
-  - Page 2: Plate 01 — Luminescence of Masazir (130 × 100 cm)
-  - Page 3: Plate 02 — The Shebeke Reliquary (40 × 60 cm)
-  - Page 4: Plate 03 — Black Gold (80 × 100 cm)
-  - Page 5: Plate 04 — After Hard Day of Work (145 × 145 cm)
-  - Page 6: Plate 05 — Solar Oracle (120 × 100 cm)
+  - Page 2: Plate 01 — Pink Moon (130 × 100 cm)
+  - Page 3: Plate 02 — Across the Universe (40 × 60 cm)
+  - Page 4: Plate 03 — Paint It Black (Black Gold) (80 × 100 cm)
+  - Page 5: Plate 04 — A Hard Day's Night (145 × 145 cm)
+  - Page 6: Plate 05 — Here Comes the Sun (120 × 100 cm)
 """
 
 import os
@@ -335,12 +335,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 01 &bull; Pure Mineral Abstraction</div>
-      <h3 class="plate-title">Luminescence of Masazir</h3>
-      <div class="plate-subtitle">Masazır Parıltısı</div>
+      <h3 class="plate-title">Pink Moon</h3>
+      <div class="plate-subtitle">Çəhrayı Ay</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('01_luminescence_of_masazir_salt_dawn.jpg')}" alt="Luminescence of Masazir"/>
+      <img src="{get_img_uri('01_luminescence_of_masazir_salt_dawn.jpg')}" alt="Pink Moon"/>
     </div>
 
     <table class="specs-grid">
@@ -355,14 +355,14 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Concept</td>
         <td class="spec-val">
-          An ethereal, meditative abstract landscape capturing the tranquil morning horizon over Lake Masazir. Where misted pastel-pink saline waters meet white crystalline shores, thick palette-knife impasto sculpts the organic coastline, embedded with coarse pink-and-white mineral crystals that glisten naturally in ambient light. Scored with delicate geometric sgraffito fissures in the mineral foreground, this composition embodies pure lacustrine serenity. (Pure geological abstraction; zero portraits, zero figures, zero carpets).
+          Where saline water turns to rose mist at dawn. Thick crystalline salt sculpted by the palette knife, holding the silent breath of an ancient Caspian morning before humankind had a name for time.
         </td>
       </tr>
     </table>
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 01: Luminescence of Masazir</div>
+    <div class="rf-context">Plate 01: Pink Moon</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">02 / 06</div>
   </div>
@@ -378,12 +378,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 02 &bull; Tactile Shell Assemblage &amp; Mineral Painting</div>
-      <h3 class="plate-title">The Shebeke Reliquary</h3>
-      <div class="plate-subtitle">Şəbəkə Qalığı</div>
+      <h3 class="plate-title">Across the Universe</h3>
+      <div class="plate-subtitle">Kainat Boyu</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="The Shebeke Reliquary"/>
+      <img src="{get_img_uri('02_the_weaver_of_sunken_shells_didacna.jpg')}" alt="Across the Universe"/>
     </div>
 
     <table class="specs-grid">
@@ -402,14 +402,14 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Concept</td>
         <td class="spec-val">
-          An architectural mandala and tactile stone reliquary fusing Absheron's stone-carving traditions (<em>daş yonma</em>) with sacred geometry. Arranged in precise concentric celestial rings, hundreds of natural Caspian <em>Didacna</em> cockle shells and iridescent mother-of-pearl segments radiate outward from an incandescent core of crystalline pink Masazir lake salt and vibrant turquoise mineral pigment. Encircled by golden Absheron coastal sand and framed within a square relief of cracked mud-volcano craquelure and incised geometric Shebeke stone tracery, the work fuses deep Caspian biological antiquity with timeless architectural harmony.
+          Centuries of tides carved into sacred stone Shebeke geometry. Concentric rings of fossilized Caspian cockles radiate from a saline core—a celestial calendar measuring eternity in mother-of-pearl.
         </td>
       </tr>
     </table>
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 02: The Shebeke Reliquary</div>
+    <div class="rf-context">Plate 02: Across the Universe</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">03 / 06</div>
   </div>
@@ -425,12 +425,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 03 &bull; Industrial-Geological Abstraction</div>
-      <h3 class="plate-title">Black Gold</h3>
-      <div class="plate-subtitle">Qara Qızıl</div>
+      <h3 class="plate-title">Paint It Black</h3>
+      <div class="plate-subtitle">Qara Qızıl (Black Gold)</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('03_keeper_of_the_cold_depths_caspian_shad.jpg')}" alt="Black Gold"/>
+      <img src="{get_img_uri('03_keeper_of_the_cold_depths_caspian_shad.jpg')}" alt="Paint It Black"/>
     </div>
 
     <table class="specs-grid">
@@ -449,7 +449,7 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Concept &amp; Variations</td>
         <td class="spec-val">
-          Confronting Baku's historic status as the pioneer of world petroleum, minimal structural scaffolding beams inspired by historic wooden oil derricks slice across visceral slabs of pitch-black Binagadi bitumen. Leaping through the dark matrix is an armored Caspian marine shad adorned with metallic golden pyrite ore, set above the eternal subterranean gas flame (<em>Yanar Dağ / Ateshgah</em>).<br/><br/>
+          The earth bleeding memory. Charred derrick scaffolding drowned in raw Binagadi bitumen, where an armored marine shad gleams with subterranean pyrite above eternal gas fire. Three iterations of an unfinished industrial reckoning.<br/><br/>
           <strong>Curated Variations:</strong> Variation 1 (Primary Master: Scaffolding &amp; Bitumen Matrix) &bull; Variation 2 (<em>The Industrial Cretti</em>, Burri Lineage: Fault-line craquelure &amp; bitumen rift) &bull; Variation 3 (<em>The Tectonic Obliteration</em>, Kiefer Lineage: Charred derrick timber &amp; fossilized sturgeon scutes).
         </td>
       </tr>
@@ -457,7 +457,7 @@ def generate_dossier_html(use_watermarked=True):
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 03: Black Gold</div>
+    <div class="rf-context">Plate 03: Paint It Black</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">04 / 06</div>
   </div>
@@ -473,12 +473,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 04 &bull; Earth-Art Vortex &bull; Geothermal Mineral Painting</div>
-      <h3 class="plate-title">After Hard Day of Work</h3>
-      <div class="plate-subtitle">Ağır İş Günündən Sonra</div>
+      <h3 class="plate-title">A Hard Day's Night</h3>
+      <div class="plate-subtitle">Ağır Bir Günün Gecəsi</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('04_breath_of_lokbatan_tadpole_goby.jpg')}" alt="After Hard Day of Work"/>
+      <img src="{get_img_uri('04_breath_of_lokbatan_tadpole_goby.jpg')}" alt="A Hard Day's Night"/>
     </div>
 
     <table class="specs-grid">
@@ -493,14 +493,14 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Concept</td>
         <td class="spec-val">
-          A monumental square statement uniting subterranean geothermal energy with aquatic serenity. An aerial vortex of an active mud-volcano crater rendered in thick palette-knife impasto and authentic mud clay craquelure fissures opens into luminous, flowing glazes of Caspian celadon and seafoam green. Gliding through the geothermal currents, an armored Caspian tadpole goby (<em>Benthophilus</em>) gleams with metallic pyrite veins, harmonizing primordial geological power with tranquil ecological resilience.
+          The quiet exhaustion of a planet. Millions of years of subterranean pressure exhaled onto canvas—cracked volcanic clay and geothermal celadon resting in the dark stillness after eruption.
         </td>
       </tr>
     </table>
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 04: After Hard Day of Work</div>
+    <div class="rf-context">Plate 04: A Hard Day's Night</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">05 / 06</div>
   </div>
@@ -516,12 +516,12 @@ def generate_dossier_html(use_watermarked=True):
 
     <div class="plate-top">
       <div class="plate-badge">Plate 05 &bull; Mythological Archaeological Totem</div>
-      <h3 class="plate-title">Solar Oracle</h3>
-      <div class="plate-subtitle">Günəş Orakulu</div>
+      <h3 class="plate-title">Here Comes the Sun</h3>
+      <div class="plate-subtitle">Günəş Doğur</div>
     </div>
 
     <div class="artwork-showcase">
-      <img src="{get_img_uri('05_the_lampreys_vigil_caspian_lamprey.jpg')}" alt="Solar Oracle"/>
+      <img src="{get_img_uri('05_the_lampreys_vigil_caspian_lamprey.jpg')}" alt="Here Comes the Sun"/>
     </div>
 
     <table class="specs-grid">
@@ -540,14 +540,14 @@ def generate_dossier_html(use_watermarked=True):
       <tr>
         <td class="spec-name">Concept</td>
         <td class="spec-val">
-          A transcendental contemporary altar piece uniting prehistoric rock art with ecological mystery. The ancient Caspian lamprey coils into an Ouroboros circle of eternity around a concentric sand-and-salt solar mandala. Incised directly into the bone-plaster and limestone ground are Gobustan petroglyphs (reed boats, hunters, and sacred solar bulls), immortalizing Absheron's ancient rock art heritage within deep cosmological time.
+          Twelve thousand years ago, hunters etched a boat carrying the sun across rock. An archaic Caspian lamprey loops through gold dust and beach sand, completing an eternal circle of return.
         </td>
       </tr>
     </table>
   </div>
 
   <div class="running-footer">
-    <div class="rf-context">Plate 05: Solar Oracle</div>
+    <div class="rf-context">Plate 05: Here Comes the Sun</div>
     <div class="rf-copyright">&copy; 2026 Jeyran Mir-Gasim Jafarova. All rights reserved.</div>
     <div class="rf-folio">06 / 06</div>
   </div>
