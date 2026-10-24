@@ -21,6 +21,7 @@ class GazelliCuratorialGallery {
     this.currentOffsetX = 0;
     this.currentOffsetY = 0;
     this.currentVariationIndex = 0;
+    this.currentLang = localStorage.getItem('mirgasim_lang') || 'en';
 
     this.cacheDOM();
     this.initAudioEngine();
@@ -28,6 +29,7 @@ class GazelliCuratorialGallery {
     this.renderThumbnails();
     this.initPanoramicPromenade();
     this.updateArtwork(0);
+    this.setLanguage(this.currentLang);
   }
 
   cacheDOM() {
@@ -172,6 +174,26 @@ class GazelliCuratorialGallery {
       });
     }
 
+    // Curatorial Popover Finishes trigger
+    const popoverFinishesBtn = document.getElementById('popoverFinishesBtn');
+    if (popoverFinishesBtn) {
+      popoverFinishesBtn.addEventListener('click', () => {
+        if (this.dom.lightingPopover) this.dom.lightingPopover.classList.remove('open');
+        this.toggleMobileCustomizer(true);
+      });
+    }
+
+    // 2-Character Language Toggle (EN -> AZ -> RU -> EN)
+    const langToggleBtn = document.getElementById('langToggleBtn');
+    if (langToggleBtn) {
+      langToggleBtn.addEventListener('click', () => {
+        const order = ['en', 'az', 'ru'];
+        const currentIdx = order.indexOf(this.currentLang || 'en');
+        const nextLang = order[(currentIdx + 1) % order.length];
+        this.setLanguage(nextLang);
+      });
+    }
+
     // Mobile Customizer Bottom Sheet events
     if (this.dom.mobileCustomizerTrigger) {
       this.dom.mobileCustomizerTrigger.addEventListener('click', () => {
@@ -189,9 +211,15 @@ class GazelliCuratorialGallery {
       });
     }
 
-    // Human scale toggle (desktop button)
+    // Human scale toggle (Always active with instant feedback across all viewing modes)
     this.dom.scaleToggleBtn.addEventListener('click', () => {
-      this.showHumanScale = !this.showHumanScale;
+      // If currently in Walk or Loupe mode, seamlessly switch to Stage view so silhouette is immediately visible
+      if (this.currentMode !== 'gallery') {
+        this.setMode('gallery');
+        this.showHumanScale = true;
+      } else {
+        this.showHumanScale = !this.showHumanScale;
+      }
       this.dom.scaleToggleBtn.classList.toggle('active', this.showHumanScale);
       if (this.dom.mobileScaleSwitch) {
         this.dom.mobileScaleSwitch.classList.toggle('active', this.showHumanScale);
@@ -203,7 +231,12 @@ class GazelliCuratorialGallery {
     // Mobile Scale Switch
     if (this.dom.mobileScaleSwitch) {
       this.dom.mobileScaleSwitch.addEventListener('click', () => {
-        this.showHumanScale = !this.showHumanScale;
+        if (this.currentMode !== 'gallery') {
+          this.setMode('gallery');
+          this.showHumanScale = true;
+        } else {
+          this.showHumanScale = !this.showHumanScale;
+        }
         this.dom.mobileScaleSwitch.classList.toggle('active', this.showHumanScale);
         this.dom.mobileScaleSwitch.textContent = this.showHumanScale ? 'ON' : 'OFF';
         this.dom.scaleToggleBtn.classList.toggle('active', this.showHumanScale);
@@ -534,6 +567,14 @@ class GazelliCuratorialGallery {
       activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
 
+    // If in panoramic mode, also scroll the promenade station into view
+    if (this.currentMode === 'panoramic' && this.dom.panoramicTrack) {
+      const activeStation = this.dom.panoramicTrack.children[index];
+      if (activeStation) {
+        activeStation.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+
     // Update main image with smooth fade
     this.dom.artworkMount.style.opacity = '0';
     setTimeout(() => {
@@ -685,6 +726,21 @@ class GazelliCuratorialGallery {
   }
 
   toggleWing(forceCollapse) {
+    const isWidescreen = window.innerWidth > 1100;
+    
+    // When on laptop, tablet, mobile, or when viewing in panoramic/macro mode:
+    // Open the Curatorial Dossier and scroll straight to the Mineral Anatomy section with full feedback!
+    if (!isWidescreen || this.currentMode !== 'gallery') {
+      this.toggleDrawer(true);
+      setTimeout(() => {
+        const mineralsSec = document.getElementById('drawerMinerals') || document.getElementById('drawerAnatomyHeading');
+        if (mineralsSec) {
+          mineralsSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 200);
+      return;
+    }
+
     if (typeof forceCollapse === 'boolean') {
       this.wingCollapsed = forceCollapse;
     } else {
@@ -948,8 +1004,15 @@ class GazelliCuratorialGallery {
       `;
     }
 
-    // Rule of Three: (1) Studio & Year, (2) Master Title, (3) Scale & Key Medium
-    // Everything else is discovered seamlessly via Curatorial Dossier
+    // Museum Placard: Single fixed brand identity is established in top header;
+    // Placard presents pure artwork details with zero repetitive branding clutter, freeing vertical height.
+    let displayTitle = art.title;
+    if (this.currentLang === 'az' && art.azTitle) displayTitle = art.azTitle;
+    if (this.currentLang === 'ru' && art.ruTitle) displayTitle = art.ruTitle;
+
+    const t = window.I18N ? window.I18N[this.currentLang || 'en'] : null;
+    const dossierLinkText = t ? t.placard.dossierLink : 'Curatorial Dossier & Specs ↗';
+
     this.dom.labelCard.innerHTML = `
       <div class="placard-mount-dots">
         <span class="dot-tl"></span>
@@ -957,16 +1020,12 @@ class GazelliCuratorialGallery {
         <span class="dot-bl"></span>
         <span class="dot-br"></span>
       </div>
-      <div class="label-header-row">
-        <span class="label-artist">Mirgasim Art Studio</span>
-        <span class="label-year">2026</span>
-      </div>
-      <div class="label-title">${art.title}</div>
+      <div class="label-title">${displayTitle}</div>
       ${varSwitcherHtml}
       <div class="label-dim">${art.dimensions} · ${mediumText}</div>
       <button class="label-dossier-link" onclick="window.gallery.toggleDrawer(true)" title="Inspect Full Technical & Mineral Specifications">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-        <span>Curatorial Dossier & Specs ↗</span>
+        <span>${dossierLinkText}</span>
       </button>
     `;
 
@@ -1141,12 +1200,26 @@ class GazelliCuratorialGallery {
   updateDrawerContent() {
     const art = this.artworks[this.currentIndex];
 
+    let title = art.title;
+    let subtitle = art.azTitle;
+    let narrative = art.curatorialNarrative;
+
+    if (this.currentLang === 'az') {
+      title = art.azTitle || art.title;
+      subtitle = art.title;
+      narrative = art.azCuratorial || art.curatorialNarrative;
+    } else if (this.currentLang === 'ru') {
+      title = art.ruTitle || art.title;
+      subtitle = art.title;
+      narrative = art.ruCuratorial || art.curatorialNarrative;
+    }
+
     document.getElementById('drawerNumber').textContent = `PLATE ${art.number} OF ${this.artworks.length}`;
-    document.getElementById('drawerTitle').textContent = art.title;
-    document.getElementById('drawerAzTitle').textContent = art.azTitle;
+    document.getElementById('drawerTitle').textContent = title;
+    document.getElementById('drawerAzTitle').textContent = subtitle;
     document.getElementById('drawerDimensions').textContent = art.dimensions;
     document.getElementById('drawerNiche').textContent = art.niche;
-    document.getElementById('drawerCuratorial').textContent = art.curatorialNarrative;
+    document.getElementById('drawerCuratorial').textContent = narrative;
     document.getElementById('drawerTaxonomy').textContent = `${art.endemicFocus} — ${art.scientificTaxonomy}`;
 
     // Minerals cards
@@ -1392,6 +1465,62 @@ class GazelliCuratorialGallery {
         this.dom.lightingPopover.classList.remove('open');
         break;
     }
+  }
+
+  setLanguage(lang) {
+    if (!window.I18N || !window.I18N[lang]) return;
+    this.currentLang = lang;
+    localStorage.setItem('mirgasim_lang', lang);
+
+    const t = window.I18N[lang];
+
+    // 1. Update 2-character toggle button label
+    const langLabel = document.getElementById('langLabel');
+    if (langLabel) langLabel.textContent = t.langCode;
+    const langToggleBtn = document.getElementById('langToggleBtn');
+    if (langToggleBtn) {
+      langToggleBtn.title = `Language: ${t.langName} (Click to switch: EN · AZ · RU)`;
+      langToggleBtn.classList.add('lang-switched');
+      setTimeout(() => langToggleBtn.classList.remove('lang-switched'), 300);
+    }
+
+    // 2. Update Header Brand Titles
+    const brandMain = document.querySelector('.brand-main');
+    if (brandMain) brandMain.textContent = t.brandTitle;
+    const brandSub = document.querySelector('.brand-sub');
+    if (brandSub) brandSub.textContent = t.brandSub;
+
+    // 3. Update Mode Tabs
+    const tabGallery = document.querySelector('.mode-tab[data-mode="gallery"] span');
+    if (tabGallery) tabGallery.textContent = t.modes.gallery;
+    const tabPanoramic = document.querySelector('.mode-tab[data-mode="panoramic"] span');
+    if (tabPanoramic) tabPanoramic.textContent = t.modes.panoramic;
+    const tabMacro = document.querySelector('.mode-tab[data-mode="macro"] span');
+    if (tabMacro) tabMacro.textContent = t.modes.macro;
+
+    // 4. Update Header Action Buttons
+    const scaleBtnLabel = document.querySelector('#scaleToggleBtn .action-label');
+    if (scaleBtnLabel) scaleBtnLabel.textContent = t.actions.scale;
+    const wingBtnLabel = document.querySelector('#wingToggleBtn .action-label');
+    if (wingBtnLabel) wingBtnLabel.textContent = t.actions.minerals;
+    const drawerBtnLabel = document.querySelector('#drawerOpenBtn .action-label');
+    if (drawerBtnLabel) drawerBtnLabel.textContent = t.actions.dossier;
+    const moreBtnLabel = document.querySelector('#moreMenuBtn .action-label');
+    if (moreBtnLabel) moreBtnLabel.textContent = t.actions.more;
+
+    // 5. Update Curatorial Dossier Drawer Headings
+    const drawerTitle = document.querySelector('.drawer-title');
+    if (drawerTitle) drawerTitle.textContent = t.drawer.title;
+    const drawerStatementHeading = document.getElementById('drawerStatementHeading');
+    if (drawerStatementHeading) drawerStatementHeading.textContent = t.drawer.statement;
+    const drawerAnatomyHeading = document.getElementById('drawerAnatomyHeading');
+    if (drawerAnatomyHeading) drawerAnatomyHeading.textContent = t.drawer.anatomy;
+    const drawerSpecsHeading = document.getElementById('drawerSpecsHeading');
+    if (drawerSpecsHeading) drawerSpecsHeading.textContent = t.drawer.specs;
+
+    // 6. Update Artwork Placard & Curatorial Drawer
+    this.updatePlacardLabel();
+    this.updateDrawerContent();
   }
 }
 
