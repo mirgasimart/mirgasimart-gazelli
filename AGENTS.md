@@ -53,4 +53,11 @@ When generating, updating, or iterating on artworks for this repository, you **M
    - **Three-Dot (`···`) Overflow Pattern**: All secondary, environmental, or administrative tools (lighting intensity & color temperature sliders, follow-beam, Caspian soundscape, In-Situ interior room toggle, direct PDF master downloads, and keyboard shortcuts) must be housed under a dignified, unobtrusive three-dot (`···`) overflow dropdown menu.
    - **Strict Web & Mobile Parity Rule**: The UI and UX across desktop web and mobile smartphone must remain strictly on par. No feature may be arbitrarily omitted from mobile; interactions must share identical mental models, terminology, and single-word button labels.
 
+8. **Single Central Brand Identity Rule**:
+   - Reference detailed specifications in [.agents/rules/single_central_brand_identity.md](file:///Users/jmj/repos/mirgasimart-gazelli/.agents/rules/single_central_brand_identity.md).
+   - **No Divergent Logo Variations**: The studio must NEVER maintain multiple different versions or ad-hoc redesigns of the logo across different places. Keep brand assets strictly single, central, and reused.
+   - **Central Authority (`assets/branding/`)**: The definitive production emblem is `assets/branding/brand_medallion.png` (built from `assets/branding/master_golden_m_medallion.jpg`).
+   - **Deterministic Generator**: All derivative formats (favicons, Apple touch icon, Android Chrome icons, SVG) are exclusively built via `scripts/generate_luxury_brand_assets.py`.
+
+
 
