@@ -178,18 +178,18 @@ const GALLERY_DATA = [
       {
         index: 1,
         number: "2",
-        label: "Shebeke Mandala",
-        azLabel: "Şəbəkə Mandalasında",
-        ruLabel: "Мандала Шебеке",
-        subtitle: "Pointed Star Halo • Turquoise Glaze on Canvas",
+        label: "Shebeke Portal",
+        azLabel: "Şəbəkə Portalı",
+        ruLabel: "Портал Шебеке",
+        subtitle: "Arched Niche • Turquoise Impasto on Canvas",
         image: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
         insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
         plate: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
-        desc: "An intricate multi-tiered pointed star mandala painted on stretched linen canvas, featuring luminous Caspian turquoise oil glazes, textured beach sand impasto, and concentric rings of fossilized Didacna cockles.",
+        desc: "An architectural pointed archway painted on stretched linen canvas, featuring sweeping palette-knife strokes of Caspian turquoise and ultramarine oil glazes, textured beach sand impasto, genuine pink Masazir salt clusters, and fossilized Caspian cockles (Didacna trigonoides).",
         hotspots: [
-          { x: 50, y: 50, label: "Masazir Halite Center", desc: "Genuine crystallized lake salt clusters embedded in thick oil impasto." },
-          { x: 30, y: 35, label: "Pointed Nacre Fretwork", desc: "Radial tiers of fossilized Caspian cockles set in coarse beach sand." },
-          { x: 68, y: 65, label: "Turquoise Oil Glaze", desc: "Luminous translucent copper-silicate glazes painted across craquelure linen." }
+          { x: 50, y: 55, label: "Palette-Knife Oil Glaze", desc: "Thick, expressive impasto strokes of Caspian turquoise, emerald, and ultramarine oil pigments." },
+          { x: 50, y: 18, label: "Fossilized Cockle Arch", desc: "Curved archway contour lined with prehistoric Caspian Didacna shells set in coarse beach sand." },
+          { x: 62, y: 38, label: "Masazir Pink Salt Crystals", desc: "Raw crystalline halite clusters scattered across the wet oil glazes, catching ambient light." }
         ]
       },
       {
