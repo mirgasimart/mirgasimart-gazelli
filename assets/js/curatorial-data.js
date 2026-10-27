@@ -178,18 +178,18 @@ const GALLERY_DATA = [
       {
         index: 1,
         number: "2",
-        label: "Coastal Mosaic",
-        azLabel: "Sahil Mozaikası",
-        ruLabel: "Прибрежная Мозаика",
-        subtitle: "Radial Didacna Cluster • Beach Quartz Grit",
+        label: "Shebeke Reliquary",
+        azLabel: "Şəbəkə Əmanətxanası",
+        ruLabel: "Реликварий Шебеке",
+        subtitle: "Sacred Stone Shebeke • Concentric Didacna Tracery",
         image: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
         insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
         plate: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
-        desc: "Dense tactile mosaic of fossilized Caspian cockles embedded in heavy Absheron beach sand and warm quarry plaster.",
+        desc: "Concentric rings of fossilized Caspian cockles (Didacna trigonoides) set within carved architectural stone Shebeke tracery, glowing with Caspian turquoise glaze.",
         hotspots: [
-          { x: 48, y: 40, label: "Fossil Shell Radial Field", desc: "Concentric rings of weathered marine cockles bound in chalk paste." },
-          { x: 28, y: 60, label: "Absheron Quartz Grit", desc: "Unrefined coastal sand creating high-friction matte surface texture." },
-          { x: 70, y: 50, label: "Mother-of-Pearl Aperture", desc: "Abraded nacre reflections catching ambient illumination." }
+          { x: 50, y: 50, label: "Stone Shebeke Geometry", desc: "Intricate architectural limestone fretwork framing deep turquoise mineral glazes." },
+          { x: 30, y: 35, label: "Concentric Didacna Halo", desc: "Radial bands of iridescent fossilized Caspian cockles in coarse sand impasto." },
+          { x: 68, y: 65, label: "Turquoise Mineral Glaze", desc: "Translucent Caspian deep-water copper silicate glaze pooled in carved recesses." }
         ]
       },
       {
