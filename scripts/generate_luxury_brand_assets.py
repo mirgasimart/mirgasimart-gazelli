@@ -1,21 +1,28 @@
 #!/usr/bin/env python3
 """
-Generate ultra-luxury brand assets from the Caspian Fire Muse medallion.
+Generate ultra-luxury brand assets from the Mirgasim Golden 'M' Medallion.
+Replaces the previous figurative muse bust with the monumental, regal golden 'M' seal.
 Produces:
 - assets/branding/brand_medallion.png (1024x1024 transparent circular cutout with supersampled anti-aliased border)
 - assets/branding/apple-touch-icon.png (180x180 square on obsidian dark luxury backing)
+- assets/branding/android-chrome-192x192.png (192x192)
+- assets/branding/android-chrome-512x512.png (512x512)
+- assets/branding/favicon-48x48.png
 - assets/branding/favicon-32x32.png
 - assets/branding/favicon-16x16.png
 - assets/branding/favicon.ico
 - assets/branding/favicon.svg
+- ./favicon.ico (root)
 """
 
 import os
 import math
+import base64
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
 
-SRC_PATH = "/Users/jmj/.gemini/antigravity-ide/brain/e7c2de84-e26a-4c28-b374-718f1588f00c/mirgasim_luxury_medallion_icon_1792847900406.jpg"
-OUT_DIR = "/Users/jmj/repos/mirgasimart-gazelli/assets/branding"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT_DIR = os.path.join(BASE_DIR, "assets", "branding")
+SRC_PATH = os.path.join(OUT_DIR, "master_golden_m_medallion.jpg")
 
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -23,12 +30,12 @@ def main():
     w, h = src.size
     
     # Exact center and radius for the golden rim
-    cx, cy = 500, 501
-    r = 472
+    cx, cy = 513.5, 513.5
+    r = 509.5
     
-    # Crop a square bounding box around the medallion with padding
-    pad = 8
-    box = (cx - r - pad, cy - r - pad, cx + r + pad, cy + r + pad)
+    # Bounding box around the circular medallion
+    pad = 2.0
+    box = (int(cx - r - pad), int(cy - r - pad), int(math.ceil(cx + r + pad)), int(math.ceil(cy + r + pad)))
     cropped = src.crop(box)
     cw, ch = cropped.size
     
@@ -54,7 +61,7 @@ def main():
     medallion = cropped.copy()
     medallion.putalpha(alpha_mask)
     
-    # Resize to clean square 1024x1024
+    # 1. Primary brand medallion: 1024x1024 transparent circular cutout
     medallion_1024 = medallion.resize((1024, 1024), Image.Resampling.LANCZOS)
     medallion_path = os.path.join(OUT_DIR, "brand_medallion.png")
     medallion_1024.save(medallion_path, "PNG", optimize=True)
@@ -80,10 +87,25 @@ def main():
     ati_rgb.save(ati_path, "PNG", optimize=True)
     print(f"Saved: {ati_path}")
     
-    # 3. Favicon 32x32 & 16x16 with contrast enhancement for micro clarity
-    # Slight micro sharpening so features pop at 32px
+    # 3. Android Chrome Icons (192x192 & 512x512)
+    ac_192 = medallion.resize((192, 192), Image.Resampling.LANCZOS)
+    ac_192_path = os.path.join(OUT_DIR, "android-chrome-192x192.png")
+    ac_192.save(ac_192_path, "PNG", optimize=True)
+    print(f"Saved: {ac_192_path}")
+    
+    ac_512 = medallion.resize((512, 512), Image.Resampling.LANCZOS)
+    ac_512_path = os.path.join(OUT_DIR, "android-chrome-512x512.png")
+    ac_512.save(ac_512_path, "PNG", optimize=True)
+    print(f"Saved: {ac_512_path}")
+    
+    # 4. Favicons with micro sharpness enhancement for crisp rendering at tiny resolutions
     enhancer = ImageEnhance.Sharpness(medallion)
     medallion_crisp = enhancer.enhance(1.8)
+    
+    fav48 = medallion_crisp.resize((48, 48), Image.Resampling.LANCZOS)
+    fav48_path = os.path.join(OUT_DIR, "favicon-48x48.png")
+    fav48.save(fav48_path, "PNG")
+    print(f"Saved: {fav48_path}")
     
     fav32 = medallion_crisp.resize((32, 32), Image.Resampling.LANCZOS)
     fav32_path = os.path.join(OUT_DIR, "favicon-32x32.png")
@@ -95,21 +117,17 @@ def main():
     fav16.save(fav16_path, "PNG")
     print(f"Saved: {fav16_path}")
     
-    # 4. Favicon.ico containing 16, 32, 48
-    fav48 = medallion_crisp.resize((48, 48), Image.Resampling.LANCZOS)
+    # 5. Favicon.ico containing 16, 32, 48
     ico_path = os.path.join(OUT_DIR, "favicon.ico")
     fav48.save(ico_path, format="ICO", sizes=[(16, 16), (32, 32), (48, 48)])
     print(f"Saved: {ico_path}")
     
-    # Also save favicon.ico to root if standard browser fallback expects it
-    root_ico = "/Users/jmj/repos/mirgasimart-gazelli/favicon.ico"
+    # Root favicon.ico fallback
+    root_ico = os.path.join(BASE_DIR, "favicon.ico")
     fav48.save(root_ico, format="ICO", sizes=[(16, 16), (32, 32), (48, 48)])
     print(f"Saved: {root_ico}")
     
-    # 5. Favicon SVG wrapper
-    import base64
-    with open(fav32_path, "rb") as f:
-        b64_32 = base64.b64encode(f.read()).decode("utf-8")
+    # 6. Favicon SVG wrapper
     with open(medallion_path, "rb") as f:
         b64_hi = base64.b64encode(f.read()).decode("utf-8")
         
@@ -127,6 +145,7 @@ def main():
     with open(svg_path, "w", encoding="utf-8") as f:
         f.write(svg_content)
     print(f"Saved: {svg_path}")
+    print("All luxury brand assets successfully created from the Golden 'M' Medallion.")
 
 if __name__ == "__main__":
     main()
