@@ -504,15 +504,15 @@ const GALLERY_DATA = [
         label: "Cosmic Wheel Totem",
         azLabel: "Kosmik Çarx Totemi",
         ruLabel: "Тотем Космического Колеса",
-        subtitle: "Prehistoric Altar Stele • Concentric Sand Halos",
+        subtitle: "Lamprey Ouroboros • Concentric Sand & Salt Halos",
         image: "docs/output/latest/_studies/plate_05_variation_3_cosmic_wheel.jpg",
         insitu: "docs/output/latest/_insitu/insitu_plate_05_gobustan_oracle.jpg",
         plate: "docs/output/latest/_studies/plate_05_variation_3_cosmic_wheel.jpg",
-        desc: "Deeply textured coarse beach sand and quartz grit arranged in monumental concentric solar rings around an ancient Caspian totem.",
+        desc: "An archaic Caspian lamprey coiled into an eternal cosmic solar wheel, surrounded by concentric rings of Absheron quartz beach sand, Masazir salt clusters, and petroglyphic incisions on bone plaster.",
         hotspots: [
-          { x: 50, y: 48, label: "Concentric Quartz Rings", desc: "Textured beach sand bands sculpted in high relief around the central axis." },
-          { x: 35, y: 32, label: "Bone Plaster Ground", desc: "Porous Absheron coquina and chalk primer cured with archival beeswax." },
-          { x: 65, y: 68, label: "Archaic Totem Loop", desc: "Prehistoric Caspian aquatic totem coiled in eternal astronomical return." }
+          { x: 50, y: 48, label: "Lamprey Ouroboros Wheel", desc: "The archaic Caspian lamprey coiled in eternal solar return, dusted with 24k gold." },
+          { x: 30, y: 35, label: "Beach Sand & Salt Rings", desc: "Coarse Absheron coastal quartz sand and crystallized halite halos in high relief." },
+          { x: 75, y: 65, label: "Gobustan Boat Incisions", desc: "Astronomical solar boat petroglyphs scored into porous limestone bone plaster." }
         ]
       }
     ]
