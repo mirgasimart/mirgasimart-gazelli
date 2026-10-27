@@ -195,18 +195,18 @@ const GALLERY_DATA = [
       {
         index: 2,
         number: "3",
-        label: "Shell Monolith",
-        azLabel: "Qabıq Monoliti",
-        ruLabel: "Монолит Раковин",
-        subtitle: "Vertical Quarry Strata • Scored Nacre Relief",
+        label: "Nacreous Portal",
+        azLabel: "Sədəfli Portal",
+        ruLabel: "Перламутровый Портал",
+        subtitle: "Architectural Stone Stele • Turquoise Axis & Cockle Halo",
         image: "docs/output/latest/_studies/plate_02_variation_3_shell_monolith.jpg",
         insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
         plate: "docs/output/latest/_studies/plate_02_variation_3_shell_monolith.jpg",
-        desc: "A solitary vertical limestone stele bearing scored geometric apertures, iridescent shell fragments, and fine quartz sand impasto.",
+        desc: "A vertical architectural stele sculpted in heavy Absheron coquina limestone with interlocking star Shebeke tracery, bisected by a luminous axis of Caspian turquoise glaze and fossilized Didacna cockles.",
         hotspots: [
-          { x: 50, y: 35, label: "Monolithic Vertical Axis", desc: "Carved coquina stone relief evoking an ancient Baku portal stela." },
-          { x: 40, y: 65, label: "Embedded Didacna Valves", desc: "Submerged marine shell valves fossilized into limestone matrix." },
-          { x: 60, y: 55, label: "Scored Sgraffito Tracery", desc: "Deep geometric Shebeke fretwork incised with sculptor's chisel." }
+          { x: 50, y: 50, label: "Turquoise & Gold Seam", desc: "Central axis of luminous Caspian mineral glazes pooled with Masazir salt crystals and gold leaf." },
+          { x: 32, y: 48, label: "Fossil Cockle Strata", desc: "Radial bands of weathered Caspian Didacna cockles with shimmering nacre." },
+          { x: 50, y: 15, label: "Carved Stone Portal", desc: "Architectural limestone Shebeke fretwork incised in high relief." }
         ]
       }
     ]
