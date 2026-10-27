@@ -924,8 +924,8 @@ class GazelliCuratorialGallery {
       const stageTotalHeight = this.dom.stage.clientHeight;
       const floorSkirtingY = 125; // Height of gallery floor skirting
 
-      // Available wall height between skirting and top header (with 50px headroom)
-      const wallAvailableH = stageTotalHeight - floorSkirtingY - 50;
+      // Available wall height between skirting and top header (accounting for header, ceiling track, and variation switcher badge)
+      const wallAvailableH = stageTotalHeight - floorSkirtingY - 140;
 
       // Available wall width
       const wingIsVisible = window.innerWidth >= 1101 && !this.wingCollapsed;
@@ -934,14 +934,14 @@ class GazelliCuratorialGallery {
       const wallAvailableW = stageTotalWidth - wingReserved - figureReserved;
 
       // Real scale calibration:
-      // The 175cm human viewer and artwork top edge (hung with centerline at 158cm) must fit with headroom
-      const totalPhysicalHeightNeeded = Math.max(175 + 30, 158 + (art.heightCm / 2) + 25);
+      // The 175cm human viewer and artwork top edge (hung with centerline at 158cm) must fit with headroom for header and variation bar
+      const totalPhysicalHeightNeeded = Math.max(175 + 30, 158 + (art.heightCm / 2) + 38);
       const scaleByHeight = wallAvailableH / totalPhysicalHeightNeeded;
       const scaleByWidth = wallAvailableW / (art.widthCm + 40);
 
       const maxScaleCeiling = isWidescreen ? 2.8 : (window.innerWidth >= 1440 ? 2.5 : 2.2);
       pxPerCm = Math.min(scaleByHeight, scaleByWidth);
-      pxPerCm = Math.min(Math.max(pxPerCm, 1.4), maxScaleCeiling);
+      pxPerCm = Math.min(Math.max(pxPerCm, 1.35), maxScaleCeiling);
 
       targetWidth = Math.round(art.widthCm * pxPerCm);
       targetHeight = Math.round(art.heightCm * pxPerCm);
@@ -964,8 +964,9 @@ class GazelliCuratorialGallery {
       const desiredArtCenterY = floorSkirtingY + Math.round(158 * pxPerCm);
       const defaultCenterY = Math.round(stageTotalHeight / 2);
 
-      // Boundary safety check: Prevent painting from colliding with header bar or floor skirting
-      const minClearCeiling = 32;
+      // Boundary safety check: Prevent painting and floating variation badge from colliding with header bar or ceiling track
+      // Header is 68px, ceiling lamp extends to 94px, variation badge needs ~48px headroom above frame
+      const minClearCeiling = 152;
       const minClearSkirting = floorSkirtingY + 28;
       const halfArtHeight = targetHeight / 2;
       const maxAllowedCenter = stageTotalHeight - halfArtHeight - minClearCeiling;
