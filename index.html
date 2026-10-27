@@ -97,11 +97,11 @@
 
       <!-- VIEW MODE SWITCHER TABS (CANONICAL 3: STAGE, WALK, LOUPE) -->
       <nav id="viewModeTabs" class="view-mode-tabs" aria-label="Viewing Modes">
-        <button class="mode-tab active" data-mode="gallery" title="Gallery Wall Hanging View (Key: G)">
+        <button class="mode-tab" data-mode="gallery" title="Gallery Wall Hanging View (Key: G)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <span>Stage</span>
         </button>
-        <button class="mode-tab" data-mode="panoramic" title="Continuous Panoramic Multi-Artwork Wall (Key: W)">
+        <button class="mode-tab active" data-mode="panoramic" title="Continuous Panoramic Multi-Artwork Wall (Key: W)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="1"/><line x1="8" y1="7" x2="8" y2="17"/><line x1="16" y1="16" x2="16" y2="17"/></svg>
           <span>Walk</span>
         </button>
@@ -226,10 +226,10 @@
       </div>
 
       <!-- WIDESCREEN CURATORIAL TRIPTYCH CONTAINER -->
-      <div id="triptychContainer" class="triptych-container">
+      <div id="triptychContainer" class="triptych-container" style="display: none;">
         
         <!-- CENTER: THE HANGING ARTWORK MOUNT -->
-        <div id="artworkMount" class="artwork-mount">
+        <div id="artworkMount" class="artwork-mount" style="display: none;">
           <!-- Floating Variation Switcher Badge (for works with multiple variations) -->
           <div id="variationBadge" class="variation-badge-bar" style="display: none;">
             <div class="variation-badge-pill" id="variationPill" title="Tap canvas or click pill to cycle variation">
@@ -294,7 +294,7 @@
       </div>
 
       <!-- CONTINUOUS PANORAMIC PROMENADE (Wide Multi-Artwork Wall) -->
-      <div id="panoramicPromenade" class="panoramic-promenade">
+      <div id="panoramicPromenade" class="panoramic-promenade active">
         <div id="panoramicTrack" class="panoramic-wall-track">
           <!-- Populated dynamically via JS with all suite artworks side-by-side -->
         </div>

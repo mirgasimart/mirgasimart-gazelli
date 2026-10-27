@@ -8,7 +8,7 @@ class GazelliCuratorialGallery {
   constructor() {
     this.artworks = GALLERY_DATA;
     this.currentIndex = 0;
-    this.currentMode = 'gallery'; // 'gallery' | 'insitu' | 'plate' | 'macro'
+    this.currentMode = 'panoramic'; // Default view: 'panoramic' (Walk) | 'gallery' (Stage) | 'macro' (Loupe)
     this.currentWall = 'limestone';
     this.currentFrame = 'floater-walnut';
     this.showHumanScale = false;
@@ -29,6 +29,7 @@ class GazelliCuratorialGallery {
     this.renderThumbnails();
     this.initPanoramicPromenade();
     this.updateArtwork(0);
+    this.setMode('panoramic');
     this.setLanguage(this.currentLang);
   }
 
@@ -565,6 +566,13 @@ class GazelliCuratorialGallery {
       thumb.classList.toggle('active', i === index);
     });
 
+    // Highlight active promenade station
+    if (this.dom.panoramicTrack) {
+      Array.from(this.dom.panoramicTrack.children).forEach((station, i) => {
+        station.classList.toggle('active', i === index);
+      });
+    }
+
     // Scroll thumbnail into view
     const activeThumb = this.dom.thumbnailStrip.children[index];
     if (activeThumb) {
@@ -796,6 +804,11 @@ class GazelliCuratorialGallery {
     const isWidescreen = window.innerWidth >= 1800;
     const pxPerCm = isMobile ? 1.15 : (isWidescreen ? 2.6 : 1.95);
 
+    let isMouseDown = false;
+    let hasDragged = false;
+    let startX = 0;
+    let scrollStart = 0;
+
     this.artworks.forEach((art, index) => {
       const station = document.createElement('div');
       station.className = `promenade-station ${index === this.currentIndex ? 'active' : ''}`;
@@ -817,6 +830,7 @@ class GazelliCuratorialGallery {
       `;
 
       station.addEventListener('click', () => {
+        if (hasDragged) return;
         this.updateArtwork(index);
         this.setMode('gallery');
       });
@@ -833,12 +847,9 @@ class GazelliCuratorialGallery {
     }, { passive: false });
 
     // Smooth mouse drag-to-scroll on desktop
-    let isMouseDown = false;
-    let startX = 0;
-    let scrollStart = 0;
-
     this.dom.panoramicPromenade.addEventListener('mousedown', (e) => {
       isMouseDown = true;
+      hasDragged = false;
       startX = e.pageX - this.dom.panoramicPromenade.offsetLeft;
       scrollStart = this.dom.panoramicPromenade.scrollLeft;
     });
@@ -852,6 +863,9 @@ class GazelliCuratorialGallery {
       e.preventDefault();
       const x = e.pageX - this.dom.panoramicPromenade.offsetLeft;
       const walk = (x - startX) * 1.5;
+      if (Math.abs(walk) > 6) {
+        hasDragged = true;
+      }
       this.dom.panoramicPromenade.scrollLeft = scrollStart - walk;
     });
   }
@@ -1445,6 +1459,14 @@ class GazelliCuratorialGallery {
       case 'm':
       case 'M':
         this.setMode(this.currentMode === 'macro' ? 'gallery' : 'macro');
+        break;
+      case 'g':
+      case 'G':
+        this.setMode('gallery');
+        break;
+      case 'p':
+      case 'P':
+        this.setMode('panoramic');
         break;
       case 'f':
       case 'F':
