@@ -178,35 +178,35 @@ const GALLERY_DATA = [
       {
         index: 1,
         number: "2",
-        label: "Shebeke Reliquary",
-        azLabel: "Şəbəkə Əmanətxanası",
-        ruLabel: "Реликварий Шебеке",
-        subtitle: "Sacred Stone Shebeke • Concentric Didacna Tracery",
+        label: "Shebeke Mandala",
+        azLabel: "Şəbəkə Mandalasında",
+        ruLabel: "Мандала Шебеке",
+        subtitle: "Pointed Star Halo • Turquoise Glaze on Canvas",
         image: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
         insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
         plate: "docs/output/latest/_studies/plate_02_variation_2_coastal_mosaic.jpg",
-        desc: "Concentric rings of fossilized Caspian cockles (Didacna trigonoides) set within carved architectural stone Shebeke tracery, glowing with Caspian turquoise glaze.",
+        desc: "An intricate multi-tiered pointed star mandala painted on stretched linen canvas, featuring luminous Caspian turquoise oil glazes, textured beach sand impasto, and concentric rings of fossilized Didacna cockles.",
         hotspots: [
-          { x: 50, y: 50, label: "Stone Shebeke Geometry", desc: "Intricate architectural limestone fretwork framing deep turquoise mineral glazes." },
-          { x: 30, y: 35, label: "Concentric Didacna Halo", desc: "Radial bands of iridescent fossilized Caspian cockles in coarse sand impasto." },
-          { x: 68, y: 65, label: "Turquoise Mineral Glaze", desc: "Translucent Caspian deep-water copper silicate glaze pooled in carved recesses." }
+          { x: 50, y: 50, label: "Masazir Halite Center", desc: "Genuine crystallized lake salt clusters embedded in thick oil impasto." },
+          { x: 30, y: 35, label: "Pointed Nacre Fretwork", desc: "Radial tiers of fossilized Caspian cockles set in coarse beach sand." },
+          { x: 68, y: 65, label: "Turquoise Oil Glaze", desc: "Luminous translucent copper-silicate glazes painted across craquelure linen." }
         ]
       },
       {
         index: 2,
         number: "3",
-        label: "Nacreous Portal",
-        azLabel: "Sədəfli Portal",
-        ruLabel: "Перламутровый Портал",
-        subtitle: "Architectural Stone Stele • Turquoise Axis & Cockle Halo",
+        label: "Astral Shebeke",
+        azLabel: "Astral Şəbəkə",
+        ruLabel: "Астральное Шебеке",
+        subtitle: "Geometric 8-Point Star • Pure Canvas Painting",
         image: "docs/output/latest/_studies/plate_02_variation_3_shell_monolith.jpg",
         insitu: "docs/output/latest/_insitu/insitu_plate_02_shebeke_reliquary.jpg",
         plate: "docs/output/latest/_studies/plate_02_variation_3_shell_monolith.jpg",
-        desc: "A vertical architectural stele sculpted in heavy Absheron coquina limestone with interlocking star Shebeke tracery, bisected by a luminous axis of Caspian turquoise glaze and fossilized Didacna cockles.",
+        desc: "A monumental 8-pointed Islamic Shebeke star painted in radiant turquoise and azure glazes on stretched canvas, framed by razor sgraffito lines, coarse beach sand, and clusters of Masazir lake salt.",
         hotspots: [
-          { x: 50, y: 50, label: "Turquoise & Gold Seam", desc: "Central axis of luminous Caspian mineral glazes pooled with Masazir salt crystals and gold leaf." },
-          { x: 32, y: 48, label: "Fossil Cockle Strata", desc: "Radial bands of weathered Caspian Didacna cockles with shimmering nacre." },
-          { x: 50, y: 15, label: "Carved Stone Portal", desc: "Architectural limestone Shebeke fretwork incised in high relief." }
+          { x: 50, y: 48, label: "8-Point Shebeke Star", desc: "Sacred star geometry painted with rich Caspian azure and sea-green glazes." },
+          { x: 35, y: 30, label: "Orbital Cockle Halo", desc: "Prehistoric Caspian Didacna cockles aligned along sacred geometric axes." },
+          { x: 65, y: 65, label: "Linen Craquelure Ground", desc: "Hand-primed stretched linen canvas scored with architectural sgraffito grid." }
         ]
       }
     ]
